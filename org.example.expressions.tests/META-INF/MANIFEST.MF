@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.example.expressions.tests
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.example.expressions.tests; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.example.expressions,
+ org.example.expressions.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.xtext.junit4,
+ org.eclipse.ui.workbench;resolution:=optional,
+ org.eclipse.xtend.lib,
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtext.xbase.junit;bundle-version="2.3.1",
+ org.eclipse.jdt.core;bundle-version="3.8.2",
+ org.eclipse.xtext.common.types.ui;bundle-version="2.4.0"
+Import-Package: org.apache.log4j,
+ org.junit;version="4.5.0",
+ org.junit.runner;version="4.5.0",
+ org.junit.runner.manipulation;version="4.5.0",
+ org.junit.runner.notification;version="4.5.0",
+ org.junit.runners;version="4.5.0",
+ org.junit.runners.model;version="4.5.0",
+ org.hamcrest.core
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.example.expressions

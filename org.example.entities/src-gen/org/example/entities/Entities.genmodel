@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.example.entities/src-gen" editDirectory="/org.example.entities.edit/src"
+    editorDirectory="/org.example.entities.editor/src" modelPluginID="org.example.entities"
+    forceOverwrite="true" modelName="Entities" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.example.entities.edit"
+    editorPluginID="org.example.entities.editor" runtimeVersion="2.9">
+  <genPackages prefix="Entities" basePackage="org.example.entities" disposableProviderFactory="true"
+      fileExtensions="entities" ecorePackage="Entities.ecore#/">
+    <genClasses ecoreClass="Entities.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Entities.ecore#//Model/entities"/>
+    </genClasses>
+    <genClasses ecoreClass="Entities.ecore#//Entity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Entities.ecore#//Entity/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Entities.ecore#//Entity/superType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Entities.ecore#//Entity/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Entities.ecore#//Attribute">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Entities.ecore#//Attribute/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Entities.ecore#//Attribute/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Entities.ecore#//AttributeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Entities.ecore#//AttributeType/elementType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Entities.ecore#//AttributeType/array"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Entities.ecore#//AttributeType/length"/>
+    </genClasses>
+    <genClasses ecoreClass="Entities.ecore#//ElementType"/>
+    <genClasses ecoreClass="Entities.ecore#//BasicType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Entities.ecore#//BasicType/typeName"/>
+    </genClasses>
+    <genClasses ecoreClass="Entities.ecore#//EntityType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Entities.ecore#//EntityType/entity"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

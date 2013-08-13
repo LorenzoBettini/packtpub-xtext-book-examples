@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.example.xbase.entities/src-gen" editDirectory="/org.example.xbase.entities.edit/src"
+    editorDirectory="/org.example.xbase.entities.editor/src" modelPluginID="org.example.xbase.entities"
+    forceOverwrite="true" modelName="Entities" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.example.xbase.entities.edit"
+    editorPluginID="org.example.xbase.entities.editor" runtimeVersion="2.9" usedGenPackages="../../../../../../org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel#//types ../../../../../../org.eclipse.xtext.xbase/model/Xbase.genmodel#//xbase ../../../../../../org.eclipse.xtext.xbase/model/Xbase.genmodel#//xtype">
+  <genPackages prefix="Entities" basePackage="org.example.xbase.entities" disposableProviderFactory="true"
+      fileExtensions="xentities" ecorePackage="Entities.ecore#/">
+    <genClasses ecoreClass="Entities.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Entities.ecore#//Model/importSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Entities.ecore#//Model/entities"/>
+    </genClasses>
+    <genClasses ecoreClass="Entities.ecore#//Entity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Entities.ecore#//Entity/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Entities.ecore#//Entity/superType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Entities.ecore#//Entity/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Entities.ecore#//Entity/operations"/>
+    </genClasses>
+    <genClasses ecoreClass="Entities.ecore#//Attribute">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Entities.ecore#//Attribute/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Entities.ecore#//Attribute/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Entities.ecore#//Attribute/initexpression"/>
+    </genClasses>
+    <genClasses ecoreClass="Entities.ecore#//Operation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Entities.ecore#//Operation/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Entities.ecore#//Operation/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Entities.ecore#//Operation/params"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Entities.ecore#//Operation/body"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

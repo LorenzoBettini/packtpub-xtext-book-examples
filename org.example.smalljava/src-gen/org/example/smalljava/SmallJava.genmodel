@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.example.smalljava/src-gen" editDirectory="/org.example.smalljava.edit/src"
+    editorDirectory="/org.example.smalljava.editor/src" modelPluginID="org.example.smalljava"
+    forceOverwrite="true" modelName="SmallJava" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.example.smalljava.edit"
+    editorPluginID="org.example.smalljava.editor" runtimeVersion="2.9">
+  <genPackages prefix="SmallJava" basePackage="org.example.smalljava" disposableProviderFactory="true"
+      fileExtensions="smalljava" ecorePackage="SmallJava.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="SmallJava.ecore#//SJAccessLevel">
+      <genEnumLiterals ecoreEnumLiteral="SmallJava.ecore#//SJAccessLevel/PRIVATE"/>
+      <genEnumLiterals ecoreEnumLiteral="SmallJava.ecore#//SJAccessLevel/PUBLIC"/>
+      <genEnumLiterals ecoreEnumLiteral="SmallJava.ecore#//SJAccessLevel/PROTECTED"/>
+    </genEnums>
+    <genClasses ecoreClass="SmallJava.ecore#//SJProgram">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SmallJava.ecore#//SJProgram/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJProgram/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJProgram/classes"/>
+    </genClasses>
+    <genClasses ecoreClass="SmallJava.ecore#//SJImport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SmallJava.ecore#//SJImport/importedNamespace"/>
+    </genClasses>
+    <genClasses ecoreClass="SmallJava.ecore#//SJClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SmallJava.ecore#//SJClass/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJClass/superclass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJClass/members"/>
+    </genClasses>
+    <genClasses ecoreClass="SmallJava.ecore#//SJMember">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SmallJava.ecore#//SJMember/access"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJMember/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SmallJava.ecore#//SJMember/name"/>
+    </genClasses>
+    <genClasses ecoreClass="SmallJava.ecore#//SJField"/>
+    <genClasses ecoreClass="SmallJava.ecore#//SJMethod">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJMethod/params"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJMethod/body"/>
+    </genClasses>
+    <genClasses ecoreClass="SmallJava.ecore#//SJParameter"/>
+    <genClasses ecoreClass="SmallJava.ecore#//SJMethodBody"/>
+    <genClasses ecoreClass="SmallJava.ecore#//SJStatement"/>
+    <genClasses ecoreClass="SmallJava.ecore#//SJReturn">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJReturn/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="SmallJava.ecore#//SJVariableDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJVariableDeclaration/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="SmallJava.ecore#//SJIfStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJIfStatement/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJIfStatement/thenBlock"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJIfStatement/elseBlock"/>
+    </genClasses>
+    <genClasses ecoreClass="SmallJava.ecore#//SJIfBlock"/>
+    <genClasses ecoreClass="SmallJava.ecore#//SJBlock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJBlock/statements"/>
+    </genClasses>
+    <genClasses ecoreClass="SmallJava.ecore#//SJSymbol">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJSymbol/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SmallJava.ecore#//SJSymbol/name"/>
+    </genClasses>
+    <genClasses ecoreClass="SmallJava.ecore#//SJExpression"/>
+    <genClasses ecoreClass="SmallJava.ecore#//SJAssignment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJAssignment/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJAssignment/right"/>
+    </genClasses>
+    <genClasses ecoreClass="SmallJava.ecore#//SJMemberSelection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJMemberSelection/receiver"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJMemberSelection/member"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SmallJava.ecore#//SJMemberSelection/methodinvocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJMemberSelection/args"/>
+    </genClasses>
+    <genClasses ecoreClass="SmallJava.ecore#//SJStringConstant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SmallJava.ecore#//SJStringConstant/value"/>
+    </genClasses>
+    <genClasses ecoreClass="SmallJava.ecore#//SJIntConstant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SmallJava.ecore#//SJIntConstant/value"/>
+    </genClasses>
+    <genClasses ecoreClass="SmallJava.ecore#//SJBoolConstant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SmallJava.ecore#//SJBoolConstant/value"/>
+    </genClasses>
+    <genClasses ecoreClass="SmallJava.ecore#//SJThis"/>
+    <genClasses ecoreClass="SmallJava.ecore#//SJSuper"/>
+    <genClasses ecoreClass="SmallJava.ecore#//SJNull"/>
+    <genClasses ecoreClass="SmallJava.ecore#//SJSymbolRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJSymbolRef/symbol"/>
+    </genClasses>
+    <genClasses ecoreClass="SmallJava.ecore#//SJNew">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SmallJava.ecore#//SJNew/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

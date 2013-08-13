@@ -1,0 +1,109 @@
+grammar org.example.smalljava.SmallJava with org.eclipse.xtext.common.Terminals
+
+generate smallJava "http://www.example.org/smalljava/SmallJava"
+
+SJProgram:
+	('package' name=QualifiedName ';')?
+	imports+=SJImport*
+	classes+=SJClass*;
+
+SJImport:
+    'import' importedNamespace = QualifiedNameWithWildcard ';'
+;
+
+QualifiedNameWithWildcard:
+    QualifiedName '.*'?
+;
+
+QualifiedName:
+	ID ('.' ID)*
+;
+
+SJClass: 'class' name=ID ('extends' superclass=[SJClass|QualifiedName])? '{'
+			members += SJMember*
+       '}' ;
+
+SJMember: 
+	SJField | SJMethod
+;
+
+SJField:
+	access=SJAccessLevel? type=[SJClass|QualifiedName] name=ID ';'
+;
+
+SJMethod:
+	access=SJAccessLevel? type=[SJClass|QualifiedName] name=ID 
+		'(' (params+=SJParameter (',' params+=SJParameter)*)? ')' 
+		body=SJMethodBody
+;
+
+enum SJAccessLevel:
+	PRIVATE='private' | PUBLIC='public' | PROTECTED='protected';
+
+SJParameter:
+	type=[SJClass|QualifiedName] name=ID
+;
+
+SJMethodBody: 
+	{SJMethodBody} '{' statements += SJStatement* '}';
+
+SJStatement:
+	SJVariableDeclaration |
+	SJReturn |
+	SJExpression ';' |
+	SJIfStatement
+;
+
+SJReturn:
+	'return' expression=SJExpression ';'
+;
+
+SJVariableDeclaration:
+	type=[SJClass|QualifiedName] name=ID '=' expression=SJExpression ';'
+;
+
+SJIfStatement:
+	'if' '(' expression=SJExpression ')' thenBlock=SJIfBlock
+	(=>'else' elseBlock=SJIfBlock)?
+;
+
+SJIfBlock:
+	statements += SJStatement
+	| '{' statements += SJStatement+ '}'
+;
+
+SJBlock:
+	SJMethodBody | SJIfBlock
+;
+
+SJSymbol:
+	SJVariableDeclaration | SJParameter
+;
+
+SJExpression: SJAssignment;
+
+SJAssignment returns SJExpression:
+	SJSelectionExpression 
+	({SJAssignment.left=current} '=' right=SJExpression)?
+;
+
+SJSelectionExpression returns SJExpression:
+	SJTerminalExpression 
+	(
+		{SJMemberSelection.receiver=current} '.' 
+		member=[SJMember]
+		(methodinvocation?='(' 
+			(args+=SJExpression (',' args+=SJExpression)*)? ')'	)?
+	)*
+;
+
+SJTerminalExpression returns SJExpression:
+   {SJStringConstant} value=STRING |
+   {SJIntConstant} value=INT |
+   {SJBoolConstant} value = ('true' | 'false') |
+   {SJThis} 'this' |
+   {SJSuper} 'super' |
+   {SJNull} 'null' |
+   {SJSymbolRef} symbol=[SJSymbol] |
+   {SJNew} 'new' type=[SJClass|QualifiedName] '(' ')' |
+   '(' SJExpression ')'; 

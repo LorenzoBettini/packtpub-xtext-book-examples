@@ -1,0 +1,7 @@
+setpref targetPlatformPath="${target.platform}"
+resolve "${projects.location}/org.example.build.hello.buckminster/projects-platform.cquery"
+resolve "${projects.location}/org.example.build.hello.buckminster/project.cquery"
+build
+junit -l "org.example.build.hello.tests/org.example.build.hello.tests.launch"  --flatXML --output "${buckminster.output.root}/test.results/org.example.build.hello.tests.launch.xml"
+junit -l "org.example.build.hello.tests/org.example.build.hello.ui.tests.launch"  --flatXML --output "${buckminster.output.root}/test.results/org.example.build.hello.ui.tests.launch.xml"
+perform "org.example.build.hello.site#site.p2"

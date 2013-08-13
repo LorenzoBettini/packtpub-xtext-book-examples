@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="org.example.build.hello.sdk" version="0.0.0">
+      <category name="main"/>
+   </feature>
+   <feature id="org.example.build.hello.sdk.source" version="0.0.0">
+      <category name="main.source"/>
+   </feature>
+   <category-def name="main" label="Hello">
+      <description>
+         Hello DSL is just a test project to experiment with Xtext and Xtext Buckminster wizard.
+      </description>
+   </category-def>
+   <category-def name="main.source" label="Source for Hello">
+      <description>
+         Hello DSL is just a test project to experiment with Xtext and Xtext Buckminster wizard.
+      </description>
+   </category-def>
+</site>

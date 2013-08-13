@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.example.build.hello/src-gen" editDirectory="/org.example.build.hello.edit/src"
+    editorDirectory="/org.example.build.hello.editor/src" modelPluginID="org.example.build.hello"
+    forceOverwrite="true" modelName="Hello" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.example.build.hello.edit"
+    editorPluginID="org.example.build.hello.editor" runtimeVersion="2.9">
+  <genPackages prefix="Hello" basePackage="org.example.build.hello" disposableProviderFactory="true"
+      fileExtensions="hello" ecorePackage="Hello.ecore#/">
+    <genClasses ecoreClass="Hello.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Hello.ecore#//Model/greetings"/>
+    </genClasses>
+    <genClasses ecoreClass="Hello.ecore#//Greeting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Hello.ecore#//Greeting/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

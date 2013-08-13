@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/org.example.xbase.expressions/src-gen" editDirectory="/org.example.xbase.expressions.edit/src"
+    editorDirectory="/org.example.xbase.expressions.editor/src" modelPluginID="org.example.xbase.expressions"
+    forceOverwrite="true" modelName="Expressions" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.example.xbase.expressions.edit"
+    editorPluginID="org.example.xbase.expressions.editor" runtimeVersion="2.9" usedGenPackages="../../../../../../org.eclipse.xtext.xbase/model/Xbase.genmodel#//xbase">
+  <genPackages prefix="Expressions" basePackage="org.example.xbase.expressions" disposableProviderFactory="true"
+      fileExtensions="xexpressions" ecorePackage="Expressions.ecore#/">
+    <genClasses ecoreClass="Expressions.ecore#//ExpressionsModel"/>
+  </genPackages>
+</genmodel:GenModel>
