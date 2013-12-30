@@ -184,14 +184,14 @@ public class ExpressionsParserTest {
     try {
       ExpressionsModel _parse = this._parseHelper.parse(input);
       final Procedure1<ExpressionsModel> _function = new Procedure1<ExpressionsModel>() {
-          public void apply(final ExpressionsModel it) {
-            ExpressionsParserTest.this._validationTestHelper.assertNoErrors(it);
-            EList<AbstractElement> _elements = it.getElements();
-            AbstractElement _last = IterableExtensions.<AbstractElement>last(_elements);
-            String _stringRepr = ExpressionsParserTest.this.stringRepr(((Expression) _last));
-            Assert.assertEquals(expected, _stringRepr);
-          }
-        };
+        public void apply(final ExpressionsModel it) {
+          ExpressionsParserTest.this._validationTestHelper.assertNoErrors(it);
+          EList<AbstractElement> _elements = it.getElements();
+          AbstractElement _last = IterableExtensions.<AbstractElement>last(_elements);
+          String _stringRepr = ExpressionsParserTest.this.stringRepr(((Expression) _last));
+          Assert.assertEquals(expected, _stringRepr);
+        }
+      };
       ExpressionsModel _doubleArrow = ObjectExtensions.<ExpressionsModel>operator_doubleArrow(_parse, _function);
       return _doubleArrow;
     } catch (Throwable _e) {
@@ -203,13 +203,13 @@ public class ExpressionsParserTest {
     try {
       ExpressionsModel _parse = this._parseHelper.parse(input);
       final Procedure1<ExpressionsModel> _function = new Procedure1<ExpressionsModel>() {
-          public void apply(final ExpressionsModel it) {
-            EList<AbstractElement> _elements = it.getElements();
-            AbstractElement _last = IterableExtensions.<AbstractElement>last(_elements);
-            String _stringRepr = ExpressionsParserTest.this.stringRepr(((Expression) _last));
-            Assert.assertEquals(expected, _stringRepr);
-          }
-        };
+        public void apply(final ExpressionsModel it) {
+          EList<AbstractElement> _elements = it.getElements();
+          AbstractElement _last = IterableExtensions.<AbstractElement>last(_elements);
+          String _stringRepr = ExpressionsParserTest.this.stringRepr(((Expression) _last));
+          Assert.assertEquals(expected, _stringRepr);
+        }
+      };
       ExpressionsModel _doubleArrow = ObjectExtensions.<ExpressionsModel>operator_doubleArrow(_parse, _function);
       return _doubleArrow;
     } catch (Throwable _e) {

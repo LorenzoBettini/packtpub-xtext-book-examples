@@ -32,12 +32,12 @@ public class SmallJavaProposalProvider extends AbstractSmallJavaProposalProvider
   public void completeSJSelectionExpression_Member(final EObject model, final Assignment assignment, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
     AbstractElement _terminal = assignment.getTerminal();
     final Predicate<IEObjectDescription> _function = new Predicate<IEObjectDescription>() {
-        public boolean apply(final IEObjectDescription description) {
-          EObject _eObjectOrProxy = description.getEObjectOrProxy();
-          boolean _isAccessibleFrom = SmallJavaProposalProvider.this._smallJavaAccessibility.isAccessibleFrom(((SJMember) _eObjectOrProxy), model);
-          return _isAccessibleFrom;
-        }
-      };
+      public boolean apply(final IEObjectDescription description) {
+        EObject _eObjectOrProxy = description.getEObjectOrProxy();
+        boolean _isAccessibleFrom = SmallJavaProposalProvider.this._smallJavaAccessibility.isAccessibleFrom(((SJMember) _eObjectOrProxy), model);
+        return _isAccessibleFrom;
+      }
+    };
     this.lookupCrossReference(((CrossReference) _terminal), context, acceptor, _function);
   }
   

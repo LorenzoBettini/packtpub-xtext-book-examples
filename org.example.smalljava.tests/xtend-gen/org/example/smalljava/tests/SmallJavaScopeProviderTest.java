@@ -100,15 +100,15 @@ public class SmallJavaScopeProviderTest {
       SJReturn _returnStatement = SmallJavaModelUtil.returnStatement(_last);
       SJExpression _expression = _returnStatement.getExpression();
       final Procedure1<SJExpression> _function = new Procedure1<SJExpression>() {
-          public void apply(final SJExpression it) {
-            EReference _sJMemberSelection_Member = SmallJavaPackage.eINSTANCE.getSJMemberSelection_Member();
-            SmallJavaScopeProviderTest.this.assertScope(it, _sJMemberSelection_Member, 
-              "f, m, C.f, C.m");
-            EReference _sJSymbolRef_Symbol = SmallJavaPackage.eINSTANCE.getSJSymbolRef_Symbol();
-            SmallJavaScopeProviderTest.this.assertScope(it, _sJSymbolRef_Symbol, 
-              "v, p");
-          }
-        };
+        public void apply(final SJExpression it) {
+          EReference _sJMemberSelection_Member = SmallJavaPackage.eINSTANCE.getSJMemberSelection_Member();
+          SmallJavaScopeProviderTest.this.assertScope(it, _sJMemberSelection_Member, 
+            "f, m, C.f, C.m");
+          EReference _sJSymbolRef_Symbol = SmallJavaPackage.eINSTANCE.getSJSymbolRef_Symbol();
+          SmallJavaScopeProviderTest.this.assertScope(it, _sJSymbolRef_Symbol, 
+            "v, p");
+        }
+      };
       ObjectExtensions.<SJExpression>operator_doubleArrow(_expression, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -146,12 +146,12 @@ public class SmallJavaScopeProviderTest {
       SJReturn _returnStatement = SmallJavaModelUtil.returnStatement(_last);
       SJExpression _expression = _returnStatement.getExpression();
       final Procedure1<SJExpression> _function = new Procedure1<SJExpression>() {
-          public void apply(final SJExpression it) {
-            EReference _sJMemberSelection_Member = SmallJavaPackage.eINSTANCE.getSJMemberSelection_Member();
-            SmallJavaScopeProviderTest.this.assertScope(it, _sJMemberSelection_Member, 
-              "f, m, C.f, C.m");
-          }
-        };
+        public void apply(final SJExpression it) {
+          EReference _sJMemberSelection_Member = SmallJavaPackage.eINSTANCE.getSJMemberSelection_Member();
+          SmallJavaScopeProviderTest.this.assertScope(it, _sJMemberSelection_Member, 
+            "f, m, C.f, C.m");
+        }
+      };
       ObjectExtensions.<SJExpression>operator_doubleArrow(_expression, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -204,33 +204,33 @@ public class SmallJavaScopeProviderTest {
       TreeIterator<EObject> _eAllContents = _body.eAllContents();
       Iterator<SJVariableDeclaration> _filter = Iterators.<SJVariableDeclaration>filter(_eAllContents, SJVariableDeclaration.class);
       final Procedure1<Iterator<SJVariableDeclaration>> _function = new Procedure1<Iterator<SJVariableDeclaration>>() {
-          public void apply(final Iterator<SJVariableDeclaration> it) {
-            final Function1<SJVariableDeclaration,Boolean> _function = new Function1<SJVariableDeclaration,Boolean>() {
-                public Boolean apply(final SJVariableDeclaration it) {
-                  String _name = it.getName();
-                  boolean _equals = Objects.equal(_name, "v3");
-                  return Boolean.valueOf(_equals);
-                }
-              };
-            SJVariableDeclaration _findFirst = IteratorExtensions.<SJVariableDeclaration>findFirst(it, _function);
-            SJExpression _expression = _findFirst.getExpression();
-            EReference _sJSymbolRef_Symbol = SmallJavaPackage.eINSTANCE.getSJSymbolRef_Symbol();
-            SmallJavaScopeProviderTest.this.assertScope(_expression, _sJSymbolRef_Symbol, 
-              "v2, v1, p");
-            final Function1<SJVariableDeclaration,Boolean> _function_1 = new Function1<SJVariableDeclaration,Boolean>() {
-                public Boolean apply(final SJVariableDeclaration it) {
-                  String _name = it.getName();
-                  boolean _equals = Objects.equal(_name, "v4");
-                  return Boolean.valueOf(_equals);
-                }
-              };
-            SJVariableDeclaration _findFirst_1 = IteratorExtensions.<SJVariableDeclaration>findFirst(it, _function_1);
-            SJExpression _expression_1 = _findFirst_1.getExpression();
-            EReference _sJSymbolRef_Symbol_1 = SmallJavaPackage.eINSTANCE.getSJSymbolRef_Symbol();
-            SmallJavaScopeProviderTest.this.assertScope(_expression_1, _sJSymbolRef_Symbol_1, 
-              "v1, p");
-          }
-        };
+        public void apply(final Iterator<SJVariableDeclaration> it) {
+          final Function1<SJVariableDeclaration,Boolean> _function = new Function1<SJVariableDeclaration,Boolean>() {
+            public Boolean apply(final SJVariableDeclaration it) {
+              String _name = it.getName();
+              boolean _equals = Objects.equal(_name, "v3");
+              return Boolean.valueOf(_equals);
+            }
+          };
+          SJVariableDeclaration _findFirst = IteratorExtensions.<SJVariableDeclaration>findFirst(it, _function);
+          SJExpression _expression = _findFirst.getExpression();
+          EReference _sJSymbolRef_Symbol = SmallJavaPackage.eINSTANCE.getSJSymbolRef_Symbol();
+          SmallJavaScopeProviderTest.this.assertScope(_expression, _sJSymbolRef_Symbol, 
+            "v2, v1, p");
+          final Function1<SJVariableDeclaration,Boolean> _function_1 = new Function1<SJVariableDeclaration,Boolean>() {
+            public Boolean apply(final SJVariableDeclaration it) {
+              String _name = it.getName();
+              boolean _equals = Objects.equal(_name, "v4");
+              return Boolean.valueOf(_equals);
+            }
+          };
+          SJVariableDeclaration _findFirst_1 = IteratorExtensions.<SJVariableDeclaration>findFirst(it, _function_1);
+          SJExpression _expression_1 = _findFirst_1.getExpression();
+          EReference _sJSymbolRef_Symbol_1 = SmallJavaPackage.eINSTANCE.getSJSymbolRef_Symbol();
+          SmallJavaScopeProviderTest.this.assertScope(_expression_1, _sJSymbolRef_Symbol_1, 
+            "v1, p");
+        }
+      };
       ObjectExtensions.<Iterator<SJVariableDeclaration>>operator_doubleArrow(_filter, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -364,21 +364,21 @@ public class SmallJavaScopeProviderTest {
       TreeIterator<EObject> _eAllContents = _get.eAllContents();
       Iterator<SJVariableDeclaration> _filter = Iterators.<SJVariableDeclaration>filter(_eAllContents, SJVariableDeclaration.class);
       final Procedure1<Iterator<SJVariableDeclaration>> _function = new Procedure1<Iterator<SJVariableDeclaration>>() {
-          public void apply(final Iterator<SJVariableDeclaration> it) {
-            final Function1<SJVariableDeclaration,Boolean> _function = new Function1<SJVariableDeclaration,Boolean>() {
-                public Boolean apply(final SJVariableDeclaration it) {
-                  String _name = it.getName();
-                  boolean _equals = Objects.equal(_name, "v3");
-                  return Boolean.valueOf(_equals);
-                }
-              };
-            SJVariableDeclaration _findFirst = IteratorExtensions.<SJVariableDeclaration>findFirst(it, _function);
-            SJExpression _expression = _findFirst.getExpression();
-            EReference _sJSymbolRef_Symbol = SmallJavaPackage.eINSTANCE.getSJSymbolRef_Symbol();
-            SmallJavaScopeProviderTest.this.assertScope(_expression, _sJSymbolRef_Symbol, 
-              "v2, v1, p");
-          }
-        };
+        public void apply(final Iterator<SJVariableDeclaration> it) {
+          final Function1<SJVariableDeclaration,Boolean> _function = new Function1<SJVariableDeclaration,Boolean>() {
+            public Boolean apply(final SJVariableDeclaration it) {
+              String _name = it.getName();
+              boolean _equals = Objects.equal(_name, "v3");
+              return Boolean.valueOf(_equals);
+            }
+          };
+          SJVariableDeclaration _findFirst = IteratorExtensions.<SJVariableDeclaration>findFirst(it, _function);
+          SJExpression _expression = _findFirst.getExpression();
+          EReference _sJSymbolRef_Symbol = SmallJavaPackage.eINSTANCE.getSJSymbolRef_Symbol();
+          SmallJavaScopeProviderTest.this.assertScope(_expression, _sJSymbolRef_Symbol, 
+            "v2, v1, p");
+        }
+      };
       ObjectExtensions.<Iterator<SJVariableDeclaration>>operator_doubleArrow(_filter, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -432,36 +432,36 @@ public class SmallJavaScopeProviderTest {
       SJProgram _parse = this._parseHelper.parse(_builder);
       EList<SJClass> _classes = _parse.getClasses();
       final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
-          public void apply(final EList<SJClass> it) {
-            SJClass _get = it.get(2);
-            Iterable<SJField> _fields = SmallJavaModelUtil.fields(_get);
-            SJField _get_1 = ((SJField[])Conversions.unwrapArray(_fields, SJField.class))[0];
-            SJClass _get_2 = it.get(2);
-            Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_get_2);
-            SJMethod _get_3 = ((SJMethod[])Conversions.unwrapArray(_methods, SJMethod.class))[0];
-            SJMemberSelection _returnExpSel = SmallJavaScopeProviderTest.this.returnExpSel(_get_3);
-            SJMember _member = _returnExpSel.getMember();
-            Assert.assertSame(_get_1, _member);
-            SJClass _get_4 = it.get(1);
-            Iterable<SJField> _fields_1 = SmallJavaModelUtil.fields(_get_4);
-            SJField _get_5 = ((SJField[])Conversions.unwrapArray(_fields_1, SJField.class))[0];
-            SJClass _get_6 = it.get(2);
-            Iterable<SJMethod> _methods_1 = SmallJavaModelUtil.methods(_get_6);
-            SJMethod _get_7 = ((SJMethod[])Conversions.unwrapArray(_methods_1, SJMethod.class))[1];
-            SJMemberSelection _returnExpSel_1 = SmallJavaScopeProviderTest.this.returnExpSel(_get_7);
-            SJMember _member_1 = _returnExpSel_1.getMember();
-            Assert.assertSame(_get_5, _member_1);
-            SJClass _get_8 = it.get(0);
-            Iterable<SJField> _fields_2 = SmallJavaModelUtil.fields(_get_8);
-            SJField _get_9 = ((SJField[])Conversions.unwrapArray(_fields_2, SJField.class))[2];
-            SJClass _get_10 = it.get(2);
-            Iterable<SJMethod> _methods_2 = SmallJavaModelUtil.methods(_get_10);
-            SJMethod _get_11 = ((SJMethod[])Conversions.unwrapArray(_methods_2, SJMethod.class))[2];
-            SJMemberSelection _returnExpSel_2 = SmallJavaScopeProviderTest.this.returnExpSel(_get_11);
-            SJMember _member_2 = _returnExpSel_2.getMember();
-            Assert.assertSame(_get_9, _member_2);
-          }
-        };
+        public void apply(final EList<SJClass> it) {
+          SJClass _get = it.get(2);
+          Iterable<SJField> _fields = SmallJavaModelUtil.fields(_get);
+          SJField _get_1 = ((SJField[])Conversions.unwrapArray(_fields, SJField.class))[0];
+          SJClass _get_2 = it.get(2);
+          Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_get_2);
+          SJMethod _get_3 = ((SJMethod[])Conversions.unwrapArray(_methods, SJMethod.class))[0];
+          SJMemberSelection _returnExpSel = SmallJavaScopeProviderTest.this.returnExpSel(_get_3);
+          SJMember _member = _returnExpSel.getMember();
+          Assert.assertSame(_get_1, _member);
+          SJClass _get_4 = it.get(1);
+          Iterable<SJField> _fields_1 = SmallJavaModelUtil.fields(_get_4);
+          SJField _get_5 = ((SJField[])Conversions.unwrapArray(_fields_1, SJField.class))[0];
+          SJClass _get_6 = it.get(2);
+          Iterable<SJMethod> _methods_1 = SmallJavaModelUtil.methods(_get_6);
+          SJMethod _get_7 = ((SJMethod[])Conversions.unwrapArray(_methods_1, SJMethod.class))[1];
+          SJMemberSelection _returnExpSel_1 = SmallJavaScopeProviderTest.this.returnExpSel(_get_7);
+          SJMember _member_1 = _returnExpSel_1.getMember();
+          Assert.assertSame(_get_5, _member_1);
+          SJClass _get_8 = it.get(0);
+          Iterable<SJField> _fields_2 = SmallJavaModelUtil.fields(_get_8);
+          SJField _get_9 = ((SJField[])Conversions.unwrapArray(_fields_2, SJField.class))[2];
+          SJClass _get_10 = it.get(2);
+          Iterable<SJMethod> _methods_2 = SmallJavaModelUtil.methods(_get_10);
+          SJMethod _get_11 = ((SJMethod[])Conversions.unwrapArray(_methods_2, SJMethod.class))[2];
+          SJMemberSelection _returnExpSel_2 = SmallJavaScopeProviderTest.this.returnExpSel(_get_11);
+          SJMember _member_2 = _returnExpSel_2.getMember();
+          Assert.assertSame(_get_9, _member_2);
+        }
+      };
       ObjectExtensions.<EList<SJClass>>operator_doubleArrow(_classes, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -512,36 +512,36 @@ public class SmallJavaScopeProviderTest {
       SJProgram _parse = this._parseHelper.parse(_builder);
       EList<SJClass> _classes = _parse.getClasses();
       final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
-          public void apply(final EList<SJClass> it) {
-            SJClass _get = it.get(2);
-            Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_get);
-            SJMethod _get_1 = ((SJMethod[])Conversions.unwrapArray(_methods, SJMethod.class))[0];
-            SJClass _get_2 = it.get(2);
-            Iterable<SJMethod> _methods_1 = SmallJavaModelUtil.methods(_get_2);
-            SJMethod _get_3 = ((SJMethod[])Conversions.unwrapArray(_methods_1, SJMethod.class))[0];
-            SJMemberSelection _returnExpSel = SmallJavaScopeProviderTest.this.returnExpSel(_get_3);
-            SJMember _member = _returnExpSel.getMember();
-            Assert.assertSame(_get_1, _member);
-            SJClass _get_4 = it.get(1);
-            Iterable<SJMethod> _methods_2 = SmallJavaModelUtil.methods(_get_4);
-            SJMethod _get_5 = ((SJMethod[])Conversions.unwrapArray(_methods_2, SJMethod.class))[0];
-            SJClass _get_6 = it.get(2);
-            Iterable<SJMethod> _methods_3 = SmallJavaModelUtil.methods(_get_6);
-            SJMethod _get_7 = ((SJMethod[])Conversions.unwrapArray(_methods_3, SJMethod.class))[1];
-            SJMemberSelection _returnExpSel_1 = SmallJavaScopeProviderTest.this.returnExpSel(_get_7);
-            SJMember _member_1 = _returnExpSel_1.getMember();
-            Assert.assertSame(_get_5, _member_1);
-            SJClass _get_8 = it.get(0);
-            Iterable<SJMethod> _methods_4 = SmallJavaModelUtil.methods(_get_8);
-            SJMethod _get_9 = ((SJMethod[])Conversions.unwrapArray(_methods_4, SJMethod.class))[2];
-            SJClass _get_10 = it.get(2);
-            Iterable<SJMethod> _methods_5 = SmallJavaModelUtil.methods(_get_10);
-            SJMethod _get_11 = ((SJMethod[])Conversions.unwrapArray(_methods_5, SJMethod.class))[2];
-            SJMemberSelection _returnExpSel_2 = SmallJavaScopeProviderTest.this.returnExpSel(_get_11);
-            SJMember _member_2 = _returnExpSel_2.getMember();
-            Assert.assertSame(_get_9, _member_2);
-          }
-        };
+        public void apply(final EList<SJClass> it) {
+          SJClass _get = it.get(2);
+          Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_get);
+          SJMethod _get_1 = ((SJMethod[])Conversions.unwrapArray(_methods, SJMethod.class))[0];
+          SJClass _get_2 = it.get(2);
+          Iterable<SJMethod> _methods_1 = SmallJavaModelUtil.methods(_get_2);
+          SJMethod _get_3 = ((SJMethod[])Conversions.unwrapArray(_methods_1, SJMethod.class))[0];
+          SJMemberSelection _returnExpSel = SmallJavaScopeProviderTest.this.returnExpSel(_get_3);
+          SJMember _member = _returnExpSel.getMember();
+          Assert.assertSame(_get_1, _member);
+          SJClass _get_4 = it.get(1);
+          Iterable<SJMethod> _methods_2 = SmallJavaModelUtil.methods(_get_4);
+          SJMethod _get_5 = ((SJMethod[])Conversions.unwrapArray(_methods_2, SJMethod.class))[0];
+          SJClass _get_6 = it.get(2);
+          Iterable<SJMethod> _methods_3 = SmallJavaModelUtil.methods(_get_6);
+          SJMethod _get_7 = ((SJMethod[])Conversions.unwrapArray(_methods_3, SJMethod.class))[1];
+          SJMemberSelection _returnExpSel_1 = SmallJavaScopeProviderTest.this.returnExpSel(_get_7);
+          SJMember _member_1 = _returnExpSel_1.getMember();
+          Assert.assertSame(_get_5, _member_1);
+          SJClass _get_8 = it.get(0);
+          Iterable<SJMethod> _methods_4 = SmallJavaModelUtil.methods(_get_8);
+          SJMethod _get_9 = ((SJMethod[])Conversions.unwrapArray(_methods_4, SJMethod.class))[2];
+          SJClass _get_10 = it.get(2);
+          Iterable<SJMethod> _methods_5 = SmallJavaModelUtil.methods(_get_10);
+          SJMethod _get_11 = ((SJMethod[])Conversions.unwrapArray(_methods_5, SJMethod.class))[2];
+          SJMemberSelection _returnExpSel_2 = SmallJavaScopeProviderTest.this.returnExpSel(_get_11);
+          SJMember _member_2 = _returnExpSel_2.getMember();
+          Assert.assertSame(_get_9, _member_2);
+        }
+      };
       ObjectExtensions.<EList<SJClass>>operator_doubleArrow(_classes, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -576,14 +576,14 @@ public class SmallJavaScopeProviderTest {
       Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_head);
       SJMethod _head_1 = IterableExtensions.<SJMethod>head(_methods);
       final Procedure1<SJMethod> _function = new Procedure1<SJMethod>() {
-          public void apply(final SJMethod it) {
-            SJReturn _returnStatement = SmallJavaModelUtil.returnStatement(it);
-            SJExpression _expression = _returnStatement.getExpression();
-            EReference _sJSymbolRef_Symbol = SmallJavaPackage.eINSTANCE.getSJSymbolRef_Symbol();
-            SmallJavaScopeProviderTest.this.assertScope(_expression, _sJSymbolRef_Symbol, 
-              "a");
-          }
-        };
+        public void apply(final SJMethod it) {
+          SJReturn _returnStatement = SmallJavaModelUtil.returnStatement(it);
+          SJExpression _expression = _returnStatement.getExpression();
+          EReference _sJSymbolRef_Symbol = SmallJavaPackage.eINSTANCE.getSJSymbolRef_Symbol();
+          SmallJavaScopeProviderTest.this.assertScope(_expression, _sJSymbolRef_Symbol, 
+            "a");
+        }
+      };
       ObjectExtensions.<SJMethod>operator_doubleArrow(_head_1, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -628,23 +628,23 @@ public class SmallJavaScopeProviderTest {
       EList<SJClass> _classes = _parse.getClasses();
       SJClass _head = IterableExtensions.<SJClass>head(_classes);
       final Procedure1<SJClass> _function = new Procedure1<SJClass>() {
-          public void apply(final SJClass it) {
-            Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(it);
-            SJMethod _head = IterableExtensions.<SJMethod>head(_methods);
-            Iterable<SJMethod> _methods_1 = SmallJavaModelUtil.methods(it);
-            SJMethod _head_1 = IterableExtensions.<SJMethod>head(_methods_1);
-            SJMemberSelection _returnExpSel = SmallJavaScopeProviderTest.this.returnExpSel(_head_1);
-            SJMember _member = _returnExpSel.getMember();
-            Assert.assertSame(_head, _member);
-            Iterable<SJField> _fields = SmallJavaModelUtil.fields(it);
-            SJField _last = IterableExtensions.<SJField>last(_fields);
-            Iterable<SJMethod> _methods_2 = SmallJavaModelUtil.methods(it);
-            SJMethod _last_1 = IterableExtensions.<SJMethod>last(_methods_2);
-            SJMemberSelection _returnExpSel_1 = SmallJavaScopeProviderTest.this.returnExpSel(_last_1);
-            SJMember _member_1 = _returnExpSel_1.getMember();
-            Assert.assertSame(_last, _member_1);
-          }
-        };
+        public void apply(final SJClass it) {
+          Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(it);
+          SJMethod _head = IterableExtensions.<SJMethod>head(_methods);
+          Iterable<SJMethod> _methods_1 = SmallJavaModelUtil.methods(it);
+          SJMethod _head_1 = IterableExtensions.<SJMethod>head(_methods_1);
+          SJMemberSelection _returnExpSel = SmallJavaScopeProviderTest.this.returnExpSel(_head_1);
+          SJMember _member = _returnExpSel.getMember();
+          Assert.assertSame(_head, _member);
+          Iterable<SJField> _fields = SmallJavaModelUtil.fields(it);
+          SJField _last = IterableExtensions.<SJField>last(_fields);
+          Iterable<SJMethod> _methods_2 = SmallJavaModelUtil.methods(it);
+          SJMethod _last_1 = IterableExtensions.<SJMethod>last(_methods_2);
+          SJMemberSelection _returnExpSel_1 = SmallJavaScopeProviderTest.this.returnExpSel(_last_1);
+          SJMember _member_1 = _returnExpSel_1.getMember();
+          Assert.assertSame(_last, _member_1);
+        }
+      };
       ObjectExtensions.<SJClass>operator_doubleArrow(_head, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -677,17 +677,17 @@ public class SmallJavaScopeProviderTest {
       Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_head);
       SJMethod _head_1 = IterableExtensions.<SJMethod>head(_methods);
       final Procedure1<SJMethod> _function = new Procedure1<SJMethod>() {
-          public void apply(final SJMethod it) {
-            SmallJavaScopeProviderTest.this._validationTestHelper.assertNoErrors(it);
-            SJMethodBody _body = it.getBody();
-            EList<SJStatement> _statements = _body.getStatements();
-            SJStatement _head = IterableExtensions.<SJStatement>head(_statements);
-            SJReturn _returnStatement = SmallJavaModelUtil.returnStatement(it);
-            SJExpression _expression = _returnStatement.getExpression();
-            SJSymbol _symbol = ((SJSymbolRef) _expression).getSymbol();
-            Assert.assertSame(_head, _symbol);
-          }
-        };
+        public void apply(final SJMethod it) {
+          SmallJavaScopeProviderTest.this._validationTestHelper.assertNoErrors(it);
+          SJMethodBody _body = it.getBody();
+          EList<SJStatement> _statements = _body.getStatements();
+          SJStatement _head = IterableExtensions.<SJStatement>head(_statements);
+          SJReturn _returnStatement = SmallJavaModelUtil.returnStatement(it);
+          SJExpression _expression = _returnStatement.getExpression();
+          SJSymbol _symbol = ((SJSymbolRef) _expression).getSymbol();
+          Assert.assertSame(_head, _symbol);
+        }
+      };
       ObjectExtensions.<SJMethod>operator_doubleArrow(_head_1, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -733,45 +733,45 @@ public class SmallJavaScopeProviderTest {
       SJProgram _parse = this._parseHelper.parse(_builder);
       EList<SJClass> _classes = _parse.getClasses();
       final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
-          public void apply(final EList<SJClass> it) {
-            SJClass _get = it.get(1);
-            Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_get);
-            SJMethod _get_1 = ((SJMethod[])Conversions.unwrapArray(_methods, SJMethod.class))[0];
-            SJClass _get_2 = it.get(1);
-            Iterable<SJMethod> _methods_1 = SmallJavaModelUtil.methods(_get_2);
-            SJMethod _get_3 = ((SJMethod[])Conversions.unwrapArray(_methods_1, SJMethod.class))[0];
-            SJMemberSelection _returnExpSel = SmallJavaScopeProviderTest.this.returnExpSel(_get_3);
-            SJMember _member = _returnExpSel.getMember();
-            Assert.assertSame(_get_1, _member);
-            SJClass _get_4 = it.get(0);
-            Iterable<SJMethod> _methods_2 = SmallJavaModelUtil.methods(_get_4);
-            SJMethod _get_5 = ((SJMethod[])Conversions.unwrapArray(_methods_2, SJMethod.class))[0];
-            SJClass _get_6 = it.get(1);
-            Iterable<SJMethod> _methods_3 = SmallJavaModelUtil.methods(_get_6);
-            SJMethod _get_7 = ((SJMethod[])Conversions.unwrapArray(_methods_3, SJMethod.class))[1];
-            SJMemberSelection _returnExpSel_1 = SmallJavaScopeProviderTest.this.returnExpSel(_get_7);
-            SJMember _member_1 = _returnExpSel_1.getMember();
-            Assert.assertSame(_get_5, _member_1);
-            SJClass _get_8 = it.get(1);
-            Iterable<SJField> _fields = SmallJavaModelUtil.fields(_get_8);
-            SJField _get_9 = ((SJField[])Conversions.unwrapArray(_fields, SJField.class))[0];
-            SJClass _get_10 = it.get(1);
-            Iterable<SJMethod> _methods_4 = SmallJavaModelUtil.methods(_get_10);
-            SJMethod _get_11 = ((SJMethod[])Conversions.unwrapArray(_methods_4, SJMethod.class))[2];
-            SJMemberSelection _returnExpSel_2 = SmallJavaScopeProviderTest.this.returnExpSel(_get_11);
-            SJMember _member_2 = _returnExpSel_2.getMember();
-            Assert.assertSame(_get_9, _member_2);
-            SJClass _get_12 = it.get(0);
-            Iterable<SJField> _fields_1 = SmallJavaModelUtil.fields(_get_12);
-            SJField _get_13 = ((SJField[])Conversions.unwrapArray(_fields_1, SJField.class))[0];
-            SJClass _get_14 = it.get(1);
-            Iterable<SJMethod> _methods_5 = SmallJavaModelUtil.methods(_get_14);
-            SJMethod _get_15 = ((SJMethod[])Conversions.unwrapArray(_methods_5, SJMethod.class))[3];
-            SJMemberSelection _returnExpSel_3 = SmallJavaScopeProviderTest.this.returnExpSel(_get_15);
-            SJMember _member_3 = _returnExpSel_3.getMember();
-            Assert.assertSame(_get_13, _member_3);
-          }
-        };
+        public void apply(final EList<SJClass> it) {
+          SJClass _get = it.get(1);
+          Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_get);
+          SJMethod _get_1 = ((SJMethod[])Conversions.unwrapArray(_methods, SJMethod.class))[0];
+          SJClass _get_2 = it.get(1);
+          Iterable<SJMethod> _methods_1 = SmallJavaModelUtil.methods(_get_2);
+          SJMethod _get_3 = ((SJMethod[])Conversions.unwrapArray(_methods_1, SJMethod.class))[0];
+          SJMemberSelection _returnExpSel = SmallJavaScopeProviderTest.this.returnExpSel(_get_3);
+          SJMember _member = _returnExpSel.getMember();
+          Assert.assertSame(_get_1, _member);
+          SJClass _get_4 = it.get(0);
+          Iterable<SJMethod> _methods_2 = SmallJavaModelUtil.methods(_get_4);
+          SJMethod _get_5 = ((SJMethod[])Conversions.unwrapArray(_methods_2, SJMethod.class))[0];
+          SJClass _get_6 = it.get(1);
+          Iterable<SJMethod> _methods_3 = SmallJavaModelUtil.methods(_get_6);
+          SJMethod _get_7 = ((SJMethod[])Conversions.unwrapArray(_methods_3, SJMethod.class))[1];
+          SJMemberSelection _returnExpSel_1 = SmallJavaScopeProviderTest.this.returnExpSel(_get_7);
+          SJMember _member_1 = _returnExpSel_1.getMember();
+          Assert.assertSame(_get_5, _member_1);
+          SJClass _get_8 = it.get(1);
+          Iterable<SJField> _fields = SmallJavaModelUtil.fields(_get_8);
+          SJField _get_9 = ((SJField[])Conversions.unwrapArray(_fields, SJField.class))[0];
+          SJClass _get_10 = it.get(1);
+          Iterable<SJMethod> _methods_4 = SmallJavaModelUtil.methods(_get_10);
+          SJMethod _get_11 = ((SJMethod[])Conversions.unwrapArray(_methods_4, SJMethod.class))[2];
+          SJMemberSelection _returnExpSel_2 = SmallJavaScopeProviderTest.this.returnExpSel(_get_11);
+          SJMember _member_2 = _returnExpSel_2.getMember();
+          Assert.assertSame(_get_9, _member_2);
+          SJClass _get_12 = it.get(0);
+          Iterable<SJField> _fields_1 = SmallJavaModelUtil.fields(_get_12);
+          SJField _get_13 = ((SJField[])Conversions.unwrapArray(_fields_1, SJField.class))[0];
+          SJClass _get_14 = it.get(1);
+          Iterable<SJMethod> _methods_5 = SmallJavaModelUtil.methods(_get_14);
+          SJMethod _get_15 = ((SJMethod[])Conversions.unwrapArray(_methods_5, SJMethod.class))[3];
+          SJMemberSelection _returnExpSel_3 = SmallJavaScopeProviderTest.this.returnExpSel(_get_15);
+          SJMember _member_3 = _returnExpSel_3.getMember();
+          Assert.assertSame(_get_13, _member_3);
+        }
+      };
       ObjectExtensions.<EList<SJClass>>operator_doubleArrow(_classes, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -1047,11 +1047,11 @@ public class SmallJavaScopeProviderTest {
     IScope _scope = this._iScopeProvider.getScope(context, reference);
     Iterable<IEObjectDescription> _allElements = _scope.getAllElements();
     final Function1<IEObjectDescription,QualifiedName> _function = new Function1<IEObjectDescription,QualifiedName>() {
-        public QualifiedName apply(final IEObjectDescription it) {
-          QualifiedName _name = it.getName();
-          return _name;
-        }
-      };
+      public QualifiedName apply(final IEObjectDescription it) {
+        QualifiedName _name = it.getName();
+        return _name;
+      }
+    };
     Iterable<QualifiedName> _map = IterableExtensions.<IEObjectDescription, QualifiedName>map(_allElements, _function);
     String _join = IterableExtensions.join(_map, ", ");
     Assert.assertEquals(_string, _join);

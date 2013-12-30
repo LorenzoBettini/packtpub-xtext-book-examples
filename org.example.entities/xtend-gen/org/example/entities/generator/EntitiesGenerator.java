@@ -31,16 +31,16 @@ public class EntitiesGenerator implements IGenerator {
     Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
     Iterable<Entity> _filter = Iterables.<Entity>filter(_iterable, Entity.class);
     final Procedure1<Entity> _function = new Procedure1<Entity>() {
-        public void apply(final Entity it) {
-          StringConcatenation _builder = new StringConcatenation();
-          _builder.append("entities/");
-          String _name = it.getName();
-          _builder.append(_name, "");
-          _builder.append(".java");
-          CharSequence _compile = EntitiesGenerator.this.compile(it);
-          fsa.generateFile(_builder.toString(), _compile);
-        }
-      };
+      public void apply(final Entity it) {
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append("entities/");
+        String _name = it.getName();
+        _builder.append(_name, "");
+        _builder.append(".java");
+        CharSequence _compile = EntitiesGenerator.this.compile(it);
+        fsa.generateFile(_builder.toString(), _compile);
+      }
+    };
     IterableExtensions.<Entity>forEach(_filter, _function);
   }
   

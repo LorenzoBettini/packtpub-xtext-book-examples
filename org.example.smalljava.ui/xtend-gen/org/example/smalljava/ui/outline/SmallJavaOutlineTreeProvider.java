@@ -26,10 +26,10 @@ public class SmallJavaOutlineTreeProvider extends DefaultOutlineTreeProvider {
   public void _createChildren(final DocumentRootNode outlineNode, final SJProgram model) {
     EList<SJClass> _classes = model.getClasses();
     final Procedure1<SJClass> _function = new Procedure1<SJClass>() {
-        public void apply(final SJClass cl) {
-          SmallJavaOutlineTreeProvider.this.createNode(outlineNode, cl);
-        }
-      };
+      public void apply(final SJClass cl) {
+        SmallJavaOutlineTreeProvider.this.createNode(outlineNode, cl);
+      }
+    };
     IterableExtensions.<SJClass>forEach(_classes, _function);
   }
 }

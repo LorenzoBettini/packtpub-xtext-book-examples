@@ -179,14 +179,14 @@ public class ExpressionsInterpreterTest {
     try {
       ExpressionsModel _parse = this._parseHelper.parse(input);
       final Procedure1<ExpressionsModel> _function = new Procedure1<ExpressionsModel>() {
-          public void apply(final ExpressionsModel it) {
-            ExpressionsInterpreterTest.this._validationTestHelper.assertNoErrors(it);
-            EList<AbstractElement> _elements = it.getElements();
-            AbstractElement _last = IterableExtensions.<AbstractElement>last(_elements);
-            Object _interpret = ExpressionsInterpreterTest.this._expressionsInterpreter.interpret(_last);
-            Assert.assertEquals(expected, _interpret);
-          }
-        };
+        public void apply(final ExpressionsModel it) {
+          ExpressionsInterpreterTest.this._validationTestHelper.assertNoErrors(it);
+          EList<AbstractElement> _elements = it.getElements();
+          AbstractElement _last = IterableExtensions.<AbstractElement>last(_elements);
+          Object _interpret = ExpressionsInterpreterTest.this._expressionsInterpreter.interpret(_last);
+          Assert.assertEquals(expected, _interpret);
+        }
+      };
       ExpressionsModel _doubleArrow = ObjectExtensions.<ExpressionsModel>operator_doubleArrow(_parse, _function);
       return _doubleArrow;
     } catch (Throwable _e) {

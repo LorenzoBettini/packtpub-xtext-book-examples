@@ -35,15 +35,15 @@ public class SmallJavaResourceDescriptionsStrategy extends DefaultResourceDescri
       {
         EList<SJClass> _classes = ((SJProgram) eObject).getClasses();
         final Procedure1<SJClass> _function = new Procedure1<SJClass>() {
-            public void apply(final SJClass sjClass) {
-              final QualifiedName fullyQualifiedName = SmallJavaResourceDescriptionsStrategy.this._iQualifiedNameProvider.getFullyQualifiedName(sjClass);
-              boolean _notEquals = (!Objects.equal(fullyQualifiedName, null));
-              if (_notEquals) {
-                IEObjectDescription _create = EObjectDescription.create(fullyQualifiedName, sjClass);
-                acceptor.accept(_create);
-              }
+          public void apply(final SJClass sjClass) {
+            final QualifiedName fullyQualifiedName = SmallJavaResourceDescriptionsStrategy.this._iQualifiedNameProvider.getFullyQualifiedName(sjClass);
+            boolean _notEquals = (!Objects.equal(fullyQualifiedName, null));
+            if (_notEquals) {
+              IEObjectDescription _create = EObjectDescription.create(fullyQualifiedName, sjClass);
+              acceptor.accept(_create);
             }
-          };
+          }
+        };
         IterableExtensions.<SJClass>forEach(_classes, _function);
         _xblockexpression = (true);
       }

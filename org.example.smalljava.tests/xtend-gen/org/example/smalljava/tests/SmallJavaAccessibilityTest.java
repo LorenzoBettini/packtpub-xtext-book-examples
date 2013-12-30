@@ -125,57 +125,57 @@ public class SmallJavaAccessibilityTest {
       SJProgram _parse = this._parseHelper.parse(_builder);
       EList<SJClass> _classes = _parse.getClasses();
       final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
-          public void apply(final EList<SJClass> it) {
-            SJClass _get = it.get(0);
-            Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_get);
-            SJMethod _get_1 = ((SJMethod[])Conversions.unwrapArray(_methods, SJMethod.class))[0];
-            SJMethodBody _body = _get_1.getBody();
-            EList<SJStatement> _statements = _body.getStatements();
-            final Procedure1<EList<SJStatement>> _function = new Procedure1<EList<SJStatement>>() {
-                public void apply(final EList<SJStatement> it) {
-                  SJStatement _get = it.get(0);
-                  SmallJavaAccessibilityTest.this.assertMemberAccessible(_get, true);
-                  SJStatement _get_1 = it.get(1);
-                  SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_1, true);
-                  SJStatement _get_2 = it.get(2);
-                  SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_2, true);
-                }
-              };
-            ObjectExtensions.<EList<SJStatement>>operator_doubleArrow(_statements, _function);
-            SJClass _get_2 = it.get(1);
-            Iterable<SJMethod> _methods_1 = SmallJavaModelUtil.methods(_get_2);
-            SJMethod _get_3 = ((SJMethod[])Conversions.unwrapArray(_methods_1, SJMethod.class))[0];
-            SJMethodBody _body_1 = _get_3.getBody();
-            EList<SJStatement> _statements_1 = _body_1.getStatements();
-            final Procedure1<EList<SJStatement>> _function_1 = new Procedure1<EList<SJStatement>>() {
-                public void apply(final EList<SJStatement> it) {
-                  SJStatement _get = it.get(0);
-                  SmallJavaAccessibilityTest.this.assertMemberAccessible(_get, false);
-                  SJStatement _get_1 = it.get(1);
-                  SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_1, true);
-                  SJStatement _get_2 = it.get(2);
-                  SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_2, true);
-                }
-              };
-            ObjectExtensions.<EList<SJStatement>>operator_doubleArrow(_statements_1, _function_1);
-            SJClass _get_4 = it.get(2);
-            Iterable<SJMethod> _methods_2 = SmallJavaModelUtil.methods(_get_4);
-            SJMethod _get_5 = ((SJMethod[])Conversions.unwrapArray(_methods_2, SJMethod.class))[0];
-            SJMethodBody _body_2 = _get_5.getBody();
-            EList<SJStatement> _statements_2 = _body_2.getStatements();
-            final Procedure1<EList<SJStatement>> _function_2 = new Procedure1<EList<SJStatement>>() {
-                public void apply(final EList<SJStatement> it) {
-                  SJStatement _get = it.get(0);
-                  SmallJavaAccessibilityTest.this.assertMemberAccessible(_get, false);
-                  SJStatement _get_1 = it.get(1);
-                  SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_1, false);
-                  SJStatement _get_2 = it.get(2);
-                  SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_2, true);
-                }
-              };
-            ObjectExtensions.<EList<SJStatement>>operator_doubleArrow(_statements_2, _function_2);
-          }
-        };
+        public void apply(final EList<SJClass> it) {
+          SJClass _get = it.get(0);
+          Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_get);
+          SJMethod _get_1 = ((SJMethod[])Conversions.unwrapArray(_methods, SJMethod.class))[0];
+          SJMethodBody _body = _get_1.getBody();
+          EList<SJStatement> _statements = _body.getStatements();
+          final Procedure1<EList<SJStatement>> _function = new Procedure1<EList<SJStatement>>() {
+            public void apply(final EList<SJStatement> it) {
+              SJStatement _get = it.get(0);
+              SmallJavaAccessibilityTest.this.assertMemberAccessible(_get, true);
+              SJStatement _get_1 = it.get(1);
+              SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_1, true);
+              SJStatement _get_2 = it.get(2);
+              SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_2, true);
+            }
+          };
+          ObjectExtensions.<EList<SJStatement>>operator_doubleArrow(_statements, _function);
+          SJClass _get_2 = it.get(1);
+          Iterable<SJMethod> _methods_1 = SmallJavaModelUtil.methods(_get_2);
+          SJMethod _get_3 = ((SJMethod[])Conversions.unwrapArray(_methods_1, SJMethod.class))[0];
+          SJMethodBody _body_1 = _get_3.getBody();
+          EList<SJStatement> _statements_1 = _body_1.getStatements();
+          final Procedure1<EList<SJStatement>> _function_1 = new Procedure1<EList<SJStatement>>() {
+            public void apply(final EList<SJStatement> it) {
+              SJStatement _get = it.get(0);
+              SmallJavaAccessibilityTest.this.assertMemberAccessible(_get, false);
+              SJStatement _get_1 = it.get(1);
+              SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_1, true);
+              SJStatement _get_2 = it.get(2);
+              SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_2, true);
+            }
+          };
+          ObjectExtensions.<EList<SJStatement>>operator_doubleArrow(_statements_1, _function_1);
+          SJClass _get_4 = it.get(2);
+          Iterable<SJMethod> _methods_2 = SmallJavaModelUtil.methods(_get_4);
+          SJMethod _get_5 = ((SJMethod[])Conversions.unwrapArray(_methods_2, SJMethod.class))[0];
+          SJMethodBody _body_2 = _get_5.getBody();
+          EList<SJStatement> _statements_2 = _body_2.getStatements();
+          final Procedure1<EList<SJStatement>> _function_2 = new Procedure1<EList<SJStatement>>() {
+            public void apply(final EList<SJStatement> it) {
+              SJStatement _get = it.get(0);
+              SmallJavaAccessibilityTest.this.assertMemberAccessible(_get, false);
+              SJStatement _get_1 = it.get(1);
+              SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_1, false);
+              SJStatement _get_2 = it.get(2);
+              SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_2, true);
+            }
+          };
+          ObjectExtensions.<EList<SJStatement>>operator_doubleArrow(_statements_2, _function_2);
+        }
+      };
       ObjectExtensions.<EList<SJClass>>operator_doubleArrow(_classes, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -269,57 +269,57 @@ public class SmallJavaAccessibilityTest {
       SJProgram _parse = this._parseHelper.parse(_builder);
       EList<SJClass> _classes = _parse.getClasses();
       final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
-          public void apply(final EList<SJClass> it) {
-            SJClass _get = it.get(0);
-            Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_get);
-            SJMethod _last = IterableExtensions.<SJMethod>last(_methods);
-            SJMethodBody _body = _last.getBody();
-            EList<SJStatement> _statements = _body.getStatements();
-            final Procedure1<EList<SJStatement>> _function = new Procedure1<EList<SJStatement>>() {
-                public void apply(final EList<SJStatement> it) {
-                  SJStatement _get = it.get(0);
-                  SmallJavaAccessibilityTest.this.assertMemberAccessible(_get, true);
-                  SJStatement _get_1 = it.get(1);
-                  SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_1, true);
-                  SJStatement _get_2 = it.get(2);
-                  SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_2, true);
-                }
-              };
-            ObjectExtensions.<EList<SJStatement>>operator_doubleArrow(_statements, _function);
-            SJClass _get_1 = it.get(1);
-            Iterable<SJMethod> _methods_1 = SmallJavaModelUtil.methods(_get_1);
-            SJMethod _last_1 = IterableExtensions.<SJMethod>last(_methods_1);
-            SJMethodBody _body_1 = _last_1.getBody();
-            EList<SJStatement> _statements_1 = _body_1.getStatements();
-            final Procedure1<EList<SJStatement>> _function_1 = new Procedure1<EList<SJStatement>>() {
-                public void apply(final EList<SJStatement> it) {
-                  SJStatement _get = it.get(0);
-                  SmallJavaAccessibilityTest.this.assertMemberAccessible(_get, false);
-                  SJStatement _get_1 = it.get(1);
-                  SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_1, true);
-                  SJStatement _get_2 = it.get(2);
-                  SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_2, true);
-                }
-              };
-            ObjectExtensions.<EList<SJStatement>>operator_doubleArrow(_statements_1, _function_1);
-            SJClass _get_2 = it.get(2);
-            Iterable<SJMethod> _methods_2 = SmallJavaModelUtil.methods(_get_2);
-            SJMethod _last_2 = IterableExtensions.<SJMethod>last(_methods_2);
-            SJMethodBody _body_2 = _last_2.getBody();
-            EList<SJStatement> _statements_2 = _body_2.getStatements();
-            final Procedure1<EList<SJStatement>> _function_2 = new Procedure1<EList<SJStatement>>() {
-                public void apply(final EList<SJStatement> it) {
-                  SJStatement _get = it.get(0);
-                  SmallJavaAccessibilityTest.this.assertMemberAccessible(_get, false);
-                  SJStatement _get_1 = it.get(1);
-                  SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_1, false);
-                  SJStatement _get_2 = it.get(2);
-                  SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_2, true);
-                }
-              };
-            ObjectExtensions.<EList<SJStatement>>operator_doubleArrow(_statements_2, _function_2);
-          }
-        };
+        public void apply(final EList<SJClass> it) {
+          SJClass _get = it.get(0);
+          Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_get);
+          SJMethod _last = IterableExtensions.<SJMethod>last(_methods);
+          SJMethodBody _body = _last.getBody();
+          EList<SJStatement> _statements = _body.getStatements();
+          final Procedure1<EList<SJStatement>> _function = new Procedure1<EList<SJStatement>>() {
+            public void apply(final EList<SJStatement> it) {
+              SJStatement _get = it.get(0);
+              SmallJavaAccessibilityTest.this.assertMemberAccessible(_get, true);
+              SJStatement _get_1 = it.get(1);
+              SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_1, true);
+              SJStatement _get_2 = it.get(2);
+              SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_2, true);
+            }
+          };
+          ObjectExtensions.<EList<SJStatement>>operator_doubleArrow(_statements, _function);
+          SJClass _get_1 = it.get(1);
+          Iterable<SJMethod> _methods_1 = SmallJavaModelUtil.methods(_get_1);
+          SJMethod _last_1 = IterableExtensions.<SJMethod>last(_methods_1);
+          SJMethodBody _body_1 = _last_1.getBody();
+          EList<SJStatement> _statements_1 = _body_1.getStatements();
+          final Procedure1<EList<SJStatement>> _function_1 = new Procedure1<EList<SJStatement>>() {
+            public void apply(final EList<SJStatement> it) {
+              SJStatement _get = it.get(0);
+              SmallJavaAccessibilityTest.this.assertMemberAccessible(_get, false);
+              SJStatement _get_1 = it.get(1);
+              SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_1, true);
+              SJStatement _get_2 = it.get(2);
+              SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_2, true);
+            }
+          };
+          ObjectExtensions.<EList<SJStatement>>operator_doubleArrow(_statements_1, _function_1);
+          SJClass _get_2 = it.get(2);
+          Iterable<SJMethod> _methods_2 = SmallJavaModelUtil.methods(_get_2);
+          SJMethod _last_2 = IterableExtensions.<SJMethod>last(_methods_2);
+          SJMethodBody _body_2 = _last_2.getBody();
+          EList<SJStatement> _statements_2 = _body_2.getStatements();
+          final Procedure1<EList<SJStatement>> _function_2 = new Procedure1<EList<SJStatement>>() {
+            public void apply(final EList<SJStatement> it) {
+              SJStatement _get = it.get(0);
+              SmallJavaAccessibilityTest.this.assertMemberAccessible(_get, false);
+              SJStatement _get_1 = it.get(1);
+              SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_1, false);
+              SJStatement _get_2 = it.get(2);
+              SmallJavaAccessibilityTest.this.assertMemberAccessible(_get_2, true);
+            }
+          };
+          ObjectExtensions.<EList<SJStatement>>operator_doubleArrow(_statements_2, _function_2);
+        }
+      };
       ObjectExtensions.<EList<SJClass>>operator_doubleArrow(_classes, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);

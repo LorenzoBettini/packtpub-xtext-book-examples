@@ -47,14 +47,14 @@ public class ExpressionsModelUtilTest {
       _builder.newLine();
       ExpressionsModel _parse = this._parseHelper.parse(_builder);
       final Procedure1<ExpressionsModel> _function = new Procedure1<ExpressionsModel>() {
-          public void apply(final ExpressionsModel it) {
-            ExpressionsModelUtilTest.this.assertVariablesDefinedBefore(it, 0, "");
-            ExpressionsModelUtilTest.this.assertVariablesDefinedBefore(it, 1, "");
-            ExpressionsModelUtilTest.this.assertVariablesDefinedBefore(it, 2, "i");
-            ExpressionsModelUtilTest.this.assertVariablesDefinedBefore(it, 3, "i");
-            ExpressionsModelUtilTest.this.assertVariablesDefinedBefore(it, 4, "i,j");
-          }
-        };
+        public void apply(final ExpressionsModel it) {
+          ExpressionsModelUtilTest.this.assertVariablesDefinedBefore(it, 0, "");
+          ExpressionsModelUtilTest.this.assertVariablesDefinedBefore(it, 1, "");
+          ExpressionsModelUtilTest.this.assertVariablesDefinedBefore(it, 2, "i");
+          ExpressionsModelUtilTest.this.assertVariablesDefinedBefore(it, 3, "i");
+          ExpressionsModelUtilTest.this.assertVariablesDefinedBefore(it, 4, "i,j");
+        }
+      };
       ObjectExtensions.<ExpressionsModel>operator_doubleArrow(_parse, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -66,11 +66,11 @@ public class ExpressionsModelUtilTest {
     AbstractElement _get = _elements.get(elemIndex);
     List<Variable> _variablesDefinedBefore = ExpressionsModelUtil.variablesDefinedBefore(_get);
     final Function1<Variable,String> _function = new Function1<Variable,String>() {
-        public String apply(final Variable it) {
-          String _name = it.getName();
-          return _name;
-        }
-      };
+      public String apply(final Variable it) {
+        String _name = it.getName();
+        return _name;
+      }
+    };
     List<String> _map = ListExtensions.<Variable, String>map(_variablesDefinedBefore, _function);
     String _join = IterableExtensions.join(_map, ",");
     Assert.assertEquals(expectedVars, _join);

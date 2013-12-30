@@ -54,12 +54,12 @@ public class SmallJavaValidatorTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
-          public void apply(final SJProgram it) {
-            SmallJavaValidatorTest.this.assertHierarchyCycle(it, "A");
-            SmallJavaValidatorTest.this.assertHierarchyCycle(it, "B");
-            SmallJavaValidatorTest.this.assertHierarchyCycle(it, "C");
-          }
-        };
+        public void apply(final SJProgram it) {
+          SmallJavaValidatorTest.this.assertHierarchyCycle(it, "A");
+          SmallJavaValidatorTest.this.assertHierarchyCycle(it, "B");
+          SmallJavaValidatorTest.this.assertHierarchyCycle(it, "C");
+        }
+      };
       ObjectExtensions.<SJProgram>operator_doubleArrow(_parse, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -363,17 +363,17 @@ public class SmallJavaValidatorTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
-          public void apply(final SJProgram it) {
-            EClass _sJSymbolRef = SmallJavaPackage.eINSTANCE.getSJSymbolRef();
-            SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJSymbolRef, 
-              Diagnostic.LINKING_DIAGNOSTIC, 
-              "Couldn\'t resolve reference to SJSymbol \'v6\'");
-            EClass _sJSymbolRef_1 = SmallJavaPackage.eINSTANCE.getSJSymbolRef();
-            SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJSymbolRef_1, 
-              Diagnostic.LINKING_DIAGNOSTIC, 
-              "Couldn\'t resolve reference to SJSymbol \'v5\'");
-          }
-        };
+        public void apply(final SJProgram it) {
+          EClass _sJSymbolRef = SmallJavaPackage.eINSTANCE.getSJSymbolRef();
+          SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJSymbolRef, 
+            Diagnostic.LINKING_DIAGNOSTIC, 
+            "Couldn\'t resolve reference to SJSymbol \'v6\'");
+          EClass _sJSymbolRef_1 = SmallJavaPackage.eINSTANCE.getSJSymbolRef();
+          SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJSymbolRef_1, 
+            Diagnostic.LINKING_DIAGNOSTIC, 
+            "Couldn\'t resolve reference to SJSymbol \'v5\'");
+        }
+      };
       ObjectExtensions.<SJProgram>operator_doubleArrow(_parse, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -440,16 +440,16 @@ public class SmallJavaValidatorTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
-          public void apply(final SJProgram it) {
-            List<Issue> _validate = SmallJavaValidatorTest.this._validationTestHelper.validate(it);
-            int _size = _validate.size();
-            Assert.assertEquals(1, _size);
-            EClass _sJMemberSelection = SmallJavaPackage.eINSTANCE.getSJMemberSelection();
-            SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJMemberSelection, 
-              SmallJavaValidator.MEMBER_NOT_ACCESSIBLE, 
-              "The private member priv is not accessible here");
-          }
-        };
+        public void apply(final SJProgram it) {
+          List<Issue> _validate = SmallJavaValidatorTest.this._validationTestHelper.validate(it);
+          int _size = _validate.size();
+          Assert.assertEquals(1, _size);
+          EClass _sJMemberSelection = SmallJavaPackage.eINSTANCE.getSJMemberSelection();
+          SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJMemberSelection, 
+            SmallJavaValidator.MEMBER_NOT_ACCESSIBLE, 
+            "The private member priv is not accessible here");
+        }
+      };
       ObjectExtensions.<SJProgram>operator_doubleArrow(_parse, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -516,20 +516,20 @@ public class SmallJavaValidatorTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
-          public void apply(final SJProgram it) {
-            List<Issue> _validate = SmallJavaValidatorTest.this._validationTestHelper.validate(it);
-            int _size = _validate.size();
-            Assert.assertEquals(2, _size);
-            EClass _sJMemberSelection = SmallJavaPackage.eINSTANCE.getSJMemberSelection();
-            SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJMemberSelection, 
-              SmallJavaValidator.MEMBER_NOT_ACCESSIBLE, 
-              "The private member priv is not accessible here");
-            EClass _sJMemberSelection_1 = SmallJavaPackage.eINSTANCE.getSJMemberSelection();
-            SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJMemberSelection_1, 
-              SmallJavaValidator.MEMBER_NOT_ACCESSIBLE, 
-              "The protected member prot is not accessible here");
-          }
-        };
+        public void apply(final SJProgram it) {
+          List<Issue> _validate = SmallJavaValidatorTest.this._validationTestHelper.validate(it);
+          int _size = _validate.size();
+          Assert.assertEquals(2, _size);
+          EClass _sJMemberSelection = SmallJavaPackage.eINSTANCE.getSJMemberSelection();
+          SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJMemberSelection, 
+            SmallJavaValidator.MEMBER_NOT_ACCESSIBLE, 
+            "The private member priv is not accessible here");
+          EClass _sJMemberSelection_1 = SmallJavaPackage.eINSTANCE.getSJMemberSelection();
+          SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJMemberSelection_1, 
+            SmallJavaValidator.MEMBER_NOT_ACCESSIBLE, 
+            "The protected member prot is not accessible here");
+        }
+      };
       ObjectExtensions.<SJProgram>operator_doubleArrow(_parse, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -602,16 +602,16 @@ public class SmallJavaValidatorTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
-          public void apply(final SJProgram it) {
-            List<Issue> _validate = SmallJavaValidatorTest.this._validationTestHelper.validate(it);
-            int _size = _validate.size();
-            Assert.assertEquals(1, _size);
-            EClass _sJMemberSelection = SmallJavaPackage.eINSTANCE.getSJMemberSelection();
-            SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJMemberSelection, 
-              SmallJavaValidator.MEMBER_NOT_ACCESSIBLE, 
-              "The private member priv is not accessible here");
-          }
-        };
+        public void apply(final SJProgram it) {
+          List<Issue> _validate = SmallJavaValidatorTest.this._validationTestHelper.validate(it);
+          int _size = _validate.size();
+          Assert.assertEquals(1, _size);
+          EClass _sJMemberSelection = SmallJavaPackage.eINSTANCE.getSJMemberSelection();
+          SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJMemberSelection, 
+            SmallJavaValidator.MEMBER_NOT_ACCESSIBLE, 
+            "The private member priv is not accessible here");
+        }
+      };
       ObjectExtensions.<SJProgram>operator_doubleArrow(_parse, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -684,20 +684,20 @@ public class SmallJavaValidatorTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
-          public void apply(final SJProgram it) {
-            List<Issue> _validate = SmallJavaValidatorTest.this._validationTestHelper.validate(it);
-            int _size = _validate.size();
-            Assert.assertEquals(2, _size);
-            EClass _sJMemberSelection = SmallJavaPackage.eINSTANCE.getSJMemberSelection();
-            SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJMemberSelection, 
-              SmallJavaValidator.MEMBER_NOT_ACCESSIBLE, 
-              "The private member priv is not accessible here");
-            EClass _sJMemberSelection_1 = SmallJavaPackage.eINSTANCE.getSJMemberSelection();
-            SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJMemberSelection_1, 
-              SmallJavaValidator.MEMBER_NOT_ACCESSIBLE, 
-              "The protected member prot is not accessible here");
-          }
-        };
+        public void apply(final SJProgram it) {
+          List<Issue> _validate = SmallJavaValidatorTest.this._validationTestHelper.validate(it);
+          int _size = _validate.size();
+          Assert.assertEquals(2, _size);
+          EClass _sJMemberSelection = SmallJavaPackage.eINSTANCE.getSJMemberSelection();
+          SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJMemberSelection, 
+            SmallJavaValidator.MEMBER_NOT_ACCESSIBLE, 
+            "The private member priv is not accessible here");
+          EClass _sJMemberSelection_1 = SmallJavaPackage.eINSTANCE.getSJMemberSelection();
+          SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJMemberSelection_1, 
+            SmallJavaValidator.MEMBER_NOT_ACCESSIBLE, 
+            "The protected member prot is not accessible here");
+        }
+      };
       ObjectExtensions.<SJProgram>operator_doubleArrow(_parse, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -833,15 +833,15 @@ public class SmallJavaValidatorTest {
   @Test
   public void assertArgExpIncompatibleTypes() {
     final Procedure1<String> _function = new Procedure1<String>() {
-        public void apply(final String it) {
-          EClass _sJNew = SmallJavaPackage.eINSTANCE.getSJNew();
-          SmallJavaValidatorTest.this.assertIncompatibleTypes(it, _sJNew, 
-            "P1", "F");
-          EClass _sJNew_1 = SmallJavaPackage.eINSTANCE.getSJNew();
-          SmallJavaValidatorTest.this.assertIncompatibleTypes(it, _sJNew_1, 
-            "P2", "V");
-        }
-      };
+      public void apply(final String it) {
+        EClass _sJNew = SmallJavaPackage.eINSTANCE.getSJNew();
+        SmallJavaValidatorTest.this.assertIncompatibleTypes(it, _sJNew, 
+          "P1", "F");
+        EClass _sJNew_1 = SmallJavaPackage.eINSTANCE.getSJNew();
+        SmallJavaValidatorTest.this.assertIncompatibleTypes(it, _sJNew_1, 
+          "P2", "V");
+      }
+    };
     ObjectExtensions.<String>operator_doubleArrow(
       "this.n(new F(), new V());", _function);
   }
@@ -955,16 +955,16 @@ public class SmallJavaValidatorTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
-          public void apply(final SJProgram it) {
-            EClass _sJMethod = SmallJavaPackage.eINSTANCE.getSJMethod();
-            SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJMethod, 
-              SmallJavaValidator.WRONG_METHOD_OVERRIDE, 
-              "The method \'m\' must override a superclass method");
-            List<Issue> _validate = SmallJavaValidatorTest.this._validationTestHelper.validate(it);
-            int _size = _validate.size();
-            Assert.assertEquals(1, _size);
-          }
-        };
+        public void apply(final SJProgram it) {
+          EClass _sJMethod = SmallJavaPackage.eINSTANCE.getSJMethod();
+          SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJMethod, 
+            SmallJavaValidator.WRONG_METHOD_OVERRIDE, 
+            "The method \'m\' must override a superclass method");
+          List<Issue> _validate = SmallJavaValidatorTest.this._validationTestHelper.validate(it);
+          int _size = _validate.size();
+          Assert.assertEquals(1, _size);
+        }
+      };
       ObjectExtensions.<SJProgram>operator_doubleArrow(_parse, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);

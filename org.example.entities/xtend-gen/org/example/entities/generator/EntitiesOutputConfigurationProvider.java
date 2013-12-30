@@ -14,11 +14,11 @@ public class EntitiesOutputConfigurationProvider extends OutputConfigurationProv
   public Set<OutputConfiguration> getOutputConfigurations() {
     Set<OutputConfiguration> _outputConfigurations = super.getOutputConfigurations();
     final Procedure1<Set<OutputConfiguration>> _function = new Procedure1<Set<OutputConfiguration>>() {
-        public void apply(final Set<OutputConfiguration> it) {
-          OutputConfiguration _head = IterableExtensions.<OutputConfiguration>head(it);
-          _head.setOutputDirectory(EntitiesOutputConfigurationProvider.this.ENTITIES_GEN);
-        }
-      };
+      public void apply(final Set<OutputConfiguration> it) {
+        OutputConfiguration _head = IterableExtensions.<OutputConfiguration>head(it);
+        _head.setOutputDirectory(EntitiesOutputConfigurationProvider.this.ENTITIES_GEN);
+      }
+    };
     Set<OutputConfiguration> _doubleArrow = ObjectExtensions.<Set<OutputConfiguration>>operator_doubleArrow(_outputConfigurations, _function);
     return _doubleArrow;
   }

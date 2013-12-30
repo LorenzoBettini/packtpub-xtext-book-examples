@@ -193,10 +193,10 @@ public class EntitiesCompilerTest {
       _builder.append("}");
       _builder.newLine();
       final IAcceptor<Result> _function = new IAcceptor<Result>() {
-          public void accept(final Result it) {
-            it.getCompiledClass();
-          }
-        };
+        public void accept(final Result it) {
+          it.getCompiledClass();
+        }
+      };
       this._compilationTestHelper.compile(_builder, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -410,28 +410,28 @@ public class EntitiesCompilerTest {
       _builder.newLine();
       _builder.append("}");
       final IAcceptor<Result> _function = new IAcceptor<Result>() {
-          public void accept(final Result it) {
-            try {
-              Class<? extends Object> _compiledClass = it.getCompiledClass();
-              final Object obj = _compiledClass.newInstance();
-              StringConcatenation _builder = new StringConcatenation();
-              _builder.append("entity C {");
-              _builder.newLine();
-              _builder.append("\t");
-              _builder.append("l = [1, 2, 3]");
-              _builder.newLine();
-              _builder.append("\t");
-              _builder.append("s = test");
-              _builder.newLine();
-              _builder.append("}");
-              String _string = _builder.toString();
-              Object _invoke = EntitiesCompilerTest.this._reflectExtensions.invoke(obj, "toString");
-              Assert.assertEquals(_string, _invoke);
-            } catch (Throwable _e) {
-              throw Exceptions.sneakyThrow(_e);
-            }
+        public void accept(final Result it) {
+          try {
+            Class<? extends Object> _compiledClass = it.getCompiledClass();
+            final Object obj = _compiledClass.newInstance();
+            StringConcatenation _builder = new StringConcatenation();
+            _builder.append("entity C {");
+            _builder.newLine();
+            _builder.append("\t");
+            _builder.append("l = [1, 2, 3]");
+            _builder.newLine();
+            _builder.append("\t");
+            _builder.append("s = test");
+            _builder.newLine();
+            _builder.append("}");
+            String _string = _builder.toString();
+            Object _invoke = EntitiesCompilerTest.this._reflectExtensions.invoke(obj, "toString");
+            Assert.assertEquals(_string, _invoke);
+          } catch (Throwable _e) {
+            throw Exceptions.sneakyThrow(_e);
           }
-        };
+        }
+      };
       this._compilationTestHelper.compile(_builder, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);

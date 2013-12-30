@@ -37,33 +37,33 @@ public class ExpressionsGenerator implements IGenerator {
     Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
     Iterable<ExpressionsModel> _filter = Iterables.<ExpressionsModel>filter(_iterable, ExpressionsModel.class);
     final Procedure1<ExpressionsModel> _function = new Procedure1<ExpressionsModel>() {
-        public void apply(final ExpressionsModel it) {
-          StringConcatenation _builder = new StringConcatenation();
-          URI _uRI = resource.getURI();
-          String _lastSegment = _uRI.lastSegment();
-          _builder.append(_lastSegment, "");
-          _builder.append(".evaluated");
-          String _interpretExpressions = ExpressionsGenerator.this.interpretExpressions(it);
-          fsa.generateFile(_builder.toString(), _interpretExpressions);
-        }
-      };
+      public void apply(final ExpressionsModel it) {
+        StringConcatenation _builder = new StringConcatenation();
+        URI _uRI = resource.getURI();
+        String _lastSegment = _uRI.lastSegment();
+        _builder.append(_lastSegment, "");
+        _builder.append(".evaluated");
+        String _interpretExpressions = ExpressionsGenerator.this.interpretExpressions(it);
+        fsa.generateFile(_builder.toString(), _interpretExpressions);
+      }
+    };
     IterableExtensions.<ExpressionsModel>forEach(_filter, _function);
   }
   
   public String interpretExpressions(final ExpressionsModel model) {
     EList<AbstractElement> _elements = model.getElements();
     final Function1<AbstractElement,String> _function = new Function1<AbstractElement,String>() {
-        public String apply(final AbstractElement it) {
-          StringConcatenation _builder = new StringConcatenation();
-          ICompositeNode _node = NodeModelUtils.getNode(it);
-          String _tokenText = NodeModelUtils.getTokenText(_node);
-          _builder.append(_tokenText, "");
-          _builder.append(" ~> ");
-          Object _interpret = ExpressionsGenerator.this._expressionsInterpreter.interpret(it);
-          _builder.append(_interpret, "");
-          return _builder.toString();
-        }
-      };
+      public String apply(final AbstractElement it) {
+        StringConcatenation _builder = new StringConcatenation();
+        ICompositeNode _node = NodeModelUtils.getNode(it);
+        String _tokenText = NodeModelUtils.getTokenText(_node);
+        _builder.append(_tokenText, "");
+        _builder.append(" ~> ");
+        Object _interpret = ExpressionsGenerator.this._expressionsInterpreter.interpret(it);
+        _builder.append(_interpret, "");
+        return _builder.toString();
+      }
+    };
     List<String> _map = ListExtensions.<AbstractElement, String>map(_elements, _function);
     String _join = IterableExtensions.join(_map, "\n");
     return _join;

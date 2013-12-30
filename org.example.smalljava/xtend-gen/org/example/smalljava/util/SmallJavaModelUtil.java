@@ -130,15 +130,15 @@ public class SmallJavaModelUtil {
   public static String paramsTypesAsString(final SJMethod m) {
     EList<SJParameter> _params = m.getParams();
     final Function1<SJParameter,String> _function = new Function1<SJParameter,String>() {
-        public String apply(final SJParameter it) {
-          SJClass _type = it.getType();
-          String _name = null;
-          if (_type!=null) {
-            _name=_type.getName();
-          }
-          return _name;
+      public String apply(final SJParameter it) {
+        SJClass _type = it.getType();
+        String _name = null;
+        if (_type!=null) {
+          _name=_type.getName();
         }
-      };
+        return _name;
+      }
+    };
     List<String> _map = ListExtensions.<SJParameter, String>map(_params, _function);
     String _join = IterableExtensions.join(_map, ", ");
     return _join;

@@ -76,13 +76,13 @@ public class SmallJavaIndexTest {
       SJClass _head = IterableExtensions.<SJClass>head(_classes);
       EList<SJMember> _members = _head.getMembers();
       final Procedure1<EList<SJMember>> _function = new Procedure1<EList<SJMember>>() {
-          public void apply(final EList<SJMember> it) {
-            SJMember _get = it.get(0);
-            SmallJavaIndexTest.this.assertDescriptions(_get, "");
-            SJMember _get_1 = it.get(1);
-            SmallJavaIndexTest.this.assertDescriptions(_get_1, "");
-          }
-        };
+        public void apply(final EList<SJMember> it) {
+          SJMember _get = it.get(0);
+          SmallJavaIndexTest.this.assertDescriptions(_get, "");
+          SJMember _get_1 = it.get(1);
+          SmallJavaIndexTest.this.assertDescriptions(_get_1, "");
+        }
+      };
       ObjectExtensions.<EList<SJMember>>operator_doubleArrow(_members, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -249,11 +249,11 @@ public class SmallJavaIndexTest {
       EClass _eClass = o.eClass();
       Iterable<IEObjectDescription> _visibleEObjectDescriptions = this._smallJavaIndex.getVisibleEObjectDescriptions(o, _eClass);
       final Function1<IEObjectDescription,QualifiedName> _function = new Function1<IEObjectDescription,QualifiedName>() {
-          public QualifiedName apply(final IEObjectDescription it) {
-            QualifiedName _qualifiedName = it.getQualifiedName();
-            return _qualifiedName;
-          }
-        };
+        public QualifiedName apply(final IEObjectDescription it) {
+          QualifiedName _qualifiedName = it.getQualifiedName();
+          return _qualifiedName;
+        }
+      };
       Iterable<QualifiedName> _map = IterableExtensions.<IEObjectDescription, QualifiedName>map(_visibleEObjectDescriptions, _function);
       String _join = IterableExtensions.join(_map, ",");
       _xblockexpression = (_join);
@@ -271,11 +271,11 @@ public class SmallJavaIndexTest {
     String _string = expected.toString();
     Iterable<IEObjectDescription> _exportedEObjectDescriptions = this._smallJavaIndex.getExportedEObjectDescriptions(o);
     final Function1<IEObjectDescription,QualifiedName> _function = new Function1<IEObjectDescription,QualifiedName>() {
-        public QualifiedName apply(final IEObjectDescription it) {
-          QualifiedName _qualifiedName = it.getQualifiedName();
-          return _qualifiedName;
-        }
-      };
+      public QualifiedName apply(final IEObjectDescription it) {
+        QualifiedName _qualifiedName = it.getQualifiedName();
+        return _qualifiedName;
+      }
+    };
     Iterable<QualifiedName> _map = IterableExtensions.<IEObjectDescription, QualifiedName>map(_exportedEObjectDescriptions, _function);
     String _join = IterableExtensions.join(_map, ", ");
     Assert.assertEquals(_string, _join);
@@ -287,11 +287,11 @@ public class SmallJavaIndexTest {
       this._validationTestHelper.assertNoErrors(o);
       Iterable<IEObjectDescription> _visibleEObjectDescriptions = this._smallJavaIndex.getVisibleEObjectDescriptions(o);
       final Function1<IEObjectDescription,QualifiedName> _function = new Function1<IEObjectDescription,QualifiedName>() {
-          public QualifiedName apply(final IEObjectDescription it) {
-            QualifiedName _qualifiedName = it.getQualifiedName();
-            return _qualifiedName;
-          }
-        };
+        public QualifiedName apply(final IEObjectDescription it) {
+          QualifiedName _qualifiedName = it.getQualifiedName();
+          return _qualifiedName;
+        }
+      };
       Iterable<QualifiedName> _map = IterableExtensions.<IEObjectDescription, QualifiedName>map(_visibleEObjectDescriptions, _function);
       String _join = IterableExtensions.join(_map, ",");
       _xblockexpression = (_join);
@@ -303,11 +303,11 @@ public class SmallJavaIndexTest {
     this._validationTestHelper.assertNoErrors(o);
     Iterable<IEObjectDescription> _visibleClassesDescriptions = this._smallJavaIndex.getVisibleClassesDescriptions(o);
     final Function1<IEObjectDescription,QualifiedName> _function = new Function1<IEObjectDescription,QualifiedName>() {
-        public QualifiedName apply(final IEObjectDescription it) {
-          QualifiedName _qualifiedName = it.getQualifiedName();
-          return _qualifiedName;
-        }
-      };
+      public QualifiedName apply(final IEObjectDescription it) {
+        QualifiedName _qualifiedName = it.getQualifiedName();
+        return _qualifiedName;
+      }
+    };
     Iterable<QualifiedName> _map = IterableExtensions.<IEObjectDescription, QualifiedName>map(_visibleClassesDescriptions, _function);
     String _join = IterableExtensions.join(_map, ",");
     Assert.assertEquals(expected, _join);

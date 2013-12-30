@@ -18,11 +18,11 @@ public class ExpressionsModelUtil {
       ExpressionsModel _containerOfType = EcoreUtil2.<ExpressionsModel>getContainerOfType(e, ExpressionsModel.class);
       final EList<AbstractElement> allElements = _containerOfType.getElements();
       final Function1<AbstractElement,Boolean> _function = new Function1<AbstractElement,Boolean>() {
-          public Boolean apply(final AbstractElement it) {
-            boolean _isAncestor = EcoreUtil.isAncestor(it, e);
-            return Boolean.valueOf(_isAncestor);
-          }
-        };
+        public Boolean apply(final AbstractElement it) {
+          boolean _isAncestor = EcoreUtil.isAncestor(it, e);
+          return Boolean.valueOf(_isAncestor);
+        }
+      };
       final AbstractElement containingElement = IterableExtensions.<AbstractElement>findFirst(allElements, _function);
       int _indexOf = allElements.indexOf(containingElement);
       List<AbstractElement> _subList = allElements.subList(0, _indexOf);

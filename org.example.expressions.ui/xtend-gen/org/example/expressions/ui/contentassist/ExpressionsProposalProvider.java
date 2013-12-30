@@ -28,14 +28,14 @@ public class ExpressionsProposalProvider extends AbstractExpressionsProposalProv
     }
     List<Variable> _variablesDefinedBefore = ExpressionsModelUtil.variablesDefinedBefore(((AbstractElement) elem));
     final Procedure1<Variable> _function = new Procedure1<Variable>() {
-        public void apply(final Variable variable) {
-          String _name = variable.getName();
-          String _name_1 = variable.getName();
-          String _plus = (_name_1 + " - Variable");
-          ICompletionProposal _createCompletionProposal = ExpressionsProposalProvider.this.createCompletionProposal(_name, _plus, null, context);
-          acceptor.accept(_createCompletionProposal);
-        }
-      };
+      public void apply(final Variable variable) {
+        String _name = variable.getName();
+        String _name_1 = variable.getName();
+        String _plus = (_name_1 + " - Variable");
+        ICompletionProposal _createCompletionProposal = ExpressionsProposalProvider.this.createCompletionProposal(_name, _plus, null, context);
+        acceptor.accept(_createCompletionProposal);
+      }
+    };
     IterableExtensions.<Variable>forEach(_variablesDefinedBefore, _function);
   }
 }

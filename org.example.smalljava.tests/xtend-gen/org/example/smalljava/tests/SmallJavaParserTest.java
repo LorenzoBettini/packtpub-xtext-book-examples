@@ -205,14 +205,14 @@ public class SmallJavaParserTest {
       _builder.append("}");
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
-          public void apply(final SJProgram it) {
-            SmallJavaParserTest.this._validationTestHelper.assertNoErrors(it);
-            SmallJavaParserTest.this.assertAccessLevel(it, 0, SJAccessLevel.PRIVATE);
-            SmallJavaParserTest.this.assertAccessLevel(it, 1, SJAccessLevel.PUBLIC);
-            SmallJavaParserTest.this.assertAccessLevel(it, 2, SJAccessLevel.PRIVATE);
-            SmallJavaParserTest.this.assertAccessLevel(it, 3, SJAccessLevel.PROTECTED);
-          }
-        };
+        public void apply(final SJProgram it) {
+          SmallJavaParserTest.this._validationTestHelper.assertNoErrors(it);
+          SmallJavaParserTest.this.assertAccessLevel(it, 0, SJAccessLevel.PRIVATE);
+          SmallJavaParserTest.this.assertAccessLevel(it, 1, SJAccessLevel.PUBLIC);
+          SmallJavaParserTest.this.assertAccessLevel(it, 2, SJAccessLevel.PRIVATE);
+          SmallJavaParserTest.this.assertAccessLevel(it, 3, SJAccessLevel.PROTECTED);
+        }
+      };
       ObjectExtensions.<SJProgram>operator_doubleArrow(_parse, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -256,20 +256,20 @@ public class SmallJavaParserTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
-          public void apply(final SJProgram it) {
-            SmallJavaParserTest.this._validationTestHelper.assertNoErrors(it);
-            EList<SJClass> _classes = it.getClasses();
-            SJClass _head = IterableExtensions.<SJClass>head(_classes);
-            EList<SJMember> _members = _head.getMembers();
-            SJMember _get = _members.get(1);
-            SJMethodBody _body = ((SJMethod) _get).getBody();
-            EList<SJStatement> _statements = _body.getStatements();
-            SJStatement _head_1 = IterableExtensions.<SJStatement>head(_statements);
-            final SJIfStatement ifS = ((SJIfStatement) _head_1);
-            SJIfBlock _elseBlock = ifS.getElseBlock();
-            Assert.assertNull(_elseBlock);
-          }
-        };
+        public void apply(final SJProgram it) {
+          SmallJavaParserTest.this._validationTestHelper.assertNoErrors(it);
+          EList<SJClass> _classes = it.getClasses();
+          SJClass _head = IterableExtensions.<SJClass>head(_classes);
+          EList<SJMember> _members = _head.getMembers();
+          SJMember _get = _members.get(1);
+          SJMethodBody _body = ((SJMethod) _get).getBody();
+          EList<SJStatement> _statements = _body.getStatements();
+          SJStatement _head_1 = IterableExtensions.<SJStatement>head(_statements);
+          final SJIfStatement ifS = ((SJIfStatement) _head_1);
+          SJIfBlock _elseBlock = ifS.getElseBlock();
+          Assert.assertNull(_elseBlock);
+        }
+      };
       ObjectExtensions.<SJProgram>operator_doubleArrow(_parse, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -313,20 +313,20 @@ public class SmallJavaParserTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
-          public void apply(final SJProgram it) {
-            SmallJavaParserTest.this._validationTestHelper.assertNoErrors(it);
-            EList<SJClass> _classes = it.getClasses();
-            SJClass _head = IterableExtensions.<SJClass>head(_classes);
-            EList<SJMember> _members = _head.getMembers();
-            SJMember _get = _members.get(1);
-            SJMethodBody _body = ((SJMethod) _get).getBody();
-            EList<SJStatement> _statements = _body.getStatements();
-            SJStatement _head_1 = IterableExtensions.<SJStatement>head(_statements);
-            final SJIfStatement ifS = ((SJIfStatement) _head_1);
-            SJIfBlock _elseBlock = ifS.getElseBlock();
-            Assert.assertNotNull(_elseBlock);
-          }
-        };
+        public void apply(final SJProgram it) {
+          SmallJavaParserTest.this._validationTestHelper.assertNoErrors(it);
+          EList<SJClass> _classes = it.getClasses();
+          SJClass _head = IterableExtensions.<SJClass>head(_classes);
+          EList<SJMember> _members = _head.getMembers();
+          SJMember _get = _members.get(1);
+          SJMethodBody _body = ((SJMethod) _get).getBody();
+          EList<SJStatement> _statements = _body.getStatements();
+          SJStatement _head_1 = IterableExtensions.<SJStatement>head(_statements);
+          final SJIfStatement ifS = ((SJIfStatement) _head_1);
+          SJIfBlock _elseBlock = ifS.getElseBlock();
+          Assert.assertNotNull(_elseBlock);
+        }
+      };
       ObjectExtensions.<SJProgram>operator_doubleArrow(_parse, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);

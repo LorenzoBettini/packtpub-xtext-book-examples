@@ -47,16 +47,16 @@ public class EntitiesEditorTest extends AbstractEditorTest {
     try {
       IJavaProject _createJavaProject = JavaProjectSetupUtil.createJavaProject(this.TEST_PROJECT);
       final Procedure1<IJavaProject> _function = new Procedure1<IJavaProject>() {
-          public void apply(final IJavaProject it) {
-            try {
-              IProject _project = it.getProject();
-              IResourcesSetupUtil.addNature(_project, XtextProjectHelper.NATURE_ID);
-              JavaProjectSetupUtil.addSourceFolder(it, "entities-gen");
-            } catch (Throwable _e) {
-              throw Exceptions.sneakyThrow(_e);
-            }
+        public void apply(final IJavaProject it) {
+          try {
+            IProject _project = it.getProject();
+            IResourcesSetupUtil.addNature(_project, XtextProjectHelper.NATURE_ID);
+            JavaProjectSetupUtil.addSourceFolder(it, "entities-gen");
+          } catch (Throwable _e) {
+            throw Exceptions.sneakyThrow(_e);
           }
-        };
+        }
+      };
       ObjectExtensions.<IJavaProject>operator_doubleArrow(_createJavaProject, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -103,12 +103,12 @@ public class EntitiesEditorTest extends AbstractEditorTest {
       XtextEditor _openEditor = this.openEditor(_createTestFile);
       IXtextDocument _document = _openEditor.getDocument();
       final IUnitOfWork<Model,XtextResource> _function = new IUnitOfWork<Model,XtextResource>() {
-          public Model exec(final XtextResource it) throws Exception {
-            EList<EObject> _contents = it.getContents();
-            EObject _get = _contents.get(0);
-            return ((Model) _get);
-          }
-        };
+        public Model exec(final XtextResource it) throws Exception {
+          EList<EObject> _contents = it.getContents();
+          EObject _get = _contents.get(0);
+          return ((Model) _get);
+        }
+      };
       Model _readOnly = _document.<Model>readOnly(_function);
       EList<Entity> _entities = _readOnly.getEntities();
       Entity _get = _entities.get(0);
@@ -126,29 +126,29 @@ public class EntitiesEditorTest extends AbstractEditorTest {
       final XtextEditor editor = this.openEditor(_createTestFile);
       IXtextDocument _document = editor.getDocument();
       final IUnitOfWork<Boolean,XtextResource> _function = new IUnitOfWork<Boolean,XtextResource>() {
-          public Boolean exec(final XtextResource it) throws Exception {
-            boolean _xblockexpression = false;
-            {
-              EList<EObject> _contents = it.getContents();
-              EObject _get = _contents.get(0);
-              final Model model = ((Model) _get);
-              EList<Entity> _entities = model.getEntities();
-              final Entity currentEntity = _entities.get(0);
-              EList<Entity> _entities_1 = model.getEntities();
-              Entity _createEntity = EntitiesFactory.eINSTANCE.createEntity();
-              final Procedure1<Entity> _function = new Procedure1<Entity>() {
-                  public void apply(final Entity it) {
-                    it.setName("Added");
-                    it.setSuperType(currentEntity);
-                  }
-                };
-              Entity _doubleArrow = ObjectExtensions.<Entity>operator_doubleArrow(_createEntity, _function);
-              boolean _add = _entities_1.add(_doubleArrow);
-              _xblockexpression = (_add);
-            }
-            return Boolean.valueOf(_xblockexpression);
+        public Boolean exec(final XtextResource it) throws Exception {
+          boolean _xblockexpression = false;
+          {
+            EList<EObject> _contents = it.getContents();
+            EObject _get = _contents.get(0);
+            final Model model = ((Model) _get);
+            EList<Entity> _entities = model.getEntities();
+            final Entity currentEntity = _entities.get(0);
+            EList<Entity> _entities_1 = model.getEntities();
+            Entity _createEntity = EntitiesFactory.eINSTANCE.createEntity();
+            final Procedure1<Entity> _function = new Procedure1<Entity>() {
+              public void apply(final Entity it) {
+                it.setName("Added");
+                it.setSuperType(currentEntity);
+              }
+            };
+            Entity _doubleArrow = ObjectExtensions.<Entity>operator_doubleArrow(_createEntity, _function);
+            boolean _add = _entities_1.add(_doubleArrow);
+            _xblockexpression = (_add);
           }
-        };
+          return Boolean.valueOf(_xblockexpression);
+        }
+      };
       _document.<Boolean>modify(_function);
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("entity E {}");
@@ -178,19 +178,19 @@ public class EntitiesEditorTest extends AbstractEditorTest {
       final XtextEditor editor = this.openEditor(_createTestFile);
       IXtextDocument _document = editor.getDocument();
       final IUnitOfWork<Entity,XtextResource> _function = new IUnitOfWork<Entity,XtextResource>() {
-          public Entity exec(final XtextResource it) throws Exception {
-            Entity _xblockexpression = null;
-            {
-              EList<EObject> _contents = it.getContents();
-              EObject _get = _contents.get(0);
-              EList<Entity> _entities = ((Model) _get).getEntities();
-              final Entity currentEntity = _entities.get(0);
-              Entity _addEntityAfter = EntitiesModelUtil.addEntityAfter(currentEntity, "Added");
-              _xblockexpression = (_addEntityAfter);
-            }
-            return _xblockexpression;
+        public Entity exec(final XtextResource it) throws Exception {
+          Entity _xblockexpression = null;
+          {
+            EList<EObject> _contents = it.getContents();
+            EObject _get = _contents.get(0);
+            EList<Entity> _entities = ((Model) _get).getEntities();
+            final Entity currentEntity = _entities.get(0);
+            Entity _addEntityAfter = EntitiesModelUtil.addEntityAfter(currentEntity, "Added");
+            _xblockexpression = (_addEntityAfter);
           }
-        };
+          return _xblockexpression;
+        }
+      };
       _document.<Entity>modify(_function);
       StringConcatenation _builder_1 = new StringConcatenation();
       _builder_1.append("entity E1 {}");

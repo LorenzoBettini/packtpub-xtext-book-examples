@@ -51,10 +51,10 @@ public class SmallJavaTypeProvider {
     public SJClass apply() {
       SJClass _createSJClass = SmallJavaFactory.eINSTANCE.createSJClass();
       final Procedure1<SJClass> _function = new Procedure1<SJClass>() {
-          public void apply(final SJClass it) {
-            it.setName("stringType");
-          }
-        };
+        public void apply(final SJClass it) {
+          it.setName("stringType");
+        }
+      };
       SJClass _doubleArrow = ObjectExtensions.<SJClass>operator_doubleArrow(_createSJClass, _function);
       return _doubleArrow;
     }
@@ -64,10 +64,10 @@ public class SmallJavaTypeProvider {
     public SJClass apply() {
       SJClass _createSJClass = SmallJavaFactory.eINSTANCE.createSJClass();
       final Procedure1<SJClass> _function = new Procedure1<SJClass>() {
-          public void apply(final SJClass it) {
-            it.setName("intType");
-          }
-        };
+        public void apply(final SJClass it) {
+          it.setName("intType");
+        }
+      };
       SJClass _doubleArrow = ObjectExtensions.<SJClass>operator_doubleArrow(_createSJClass, _function);
       return _doubleArrow;
     }
@@ -77,10 +77,10 @@ public class SmallJavaTypeProvider {
     public SJClass apply() {
       SJClass _createSJClass = SmallJavaFactory.eINSTANCE.createSJClass();
       final Procedure1<SJClass> _function = new Procedure1<SJClass>() {
-          public void apply(final SJClass it) {
-            it.setName("booleanType");
-          }
-        };
+        public void apply(final SJClass it) {
+          it.setName("booleanType");
+        }
+      };
       SJClass _doubleArrow = ObjectExtensions.<SJClass>operator_doubleArrow(_createSJClass, _function);
       return _doubleArrow;
     }
@@ -90,10 +90,10 @@ public class SmallJavaTypeProvider {
     public SJClass apply() {
       SJClass _createSJClass = SmallJavaFactory.eINSTANCE.createSJClass();
       final Procedure1<SJClass> _function = new Procedure1<SJClass>() {
-          public void apply(final SJClass it) {
-            it.setName("nullType");
-          }
-        };
+        public void apply(final SJClass it) {
+          it.setName("nullType");
+        }
+      };
       SJClass _doubleArrow = ObjectExtensions.<SJClass>operator_doubleArrow(_createSJClass, _function);
       return _doubleArrow;
     }
@@ -271,15 +271,15 @@ public class SmallJavaTypeProvider {
   public String argsTypesAsStrings(final SJMemberSelection sel) {
     EList<SJExpression> _args = sel.getArgs();
     final Function1<SJExpression,String> _function = new Function1<SJExpression,String>() {
-        public String apply(final SJExpression it) {
-          SJClass _typeFor = SmallJavaTypeProvider.this.typeFor(it);
-          String _name = null;
-          if (_typeFor!=null) {
-            _name=_typeFor.getName();
-          }
-          return _name;
+      public String apply(final SJExpression it) {
+        SJClass _typeFor = SmallJavaTypeProvider.this.typeFor(it);
+        String _name = null;
+        if (_typeFor!=null) {
+          _name=_typeFor.getName();
         }
-      };
+        return _name;
+      }
+    };
     List<String> _map = ListExtensions.<SJExpression, String>map(_args, _function);
     String _join = IterableExtensions.join(_map, ", ");
     String _plus = ("(" + _join);

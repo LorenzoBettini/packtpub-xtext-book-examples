@@ -30,11 +30,11 @@ public class SmallJavaIndex {
   public Iterable<IEObjectDescription> getVisibleEObjectDescriptions(final EObject o) {
     List<IContainer> _visibleContainers = this.getVisibleContainers(o);
     final Function1<IContainer,Iterable<IEObjectDescription>> _function = new Function1<IContainer,Iterable<IEObjectDescription>>() {
-        public Iterable<IEObjectDescription> apply(final IContainer container) {
-          Iterable<IEObjectDescription> _exportedObjects = container.getExportedObjects();
-          return _exportedObjects;
-        }
-      };
+      public Iterable<IEObjectDescription> apply(final IContainer container) {
+        Iterable<IEObjectDescription> _exportedObjects = container.getExportedObjects();
+        return _exportedObjects;
+      }
+    };
     List<Iterable<IEObjectDescription>> _map = ListExtensions.<IContainer, Iterable<IEObjectDescription>>map(_visibleContainers, _function);
     Iterable<IEObjectDescription> _flatten = Iterables.<IEObjectDescription>concat(_map);
     return _flatten;
@@ -43,11 +43,11 @@ public class SmallJavaIndex {
   public Iterable<IEObjectDescription> getVisibleEObjectDescriptions(final EObject o, final EClass type) {
     List<IContainer> _visibleContainers = this.getVisibleContainers(o);
     final Function1<IContainer,Iterable<IEObjectDescription>> _function = new Function1<IContainer,Iterable<IEObjectDescription>>() {
-        public Iterable<IEObjectDescription> apply(final IContainer container) {
-          Iterable<IEObjectDescription> _exportedObjectsByType = container.getExportedObjectsByType(type);
-          return _exportedObjectsByType;
-        }
-      };
+      public Iterable<IEObjectDescription> apply(final IContainer container) {
+        Iterable<IEObjectDescription> _exportedObjectsByType = container.getExportedObjectsByType(type);
+        return _exportedObjectsByType;
+      }
+    };
     List<Iterable<IEObjectDescription>> _map = ListExtensions.<IContainer, Iterable<IEObjectDescription>>map(_visibleContainers, _function);
     Iterable<IEObjectDescription> _flatten = Iterables.<IEObjectDescription>concat(_map);
     return _flatten;

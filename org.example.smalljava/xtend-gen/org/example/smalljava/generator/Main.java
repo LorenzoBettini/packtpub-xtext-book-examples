@@ -43,11 +43,11 @@ public class Main {
   protected void runGenerator(final String[] strings) {
     final ResourceSet set = this.smallJavaLib.loadLib();
     final Procedure1<String> _function = new Procedure1<String>() {
-        public void apply(final String s) {
-          URI _createURI = URI.createURI(s);
-          set.getResource(_createURI, true);
-        }
-      };
+      public void apply(final String s) {
+        URI _createURI = URI.createURI(s);
+        set.getResource(_createURI, true);
+      }
+    };
     IterableExtensions.<String>forEach(((Iterable<String>)Conversions.doWrapArray(strings)), _function);
     boolean ok = true;
     EList<Resource> _resources = set.getResources();

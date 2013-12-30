@@ -77,17 +77,17 @@ public class SmallJavaLib {
       final InputStream stream = _classLoader.getResourceAsStream(SmallJavaLib.MAIN_LIB);
       ResourceSet _get = this.resourceSetProvider.get();
       final Procedure1<ResourceSet> _function = new Procedure1<ResourceSet>() {
-          public void apply(final ResourceSet resourceSet) {
-            try {
-              URI _createURI = URI.createURI(SmallJavaLib.MAIN_LIB);
-              final Resource resource = resourceSet.createResource(_createURI);
-              Map<Object,Object> _loadOptions = resourceSet.getLoadOptions();
-              resource.load(stream, _loadOptions);
-            } catch (Throwable _e) {
-              throw Exceptions.sneakyThrow(_e);
-            }
+        public void apply(final ResourceSet resourceSet) {
+          try {
+            URI _createURI = URI.createURI(SmallJavaLib.MAIN_LIB);
+            final Resource resource = resourceSet.createResource(_createURI);
+            Map<Object,Object> _loadOptions = resourceSet.getLoadOptions();
+            resource.load(stream, _loadOptions);
+          } catch (Throwable _e) {
+            throw Exceptions.sneakyThrow(_e);
           }
-        };
+        }
+      };
       ResourceSet _doubleArrow = ObjectExtensions.<ResourceSet>operator_doubleArrow(_get, _function);
       _xblockexpression = (_doubleArrow);
     }
@@ -137,13 +137,13 @@ public class SmallJavaLib {
     {
       Iterable<IEObjectDescription> _visibleClassesDescriptions = this._smallJavaIndex.getVisibleClassesDescriptions(context);
       final Function1<IEObjectDescription,Boolean> _function = new Function1<IEObjectDescription,Boolean>() {
-          public Boolean apply(final IEObjectDescription it) {
-            QualifiedName _qualifiedName = it.getQualifiedName();
-            String _string = _qualifiedName.toString();
-            boolean _equals = Objects.equal(_string, SmallJavaLib.LIB_OBJECT);
-            return Boolean.valueOf(_equals);
-          }
-        };
+        public Boolean apply(final IEObjectDescription it) {
+          QualifiedName _qualifiedName = it.getQualifiedName();
+          String _string = _qualifiedName.toString();
+          boolean _equals = Objects.equal(_string, SmallJavaLib.LIB_OBJECT);
+          return Boolean.valueOf(_equals);
+        }
+      };
       final IEObjectDescription desc = IterableExtensions.<IEObjectDescription>findFirst(_visibleClassesDescriptions, _function);
       boolean _equals = Objects.equal(desc, null);
       if (_equals) {

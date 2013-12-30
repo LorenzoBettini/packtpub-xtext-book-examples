@@ -60,20 +60,20 @@ public class ExpressionsValidatorTest {
       _builder.append("i = 1 j+i j = 10");
       ExpressionsModel _parse = this._parseHelper.parse(_builder);
       final Procedure1<ExpressionsModel> _function = new Procedure1<ExpressionsModel>() {
-          public void apply(final ExpressionsModel it) {
-            EClass _variableRef = ExpressionsPackage.eINSTANCE.getVariableRef();
-            ExpressionsValidatorTest.this._validationTestHelper.assertError(it, _variableRef, 
-              ExpressionsValidator.FORWARD_REFERENCE, 
-              "variable forward reference not allowed: \'j\'");
-            EClass _expression = ExpressionsPackage.eINSTANCE.getExpression();
-            ExpressionsValidatorTest.this._validationTestHelper.assertError(it, _expression, 
-              ExpressionsValidator.WRONG_TYPE, 
-              "null type");
-            List<Issue> _validate = ExpressionsValidatorTest.this._validationTestHelper.validate(it);
-            int _size = _validate.size();
-            Assert.assertEquals(2, _size);
-          }
-        };
+        public void apply(final ExpressionsModel it) {
+          EClass _variableRef = ExpressionsPackage.eINSTANCE.getVariableRef();
+          ExpressionsValidatorTest.this._validationTestHelper.assertError(it, _variableRef, 
+            ExpressionsValidator.FORWARD_REFERENCE, 
+            "variable forward reference not allowed: \'j\'");
+          EClass _expression = ExpressionsPackage.eINSTANCE.getExpression();
+          ExpressionsValidatorTest.this._validationTestHelper.assertError(it, _expression, 
+            ExpressionsValidator.WRONG_TYPE, 
+            "null type");
+          List<Issue> _validate = ExpressionsValidatorTest.this._validationTestHelper.validate(it);
+          int _size = _validate.size();
+          Assert.assertEquals(2, _size);
+        }
+      };
       ObjectExtensions.<ExpressionsModel>operator_doubleArrow(_parse, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -141,15 +141,15 @@ public class ExpressionsValidatorTest {
       EList<AbstractElement> _elements = _parse.getElements();
       AbstractElement _last = IterableExtensions.<AbstractElement>last(_elements);
       final Procedure1<AbstractElement> _function = new Procedure1<AbstractElement>() {
-          public void apply(final AbstractElement it) {
-            EClass _expression = ExpressionsPackage.eINSTANCE.getExpression();
-            String _plus = ("expected " + expectedActualType);
-            String _plus_1 = (_plus + " type, but was ");
-            String _plus_2 = (_plus_1 + expectedWrongType);
-            ExpressionsValidatorTest.this._validationTestHelper.assertError(it, _expression, 
-              ExpressionsValidator.WRONG_TYPE, _plus_2);
-          }
-        };
+        public void apply(final AbstractElement it) {
+          EClass _expression = ExpressionsPackage.eINSTANCE.getExpression();
+          String _plus = ("expected " + expectedActualType);
+          String _plus_1 = (_plus + " type, but was ");
+          String _plus_2 = (_plus_1 + expectedWrongType);
+          ExpressionsValidatorTest.this._validationTestHelper.assertError(it, _expression, 
+            ExpressionsValidator.WRONG_TYPE, _plus_2);
+        }
+      };
       ObjectExtensions.<AbstractElement>operator_doubleArrow(_last, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -162,15 +162,15 @@ public class ExpressionsValidatorTest {
       EList<AbstractElement> _elements = _parse.getElements();
       AbstractElement _last = IterableExtensions.<AbstractElement>last(_elements);
       final Procedure1<AbstractElement> _function = new Procedure1<AbstractElement>() {
-          public void apply(final AbstractElement it) {
-            EClass _expression = ExpressionsPackage.eINSTANCE.getExpression();
-            String _plus = ("expected the same type, but was " + expectedLeft);
-            String _plus_1 = (_plus + ", ");
-            String _plus_2 = (_plus_1 + expectedRight);
-            ExpressionsValidatorTest.this._validationTestHelper.assertError(it, _expression, 
-              ExpressionsValidator.WRONG_TYPE, _plus_2);
-          }
-        };
+        public void apply(final AbstractElement it) {
+          EClass _expression = ExpressionsPackage.eINSTANCE.getExpression();
+          String _plus = ("expected the same type, but was " + expectedLeft);
+          String _plus_1 = (_plus + ", ");
+          String _plus_2 = (_plus_1 + expectedRight);
+          ExpressionsValidatorTest.this._validationTestHelper.assertError(it, _expression, 
+            ExpressionsValidator.WRONG_TYPE, _plus_2);
+        }
+      };
       ObjectExtensions.<AbstractElement>operator_doubleArrow(_last, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
@@ -183,13 +183,13 @@ public class ExpressionsValidatorTest {
       EList<AbstractElement> _elements = _parse.getElements();
       AbstractElement _last = IterableExtensions.<AbstractElement>last(_elements);
       final Procedure1<AbstractElement> _function = new Procedure1<AbstractElement>() {
-          public void apply(final AbstractElement it) {
-            EClass _expression = ExpressionsPackage.eINSTANCE.getExpression();
-            ExpressionsValidatorTest.this._validationTestHelper.assertError(it, _expression, 
-              ExpressionsValidator.WRONG_TYPE, 
-              "cannot be boolean");
-          }
-        };
+        public void apply(final AbstractElement it) {
+          EClass _expression = ExpressionsPackage.eINSTANCE.getExpression();
+          ExpressionsValidatorTest.this._validationTestHelper.assertError(it, _expression, 
+            ExpressionsValidator.WRONG_TYPE, 
+            "cannot be boolean");
+        }
+      };
       ObjectExtensions.<AbstractElement>operator_doubleArrow(_last, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);

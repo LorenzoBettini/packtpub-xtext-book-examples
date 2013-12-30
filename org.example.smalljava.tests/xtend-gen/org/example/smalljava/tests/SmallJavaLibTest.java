@@ -112,22 +112,22 @@ public class SmallJavaLibTest {
     _builder.newLine();
     SJProgram _loadLibAndParse = this.loadLibAndParse(_builder);
     final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
-        public void apply(final SJProgram it) {
-          SmallJavaLibTest.this._validationTestHelper.assertNoErrors(it);
-          EList<SJClass> _classes = it.getClasses();
-          final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
-              public void apply(final EList<SJClass> it) {
-                SJClass _get = it.get(0);
-                SmallJavaLibTest.this.assertHierarchyWithObject(_get, "Object");
-                SJClass _get_1 = it.get(1);
-                SmallJavaLibTest.this.assertHierarchyWithObject(_get_1, "A, Object");
-                SJClass _get_2 = it.get(3);
-                SmallJavaLibTest.this.assertHierarchyWithObject(_get_2, "C, Object");
-              }
-            };
-          ObjectExtensions.<EList<SJClass>>operator_doubleArrow(_classes, _function);
-        }
-      };
+      public void apply(final SJProgram it) {
+        SmallJavaLibTest.this._validationTestHelper.assertNoErrors(it);
+        EList<SJClass> _classes = it.getClasses();
+        final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
+          public void apply(final EList<SJClass> it) {
+            SJClass _get = it.get(0);
+            SmallJavaLibTest.this.assertHierarchyWithObject(_get, "Object");
+            SJClass _get_1 = it.get(1);
+            SmallJavaLibTest.this.assertHierarchyWithObject(_get_1, "A, Object");
+            SJClass _get_2 = it.get(3);
+            SmallJavaLibTest.this.assertHierarchyWithObject(_get_2, "C, Object");
+          }
+        };
+        ObjectExtensions.<EList<SJClass>>operator_doubleArrow(_classes, _function);
+      }
+    };
     ObjectExtensions.<SJProgram>operator_doubleArrow(_loadLibAndParse, _function);
   }
   
@@ -144,29 +144,29 @@ public class SmallJavaLibTest {
     _builder.newLine();
     SJProgram _loadLibAndParse = this.loadLibAndParse(_builder);
     final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
-        public void apply(final SJProgram it) {
-          SmallJavaLibTest.this._validationTestHelper.assertNoErrors(it);
-          EList<SJClass> _classes = it.getClasses();
-          final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
-              public void apply(final EList<SJClass> it) {
-                SJClass _head = IterableExtensions.<SJClass>head(it);
-                final SJClass objClass = SmallJavaLibTest.this._smallJavaLib.getSmallJavaObjectClass(_head);
-                Assert.assertNotNull(objClass);
-                SJClass _get = it.get(0);
-                SJClass _superclassOrObject = SmallJavaLibTest.this._smallJavaLib.getSuperclassOrObject(_get);
-                Assert.assertSame(objClass, _superclassOrObject);
-                SJClass _get_1 = it.get(0);
-                SJClass _get_2 = it.get(1);
-                SJClass _superclassOrObject_1 = SmallJavaLibTest.this._smallJavaLib.getSuperclassOrObject(_get_2);
-                Assert.assertSame(_get_1, _superclassOrObject_1);
-                SJClass _get_3 = it.get(2);
-                SJClass _superclassOrObject_2 = SmallJavaLibTest.this._smallJavaLib.getSuperclassOrObject(_get_3);
-                Assert.assertSame(objClass, _superclassOrObject_2);
-              }
-            };
-          ObjectExtensions.<EList<SJClass>>operator_doubleArrow(_classes, _function);
-        }
-      };
+      public void apply(final SJProgram it) {
+        SmallJavaLibTest.this._validationTestHelper.assertNoErrors(it);
+        EList<SJClass> _classes = it.getClasses();
+        final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
+          public void apply(final EList<SJClass> it) {
+            SJClass _head = IterableExtensions.<SJClass>head(it);
+            final SJClass objClass = SmallJavaLibTest.this._smallJavaLib.getSmallJavaObjectClass(_head);
+            Assert.assertNotNull(objClass);
+            SJClass _get = it.get(0);
+            SJClass _superclassOrObject = SmallJavaLibTest.this._smallJavaLib.getSuperclassOrObject(_get);
+            Assert.assertSame(objClass, _superclassOrObject);
+            SJClass _get_1 = it.get(0);
+            SJClass _get_2 = it.get(1);
+            SJClass _superclassOrObject_1 = SmallJavaLibTest.this._smallJavaLib.getSuperclassOrObject(_get_2);
+            Assert.assertSame(_get_1, _superclassOrObject_1);
+            SJClass _get_3 = it.get(2);
+            SJClass _superclassOrObject_2 = SmallJavaLibTest.this._smallJavaLib.getSuperclassOrObject(_get_3);
+            Assert.assertSame(objClass, _superclassOrObject_2);
+          }
+        };
+        ObjectExtensions.<EList<SJClass>>operator_doubleArrow(_classes, _function);
+      }
+    };
     ObjectExtensions.<SJProgram>operator_doubleArrow(_loadLibAndParse, _function);
   }
   
@@ -208,18 +208,18 @@ public class SmallJavaLibTest {
   private ResourceSet loadLibrary() {
     ResourceSet _loadLib = this._smallJavaLib.loadLib();
     final Procedure1<ResourceSet> _function = new Procedure1<ResourceSet>() {
-        public void apply(final ResourceSet it) {
-          EList<Resource> _resources = it.getResources();
-          final Procedure1<Resource> _function = new Procedure1<Resource>() {
-              public void apply(final Resource it) {
-                EList<EObject> _contents = it.getContents();
-                EObject _get = _contents.get(0);
-                SmallJavaLibTest.this._validationTestHelper.assertNoErrors(_get);
-              }
-            };
-          IterableExtensions.<Resource>forEach(_resources, _function);
-        }
-      };
+      public void apply(final ResourceSet it) {
+        EList<Resource> _resources = it.getResources();
+        final Procedure1<Resource> _function = new Procedure1<Resource>() {
+          public void apply(final Resource it) {
+            EList<EObject> _contents = it.getContents();
+            EObject _get = _contents.get(0);
+            SmallJavaLibTest.this._validationTestHelper.assertNoErrors(_get);
+          }
+        };
+        IterableExtensions.<Resource>forEach(_resources, _function);
+      }
+    };
     ResourceSet _doubleArrow = ObjectExtensions.<ResourceSet>operator_doubleArrow(_loadLib, _function);
     return _doubleArrow;
   }
@@ -228,11 +228,11 @@ public class SmallJavaLibTest {
     String _string = expected.toString();
     ArrayList<SJClass> _classHierarchyWithObject = this._smallJavaLib.getClassHierarchyWithObject(c);
     final Function1<SJClass,String> _function = new Function1<SJClass,String>() {
-        public String apply(final SJClass it) {
-          String _name = it.getName();
-          return _name;
-        }
-      };
+      public String apply(final SJClass it) {
+        String _name = it.getName();
+        return _name;
+      }
+    };
     List<String> _map = ListExtensions.<SJClass, String>map(_classHierarchyWithObject, _function);
     String _join = IterableExtensions.join(_map, ", ");
     Assert.assertEquals(_string, _join);

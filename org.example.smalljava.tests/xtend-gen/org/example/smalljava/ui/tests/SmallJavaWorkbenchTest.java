@@ -38,15 +38,15 @@ public class SmallJavaWorkbenchTest extends AbstractWorkbenchTest {
     try {
       IJavaProject _createJavaProject = JavaProjectSetupUtil.createJavaProject(this.TEST_PROJECT);
       final Procedure1<IJavaProject> _function = new Procedure1<IJavaProject>() {
-          public void apply(final IJavaProject it) {
-            try {
-              IProject _project = it.getProject();
-              IResourcesSetupUtil.addNature(_project, XtextProjectHelper.NATURE_ID);
-            } catch (Throwable _e) {
-              throw Exceptions.sneakyThrow(_e);
-            }
+        public void apply(final IJavaProject it) {
+          try {
+            IProject _project = it.getProject();
+            IResourcesSetupUtil.addNature(_project, XtextProjectHelper.NATURE_ID);
+          } catch (Throwable _e) {
+            throw Exceptions.sneakyThrow(_e);
           }
-        };
+        }
+      };
       ObjectExtensions.<IJavaProject>operator_doubleArrow(_createJavaProject, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);

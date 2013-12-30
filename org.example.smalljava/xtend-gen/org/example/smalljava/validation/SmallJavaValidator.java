@@ -123,39 +123,39 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
     final QualifiedName className = this._iQualifiedNameProvider.getFullyQualifiedName(c);
     Iterable<IEObjectDescription> _visibleClassesDescriptions = this._smallJavaIndex.getVisibleClassesDescriptions(c);
     final Procedure1<IEObjectDescription> _function = new Procedure1<IEObjectDescription>() {
-        public void apply(final IEObjectDescription desc) {
-          boolean _and = false;
-          boolean _and_1 = false;
-          QualifiedName _qualifiedName = desc.getQualifiedName();
-          boolean _equals = Objects.equal(_qualifiedName, className);
-          if (!_equals) {
-            _and_1 = false;
-          } else {
-            EObject _eObjectOrProxy = desc.getEObjectOrProxy();
-            boolean _notEquals = (!Objects.equal(_eObjectOrProxy, c));
-            _and_1 = (_equals && _notEquals);
-          }
-          if (!_and_1) {
-            _and = false;
-          } else {
-            URI _eObjectURI = desc.getEObjectURI();
-            URI _trimFragment = _eObjectURI.trimFragment();
-            Resource _eResource = c.eResource();
-            URI _uRI = _eResource.getURI();
-            boolean _notEquals_1 = (!Objects.equal(_trimFragment, _uRI));
-            _and = (_and_1 && _notEquals_1);
-          }
-          if (_and) {
-            String _name = c.getName();
-            String _plus = ("The type " + _name);
-            String _plus_1 = (_plus + " is already defined");
-            EAttribute _sJClass_Name = SmallJavaPackage.eINSTANCE.getSJClass_Name();
-            SmallJavaValidator.this.error(_plus_1, _sJClass_Name, 
-              SmallJavaValidator.DUPLICATE_CLASS);
-            return;
-          }
+      public void apply(final IEObjectDescription desc) {
+        boolean _and = false;
+        boolean _and_1 = false;
+        QualifiedName _qualifiedName = desc.getQualifiedName();
+        boolean _equals = Objects.equal(_qualifiedName, className);
+        if (!_equals) {
+          _and_1 = false;
+        } else {
+          EObject _eObjectOrProxy = desc.getEObjectOrProxy();
+          boolean _notEquals = (!Objects.equal(_eObjectOrProxy, c));
+          _and_1 = (_equals && _notEquals);
         }
-      };
+        if (!_and_1) {
+          _and = false;
+        } else {
+          URI _eObjectURI = desc.getEObjectURI();
+          URI _trimFragment = _eObjectURI.trimFragment();
+          Resource _eResource = c.eResource();
+          URI _uRI = _eResource.getURI();
+          boolean _notEquals_1 = (!Objects.equal(_trimFragment, _uRI));
+          _and = (_and_1 && _notEquals_1);
+        }
+        if (_and) {
+          String _name = c.getName();
+          String _plus = ("The type " + _name);
+          String _plus_1 = (_plus + " is already defined");
+          EAttribute _sJClass_Name = SmallJavaPackage.eINSTANCE.getSJClass_Name();
+          SmallJavaValidator.this.error(_plus_1, _sJClass_Name, 
+            SmallJavaValidator.DUPLICATE_CLASS);
+          return;
+        }
+      }
+    };
     IterableExtensions.<IEObjectDescription>forEach(_visibleClassesDescriptions, _function);
   }
   
@@ -305,20 +305,20 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
     SJMethodBody _body = _containingMethod.getBody();
     List<SJVariableDeclaration> _allContentsOfType = EcoreUtil2.<SJVariableDeclaration>getAllContentsOfType(_body, SJVariableDeclaration.class);
     final Function1<SJVariableDeclaration,Boolean> _function = new Function1<SJVariableDeclaration,Boolean>() {
-        public Boolean apply(final SJVariableDeclaration it) {
-          boolean _and = false;
-          boolean _notEquals = (!Objects.equal(it, vardecl));
-          if (!_notEquals) {
-            _and = false;
-          } else {
-            String _name = it.getName();
-            String _name_1 = vardecl.getName();
-            boolean _equals = Objects.equal(_name, _name_1);
-            _and = (_notEquals && _equals);
-          }
-          return Boolean.valueOf(_and);
+      public Boolean apply(final SJVariableDeclaration it) {
+        boolean _and = false;
+        boolean _notEquals = (!Objects.equal(it, vardecl));
+        if (!_notEquals) {
+          _and = false;
+        } else {
+          String _name = it.getName();
+          String _name_1 = vardecl.getName();
+          boolean _equals = Objects.equal(_name, _name_1);
+          _and = (_notEquals && _equals);
         }
-      };
+        return Boolean.valueOf(_and);
+      }
+    };
     final SJVariableDeclaration duplicate = IterableExtensions.<SJVariableDeclaration>findFirst(_allContentsOfType, _function);
     boolean _notEquals = (!Objects.equal(duplicate, null));
     if (_notEquals) {
@@ -336,29 +336,29 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
     SJClass _containingClass = SmallJavaModelUtil.containingClass(member);
     EList<SJMember> _members = _containingClass.getMembers();
     final Function1<SJMember,Boolean> _function = new Function1<SJMember,Boolean>() {
-        public Boolean apply(final SJMember it) {
-          boolean _and = false;
-          boolean _and_1 = false;
-          boolean _notEquals = (!Objects.equal(it, member));
-          if (!_notEquals) {
-            _and_1 = false;
-          } else {
-            EClass _eClass = it.eClass();
-            EClass _eClass_1 = member.eClass();
-            boolean _equals = Objects.equal(_eClass, _eClass_1);
-            _and_1 = (_notEquals && _equals);
-          }
-          if (!_and_1) {
-            _and = false;
-          } else {
-            String _name = it.getName();
-            String _name_1 = member.getName();
-            boolean _equals_1 = Objects.equal(_name, _name_1);
-            _and = (_and_1 && _equals_1);
-          }
-          return Boolean.valueOf(_and);
+      public Boolean apply(final SJMember it) {
+        boolean _and = false;
+        boolean _and_1 = false;
+        boolean _notEquals = (!Objects.equal(it, member));
+        if (!_notEquals) {
+          _and_1 = false;
+        } else {
+          EClass _eClass = it.eClass();
+          EClass _eClass_1 = member.eClass();
+          boolean _equals = Objects.equal(_eClass, _eClass_1);
+          _and_1 = (_notEquals && _equals);
         }
-      };
+        if (!_and_1) {
+          _and = false;
+        } else {
+          String _name = it.getName();
+          String _name_1 = member.getName();
+          boolean _equals_1 = Objects.equal(_name, _name_1);
+          _and = (_and_1 && _equals_1);
+        }
+        return Boolean.valueOf(_and);
+      }
+    };
     final SJMember duplicate = IterableExtensions.<SJMember>findFirst(_members, _function);
     boolean _notEquals = (!Objects.equal(duplicate, null));
     if (_notEquals) {
@@ -376,20 +376,20 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
     SJProgram _containingProgram = SmallJavaModelUtil.containingProgram(c);
     EList<SJClass> _classes = _containingProgram.getClasses();
     final Function1<SJClass,Boolean> _function = new Function1<SJClass,Boolean>() {
-        public Boolean apply(final SJClass it) {
-          boolean _and = false;
-          boolean _notEquals = (!Objects.equal(it, c));
-          if (!_notEquals) {
-            _and = false;
-          } else {
-            String _name = it.getName();
-            String _name_1 = c.getName();
-            boolean _equals = Objects.equal(_name, _name_1);
-            _and = (_notEquals && _equals);
-          }
-          return Boolean.valueOf(_and);
+      public Boolean apply(final SJClass it) {
+        boolean _and = false;
+        boolean _notEquals = (!Objects.equal(it, c));
+        if (!_notEquals) {
+          _and = false;
+        } else {
+          String _name = it.getName();
+          String _name_1 = c.getName();
+          boolean _equals = Objects.equal(_name, _name_1);
+          _and = (_notEquals && _equals);
         }
-      };
+        return Boolean.valueOf(_and);
+      }
+    };
     boolean _exists = IterableExtensions.<SJClass>exists(_classes, _function);
     if (_exists) {
       String _name = c.getName();
@@ -433,21 +433,21 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
     SJClass _containingClass = SmallJavaModelUtil.containingClass(m);
     ArrayList<SJClass> _classHierarchy = SmallJavaModelUtil.classHierarchy(_containingClass);
     final Function1<SJClass,Iterable<SJMethod>> _function = new Function1<SJClass,Iterable<SJMethod>>() {
-        public Iterable<SJMethod> apply(final SJClass it) {
-          Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(it);
-          return _methods;
-        }
-      };
+      public Iterable<SJMethod> apply(final SJClass it) {
+        Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(it);
+        return _methods;
+      }
+    };
     List<Iterable<SJMethod>> _map = ListExtensions.<SJClass, Iterable<SJMethod>>map(_classHierarchy, _function);
     Iterable<SJMethod> _flatten = Iterables.<SJMethod>concat(_map);
     final Function1<SJMethod,Boolean> _function_1 = new Function1<SJMethod,Boolean>() {
-        public Boolean apply(final SJMethod it) {
-          String _name = it.getName();
-          String _name_1 = m.getName();
-          boolean _equals = Objects.equal(_name, _name_1);
-          return Boolean.valueOf(_equals);
-        }
-      };
+      public Boolean apply(final SJMethod it) {
+        String _name = it.getName();
+        String _name_1 = m.getName();
+        boolean _equals = Objects.equal(_name, _name_1);
+        return Boolean.valueOf(_equals);
+      }
+    };
     final SJMethod overridden = IterableExtensions.<SJMethod>findFirst(_flatten, _function_1);
     boolean _notEquals = (!Objects.equal(overridden, null));
     if (_notEquals) {
@@ -461,19 +461,19 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
       } else {
         EList<SJParameter> _params = m.getParams();
         final Function1<SJParameter,SJClass> _function_2 = new Function1<SJParameter,SJClass>() {
-            public SJClass apply(final SJParameter it) {
-              SJClass _type = it.getType();
-              return _type;
-            }
-          };
+          public SJClass apply(final SJParameter it) {
+            SJClass _type = it.getType();
+            return _type;
+          }
+        };
         List<SJClass> _map_1 = ListExtensions.<SJParameter, SJClass>map(_params, _function_2);
         EList<SJParameter> _params_1 = overridden.getParams();
         final Function1<SJParameter,SJClass> _function_3 = new Function1<SJParameter,SJClass>() {
-            public SJClass apply(final SJParameter it) {
-              SJClass _type = it.getType();
-              return _type;
-            }
-          };
+          public SJClass apply(final SJParameter it) {
+            SJClass _type = it.getType();
+            return _type;
+          }
+        };
         List<SJClass> _map_2 = ListExtensions.<SJParameter, SJClass>map(_params_1, _function_3);
         boolean _elementsEqual = IterableExtensions.elementsEqual(_map_1, _map_2);
         boolean _not_1 = (!_elementsEqual);
