@@ -6,7 +6,6 @@ import org.eclipse.xtext.junit4.InjectWith;
 import org.eclipse.xtext.junit4.XtextRunner;
 import org.eclipse.xtext.util.IAcceptor;
 import org.eclipse.xtext.xbase.compiler.CompilationTestHelper;
-import org.eclipse.xtext.xbase.compiler.CompilationTestHelper.Result;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Extension;
 import org.eclipse.xtext.xbase.lib.util.ReflectExtensions;
@@ -192,8 +191,8 @@ public class EntitiesCompilerTest {
       _builder.newLine();
       _builder.append("}");
       _builder.newLine();
-      final IAcceptor<Result> _function = new IAcceptor<Result>() {
-        public void accept(final Result it) {
+      final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
+        public void accept(final CompilationTestHelper.Result it) {
           it.getCompiledClass();
         }
       };
@@ -291,30 +290,13 @@ public class EntitiesCompilerTest {
       _builder_1.newLine();
       _builder_1.append("import org.eclipse.xtext.xbase.lib.CollectionLiterals;");
       _builder_1.newLine();
-      _builder_1.append("import org.eclipse.xtext.xbase.lib.Functions.Function0;");
-      _builder_1.newLine();
       _builder_1.newLine();
       _builder_1.append("@SuppressWarnings(\"all\")");
       _builder_1.newLine();
       _builder_1.append("public class C {");
       _builder_1.newLine();
       _builder_1.append("  ");
-      _builder_1.append("private ArrayList<Integer> l = new Function0<ArrayList<Integer>>() {");
-      _builder_1.newLine();
-      _builder_1.append("    ");
-      _builder_1.append("public ArrayList<Integer> apply() {");
-      _builder_1.newLine();
-      _builder_1.append("      ");
-      _builder_1.append("ArrayList<Integer> _newArrayList = CollectionLiterals.<Integer>newArrayList(Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3));");
-      _builder_1.newLine();
-      _builder_1.append("      ");
-      _builder_1.append("return _newArrayList;");
-      _builder_1.newLine();
-      _builder_1.append("    ");
-      _builder_1.append("}");
-      _builder_1.newLine();
-      _builder_1.append("  ");
-      _builder_1.append("}.apply();");
+      _builder_1.append("private ArrayList<Integer> l = CollectionLiterals.<Integer>newArrayList(Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3));");
       _builder_1.newLine();
       _builder_1.append("  ");
       _builder_1.newLine();
@@ -409,8 +391,8 @@ public class EntitiesCompilerTest {
       _builder.append("attr s = \"test\";");
       _builder.newLine();
       _builder.append("}");
-      final IAcceptor<Result> _function = new IAcceptor<Result>() {
-        public void accept(final Result it) {
+      final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
+        public void accept(final CompilationTestHelper.Result it) {
           try {
             Class<? extends Object> _compiledClass = it.getCompiledClass();
             final Object obj = _compiledClass.newInstance();

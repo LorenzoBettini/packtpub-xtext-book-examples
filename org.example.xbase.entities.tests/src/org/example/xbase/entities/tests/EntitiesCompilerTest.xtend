@@ -138,16 +138,10 @@ public class MyList extends LinkedList<String> {
 
 		import java.util.ArrayList;
 		import org.eclipse.xtext.xbase.lib.CollectionLiterals;
-		import org.eclipse.xtext.xbase.lib.Functions.Function0;
 		
 		@SuppressWarnings("all")
 		public class C {
-		  private ArrayList<Integer> l = new Function0<ArrayList<Integer>>() {
-		    public ArrayList<Integer> apply() {
-		      ArrayList<Integer> _newArrayList = CollectionLiterals.<Integer>newArrayList(Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3));
-		      return _newArrayList;
-		    }
-		  }.apply();
+		  private ArrayList<Integer> l = CollectionLiterals.<Integer>newArrayList(Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3));
 		  
 		  public ArrayList<Integer> getL() {
 		    return this.l;
