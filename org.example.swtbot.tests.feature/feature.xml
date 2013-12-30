@@ -24,10 +24,6 @@
          id="org.eclipse.platform"
          version="0.0.0"/>
 
-   <includes
-         id="org.eclipse.pde"
-         version="0.0.0"/>
-
    <plugin
          id="org.example.smalljava"
          download-size="0"

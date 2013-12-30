@@ -1,5 +1,6 @@
 setpref targetPlatformPath="${target.platform}"
-resolve "${projects.location}/org.example.releng/build.cquery"
+resolve "${projects.location}/org.example.releng/projects-platform.cquery"
+resolve "${projects.location}/org.example.releng/project.cquery"
 build
 perform "org.example.site#site.p2"
 emma -l "org.example.entities.tests/org.example.entities.ui.tests.launch"  --flatXML --output "${buckminster.output.root}/test.results/org.example.entities.tests.ui.launch.xml" --exec "${buckminster.output.root}/test.results/coverage.org.example.entities.tests.ui.launch.exec"

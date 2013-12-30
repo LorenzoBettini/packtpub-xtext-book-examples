@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cs:cspecExtension xmlns:com="http://www.eclipse.org/buckminster/Common-1.0" xmlns:cs="http://www.eclipse.org/buckminster/CSpec-1.0">
+	<cs:dependencies>
+        <cs:dependency name="org.example.build.hello.site" componentType="eclipse.feature"/>
+        <cs:dependency name="org.example.entities.tests" componentType="osgi.bundle"/>
+        <cs:dependency name="org.example.expressions.tests" componentType="osgi.bundle"/>
+        <cs:dependency name="org.example.smalljava.tests" componentType="osgi.bundle"/>
+        <cs:dependency name="org.example.swtbot.tests.feature" componentType="eclipse.feature"/>
+        <cs:dependency name="org.example.xbase.entities.tests" componentType="osgi.bundle"/>
+        <cs:dependency name="org.example.xbase.expressions.tests" componentType="osgi.bundle"/>
+        <cs:dependency name="org.example.xtend-examples" componentType="osgi.bundle"/>
+	</cs:dependencies>
+</cs:cspecExtension>

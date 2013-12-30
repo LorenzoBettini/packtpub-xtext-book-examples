@@ -1,5 +1,5 @@
-The build.cquery is used to materialize the target platform and the
-projects in the workspace.
+The projects-platform.cquery is used to materialize the target platform. 
+The project.cquery is used to materialize the projects in the workspace.
 
 The build-using-local-mirror.cquery is an example to materialize the target platform
 using a local eclipse mirror obtained using the b3 aggregator on the
