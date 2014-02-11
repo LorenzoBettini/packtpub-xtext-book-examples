@@ -49,8 +49,9 @@ public class SmallJavaProjectWizardTests {
 		bot.table().select("Plug-in Development");
 		bot.button("OK").click();
 
-		bot.viewByTitle("Error Log").close();
-		bot.viewByTitle("Problems").show();
+		// in SwtBot 2.2.0 we must use viewByPartName instead of viewByTitle
+		bot.viewByPartName("Error Log").close();
+		bot.viewByPartName("Problems").show();
 	}
 
 	@AfterClass
