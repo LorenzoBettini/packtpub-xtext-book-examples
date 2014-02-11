@@ -29,8 +29,6 @@ class EntitiesCompilerTest {
 		'''
 package entities;
 
-import org.eclipse.xtext.xbase.lib.Functions.Function0;
-
 /**
  * my entity
  */
@@ -39,12 +37,7 @@ public class MyEntity {
   /**
    * my attribute
    */
-  private MyEntity e = new Function0<MyEntity>() {
-    public MyEntity apply() {
-      MyEntity _myEntity = new MyEntity();
-      return _myEntity;
-    }
-  }.apply();
+  private MyEntity e = new MyEntity();
   
   public MyEntity getE() {
     return this.e;
@@ -113,8 +106,7 @@ import java.util.LinkedList;
 @SuppressWarnings("all")
 public class MyList extends LinkedList<String> {
   public boolean insert(final String s) {
-    boolean _add = this.add(s);
-    return _add;
+    return this.add(s);
   }
   
   public String toString() {
