@@ -65,9 +65,7 @@ public class EntitiesEditorTest extends AbstractEditorTest {
   
   public IFile createTestFile(final String contents) {
     try {
-      String _plus = (this.TEST_PROJECT + "/src/test.entities");
-      IFile _createFile = IResourcesSetupUtil.createFile(_plus, contents);
-      return _createFile;
+      return IResourcesSetupUtil.createFile((this.TEST_PROJECT + "/src/test.entities"), contents);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }
@@ -143,8 +141,7 @@ public class EntitiesEditorTest extends AbstractEditorTest {
               }
             };
             Entity _doubleArrow = ObjectExtensions.<Entity>operator_doubleArrow(_createEntity, _function);
-            boolean _add = _entities_1.add(_doubleArrow);
-            _xblockexpression = (_add);
+            _xblockexpression = (_entities_1.add(_doubleArrow));
           }
           return Boolean.valueOf(_xblockexpression);
         }
@@ -185,8 +182,7 @@ public class EntitiesEditorTest extends AbstractEditorTest {
             EObject _get = _contents.get(0);
             EList<Entity> _entities = ((Model) _get).getEntities();
             final Entity currentEntity = _entities.get(0);
-            Entity _addEntityAfter = EntitiesModelUtil.addEntityAfter(currentEntity, "Added");
-            _xblockexpression = (_addEntityAfter);
+            _xblockexpression = (EntitiesModelUtil.addEntityAfter(currentEntity, "Added"));
           }
           return _xblockexpression;
         }

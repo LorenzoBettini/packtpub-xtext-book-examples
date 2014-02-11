@@ -11,19 +11,16 @@ import org.example.entities.entities.EntityType;
 public class XtendDispatchMethods {
   public String toString(final AttributeType attributeType) {
     ElementType _elementType = attributeType.getElementType();
-    String _typeToString = this.typeToString(_elementType);
-    return _typeToString;
+    return this.typeToString(_elementType);
   }
   
   protected String _typeToString(final BasicType type) {
-    String _typeName = type.getTypeName();
-    return _typeName;
+    return type.getTypeName();
   }
   
   protected String _typeToString(final EntityType type) {
     Entity _entity = type.getEntity();
-    String _name = _entity.getName();
-    return _name;
+    return _entity.getName();
   }
   
   public String typeToString(final ElementType type) {

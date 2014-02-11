@@ -250,13 +250,11 @@ public class SmallJavaIndexTest {
       Iterable<IEObjectDescription> _visibleEObjectDescriptions = this._smallJavaIndex.getVisibleEObjectDescriptions(o, _eClass);
       final Function1<IEObjectDescription,QualifiedName> _function = new Function1<IEObjectDescription,QualifiedName>() {
         public QualifiedName apply(final IEObjectDescription it) {
-          QualifiedName _qualifiedName = it.getQualifiedName();
-          return _qualifiedName;
+          return it.getQualifiedName();
         }
       };
       Iterable<QualifiedName> _map = IterableExtensions.<IEObjectDescription, QualifiedName>map(_visibleEObjectDescriptions, _function);
-      String _join = IterableExtensions.join(_map, ",");
-      _xblockexpression = (_join);
+      _xblockexpression = (IterableExtensions.join(_map, ","));
     }
     return _xblockexpression;
   }
@@ -272,8 +270,7 @@ public class SmallJavaIndexTest {
     Iterable<IEObjectDescription> _exportedEObjectDescriptions = this._smallJavaIndex.getExportedEObjectDescriptions(o);
     final Function1<IEObjectDescription,QualifiedName> _function = new Function1<IEObjectDescription,QualifiedName>() {
       public QualifiedName apply(final IEObjectDescription it) {
-        QualifiedName _qualifiedName = it.getQualifiedName();
-        return _qualifiedName;
+        return it.getQualifiedName();
       }
     };
     Iterable<QualifiedName> _map = IterableExtensions.<IEObjectDescription, QualifiedName>map(_exportedEObjectDescriptions, _function);
@@ -288,13 +285,11 @@ public class SmallJavaIndexTest {
       Iterable<IEObjectDescription> _visibleEObjectDescriptions = this._smallJavaIndex.getVisibleEObjectDescriptions(o);
       final Function1<IEObjectDescription,QualifiedName> _function = new Function1<IEObjectDescription,QualifiedName>() {
         public QualifiedName apply(final IEObjectDescription it) {
-          QualifiedName _qualifiedName = it.getQualifiedName();
-          return _qualifiedName;
+          return it.getQualifiedName();
         }
       };
       Iterable<QualifiedName> _map = IterableExtensions.<IEObjectDescription, QualifiedName>map(_visibleEObjectDescriptions, _function);
-      String _join = IterableExtensions.join(_map, ",");
-      _xblockexpression = (_join);
+      _xblockexpression = (IterableExtensions.join(_map, ","));
     }
     return _xblockexpression;
   }
@@ -304,8 +299,7 @@ public class SmallJavaIndexTest {
     Iterable<IEObjectDescription> _visibleClassesDescriptions = this._smallJavaIndex.getVisibleClassesDescriptions(o);
     final Function1<IEObjectDescription,QualifiedName> _function = new Function1<IEObjectDescription,QualifiedName>() {
       public QualifiedName apply(final IEObjectDescription it) {
-        QualifiedName _qualifiedName = it.getQualifiedName();
-        return _qualifiedName;
+        return it.getQualifiedName();
       }
     };
     Iterable<QualifiedName> _map = IterableExtensions.<IEObjectDescription, QualifiedName>map(_visibleClassesDescriptions, _function);

@@ -19,7 +19,6 @@ public class EntitiesOutputConfigurationProvider extends OutputConfigurationProv
         _head.setOutputDirectory(EntitiesOutputConfigurationProvider.this.ENTITIES_GEN);
       }
     };
-    Set<OutputConfiguration> _doubleArrow = ObjectExtensions.<Set<OutputConfiguration>>operator_doubleArrow(_outputConfigurations, _function);
-    return _doubleArrow;
+    return ObjectExtensions.<Set<OutputConfiguration>>operator_doubleArrow(_outputConfigurations, _function);
   }
 }

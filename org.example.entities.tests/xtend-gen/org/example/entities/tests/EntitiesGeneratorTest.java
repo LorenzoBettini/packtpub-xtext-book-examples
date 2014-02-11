@@ -6,7 +6,6 @@ import org.eclipse.xtext.junit4.InjectWith;
 import org.eclipse.xtext.junit4.XtextRunner;
 import org.eclipse.xtext.util.IAcceptor;
 import org.eclipse.xtext.xbase.compiler.CompilationTestHelper;
-import org.eclipse.xtext.xbase.compiler.CompilationTestHelper.Result;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Extension;
 import org.eclipse.xtext.xbase.lib.ObjectExtensions;
@@ -91,8 +90,8 @@ public class EntitiesGeneratorTest {
       _builder.newLine();
       _builder.append("}");
       _builder.newLine();
-      final IAcceptor<Result> _function = new IAcceptor<Result>() {
-        public void accept(final Result it) {
+      final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
+        public void accept(final CompilationTestHelper.Result it) {
           StringConcatenation _builder = new StringConcatenation();
           _builder.append("package entities;");
           _builder.newLine();
@@ -149,8 +148,8 @@ public class EntitiesGeneratorTest {
       _builder.newLine();
       _builder.append("}");
       _builder.newLine();
-      final IAcceptor<Result> _function = new IAcceptor<Result>() {
-        public void accept(final Result it) {
+      final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
+        public void accept(final CompilationTestHelper.Result it) {
           it.getCompiledClass();
         }
       };
@@ -178,8 +177,8 @@ public class EntitiesGeneratorTest {
       _builder.newLine();
       _builder.append("}");
       _builder.newLine();
-      final IAcceptor<Result> _function = new IAcceptor<Result>() {
-        public void accept(final Result it) {
+      final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
+        public void accept(final CompilationTestHelper.Result it) {
           Class<? extends Object> _compiledClass = it.getCompiledClass("entities.FirstEntity");
           Assert.assertNotNull(_compiledClass);
           Class<? extends Object> _compiledClass_1 = it.getCompiledClass("entities.SecondEntity");
@@ -203,8 +202,8 @@ public class EntitiesGeneratorTest {
       _builder.newLine();
       _builder.append("}");
       _builder.newLine();
-      final IAcceptor<Result> _function = new IAcceptor<Result>() {
-        public void accept(final Result it) {
+      final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
+        public void accept(final CompilationTestHelper.Result it) {
           try {
             Class<? extends Object> _compiledClass = it.getCompiledClass();
             Object _newInstance = _compiledClass.newInstance();
@@ -247,8 +246,8 @@ public class EntitiesGeneratorTest {
       _builder.newLine();
       _builder.append("entity SecondEntity { }");
       _builder.newLine();
-      final IAcceptor<Result> _function = new IAcceptor<Result>() {
-        public void accept(final Result it) {
+      final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
+        public void accept(final CompilationTestHelper.Result it) {
           StringConcatenation _builder = new StringConcatenation();
           _builder.append("package entities;");
           _builder.newLine();
@@ -325,8 +324,8 @@ public class EntitiesGeneratorTest {
       _builder.newLine();
       _builder.append("}");
       _builder.newLine();
-      final IAcceptor<Result> _function = new IAcceptor<Result>() {
-        public void accept(final Result it) {
+      final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
+        public void accept(final CompilationTestHelper.Result it) {
           try {
             Class<? extends Object> _compiledClass = it.getCompiledClass("entities.FirstEntity");
             final Object FirstEntity = _compiledClass.newInstance();
@@ -376,8 +375,8 @@ public class EntitiesGeneratorTest {
       _builder.newLine();
       _builder.append("}");
       _builder.newLine();
-      final IAcceptor<Result> _function = new IAcceptor<Result>() {
-        public void accept(final Result it) {
+      final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
+        public void accept(final CompilationTestHelper.Result it) {
           StringConcatenation _builder = new StringConcatenation();
           _builder.append("package entities;");
           _builder.newLine();

@@ -55,8 +55,7 @@ public class EntitiesWorkbenchTest extends AbstractWorkbenchTest {
   
   public void checkEntityProgram(final String contents, final int expectedErrors) {
     try {
-      String _plus = (this.TEST_PROJECT + "/src/test.entities");
-      final IFile file = IResourcesSetupUtil.createFile(_plus, contents);
+      final IFile file = IResourcesSetupUtil.createFile((this.TEST_PROJECT + "/src/test.entities"), contents);
       IResourcesSetupUtil.waitForAutoBuild();
       IMarker[] _findMarkers = file.findMarkers(EValidator.MARKER, true, 
         IResource.DEPTH_INFINITE);

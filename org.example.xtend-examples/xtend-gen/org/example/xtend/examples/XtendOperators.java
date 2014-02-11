@@ -4,13 +4,11 @@ import com.google.common.collect.Iterables;
 import java.util.ArrayList;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.InputOutput;
-import org.eclipse.xtext.xbase.lib.ObjectExtensions;
 
 @SuppressWarnings("all")
 public class XtendOperators {
   public static void main(final String[] args) {
-    Object _object = new Object();
-    final Object o = _object;
+    final Object o = new Object();
     if (o!=null) {
       o.toString();
     }
@@ -28,17 +26,12 @@ public class XtendOperators {
     if (_string_1 != null) {
       _elvis = _string_1;
     } else {
-      _elvis = ObjectExtensions.<String>operator_elvis(_string_1, "default");
+      _elvis = "default";
     }
     result = _elvis;
-    int _minus = (3 - 2);
-    int _minus_1 = (_minus - 1);
-    InputOutput.<Integer>println(Integer.valueOf(_minus_1));
-    int _minus_2 = (2 - 1);
-    int _minus_3 = (3 - _minus_2);
-    InputOutput.<Integer>println(Integer.valueOf(_minus_3));
-    boolean _not = (!true);
-    InputOutput.<Boolean>println(Boolean.valueOf(_not));
+    InputOutput.<Integer>println(Integer.valueOf(((3 - 2) - 1)));
+    InputOutput.<Integer>println(Integer.valueOf((3 - (2 - 1))));
+    InputOutput.<Boolean>println(Boolean.valueOf((!true)));
     final ArrayList<String> l1 = CollectionLiterals.<String>newArrayList("a");
     l1.add("b");
     final ArrayList<String> l2 = CollectionLiterals.<String>newArrayList("c");

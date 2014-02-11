@@ -186,8 +186,7 @@ public class SmallJavaModelUtilTest {
     ArrayList<SJClass> _classHierarchy = SmallJavaModelUtil.classHierarchy(c);
     final Function1<SJClass,String> _function = new Function1<SJClass,String>() {
       public String apply(final SJClass it) {
-        String _name = it.getName();
-        return _name;
+        return it.getName();
       }
     };
     List<String> _map = ListExtensions.<SJClass, String>map(_classHierarchy, _function);

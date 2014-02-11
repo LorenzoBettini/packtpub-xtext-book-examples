@@ -32,8 +32,7 @@ public class SmallJavaLabelProvider extends DefaultEObjectLabelProvider {
     String _plus = (" : " + _name);
     StyledString _styledString_1 = new StyledString(_plus, 
       StyledString.DECORATIONS_STYLER);
-    StyledString _append = _styledString.append(_styledString_1);
-    return _append;
+    return _styledString.append(_styledString_1);
   }
   
   public String image(final SJMethod m) {
@@ -48,8 +47,7 @@ public class SmallJavaLabelProvider extends DefaultEObjectLabelProvider {
     String _plus = (" : " + _name_1);
     StyledString _styledString_1 = new StyledString(_plus, 
       StyledString.DECORATIONS_STYLER);
-    StyledString _append = _styledString.append(_styledString_1);
-    return _append;
+    return _styledString.append(_styledString_1);
   }
   
   public String image(final SJField f) {

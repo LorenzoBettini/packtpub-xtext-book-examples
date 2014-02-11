@@ -21,12 +21,10 @@ public class PersonUtil {
         String _plus_1 = (_plus + _firstname);
         String _plus_2 = (_plus_1 + " ");
         int _age = it.getAge();
-        String _plus_3 = (_plus_2 + Integer.valueOf(_age));
-        return _plus_3;
+        return (_plus_2 + Integer.valueOf(_age));
       }
     };
-    List<Person> _sortBy = IterableExtensions.<Person, String>sortBy(persons, _function);
-    return _sortBy;
+    return IterableExtensions.<Person, String>sortBy(persons, _function);
   }
   
   public static String asString(final List<Person> persons) {
@@ -39,25 +37,21 @@ public class PersonUtil {
         String _plus_2 = (_plus_1 + " (");
         int _age = it.getAge();
         String _plus_3 = (_plus_2 + Integer.valueOf(_age));
-        String _plus_4 = (_plus_3 + ")");
-        return _plus_4;
+        return (_plus_3 + ")");
       }
     };
     List<String> _map = ListExtensions.<Person, String>map(persons, _function);
-    String _join = IterableExtensions.join(_map, ", ");
-    return _join;
+    return IterableExtensions.join(_map, ", ");
   }
   
   public static Person findByName(final List<Person> persons, final String name) {
     final Function1<Person,Boolean> _function = new Function1<Person,Boolean>() {
       public Boolean apply(final Person it) {
         String _firstname = it.getFirstname();
-        boolean _equals = Objects.equal(_firstname, name);
-        return Boolean.valueOf(_equals);
+        return Boolean.valueOf(Objects.equal(_firstname, name));
       }
     };
-    Person _findFirst = IterableExtensions.<Person>findFirst(persons, _function);
-    return _findFirst;
+    return IterableExtensions.<Person>findFirst(persons, _function);
   }
   
   public static void main(final String[] args) {
@@ -73,15 +67,13 @@ public class PersonUtil {
     final Function1<Person,Boolean> _function = new Function1<Person,Boolean>() {
       public Boolean apply(final Person it) {
         String _firstname = it.getFirstname();
-        boolean _startsWith = _firstname.startsWith("J");
-        return Boolean.valueOf(_startsWith);
+        return Boolean.valueOf(_firstname.startsWith("J"));
       }
     };
     Iterable<Person> _filter = IterableExtensions.<Person>filter(personList, _function);
     final Function1<Person,Integer> _function_1 = new Function1<Person,Integer>() {
       public Integer apply(final Person it) {
-        int _age = it.getAge();
-        return Integer.valueOf(_age);
+        return Integer.valueOf(it.getAge());
       }
     };
     List<Person> _sortBy = IterableExtensions.<Person, Integer>sortBy(_filter, _function_1);
@@ -91,8 +83,7 @@ public class PersonUtil {
         String _surname = it.getSurname();
         String _plus = (_surname + ", ");
         String _firstname = it.getFirstname();
-        String _plus_1 = (_plus + _firstname);
-        return _plus_1;
+        return (_plus + _firstname);
       }
     };
     Iterable<String> _map = IterableExtensions.<Person, String>map(_take, _function_2);

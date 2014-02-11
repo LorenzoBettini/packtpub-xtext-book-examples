@@ -208,8 +208,7 @@ public class SmallJavaScopeProviderTest {
           final Function1<SJVariableDeclaration,Boolean> _function = new Function1<SJVariableDeclaration,Boolean>() {
             public Boolean apply(final SJVariableDeclaration it) {
               String _name = it.getName();
-              boolean _equals = Objects.equal(_name, "v3");
-              return Boolean.valueOf(_equals);
+              return Boolean.valueOf(Objects.equal(_name, "v3"));
             }
           };
           SJVariableDeclaration _findFirst = IteratorExtensions.<SJVariableDeclaration>findFirst(it, _function);
@@ -220,8 +219,7 @@ public class SmallJavaScopeProviderTest {
           final Function1<SJVariableDeclaration,Boolean> _function_1 = new Function1<SJVariableDeclaration,Boolean>() {
             public Boolean apply(final SJVariableDeclaration it) {
               String _name = it.getName();
-              boolean _equals = Objects.equal(_name, "v4");
-              return Boolean.valueOf(_equals);
+              return Boolean.valueOf(Objects.equal(_name, "v4"));
             }
           };
           SJVariableDeclaration _findFirst_1 = IteratorExtensions.<SJVariableDeclaration>findFirst(it, _function_1);
@@ -368,8 +366,7 @@ public class SmallJavaScopeProviderTest {
           final Function1<SJVariableDeclaration,Boolean> _function = new Function1<SJVariableDeclaration,Boolean>() {
             public Boolean apply(final SJVariableDeclaration it) {
               String _name = it.getName();
-              boolean _equals = Objects.equal(_name, "v3");
-              return Boolean.valueOf(_equals);
+              return Boolean.valueOf(Objects.equal(_name, "v3"));
             }
           };
           SJVariableDeclaration _findFirst = IteratorExtensions.<SJVariableDeclaration>findFirst(it, _function);
@@ -1048,8 +1045,7 @@ public class SmallJavaScopeProviderTest {
     Iterable<IEObjectDescription> _allElements = _scope.getAllElements();
     final Function1<IEObjectDescription,QualifiedName> _function = new Function1<IEObjectDescription,QualifiedName>() {
       public QualifiedName apply(final IEObjectDescription it) {
-        QualifiedName _name = it.getName();
-        return _name;
+        return it.getName();
       }
     };
     Iterable<QualifiedName> _map = IterableExtensions.<IEObjectDescription, QualifiedName>map(_allElements, _function);

@@ -198,8 +198,7 @@ public class SmallJavaLibTest {
   private SJProgram loadLibAndParse(final CharSequence p) {
     try {
       ResourceSet _loadLibrary = this.loadLibrary();
-      SJProgram _parse = this._parseHelper.parse(p, _loadLibrary);
-      return _parse;
+      return this._parseHelper.parse(p, _loadLibrary);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }
@@ -220,8 +219,7 @@ public class SmallJavaLibTest {
         IterableExtensions.<Resource>forEach(_resources, _function);
       }
     };
-    ResourceSet _doubleArrow = ObjectExtensions.<ResourceSet>operator_doubleArrow(_loadLib, _function);
-    return _doubleArrow;
+    return ObjectExtensions.<ResourceSet>operator_doubleArrow(_loadLib, _function);
   }
   
   private void assertHierarchyWithObject(final SJClass c, final CharSequence expected) {
@@ -229,8 +227,7 @@ public class SmallJavaLibTest {
     ArrayList<SJClass> _classHierarchyWithObject = this._smallJavaLib.getClassHierarchyWithObject(c);
     final Function1<SJClass,String> _function = new Function1<SJClass,String>() {
       public String apply(final SJClass it) {
-        String _name = it.getName();
-        return _name;
+        return it.getName();
       }
     };
     List<String> _map = ListExtensions.<SJClass, String>map(_classHierarchyWithObject, _function);

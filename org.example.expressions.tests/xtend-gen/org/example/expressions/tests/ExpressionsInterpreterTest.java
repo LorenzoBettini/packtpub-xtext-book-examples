@@ -187,8 +187,7 @@ public class ExpressionsInterpreterTest {
           Assert.assertEquals(expected, _interpret);
         }
       };
-      ExpressionsModel _doubleArrow = ObjectExtensions.<ExpressionsModel>operator_doubleArrow(_parse, _function);
-      return _doubleArrow;
+      return ObjectExtensions.<ExpressionsModel>operator_doubleArrow(_parse, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }

@@ -35,14 +35,12 @@ public class SmallJavaAccessibility {
         if (_isSubclassOf) {
           _matched=true;
           SJAccessLevel _access = member.getAccess();
-          boolean _notEquals = (!Objects.equal(_access, SJAccessLevel.PRIVATE));
-          _switchResult = _notEquals;
+          _switchResult = (!Objects.equal(_access, SJAccessLevel.PRIVATE));
         }
       }
       if (!_matched) {
         SJAccessLevel _access_1 = member.getAccess();
-        boolean _equals_1 = Objects.equal(_access_1, SJAccessLevel.PUBLIC);
-        _switchResult = _equals_1;
+        _switchResult = Objects.equal(_access_1, SJAccessLevel.PUBLIC);
       }
       _xblockexpression = (_switchResult);
     }

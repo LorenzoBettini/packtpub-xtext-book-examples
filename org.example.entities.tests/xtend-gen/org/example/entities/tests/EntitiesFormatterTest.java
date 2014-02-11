@@ -4,7 +4,6 @@ import com.google.inject.Inject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.formatting.INodeModelFormatter;
-import org.eclipse.xtext.formatting.INodeModelFormatter.IFormattedRegion;
 import org.eclipse.xtext.junit4.InjectWith;
 import org.eclipse.xtext.junit4.XtextRunner;
 import org.eclipse.xtext.junit4.util.ParseHelper;
@@ -77,7 +76,7 @@ public class EntitiesFormatterTest {
       IParseResult _parseResult = ((XtextResource) _eResource).getParseResult();
       ICompositeNode _rootNode = _parseResult.getRootNode();
       int _length = input.length();
-      IFormattedRegion _format = this._iNodeModelFormatter.format(_rootNode, 0, _length);
+      INodeModelFormatter.IFormattedRegion _format = this._iNodeModelFormatter.format(_rootNode, 0, _length);
       String _formattedText = _format.getFormattedText();
       Assert.assertEquals(_string, _formattedText);
     } catch (Throwable _e) {

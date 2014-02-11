@@ -19,15 +19,13 @@ public class ExpressionsModelUtil {
       final EList<AbstractElement> allElements = _containerOfType.getElements();
       final Function1<AbstractElement,Boolean> _function = new Function1<AbstractElement,Boolean>() {
         public Boolean apply(final AbstractElement it) {
-          boolean _isAncestor = EcoreUtil.isAncestor(it, e);
-          return Boolean.valueOf(_isAncestor);
+          return Boolean.valueOf(EcoreUtil.isAncestor(it, e));
         }
       };
       final AbstractElement containingElement = IterableExtensions.<AbstractElement>findFirst(allElements, _function);
       int _indexOf = allElements.indexOf(containingElement);
       List<AbstractElement> _subList = allElements.subList(0, _indexOf);
-      List<Variable> _typeSelect = EcoreUtil2.<Variable>typeSelect(_subList, Variable.class);
-      _xblockexpression = (_typeSelect);
+      _xblockexpression = (EcoreUtil2.<Variable>typeSelect(_subList, Variable.class));
     }
     return _xblockexpression;
   }

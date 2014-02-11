@@ -3,7 +3,6 @@ package org.example.expressions.typing;
 import com.google.common.base.Objects;
 import java.util.Arrays;
 import java.util.List;
-import org.eclipse.xtext.xbase.lib.Functions.Function0;
 import org.example.expressions.expressions.AbstractElement;
 import org.example.expressions.expressions.And;
 import org.example.expressions.expressions.BoolConstant;
@@ -27,96 +26,71 @@ import org.example.expressions.typing.StringType;
 
 @SuppressWarnings("all")
 public class ExpressionsTypeProvider {
-  public final static StringType stringType = new Function0<StringType>() {
-    public StringType apply() {
-      StringType _stringType = new StringType();
-      return _stringType;
-    }
-  }.apply();
+  public final static StringType stringType = new StringType();
   
-  public final static IntType intType = new Function0<IntType>() {
-    public IntType apply() {
-      IntType _intType = new IntType();
-      return _intType;
-    }
-  }.apply();
+  public final static IntType intType = new IntType();
   
-  public final static BoolType boolType = new Function0<BoolType>() {
-    public BoolType apply() {
-      BoolType _boolType = new BoolType();
-      return _boolType;
-    }
-  }.apply();
+  public final static BoolType boolType = new BoolType();
   
   protected ExpressionsType _typeFor(final Expression e) {
     ExpressionsType _switchResult = null;
     boolean _matched = false;
     if (!_matched) {
       if (e instanceof StringConstant) {
-        final StringConstant _stringConstant = (StringConstant)e;
         _matched=true;
         _switchResult = ExpressionsTypeProvider.stringType;
       }
     }
     if (!_matched) {
       if (e instanceof IntConstant) {
-        final IntConstant _intConstant = (IntConstant)e;
         _matched=true;
         _switchResult = ExpressionsTypeProvider.intType;
       }
     }
     if (!_matched) {
       if (e instanceof BoolConstant) {
-        final BoolConstant _boolConstant = (BoolConstant)e;
         _matched=true;
         _switchResult = ExpressionsTypeProvider.boolType;
       }
     }
     if (!_matched) {
       if (e instanceof Not) {
-        final Not _not = (Not)e;
         _matched=true;
         _switchResult = ExpressionsTypeProvider.boolType;
       }
     }
     if (!_matched) {
       if (e instanceof MulOrDiv) {
-        final MulOrDiv _mulOrDiv = (MulOrDiv)e;
         _matched=true;
         _switchResult = ExpressionsTypeProvider.intType;
       }
     }
     if (!_matched) {
       if (e instanceof Minus) {
-        final Minus _minus = (Minus)e;
         _matched=true;
         _switchResult = ExpressionsTypeProvider.intType;
       }
     }
     if (!_matched) {
       if (e instanceof Comparison) {
-        final Comparison _comparison = (Comparison)e;
         _matched=true;
         _switchResult = ExpressionsTypeProvider.boolType;
       }
     }
     if (!_matched) {
       if (e instanceof Equality) {
-        final Equality _equality = (Equality)e;
         _matched=true;
         _switchResult = ExpressionsTypeProvider.boolType;
       }
     }
     if (!_matched) {
       if (e instanceof And) {
-        final And _and = (And)e;
         _matched=true;
         _switchResult = ExpressionsTypeProvider.boolType;
       }
     }
     if (!_matched) {
       if (e instanceof Or) {
-        final Or _or = (Or)e;
         _matched=true;
         _switchResult = ExpressionsTypeProvider.boolType;
       }
@@ -129,8 +103,8 @@ public class ExpressionsTypeProvider {
     {
       Expression _left = e.getLeft();
       final ExpressionsType leftType = this.typeFor(_left);
-      ExpressionsType _typeFor = null;
       Expression _right = e.getRight();
+      ExpressionsType _typeFor = null;
       if (_right!=null) {
         _typeFor=this.typeFor(_right);
       }
@@ -142,7 +116,7 @@ public class ExpressionsTypeProvider {
         _or = true;
       } else {
         boolean _equals_1 = Objects.equal(rightType, ExpressionsTypeProvider.stringType);
-        _or = (_equals || _equals_1);
+        _or = _equals_1;
       }
       if (_or) {
         _xifexpression = ExpressionsTypeProvider.stringType;
@@ -155,11 +129,11 @@ public class ExpressionsTypeProvider {
   }
   
   protected ExpressionsType _typeFor(final Variable variable) {
-    ExpressionsType _typeFor = null;
     Expression _expression = null;
     if (variable!=null) {
       _expression=variable.getExpression();
     }
+    ExpressionsType _typeFor = null;
     if (_expression!=null) {
       _typeFor=this.typeFor(_expression);
     }
@@ -177,7 +151,7 @@ public class ExpressionsTypeProvider {
       Variable _variable_1 = varRef.getVariable();
       boolean _contains = _variablesDefinedBefore.contains(_variable_1);
       boolean _not = (!_contains);
-      _or = (_equals || _not);
+      _or = _not;
     }
     if (_or) {
       return null;
@@ -188,18 +162,15 @@ public class ExpressionsTypeProvider {
   }
   
   public boolean isInt(final ExpressionsType type) {
-    boolean _equals = Objects.equal(type, ExpressionsTypeProvider.intType);
-    return _equals;
+    return Objects.equal(type, ExpressionsTypeProvider.intType);
   }
   
   public boolean isString(final ExpressionsType type) {
-    boolean _equals = Objects.equal(type, ExpressionsTypeProvider.stringType);
-    return _equals;
+    return Objects.equal(type, ExpressionsTypeProvider.stringType);
   }
   
   public boolean isBoolean(final ExpressionsType type) {
-    boolean _equals = Objects.equal(type, ExpressionsTypeProvider.boolType);
-    return _equals;
+    return Objects.equal(type, ExpressionsTypeProvider.boolType);
   }
   
   public ExpressionsType typeFor(final AbstractElement e) {

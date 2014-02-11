@@ -15,7 +15,6 @@ import org.example.expressions.expressions.Comparison;
 import org.example.expressions.expressions.Equality;
 import org.example.expressions.expressions.Expression;
 import org.example.expressions.expressions.ExpressionsPackage;
-import org.example.expressions.expressions.ExpressionsPackage.Literals;
 import org.example.expressions.expressions.Minus;
 import org.example.expressions.expressions.MulOrDiv;
 import org.example.expressions.expressions.Not;
@@ -54,7 +53,7 @@ public class ExpressionsValidator extends AbstractExpressionsValidator {
       List<Variable> _variablesDefinedBefore = ExpressionsModelUtil.variablesDefinedBefore(varRef);
       boolean _contains = _variablesDefinedBefore.contains(variable);
       boolean _not = (!_contains);
-      _and = (_notEquals && _not);
+      _and = _not;
     }
     if (_and) {
       String _name = variable.getName();
@@ -71,56 +70,56 @@ public class ExpressionsValidator extends AbstractExpressionsValidator {
   public void checkType(final Not not) {
     Expression _expression = not.getExpression();
     this.checkExpectedBoolean(_expression, 
-      Literals.NOT__EXPRESSION);
+      ExpressionsPackage.Literals.NOT__EXPRESSION);
   }
   
   @Check
   public void checkType(final MulOrDiv mulOrDiv) {
     Expression _left = mulOrDiv.getLeft();
     this.checkExpectedInt(_left, 
-      Literals.MUL_OR_DIV__LEFT);
+      ExpressionsPackage.Literals.MUL_OR_DIV__LEFT);
     Expression _right = mulOrDiv.getRight();
     this.checkExpectedInt(_right, 
-      Literals.MUL_OR_DIV__RIGHT);
+      ExpressionsPackage.Literals.MUL_OR_DIV__RIGHT);
   }
   
   @Check
   public void checkType(final Minus minus) {
     Expression _left = minus.getLeft();
     this.checkExpectedInt(_left, 
-      Literals.MINUS__LEFT);
+      ExpressionsPackage.Literals.MINUS__LEFT);
     Expression _right = minus.getRight();
     this.checkExpectedInt(_right, 
-      Literals.MINUS__RIGHT);
+      ExpressionsPackage.Literals.MINUS__RIGHT);
   }
   
   @Check
   public void checkType(final And and) {
     Expression _left = and.getLeft();
     this.checkExpectedBoolean(_left, 
-      Literals.AND__LEFT);
+      ExpressionsPackage.Literals.AND__LEFT);
     Expression _right = and.getRight();
     this.checkExpectedBoolean(_right, 
-      Literals.AND__RIGHT);
+      ExpressionsPackage.Literals.AND__RIGHT);
   }
   
   @Check
   public void checkType(final Or or) {
     Expression _left = or.getLeft();
-    this.checkExpectedBoolean(_left, Literals.OR__LEFT);
+    this.checkExpectedBoolean(_left, ExpressionsPackage.Literals.OR__LEFT);
     Expression _right = or.getRight();
     this.checkExpectedBoolean(_right, 
-      Literals.OR__RIGHT);
+      ExpressionsPackage.Literals.OR__RIGHT);
   }
   
   @Check
   public void checkType(final Equality equality) {
     Expression _left = equality.getLeft();
     final ExpressionsType leftType = this.getTypeAndCheckNotNull(_left, 
-      Literals.EQUALITY__LEFT);
+      ExpressionsPackage.Literals.EQUALITY__LEFT);
     Expression _right = equality.getRight();
     final ExpressionsType rightType = this.getTypeAndCheckNotNull(_right, 
-      Literals.EQUALITY__RIGHT);
+      ExpressionsPackage.Literals.EQUALITY__RIGHT);
     this.checkExpectedSame(leftType, rightType);
   }
   
@@ -128,23 +127,23 @@ public class ExpressionsValidator extends AbstractExpressionsValidator {
   public void checkType(final Comparison comparison) {
     Expression _left = comparison.getLeft();
     final ExpressionsType leftType = this.getTypeAndCheckNotNull(_left, 
-      Literals.COMPARISON__LEFT);
+      ExpressionsPackage.Literals.COMPARISON__LEFT);
     Expression _right = comparison.getRight();
     final ExpressionsType rightType = this.getTypeAndCheckNotNull(_right, 
-      Literals.COMPARISON__RIGHT);
+      ExpressionsPackage.Literals.COMPARISON__RIGHT);
     this.checkExpectedSame(leftType, rightType);
-    this.checkNotBoolean(leftType, Literals.COMPARISON__LEFT);
-    this.checkNotBoolean(rightType, Literals.COMPARISON__RIGHT);
+    this.checkNotBoolean(leftType, ExpressionsPackage.Literals.COMPARISON__LEFT);
+    this.checkNotBoolean(rightType, ExpressionsPackage.Literals.COMPARISON__RIGHT);
   }
   
   @Check
   public void checkType(final Plus plus) {
     Expression _left = plus.getLeft();
     final ExpressionsType leftType = this.getTypeAndCheckNotNull(_left, 
-      Literals.PLUS__LEFT);
+      ExpressionsPackage.Literals.PLUS__LEFT);
     Expression _right = plus.getRight();
     final ExpressionsType rightType = this.getTypeAndCheckNotNull(_right, 
-      Literals.PLUS__RIGHT);
+      ExpressionsPackage.Literals.PLUS__RIGHT);
     boolean _or = false;
     boolean _or_1 = false;
     boolean _equals = Objects.equal(leftType, ExpressionsTypeProvider.intType);
@@ -152,7 +151,7 @@ public class ExpressionsValidator extends AbstractExpressionsValidator {
       _or_1 = true;
     } else {
       boolean _equals_1 = Objects.equal(rightType, ExpressionsTypeProvider.intType);
-      _or_1 = (_equals || _equals_1);
+      _or_1 = _equals_1;
     }
     if (_or_1) {
       _or = true;
@@ -163,13 +162,13 @@ public class ExpressionsValidator extends AbstractExpressionsValidator {
         _and = false;
       } else {
         boolean _notEquals_1 = (!Objects.equal(rightType, ExpressionsTypeProvider.stringType));
-        _and = (_notEquals && _notEquals_1);
+        _and = _notEquals_1;
       }
-      _or = (_or_1 || _and);
+      _or = _and;
     }
     if (_or) {
-      this.checkNotBoolean(leftType, Literals.PLUS__LEFT);
-      this.checkNotBoolean(rightType, Literals.PLUS__RIGHT);
+      this.checkNotBoolean(leftType, ExpressionsPackage.Literals.PLUS__LEFT);
+      this.checkNotBoolean(rightType, ExpressionsPackage.Literals.PLUS__RIGHT);
     }
   }
   
@@ -181,20 +180,17 @@ public class ExpressionsValidator extends AbstractExpressionsValidator {
       _and_1 = false;
     } else {
       boolean _notEquals_1 = (!Objects.equal(left, null));
-      _and_1 = (_notEquals && _notEquals_1);
+      _and_1 = _notEquals_1;
     }
     if (!_and_1) {
       _and = false;
     } else {
       boolean _notEquals_2 = (!Objects.equal(right, left));
-      _and = (_and_1 && _notEquals_2);
+      _and = _notEquals_2;
     }
     if (_and) {
-      String _plus = ("expected the same type, but was " + left);
-      String _plus_1 = (_plus + ", ");
-      String _plus_2 = (_plus_1 + right);
-      EAttribute _eIDAttribute = Literals.EQUALITY.getEIDAttribute();
-      this.error(_plus_2, _eIDAttribute, 
+      EAttribute _eIDAttribute = ExpressionsPackage.Literals.EQUALITY.getEIDAttribute();
+      this.error(((("expected the same type, but was " + left) + ", ") + right), _eIDAttribute, 
         ExpressionsValidator.WRONG_TYPE);
     }
   }
@@ -218,10 +214,7 @@ public class ExpressionsValidator extends AbstractExpressionsValidator {
     final ExpressionsType actualType = this.getTypeAndCheckNotNull(exp, reference);
     boolean _notEquals = (!Objects.equal(actualType, expectedType));
     if (_notEquals) {
-      String _plus = ("expected " + expectedType);
-      String _plus_1 = (_plus + " type, but was ");
-      String _plus_2 = (_plus_1 + actualType);
-      this.error(_plus_2, reference, ExpressionsValidator.WRONG_TYPE);
+      this.error(((("expected " + expectedType) + " type, but was ") + actualType), reference, ExpressionsValidator.WRONG_TYPE);
     }
   }
   

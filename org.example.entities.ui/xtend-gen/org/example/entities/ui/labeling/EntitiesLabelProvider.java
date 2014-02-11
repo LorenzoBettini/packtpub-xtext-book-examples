@@ -37,13 +37,11 @@ public class EntitiesLabelProvider extends DefaultEObjectLabelProvider {
     if (_notEquals) {
       AttributeType _type_1 = a.getType();
       String _representation = this._typeRepresentation.representation(_type_1);
-      String _plus = (" : " + _representation);
-      _xifexpression = _plus;
+      _xifexpression = (" : " + _representation);
     } else {
       _xifexpression = "";
     }
-    String _plus_1 = (_name + _xifexpression);
-    return _plus_1;
+    return (_name + _xifexpression);
   }
   
   public String image(final Entity e) {

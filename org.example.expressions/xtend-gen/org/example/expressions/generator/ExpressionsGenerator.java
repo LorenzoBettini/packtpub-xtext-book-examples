@@ -65,7 +65,6 @@ public class ExpressionsGenerator implements IGenerator {
       }
     };
     List<String> _map = ListExtensions.<AbstractElement, String>map(_elements, _function);
-    String _join = IterableExtensions.join(_map, "\n");
-    return _join;
+    return IterableExtensions.join(_map, "\n");
   }
 }

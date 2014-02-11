@@ -143,11 +143,9 @@ public class ExpressionsValidatorTest {
       final Procedure1<AbstractElement> _function = new Procedure1<AbstractElement>() {
         public void apply(final AbstractElement it) {
           EClass _expression = ExpressionsPackage.eINSTANCE.getExpression();
-          String _plus = ("expected " + expectedActualType);
-          String _plus_1 = (_plus + " type, but was ");
-          String _plus_2 = (_plus_1 + expectedWrongType);
           ExpressionsValidatorTest.this._validationTestHelper.assertError(it, _expression, 
-            ExpressionsValidator.WRONG_TYPE, _plus_2);
+            ExpressionsValidator.WRONG_TYPE, 
+            ((("expected " + expectedActualType) + " type, but was ") + expectedWrongType));
         }
       };
       ObjectExtensions.<AbstractElement>operator_doubleArrow(_last, _function);
@@ -164,11 +162,9 @@ public class ExpressionsValidatorTest {
       final Procedure1<AbstractElement> _function = new Procedure1<AbstractElement>() {
         public void apply(final AbstractElement it) {
           EClass _expression = ExpressionsPackage.eINSTANCE.getExpression();
-          String _plus = ("expected the same type, but was " + expectedLeft);
-          String _plus_1 = (_plus + ", ");
-          String _plus_2 = (_plus_1 + expectedRight);
           ExpressionsValidatorTest.this._validationTestHelper.assertError(it, _expression, 
-            ExpressionsValidator.WRONG_TYPE, _plus_2);
+            ExpressionsValidator.WRONG_TYPE, 
+            ((("expected the same type, but was " + expectedLeft) + ", ") + expectedRight));
         }
       };
       ObjectExtensions.<AbstractElement>operator_doubleArrow(_last, _function);

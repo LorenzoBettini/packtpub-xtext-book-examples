@@ -17,19 +17,15 @@ public class XtendSwitch {
       boolean _matched = false;
       if (!_matched) {
         if (elementType instanceof BasicType) {
-          final BasicType _basicType = (BasicType)elementType;
           _matched=true;
-          String _typeName = _basicType.getTypeName();
-          _switchResult = _typeName;
+          _switchResult = ((BasicType)elementType).getTypeName();
         }
       }
       if (!_matched) {
         if (elementType instanceof EntityType) {
-          final EntityType _entityType = (EntityType)elementType;
           _matched=true;
-          Entity _entity = _entityType.getEntity();
-          String _name = _entity.getName();
-          _switchResult = _name;
+          Entity _entity = ((EntityType)elementType).getEntity();
+          _switchResult = _entity.getName();
         }
       }
       _xblockexpression = (_switchResult);

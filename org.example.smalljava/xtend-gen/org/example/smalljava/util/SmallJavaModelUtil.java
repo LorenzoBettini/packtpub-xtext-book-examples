@@ -36,7 +36,7 @@ public class SmallJavaModelUtil {
       } else {
         boolean _contains = visited.contains(current);
         boolean _not = (!_contains);
-        _and = (_notEquals && _not);
+        _and = _not;
       }
       boolean _while = _and;
       while (_while) {
@@ -52,7 +52,7 @@ public class SmallJavaModelUtil {
         } else {
           boolean _contains_1 = visited.contains(current);
           boolean _not_1 = (!_contains_1);
-          _and_1 = (_notEquals_1 && _not_1);
+          _and_1 = _not_1;
         }
         _while = _and_1;
       }
@@ -63,42 +63,35 @@ public class SmallJavaModelUtil {
   
   public static Iterable<SJField> fields(final SJClass c) {
     EList<SJMember> _members = c.getMembers();
-    Iterable<SJField> _filter = Iterables.<SJField>filter(_members, SJField.class);
-    return _filter;
+    return Iterables.<SJField>filter(_members, SJField.class);
   }
   
   public static Iterable<SJMethod> methods(final SJClass c) {
     EList<SJMember> _members = c.getMembers();
-    Iterable<SJMethod> _filter = Iterables.<SJMethod>filter(_members, SJMethod.class);
-    return _filter;
+    return Iterables.<SJMethod>filter(_members, SJMethod.class);
   }
   
   public static SJReturn returnStatement(final SJMethod m) {
     SJMethodBody _body = m.getBody();
     EList<SJStatement> _statements = _body.getStatements();
     List<SJReturn> _typeSelect = EcoreUtil2.<SJReturn>typeSelect(_statements, SJReturn.class);
-    SJReturn _head = IterableExtensions.<SJReturn>head(_typeSelect);
-    return _head;
+    return IterableExtensions.<SJReturn>head(_typeSelect);
   }
   
   public static SJClass containingClass(final EObject e) {
-    SJClass _containerOfType = EcoreUtil2.<SJClass>getContainerOfType(e, SJClass.class);
-    return _containerOfType;
+    return EcoreUtil2.<SJClass>getContainerOfType(e, SJClass.class);
   }
   
   public static SJMethod containingMethod(final EObject e) {
-    SJMethod _containerOfType = EcoreUtil2.<SJMethod>getContainerOfType(e, SJMethod.class);
-    return _containerOfType;
+    return EcoreUtil2.<SJMethod>getContainerOfType(e, SJMethod.class);
   }
   
   public static SJProgram containingProgram(final EObject e) {
-    SJProgram _containerOfType = EcoreUtil2.<SJProgram>getContainerOfType(e, SJProgram.class);
-    return _containerOfType;
+    return EcoreUtil2.<SJProgram>getContainerOfType(e, SJProgram.class);
   }
   
   public static SJBlock containingBlock(final EObject e) {
-    SJBlock _containerOfType = EcoreUtil2.<SJBlock>getContainerOfType(e, SJBlock.class);
-    return _containerOfType;
+    return EcoreUtil2.<SJBlock>getContainerOfType(e, SJBlock.class);
   }
   
   public static String memberAsString(final SJMember m) {
@@ -106,22 +99,18 @@ public class SmallJavaModelUtil {
     boolean _matched = false;
     if (!_matched) {
       if (m instanceof SJField) {
-        final SJField _sJField = (SJField)m;
         _matched=true;
-        String _name = _sJField.getName();
-        _switchResult = _name;
+        _switchResult = ((SJField)m).getName();
       }
     }
     if (!_matched) {
       if (m instanceof SJMethod) {
-        final SJMethod _sJMethod = (SJMethod)m;
         _matched=true;
-        String _name = _sJMethod.getName();
+        String _name = ((SJMethod)m).getName();
         String _plus = (_name + "(");
-        String _paramsTypesAsString = SmallJavaModelUtil.paramsTypesAsString(_sJMethod);
+        String _paramsTypesAsString = SmallJavaModelUtil.paramsTypesAsString(((SJMethod)m));
         String _plus_1 = (_plus + _paramsTypesAsString);
-        String _plus_2 = (_plus_1 + ")");
-        _switchResult = _plus_2;
+        _switchResult = (_plus_1 + ")");
       }
     }
     return _switchResult;
@@ -140,8 +129,7 @@ public class SmallJavaModelUtil {
       }
     };
     List<String> _map = ListExtensions.<SJParameter, String>map(_params, _function);
-    String _join = IterableExtensions.join(_map, ", ");
-    return _join;
+    return IterableExtensions.join(_map, ", ");
   }
   
   public static String memberAsStringWithType(final SJMember m) {
@@ -149,7 +137,6 @@ public class SmallJavaModelUtil {
     String _plus = (_memberAsString + " : ");
     SJClass _type = m.getType();
     String _name = _type.getName();
-    String _plus_1 = (_plus + _name);
-    return _plus_1;
+    return (_plus + _name);
   }
 }

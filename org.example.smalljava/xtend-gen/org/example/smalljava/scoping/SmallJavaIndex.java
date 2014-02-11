@@ -9,7 +9,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.resource.IContainer;
-import org.eclipse.xtext.resource.IContainer.Manager;
 import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.resource.IResourceDescription;
 import org.eclipse.xtext.resource.IResourceDescriptions;
@@ -25,38 +24,33 @@ public class SmallJavaIndex {
   private ResourceDescriptionsProvider rdp;
   
   @Inject
-  private Manager cm;
+  private IContainer.Manager cm;
   
   public Iterable<IEObjectDescription> getVisibleEObjectDescriptions(final EObject o) {
     List<IContainer> _visibleContainers = this.getVisibleContainers(o);
     final Function1<IContainer,Iterable<IEObjectDescription>> _function = new Function1<IContainer,Iterable<IEObjectDescription>>() {
       public Iterable<IEObjectDescription> apply(final IContainer container) {
-        Iterable<IEObjectDescription> _exportedObjects = container.getExportedObjects();
-        return _exportedObjects;
+        return container.getExportedObjects();
       }
     };
     List<Iterable<IEObjectDescription>> _map = ListExtensions.<IContainer, Iterable<IEObjectDescription>>map(_visibleContainers, _function);
-    Iterable<IEObjectDescription> _flatten = Iterables.<IEObjectDescription>concat(_map);
-    return _flatten;
+    return Iterables.<IEObjectDescription>concat(_map);
   }
   
   public Iterable<IEObjectDescription> getVisibleEObjectDescriptions(final EObject o, final EClass type) {
     List<IContainer> _visibleContainers = this.getVisibleContainers(o);
     final Function1<IContainer,Iterable<IEObjectDescription>> _function = new Function1<IContainer,Iterable<IEObjectDescription>>() {
       public Iterable<IEObjectDescription> apply(final IContainer container) {
-        Iterable<IEObjectDescription> _exportedObjectsByType = container.getExportedObjectsByType(type);
-        return _exportedObjectsByType;
+        return container.getExportedObjectsByType(type);
       }
     };
     List<Iterable<IEObjectDescription>> _map = ListExtensions.<IContainer, Iterable<IEObjectDescription>>map(_visibleContainers, _function);
-    Iterable<IEObjectDescription> _flatten = Iterables.<IEObjectDescription>concat(_map);
-    return _flatten;
+    return Iterables.<IEObjectDescription>concat(_map);
   }
   
   public Iterable<IEObjectDescription> getVisibleClassesDescriptions(final EObject o) {
     EClass _sJClass = SmallJavaPackage.eINSTANCE.getSJClass();
-    Iterable<IEObjectDescription> _visibleEObjectDescriptions = this.getVisibleEObjectDescriptions(o, _sJClass);
-    return _visibleEObjectDescriptions;
+    return this.getVisibleEObjectDescriptions(o, _sJClass);
   }
   
   public List<IContainer> getVisibleContainers(final EObject o) {
@@ -70,11 +64,9 @@ public class SmallJavaIndex {
       List<IContainer> _xifexpression = null;
       boolean _notEquals = (!Objects.equal(rd, null));
       if (_notEquals) {
-        List<IContainer> _visibleContainers = this.cm.getVisibleContainers(rd, index);
-        _xifexpression = _visibleContainers;
+        _xifexpression = this.cm.getVisibleContainers(rd, index);
       } else {
-        List<IContainer> _emptyList = CollectionLiterals.<IContainer>emptyList();
-        _xifexpression = _emptyList;
+        _xifexpression = CollectionLiterals.<IContainer>emptyList();
       }
       _xblockexpression = (_xifexpression);
     }
@@ -88,15 +80,13 @@ public class SmallJavaIndex {
       final IResourceDescriptions index = this.rdp.getResourceDescriptions(_eResource);
       Resource _eResource_1 = o.eResource();
       URI _uRI = _eResource_1.getURI();
-      IResourceDescription _resourceDescription = index.getResourceDescription(_uRI);
-      _xblockexpression = (_resourceDescription);
+      _xblockexpression = (index.getResourceDescription(_uRI));
     }
     return _xblockexpression;
   }
   
   public Iterable<IEObjectDescription> getExportedEObjectDescriptions(final EObject o) {
     IResourceDescription _resourceDescription = this.getResourceDescription(o);
-    Iterable<IEObjectDescription> _exportedObjects = _resourceDescription.getExportedObjects();
-    return _exportedObjects;
+    return _resourceDescription.getExportedObjects();
   }
 }

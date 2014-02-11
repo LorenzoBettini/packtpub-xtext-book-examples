@@ -24,7 +24,7 @@ public class XtendCodeGenerator {
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     CharSequence _generateBody = this.generateBody(name, body);
-    _builder.append(_generateBody, "	");
+    _builder.append(_generateBody, "\t");
     _builder.newLineIfNotEmpty();
     _builder.append("}");
     _builder.newLine();
@@ -32,8 +32,7 @@ public class XtendCodeGenerator {
   }
   
   public static void main(final String[] args) {
-    XtendCodeGenerator _xtendCodeGenerator = new XtendCodeGenerator();
-    final XtendCodeGenerator generator = _xtendCodeGenerator;
+    final XtendCodeGenerator generator = new XtendCodeGenerator();
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("System.out.println(\"Hello\");");
     _builder.newLine();

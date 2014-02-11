@@ -133,7 +133,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
         } else {
           EObject _eObjectOrProxy = desc.getEObjectOrProxy();
           boolean _notEquals = (!Objects.equal(_eObjectOrProxy, c));
-          _and_1 = (_equals && _notEquals);
+          _and_1 = _notEquals;
         }
         if (!_and_1) {
           _and = false;
@@ -143,7 +143,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
           Resource _eResource = c.eResource();
           URI _uRI = _eResource.getURI();
           boolean _notEquals_1 = (!Objects.equal(_trimFragment, _uRI));
-          _and = (_and_1 && _notEquals_1);
+          _and = _notEquals_1;
         }
         if (_and) {
           String _name = c.getName();
@@ -170,14 +170,14 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
     } else {
       boolean _isAccessibleFrom = this._smallJavaAccessibility.isAccessibleFrom(member, sel);
       boolean _not = (!_isAccessibleFrom);
-      _and_1 = (_notEquals && _not);
+      _and_1 = _not;
     }
     if (!_and_1) {
       _and = false;
     } else {
       String _name = member.getName();
       boolean _notEquals_1 = (!Objects.equal(_name, null));
-      _and = (_and_1 && _notEquals_1);
+      _and = _notEquals_1;
     }
     if (_and) {
       StringConcatenation _builder = new StringConcatenation();
@@ -204,7 +204,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
         _and = false;
       } else {
         boolean _isMethodinvocation = sel.isMethodinvocation();
-        _and = ((member instanceof SJField) && _isMethodinvocation);
+        _and = _isMethodinvocation;
       }
       if (_and) {
         StringConcatenation _builder = new StringConcatenation();
@@ -219,7 +219,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
       } else {
         boolean _isMethodinvocation_1 = sel.isMethodinvocation();
         boolean _not = (!_isMethodinvocation_1);
-        _and_1 = ((member instanceof SJMethod) && _not);
+        _and_1 = _not;
       }
       if (_and_1) {
         StringConcatenation _builder_1 = new StringConcatenation();
@@ -241,7 +241,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
       _or = true;
     } else {
       boolean _equals_1 = Objects.equal(actualType, null);
-      _or = (_equals || _equals_1);
+      _or = _equals_1;
     }
     if (_or) {
       return;
@@ -275,7 +275,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
       _and = false;
     } else {
       SJMember _member_1 = sel.getMember();
-      _and = (_notEquals && (_member_1 instanceof SJMethod));
+      _and = (_member_1 instanceof SJMethod);
     }
     if (_and) {
       SJMember _member_2 = sel.getMember();
@@ -314,7 +314,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
           String _name = it.getName();
           String _name_1 = vardecl.getName();
           boolean _equals = Objects.equal(_name, _name_1);
-          _and = (_notEquals && _equals);
+          _and = _equals;
         }
         return Boolean.valueOf(_and);
       }
@@ -346,7 +346,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
           EClass _eClass = it.eClass();
           EClass _eClass_1 = member.eClass();
           boolean _equals = Objects.equal(_eClass, _eClass_1);
-          _and_1 = (_notEquals && _equals);
+          _and_1 = _equals;
         }
         if (!_and_1) {
           _and = false;
@@ -354,7 +354,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
           String _name = it.getName();
           String _name_1 = member.getName();
           boolean _equals_1 = Objects.equal(_name, _name_1);
-          _and = (_and_1 && _equals_1);
+          _and = _equals_1;
         }
         return Boolean.valueOf(_and);
       }
@@ -385,7 +385,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
           String _name = it.getName();
           String _name_1 = c.getName();
           boolean _equals = Objects.equal(_name, _name_1);
-          _and = (_notEquals && _equals);
+          _and = _equals;
         }
         return Boolean.valueOf(_and);
       }
@@ -434,8 +434,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
     ArrayList<SJClass> _classHierarchy = SmallJavaModelUtil.classHierarchy(_containingClass);
     final Function1<SJClass,Iterable<SJMethod>> _function = new Function1<SJClass,Iterable<SJMethod>>() {
       public Iterable<SJMethod> apply(final SJClass it) {
-        Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(it);
-        return _methods;
+        return SmallJavaModelUtil.methods(it);
       }
     };
     List<Iterable<SJMethod>> _map = ListExtensions.<SJClass, Iterable<SJMethod>>map(_classHierarchy, _function);
@@ -444,8 +443,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
       public Boolean apply(final SJMethod it) {
         String _name = it.getName();
         String _name_1 = m.getName();
-        boolean _equals = Objects.equal(_name, _name_1);
-        return Boolean.valueOf(_equals);
+        return Boolean.valueOf(Objects.equal(_name, _name_1));
       }
     };
     final SJMethod overridden = IterableExtensions.<SJMethod>findFirst(_flatten, _function_1);
@@ -462,22 +460,20 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
         EList<SJParameter> _params = m.getParams();
         final Function1<SJParameter,SJClass> _function_2 = new Function1<SJParameter,SJClass>() {
           public SJClass apply(final SJParameter it) {
-            SJClass _type = it.getType();
-            return _type;
+            return it.getType();
           }
         };
         List<SJClass> _map_1 = ListExtensions.<SJParameter, SJClass>map(_params, _function_2);
         EList<SJParameter> _params_1 = overridden.getParams();
         final Function1<SJParameter,SJClass> _function_3 = new Function1<SJParameter,SJClass>() {
           public SJClass apply(final SJParameter it) {
-            SJClass _type = it.getType();
-            return _type;
+            return it.getType();
           }
         };
         List<SJClass> _map_2 = ListExtensions.<SJParameter, SJClass>map(_params_1, _function_3);
         boolean _elementsEqual = IterableExtensions.elementsEqual(_map_1, _map_2);
         boolean _not_1 = (!_elementsEqual);
-        _or = (_not || _not_1);
+        _or = _not_1;
       }
       if (_or) {
         StringConcatenation _builder = new StringConcatenation();

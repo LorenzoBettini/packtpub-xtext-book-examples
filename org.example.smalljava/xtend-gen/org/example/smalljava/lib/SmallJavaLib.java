@@ -15,7 +15,6 @@ import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Extension;
-import org.eclipse.xtext.xbase.lib.Functions.Function0;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.ObjectExtensions;
@@ -39,33 +38,13 @@ public class SmallJavaLib {
   
   public final static String LIB_PACKAGE = "smalljava.lang";
   
-  public final static String LIB_OBJECT = new Function0<String>() {
-    public String apply() {
-      String _plus = (SmallJavaLib.LIB_PACKAGE + ".Object");
-      return _plus;
-    }
-  }.apply();
+  public final static String LIB_OBJECT = (SmallJavaLib.LIB_PACKAGE + ".Object");
   
-  public final static String LIB_STRING = new Function0<String>() {
-    public String apply() {
-      String _plus = (SmallJavaLib.LIB_PACKAGE + ".String");
-      return _plus;
-    }
-  }.apply();
+  public final static String LIB_STRING = (SmallJavaLib.LIB_PACKAGE + ".String");
   
-  public final static String LIB_INTEGER = new Function0<String>() {
-    public String apply() {
-      String _plus = (SmallJavaLib.LIB_PACKAGE + ".Integer");
-      return _plus;
-    }
-  }.apply();
+  public final static String LIB_INTEGER = (SmallJavaLib.LIB_PACKAGE + ".Integer");
   
-  public final static String LIB_BOOLEAN = new Function0<String>() {
-    public String apply() {
-      String _plus = (SmallJavaLib.LIB_PACKAGE + ".Boolean");
-      return _plus;
-    }
-  }.apply();
+  public final static String LIB_BOOLEAN = (SmallJavaLib.LIB_PACKAGE + ".Boolean");
   
   public final static String MAIN_LIB = "smalljava/lang/mainlib.smalljava";
   
@@ -88,8 +67,7 @@ public class SmallJavaLib {
           }
         }
       };
-      ResourceSet _doubleArrow = ObjectExtensions.<ResourceSet>operator_doubleArrow(_get, _function);
-      _xblockexpression = (_doubleArrow);
+      _xblockexpression = (ObjectExtensions.<ResourceSet>operator_doubleArrow(_get, _function));
     }
     return _xblockexpression;
   }
@@ -98,8 +76,8 @@ public class SmallJavaLib {
     ArrayList<SJClass> _xblockexpression = null;
     {
       ArrayList<SJClass> hierarchy = SmallJavaModelUtil.classHierarchy(c);
-      QualifiedName _fullyQualifiedName = null;
       SJClass _last = IterableExtensions.<SJClass>last(hierarchy);
+      QualifiedName _fullyQualifiedName = null;
       if (_last!=null) {
         _fullyQualifiedName=this._iQualifiedNameProvider.getFullyQualifiedName(_last);
       }
@@ -127,7 +105,7 @@ public class SmallJavaLib {
       _elvis = _superclass;
     } else {
       SJClass _smallJavaObjectClass = this.getSmallJavaObjectClass(c);
-      _elvis = ObjectExtensions.<SJClass>operator_elvis(_superclass, _smallJavaObjectClass);
+      _elvis = _smallJavaObjectClass;
     }
     return _elvis;
   }
@@ -140,8 +118,7 @@ public class SmallJavaLib {
         public Boolean apply(final IEObjectDescription it) {
           QualifiedName _qualifiedName = it.getQualifiedName();
           String _string = _qualifiedName.toString();
-          boolean _equals = Objects.equal(_string, SmallJavaLib.LIB_OBJECT);
-          return Boolean.valueOf(_equals);
+          return Boolean.valueOf(Objects.equal(_string, SmallJavaLib.LIB_OBJECT));
         }
       };
       final IEObjectDescription desc = IterableExtensions.<IEObjectDescription>findFirst(_visibleClassesDescriptions, _function);

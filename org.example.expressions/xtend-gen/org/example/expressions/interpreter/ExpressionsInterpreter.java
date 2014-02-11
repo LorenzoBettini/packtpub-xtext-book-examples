@@ -33,60 +33,49 @@ public class ExpressionsInterpreter {
     boolean _matched = false;
     if (!_matched) {
       if (e instanceof IntConstant) {
-        final IntConstant _intConstant = (IntConstant)e;
         _matched=true;
-        int _value = _intConstant.getValue();
-        _switchResult = Integer.valueOf(_value);
+        _switchResult = Integer.valueOf(((IntConstant)e).getValue());
       }
     }
     if (!_matched) {
       if (e instanceof BoolConstant) {
-        final BoolConstant _boolConstant = (BoolConstant)e;
         _matched=true;
-        String _value = _boolConstant.getValue();
-        boolean _parseBoolean = Boolean.parseBoolean(_value);
-        _switchResult = Boolean.valueOf(_parseBoolean);
+        String _value = ((BoolConstant)e).getValue();
+        _switchResult = Boolean.valueOf(Boolean.parseBoolean(_value));
       }
     }
     if (!_matched) {
       if (e instanceof StringConstant) {
-        final StringConstant _stringConstant = (StringConstant)e;
         _matched=true;
-        String _value = _stringConstant.getValue();
-        _switchResult = _value;
+        _switchResult = ((StringConstant)e).getValue();
       }
     }
     if (!_matched) {
       if (e instanceof Not) {
-        final Not _not = (Not)e;
         _matched=true;
-        Expression _expression = _not.getExpression();
+        Expression _expression = ((Not)e).getExpression();
         Object _interpret = this.interpret(_expression);
-        boolean _not_1 = (!(((Boolean) _interpret)).booleanValue());
-        _switchResult = Boolean.valueOf(_not_1);
+        _switchResult = Boolean.valueOf((!(((Boolean) _interpret)).booleanValue()));
       }
     }
     if (!_matched) {
       if (e instanceof MulOrDiv) {
-        final MulOrDiv _mulOrDiv = (MulOrDiv)e;
         _matched=true;
         int _xblockexpression = (int) 0;
         {
-          Expression _left = _mulOrDiv.getLeft();
+          Expression _left = ((MulOrDiv)e).getLeft();
           Object _interpret = this.interpret(_left);
           final Integer left = ((Integer) _interpret);
-          Expression _right = _mulOrDiv.getRight();
+          Expression _right = ((MulOrDiv)e).getRight();
           Object _interpret_1 = this.interpret(_right);
           final Integer right = ((Integer) _interpret_1);
           int _xifexpression = (int) 0;
-          String _op = _mulOrDiv.getOp();
+          String _op = ((MulOrDiv)e).getOp();
           boolean _equals = Objects.equal(_op, "*");
           if (_equals) {
-            int _multiply = ((left).intValue() * (right).intValue());
-            _xifexpression = _multiply;
+            _xifexpression = ((left).intValue() * (right).intValue());
           } else {
-            int _divide = ((left).intValue() / (right).intValue());
-            _xifexpression = _divide;
+            _xifexpression = ((left).intValue() / (right).intValue());
           }
           _xblockexpression = (_xifexpression);
         }
@@ -95,219 +84,196 @@ public class ExpressionsInterpreter {
     }
     if (!_matched) {
       if (e instanceof Minus) {
-        final Minus _minus = (Minus)e;
         _matched=true;
-        Expression _left = _minus.getLeft();
+        Expression _left = ((Minus)e).getLeft();
         Object _interpret = this.interpret(_left);
-        Expression _right = _minus.getRight();
+        Expression _right = ((Minus)e).getRight();
         Object _interpret_1 = this.interpret(_right);
-        int _minus_1 = ((((Integer) _interpret)).intValue() - (((Integer) _interpret_1)).intValue());
-        _switchResult = Integer.valueOf(_minus_1);
+        _switchResult = Integer.valueOf(((((Integer) _interpret)).intValue() - (((Integer) _interpret_1)).intValue()));
       }
     }
     if (!_matched) {
       if (e instanceof Plus) {
-        final Plus _plus = (Plus)e;
         _matched=true;
         Object _xifexpression = null;
         boolean _or = false;
-        Expression _left = _plus.getLeft();
+        Expression _left = ((Plus)e).getLeft();
         ExpressionsType _typeFor = this._expressionsTypeProvider.typeFor(_left);
         boolean _isString = this._expressionsTypeProvider.isString(_typeFor);
         if (_isString) {
           _or = true;
         } else {
-          Expression _right = _plus.getRight();
+          Expression _right = ((Plus)e).getRight();
           ExpressionsType _typeFor_1 = this._expressionsTypeProvider.typeFor(_right);
           boolean _isString_1 = this._expressionsTypeProvider.isString(_typeFor_1);
-          _or = (_isString || _isString_1);
+          _or = _isString_1;
         }
         if (_or) {
-          Expression _left_1 = _plus.getLeft();
+          Expression _left_1 = ((Plus)e).getLeft();
           Object _interpret = this.interpret(_left_1);
           String _string = _interpret.toString();
-          Expression _right_1 = _plus.getRight();
+          Expression _right_1 = ((Plus)e).getRight();
           Object _interpret_1 = this.interpret(_right_1);
           String _string_1 = _interpret_1.toString();
-          String _plus_1 = (_string + _string_1);
-          _xifexpression = _plus_1;
+          _xifexpression = (_string + _string_1);
         } else {
-          Expression _left_2 = _plus.getLeft();
+          Expression _left_2 = ((Plus)e).getLeft();
           Object _interpret_2 = this.interpret(_left_2);
-          Expression _right_2 = _plus.getRight();
+          Expression _right_2 = ((Plus)e).getRight();
           Object _interpret_3 = this.interpret(_right_2);
-          int _plus_2 = ((((Integer) _interpret_2)).intValue() + (((Integer) _interpret_3)).intValue());
-          _xifexpression = Integer.valueOf(_plus_2);
+          _xifexpression = Integer.valueOf(((((Integer) _interpret_2)).intValue() + (((Integer) _interpret_3)).intValue()));
         }
         _switchResult = ((Comparable<Object>)_xifexpression);
       }
     }
     if (!_matched) {
       if (e instanceof Equality) {
-        final Equality _equality = (Equality)e;
         _matched=true;
         boolean _xifexpression = false;
-        String _op = _equality.getOp();
+        String _op = ((Equality)e).getOp();
         boolean _equals = Objects.equal(_op, "==");
         if (_equals) {
-          Expression _left = _equality.getLeft();
+          Expression _left = ((Equality)e).getLeft();
           Object _interpret = this.interpret(_left);
-          Expression _right = _equality.getRight();
+          Expression _right = ((Equality)e).getRight();
           Object _interpret_1 = this.interpret(_right);
-          boolean _equals_1 = Objects.equal(_interpret, _interpret_1);
-          _xifexpression = _equals_1;
+          _xifexpression = Objects.equal(_interpret, _interpret_1);
         } else {
-          Expression _left_1 = _equality.getLeft();
+          Expression _left_1 = ((Equality)e).getLeft();
           Object _interpret_2 = this.interpret(_left_1);
-          Expression _right_1 = _equality.getRight();
+          Expression _right_1 = ((Equality)e).getRight();
           Object _interpret_3 = this.interpret(_right_1);
-          boolean _notEquals = (!Objects.equal(_interpret_2, _interpret_3));
-          _xifexpression = _notEquals;
+          _xifexpression = (!Objects.equal(_interpret_2, _interpret_3));
         }
         _switchResult = Boolean.valueOf(_xifexpression);
       }
     }
     if (!_matched) {
       if (e instanceof And) {
-        final And _and = (And)e;
         _matched=true;
-        boolean _and_1 = false;
-        Expression _left = _and.getLeft();
+        boolean _and = false;
+        Expression _left = ((And)e).getLeft();
         Object _interpret = this.interpret(_left);
         if (!(((Boolean) _interpret)).booleanValue()) {
-          _and_1 = false;
+          _and = false;
         } else {
-          Expression _right = _and.getRight();
+          Expression _right = ((And)e).getRight();
           Object _interpret_1 = this.interpret(_right);
-          _and_1 = ((((Boolean) _interpret)).booleanValue() && (((Boolean) _interpret_1)).booleanValue());
+          _and = (((Boolean) _interpret_1)).booleanValue();
         }
-        _switchResult = Boolean.valueOf(_and_1);
+        _switchResult = Boolean.valueOf(_and);
       }
     }
     if (!_matched) {
       if (e instanceof Or) {
-        final Or _or = (Or)e;
         _matched=true;
-        boolean _or_1 = false;
-        Expression _left = _or.getLeft();
+        boolean _or = false;
+        Expression _left = ((Or)e).getLeft();
         Object _interpret = this.interpret(_left);
         if ((((Boolean) _interpret)).booleanValue()) {
-          _or_1 = true;
+          _or = true;
         } else {
-          Expression _right = _or.getRight();
+          Expression _right = ((Or)e).getRight();
           Object _interpret_1 = this.interpret(_right);
-          _or_1 = ((((Boolean) _interpret)).booleanValue() || (((Boolean) _interpret_1)).booleanValue());
+          _or = (((Boolean) _interpret_1)).booleanValue();
         }
-        _switchResult = Boolean.valueOf(_or_1);
+        _switchResult = Boolean.valueOf(_or);
       }
     }
     if (!_matched) {
       if (e instanceof Comparison) {
-        final Comparison _comparison = (Comparison)e;
         _matched=true;
-        Boolean _xifexpression = null;
-        Expression _left = _comparison.getLeft();
+        boolean _xifexpression = false;
+        Expression _left = ((Comparison)e).getLeft();
         ExpressionsType _typeFor = this._expressionsTypeProvider.typeFor(_left);
         boolean _isString = this._expressionsTypeProvider.isString(_typeFor);
         if (_isString) {
-          Boolean _xblockexpression = null;
+          boolean _xblockexpression = false;
           {
-            Expression _left_1 = _comparison.getLeft();
+            Expression _left_1 = ((Comparison)e).getLeft();
             Object _interpret = this.interpret(_left_1);
             final String left = ((String) _interpret);
-            Expression _right = _comparison.getRight();
+            Expression _right = ((Comparison)e).getRight();
             Object _interpret_1 = this.interpret(_right);
             final String right = ((String) _interpret_1);
-            Boolean _switchResult_1 = null;
-            String _op = _comparison.getOp();
-            final String _switchValue = _op;
+            boolean _switchResult_1 = false;
+            String _op = ((Comparison)e).getOp();
             boolean _matched_1 = false;
             if (!_matched_1) {
-              if (Objects.equal(_switchValue,"<")) {
+              if (Objects.equal(_op,"<")) {
                 _matched_1=true;
-                boolean _lessThan = (left.compareTo(right) < 0);
-                _switchResult_1 = Boolean.valueOf(_lessThan);
+                _switchResult_1 = (left.compareTo(right) < 0);
               }
             }
             if (!_matched_1) {
-              if (Objects.equal(_switchValue,">")) {
+              if (Objects.equal(_op,">")) {
                 _matched_1=true;
-                boolean _greaterThan = (left.compareTo(right) > 0);
-                _switchResult_1 = Boolean.valueOf(_greaterThan);
+                _switchResult_1 = (left.compareTo(right) > 0);
               }
             }
             if (!_matched_1) {
-              if (Objects.equal(_switchValue,">=")) {
+              if (Objects.equal(_op,">=")) {
                 _matched_1=true;
-                boolean _greaterEqualsThan = (left.compareTo(right) >= 0);
-                _switchResult_1 = Boolean.valueOf(_greaterEqualsThan);
+                _switchResult_1 = (left.compareTo(right) >= 0);
               }
             }
             if (!_matched_1) {
-              if (Objects.equal(_switchValue,"<=")) {
+              if (Objects.equal(_op,"<=")) {
                 _matched_1=true;
-                boolean _lessEqualsThan = (left.compareTo(right) <= 0);
-                _switchResult_1 = Boolean.valueOf(_lessEqualsThan);
+                _switchResult_1 = (left.compareTo(right) <= 0);
               }
             }
             _xblockexpression = (_switchResult_1);
           }
           _xifexpression = _xblockexpression;
         } else {
-          Boolean _xblockexpression_1 = null;
+          boolean _xblockexpression_1 = false;
           {
-            Expression _left_1 = _comparison.getLeft();
+            Expression _left_1 = ((Comparison)e).getLeft();
             Object _interpret = this.interpret(_left_1);
             final Integer left = ((Integer) _interpret);
-            Expression _right = _comparison.getRight();
+            Expression _right = ((Comparison)e).getRight();
             Object _interpret_1 = this.interpret(_right);
             final Integer right = ((Integer) _interpret_1);
-            Boolean _switchResult_1 = null;
-            String _op = _comparison.getOp();
-            final String _switchValue = _op;
+            boolean _switchResult_1 = false;
+            String _op = ((Comparison)e).getOp();
             boolean _matched_1 = false;
             if (!_matched_1) {
-              if (Objects.equal(_switchValue,"<")) {
+              if (Objects.equal(_op,"<")) {
                 _matched_1=true;
-                boolean _lessThan = (left.compareTo(right) < 0);
-                _switchResult_1 = Boolean.valueOf(_lessThan);
+                _switchResult_1 = (left.compareTo(right) < 0);
               }
             }
             if (!_matched_1) {
-              if (Objects.equal(_switchValue,">")) {
+              if (Objects.equal(_op,">")) {
                 _matched_1=true;
-                boolean _greaterThan = (left.compareTo(right) > 0);
-                _switchResult_1 = Boolean.valueOf(_greaterThan);
+                _switchResult_1 = (left.compareTo(right) > 0);
               }
             }
             if (!_matched_1) {
-              if (Objects.equal(_switchValue,">=")) {
+              if (Objects.equal(_op,">=")) {
                 _matched_1=true;
-                boolean _greaterEqualsThan = (left.compareTo(right) >= 0);
-                _switchResult_1 = Boolean.valueOf(_greaterEqualsThan);
+                _switchResult_1 = (left.compareTo(right) >= 0);
               }
             }
             if (!_matched_1) {
-              if (Objects.equal(_switchValue,"<=")) {
+              if (Objects.equal(_op,"<=")) {
                 _matched_1=true;
-                boolean _lessEqualsThan = (left.compareTo(right) <= 0);
-                _switchResult_1 = Boolean.valueOf(_lessEqualsThan);
+                _switchResult_1 = (left.compareTo(right) <= 0);
               }
             }
             _xblockexpression_1 = (_switchResult_1);
           }
           _xifexpression = _xblockexpression_1;
         }
-        _switchResult = _xifexpression;
+        _switchResult = Boolean.valueOf(_xifexpression);
       }
     }
     if (!_matched) {
       if (e instanceof VariableRef) {
-        final VariableRef _variableRef = (VariableRef)e;
         _matched=true;
-        Variable _variable = _variableRef.getVariable();
-        Object _interpret = this.interpret(_variable);
-        _switchResult = _interpret;
+        Variable _variable = ((VariableRef)e).getVariable();
+        _switchResult = this.interpret(_variable);
       }
     }
     return _switchResult;
@@ -315,8 +281,7 @@ public class ExpressionsInterpreter {
   
   protected Object _interpret(final Variable v) {
     Expression _expression = v.getExpression();
-    Object _interpret = this.interpret(_expression);
-    return _interpret;
+    return this.interpret(_expression);
   }
   
   public Object interpret(final AbstractElement e) {

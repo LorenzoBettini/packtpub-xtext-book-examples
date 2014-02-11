@@ -68,10 +68,9 @@ public class SmallJavaValidatorTest {
   
   private void assertHierarchyCycle(final SJProgram p, final String expectedClassName) {
     EClass _sJClass = SmallJavaPackage.eINSTANCE.getSJClass();
-    String _plus = ("cycle in hierarchy of class \'" + expectedClassName);
-    String _plus_1 = (_plus + "\'");
     this._validationTestHelper.assertError(p, _sJClass, 
-      SmallJavaValidator.HIERARCHY_CYCLE, _plus_1);
+      SmallJavaValidator.HIERARCHY_CYCLE, 
+      (("cycle in hierarchy of class \'" + expectedClassName) + "\'"));
   }
   
   @Test
@@ -877,7 +876,7 @@ public class SmallJavaValidatorTest {
       _builder.append("R m(P p) {");
       _builder.newLine();
       _builder.append("\t\t");
-      _builder.append(methodBody, "		");
+      _builder.append(methodBody, "\t\t");
       _builder.newLineIfNotEmpty();
       _builder.append("\t");
       _builder.append("}");
@@ -1020,10 +1019,7 @@ public class SmallJavaValidatorTest {
   }
   
   private void assertIncompatibleTypes(final EObject o, final EClass c, final String expectedType, final String actualType) {
-    String _plus = ("Incompatible types. Expected \'" + expectedType);
-    String _plus_1 = (_plus + "\' but was \'");
-    String _plus_2 = (_plus_1 + actualType);
-    String _plus_3 = (_plus_2 + "\'");
-    this._validationTestHelper.assertError(o, c, SmallJavaValidator.INCOMPATIBLE_TYPES, _plus_3);
+    this._validationTestHelper.assertError(o, c, SmallJavaValidator.INCOMPATIBLE_TYPES, 
+      (((("Incompatible types. Expected \'" + expectedType) + "\' but was \'") + actualType) + "\'"));
   }
 }

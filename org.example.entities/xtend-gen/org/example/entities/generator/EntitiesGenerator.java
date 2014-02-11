@@ -73,10 +73,10 @@ public class EntitiesGenerator implements IGenerator {
         _builder.append("private ");
         AttributeType _type = attribute.getType();
         String _compile = this.compile(_type);
-        _builder.append(_compile, "	");
+        _builder.append(_compile, "\t");
         _builder.append(" ");
         String _name_2 = attribute.getName();
-        _builder.append(_name_2, "	");
+        _builder.append(_name_2, "\t");
         _builder.append(";");
         _builder.newLineIfNotEmpty();
       }
@@ -89,18 +89,18 @@ public class EntitiesGenerator implements IGenerator {
         _builder.append("public ");
         AttributeType _type_1 = attribute_1.getType();
         String _compile_1 = this.compile(_type_1);
-        _builder.append(_compile_1, "	");
+        _builder.append(_compile_1, "\t");
         _builder.append(" get");
         String _name_3 = attribute_1.getName();
         String _firstUpper = StringExtensions.toFirstUpper(_name_3);
-        _builder.append(_firstUpper, "	");
+        _builder.append(_firstUpper, "\t");
         _builder.append("() {");
         _builder.newLineIfNotEmpty();
         _builder.append("\t");
         _builder.append("\t");
         _builder.append("return ");
         String _name_4 = attribute_1.getName();
-        _builder.append(_name_4, "		");
+        _builder.append(_name_4, "\t\t");
         _builder.append(";");
         _builder.newLineIfNotEmpty();
         _builder.append("\t");
@@ -112,18 +112,18 @@ public class EntitiesGenerator implements IGenerator {
         _builder.append("public void set");
         String _name_5 = attribute_1.getName();
         String _firstUpper_1 = StringExtensions.toFirstUpper(_name_5);
-        _builder.append(_firstUpper_1, "	");
+        _builder.append(_firstUpper_1, "\t");
         _builder.append("(");
         AttributeType _type_2 = attribute_1.getType();
         String _compile_2 = this.compile(_type_2);
-        _builder.append(_compile_2, "	");
+        _builder.append(_compile_2, "\t");
         _builder.append(" _arg) {");
         _builder.newLineIfNotEmpty();
         _builder.append("\t");
         _builder.append("\t");
         _builder.append("this.");
         String _name_6 = attribute_1.getName();
-        _builder.append(_name_6, "		");
+        _builder.append(_name_6, "\t\t");
         _builder.append(" = _arg;");
         _builder.newLineIfNotEmpty();
         _builder.append("\t");
@@ -148,8 +148,7 @@ public class EntitiesGenerator implements IGenerator {
     } else {
       _xifexpression = "";
     }
-    String _plus = (_typeToString + _xifexpression);
-    return _plus;
+    return (_typeToString + _xifexpression);
   }
   
   protected String _typeToString(final BasicType type) {
@@ -159,16 +158,14 @@ public class EntitiesGenerator implements IGenerator {
     if (_equals) {
       _xifexpression = "String";
     } else {
-      String _typeName_1 = type.getTypeName();
-      _xifexpression = _typeName_1;
+      _xifexpression = type.getTypeName();
     }
     return _xifexpression;
   }
   
   protected String _typeToString(final EntityType type) {
     Entity _entity = type.getEntity();
-    String _name = _entity.getName();
-    return _name;
+    return _entity.getName();
   }
   
   public String typeToString(final ElementType type) {

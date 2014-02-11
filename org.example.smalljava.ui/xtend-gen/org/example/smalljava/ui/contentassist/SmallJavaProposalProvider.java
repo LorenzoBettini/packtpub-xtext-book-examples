@@ -34,8 +34,7 @@ public class SmallJavaProposalProvider extends AbstractSmallJavaProposalProvider
     final Predicate<IEObjectDescription> _function = new Predicate<IEObjectDescription>() {
       public boolean apply(final IEObjectDescription description) {
         EObject _eObjectOrProxy = description.getEObjectOrProxy();
-        boolean _isAccessibleFrom = SmallJavaProposalProvider.this._smallJavaAccessibility.isAccessibleFrom(((SJMember) _eObjectOrProxy), model);
-        return _isAccessibleFrom;
+        return SmallJavaProposalProvider.this._smallJavaAccessibility.isAccessibleFrom(((SJMember) _eObjectOrProxy), model);
       }
     };
     this.lookupCrossReference(((CrossReference) _terminal), context, acceptor, _function);
@@ -54,13 +53,11 @@ public class SmallJavaProposalProvider extends AbstractSmallJavaProposalProvider
         String _plus = (" - " + _name);
         StyledString _styledString_1 = new StyledString(_plus, 
           StyledString.QUALIFIER_STYLER);
-        StyledString _append = _styledString.append(_styledString_1);
-        _xblockexpression = (_append);
+        _xblockexpression = (_styledString.append(_styledString_1));
       }
       _xifexpression = _xblockexpression;
     } else {
-      StyledString _styledDisplayString = super.getStyledDisplayString(element, qualifiedNameAsString, shortName);
-      _xifexpression = _styledDisplayString;
+      _xifexpression = super.getStyledDisplayString(element, qualifiedNameAsString, shortName);
     }
     return _xifexpression;
   }

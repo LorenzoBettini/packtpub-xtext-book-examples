@@ -55,10 +55,8 @@ public class SmallJavaWorkbenchTest extends AbstractWorkbenchTest {
   
   public void checkSmallJavaPrograms(final String program1, final String program2, final int expectedErrors) {
     try {
-      String _plus = (this.TEST_PROJECT + "/src/test1.smalljava");
-      final IFile file1 = IResourcesSetupUtil.createFile(_plus, program1);
-      String _plus_1 = (this.TEST_PROJECT + "/src/test2.smalljava");
-      final IFile file2 = IResourcesSetupUtil.createFile(_plus_1, program2);
+      final IFile file1 = IResourcesSetupUtil.createFile((this.TEST_PROJECT + "/src/test1.smalljava"), program1);
+      final IFile file2 = IResourcesSetupUtil.createFile((this.TEST_PROJECT + "/src/test2.smalljava"), program2);
       IResourcesSetupUtil.waitForAutoBuild();
       IMarker[] _findMarkers = file1.findMarkers(EValidator.MARKER, true, 
         IResource.DEPTH_INFINITE);

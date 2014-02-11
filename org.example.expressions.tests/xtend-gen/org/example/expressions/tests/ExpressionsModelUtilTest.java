@@ -67,8 +67,7 @@ public class ExpressionsModelUtilTest {
     List<Variable> _variablesDefinedBefore = ExpressionsModelUtil.variablesDefinedBefore(_get);
     final Function1<Variable,String> _function = new Function1<Variable,String>() {
       public String apply(final Variable it) {
-        String _name = it.getName();
-        return _name;
+        return it.getName();
       }
     };
     List<String> _map = ListExtensions.<Variable, String>map(_variablesDefinedBefore, _function);

@@ -59,7 +59,7 @@ public class SmallJavaScopeProvider extends AbstractDeclarativeScopeProvider {
         _or = true;
       } else {
         boolean _isPrimitive = this._smallJavaTypeProvider.isPrimitive(type);
-        _or = (_equals || _isPrimitive);
+        _or = _isPrimitive;
       }
       if (_or) {
         return parentScope;
@@ -72,8 +72,7 @@ public class SmallJavaScopeProvider extends AbstractDeclarativeScopeProvider {
         parentScope = _scopeFor;
       }
       Iterable<SJMember> _selectMembers_1 = this.selectMembers(type, sel);
-      IScope _scopeFor_1 = Scopes.scopeFor(_selectMembers_1, parentScope);
-      _xblockexpression = (_scopeFor_1);
+      _xblockexpression = (Scopes.scopeFor(_selectMembers_1, parentScope));
     }
     return _xblockexpression;
   }
@@ -84,34 +83,29 @@ public class SmallJavaScopeProvider extends AbstractDeclarativeScopeProvider {
     if (_isMethodinvocation) {
       Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(type);
       Iterable<SJField> _fields = SmallJavaModelUtil.fields(type);
-      Iterable<SJMember> _plus = Iterables.<SJMember>concat(_methods, _fields);
-      _xifexpression = _plus;
+      _xifexpression = Iterables.<SJMember>concat(_methods, _fields);
     } else {
       Iterable<SJField> _fields_1 = SmallJavaModelUtil.fields(type);
       Iterable<SJMethod> _methods_1 = SmallJavaModelUtil.methods(type);
-      Iterable<SJMember> _plus_1 = Iterables.<SJMember>concat(_fields_1, _methods_1);
-      _xifexpression = _plus_1;
+      _xifexpression = Iterables.<SJMember>concat(_fields_1, _methods_1);
     }
     return _xifexpression;
   }
   
   public IScope scope_SJSymbolRef_symbol(final SJExpression context, final EReference r) {
     EObject _eContainer = context.eContainer();
-    IScope _symbolsDefinedBefore = this.symbolsDefinedBefore(_eContainer, context);
-    return _symbolsDefinedBefore;
+    return this.symbolsDefinedBefore(_eContainer, context);
   }
   
   protected IScope _symbolsDefinedBefore(final EObject container, final EObject o) {
     EObject _eContainer = container.eContainer();
     EObject _eContainer_1 = o.eContainer();
-    IScope _symbolsDefinedBefore = this.symbolsDefinedBefore(_eContainer, _eContainer_1);
-    return _symbolsDefinedBefore;
+    return this.symbolsDefinedBefore(_eContainer, _eContainer_1);
   }
   
   protected IScope _symbolsDefinedBefore(final SJMethod m, final EObject o) {
     EList<SJParameter> _params = m.getParams();
-    IScope _scopeFor = Scopes.scopeFor(_params);
-    return _scopeFor;
+    return Scopes.scopeFor(_params);
   }
   
   protected IScope _symbolsDefinedBefore(final SJBlock b, final EObject o) {
@@ -120,15 +114,13 @@ public class SmallJavaScopeProvider extends AbstractDeclarativeScopeProvider {
     EObject _eContainer = b.eContainer();
     EObject _eContainer_1 = o.eContainer();
     IScope _symbolsDefinedBefore = this.symbolsDefinedBefore(_eContainer, _eContainer_1);
-    IScope _scopeFor = Scopes.scopeFor(_variablesDeclaredBefore, _symbolsDefinedBefore);
-    return _scopeFor;
+    return Scopes.scopeFor(_variablesDeclaredBefore, _symbolsDefinedBefore);
   }
   
   private Iterable<SJVariableDeclaration> variablesDeclaredBefore(final List<SJStatement> list, final EObject o) {
     int _indexOf = list.indexOf(o);
     List<SJStatement> _subList = list.subList(0, _indexOf);
-    Iterable<SJVariableDeclaration> _filter = Iterables.<SJVariableDeclaration>filter(_subList, SJVariableDeclaration.class);
-    return _filter;
+    return Iterables.<SJVariableDeclaration>filter(_subList, SJVariableDeclaration.class);
   }
   
   public IScope symbolsDefinedBefore(final EObject m, final EObject o) {

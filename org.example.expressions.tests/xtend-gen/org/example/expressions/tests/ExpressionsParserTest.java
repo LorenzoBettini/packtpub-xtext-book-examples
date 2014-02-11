@@ -192,8 +192,7 @@ public class ExpressionsParserTest {
           Assert.assertEquals(expected, _stringRepr);
         }
       };
-      ExpressionsModel _doubleArrow = ObjectExtensions.<ExpressionsModel>operator_doubleArrow(_parse, _function);
-      return _doubleArrow;
+      return ObjectExtensions.<ExpressionsModel>operator_doubleArrow(_parse, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }
@@ -210,8 +209,7 @@ public class ExpressionsParserTest {
           Assert.assertEquals(expected, _stringRepr);
         }
       };
-      ExpressionsModel _doubleArrow = ObjectExtensions.<ExpressionsModel>operator_doubleArrow(_parse, _function);
-      return _doubleArrow;
+      return ObjectExtensions.<ExpressionsModel>operator_doubleArrow(_parse, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }
@@ -222,15 +220,14 @@ public class ExpressionsParserTest {
     boolean _matched = false;
     if (!_matched) {
       if (e instanceof Plus) {
-        final Plus _plus = (Plus)e;
         _matched=true;
         StringConcatenation _builder = new StringConcatenation();
         _builder.append("(");
-        Expression _left = _plus.getLeft();
+        Expression _left = ((Plus)e).getLeft();
         String _stringRepr = this.stringRepr(_left);
         _builder.append(_stringRepr, "");
         _builder.append(" + ");
-        Expression _right = _plus.getRight();
+        Expression _right = ((Plus)e).getRight();
         String _stringRepr_1 = this.stringRepr(_right);
         _builder.append(_stringRepr_1, "");
         _builder.append(")");
@@ -239,15 +236,14 @@ public class ExpressionsParserTest {
     }
     if (!_matched) {
       if (e instanceof Minus) {
-        final Minus _minus = (Minus)e;
         _matched=true;
         StringConcatenation _builder = new StringConcatenation();
         _builder.append("(");
-        Expression _left = _minus.getLeft();
+        Expression _left = ((Minus)e).getLeft();
         String _stringRepr = this.stringRepr(_left);
         _builder.append(_stringRepr, "");
         _builder.append(" - ");
-        Expression _right = _minus.getRight();
+        Expression _right = ((Minus)e).getRight();
         String _stringRepr_1 = this.stringRepr(_right);
         _builder.append(_stringRepr_1, "");
         _builder.append(")");
@@ -256,18 +252,17 @@ public class ExpressionsParserTest {
     }
     if (!_matched) {
       if (e instanceof MulOrDiv) {
-        final MulOrDiv _mulOrDiv = (MulOrDiv)e;
         _matched=true;
         StringConcatenation _builder = new StringConcatenation();
         _builder.append("(");
-        Expression _left = _mulOrDiv.getLeft();
+        Expression _left = ((MulOrDiv)e).getLeft();
         String _stringRepr = this.stringRepr(_left);
         _builder.append(_stringRepr, "");
         _builder.append(" ");
-        String _op = _mulOrDiv.getOp();
+        String _op = ((MulOrDiv)e).getOp();
         _builder.append(_op, "");
         _builder.append(" ");
-        Expression _right = _mulOrDiv.getRight();
+        Expression _right = ((MulOrDiv)e).getRight();
         String _stringRepr_1 = this.stringRepr(_right);
         _builder.append(_stringRepr_1, "");
         _builder.append(")");
@@ -276,18 +271,17 @@ public class ExpressionsParserTest {
     }
     if (!_matched) {
       if (e instanceof Comparison) {
-        final Comparison _comparison = (Comparison)e;
         _matched=true;
         StringConcatenation _builder = new StringConcatenation();
         _builder.append("(");
-        Expression _left = _comparison.getLeft();
+        Expression _left = ((Comparison)e).getLeft();
         String _stringRepr = this.stringRepr(_left);
         _builder.append(_stringRepr, "");
         _builder.append(" ");
-        String _op = _comparison.getOp();
+        String _op = ((Comparison)e).getOp();
         _builder.append(_op, "");
         _builder.append(" ");
-        Expression _right = _comparison.getRight();
+        Expression _right = ((Comparison)e).getRight();
         String _stringRepr_1 = this.stringRepr(_right);
         _builder.append(_stringRepr_1, "");
         _builder.append(")");
@@ -296,18 +290,17 @@ public class ExpressionsParserTest {
     }
     if (!_matched) {
       if (e instanceof Equality) {
-        final Equality _equality = (Equality)e;
         _matched=true;
         StringConcatenation _builder = new StringConcatenation();
         _builder.append("(");
-        Expression _left = _equality.getLeft();
+        Expression _left = ((Equality)e).getLeft();
         String _stringRepr = this.stringRepr(_left);
         _builder.append(_stringRepr, "");
         _builder.append(" ");
-        String _op = _equality.getOp();
+        String _op = ((Equality)e).getOp();
         _builder.append(_op, "");
         _builder.append(" ");
-        Expression _right = _equality.getRight();
+        Expression _right = ((Equality)e).getRight();
         String _stringRepr_1 = this.stringRepr(_right);
         _builder.append(_stringRepr_1, "");
         _builder.append(")");
@@ -316,15 +309,14 @@ public class ExpressionsParserTest {
     }
     if (!_matched) {
       if (e instanceof And) {
-        final And _and = (And)e;
         _matched=true;
         StringConcatenation _builder = new StringConcatenation();
         _builder.append("(");
-        Expression _left = _and.getLeft();
+        Expression _left = ((And)e).getLeft();
         String _stringRepr = this.stringRepr(_left);
         _builder.append(_stringRepr, "");
         _builder.append(" && ");
-        Expression _right = _and.getRight();
+        Expression _right = ((And)e).getRight();
         String _stringRepr_1 = this.stringRepr(_right);
         _builder.append(_stringRepr_1, "");
         _builder.append(")");
@@ -333,15 +325,14 @@ public class ExpressionsParserTest {
     }
     if (!_matched) {
       if (e instanceof Or) {
-        final Or _or = (Or)e;
         _matched=true;
         StringConcatenation _builder = new StringConcatenation();
         _builder.append("(");
-        Expression _left = _or.getLeft();
+        Expression _left = ((Or)e).getLeft();
         String _stringRepr = this.stringRepr(_left);
         _builder.append(_stringRepr, "");
         _builder.append(" || ");
-        Expression _right = _or.getRight();
+        Expression _right = ((Or)e).getRight();
         String _stringRepr_1 = this.stringRepr(_right);
         _builder.append(_stringRepr_1, "");
         _builder.append(")");
@@ -350,11 +341,10 @@ public class ExpressionsParserTest {
     }
     if (!_matched) {
       if (e instanceof Not) {
-        final Not _not = (Not)e;
         _matched=true;
         StringConcatenation _builder = new StringConcatenation();
         _builder.append("(!");
-        Expression _expression = _not.getExpression();
+        Expression _expression = ((Not)e).getExpression();
         String _stringRepr = this.stringRepr(_expression);
         _builder.append(_stringRepr, "");
         _builder.append(")");
@@ -363,40 +353,36 @@ public class ExpressionsParserTest {
     }
     if (!_matched) {
       if (e instanceof IntConstant) {
-        final IntConstant _intConstant = (IntConstant)e;
         _matched=true;
         StringConcatenation _builder = new StringConcatenation();
-        int _value = _intConstant.getValue();
+        int _value = ((IntConstant)e).getValue();
         _builder.append(_value, "");
         _switchResult = _builder.toString();
       }
     }
     if (!_matched) {
       if (e instanceof StringConstant) {
-        final StringConstant _stringConstant = (StringConstant)e;
         _matched=true;
         StringConcatenation _builder = new StringConcatenation();
-        String _value = _stringConstant.getValue();
+        String _value = ((StringConstant)e).getValue();
         _builder.append(_value, "");
         _switchResult = _builder.toString();
       }
     }
     if (!_matched) {
       if (e instanceof BoolConstant) {
-        final BoolConstant _boolConstant = (BoolConstant)e;
         _matched=true;
         StringConcatenation _builder = new StringConcatenation();
-        String _value = _boolConstant.getValue();
+        String _value = ((BoolConstant)e).getValue();
         _builder.append(_value, "");
         _switchResult = _builder.toString();
       }
     }
     if (!_matched) {
       if (e instanceof VariableRef) {
-        final VariableRef _variableRef = (VariableRef)e;
         _matched=true;
         StringConcatenation _builder = new StringConcatenation();
-        Variable _variable = _variableRef.getVariable();
+        Variable _variable = ((VariableRef)e).getVariable();
         String _name = _variable.getName();
         _builder.append(_name, "");
         _switchResult = _builder.toString();

@@ -22,8 +22,7 @@ import org.example.expressions.ui.contentassist.AbstractExpressionsProposalProvi
 @SuppressWarnings("all")
 public class ExpressionsProposalProvider extends AbstractExpressionsProposalProvider {
   public void completeAtomic_Variable(final EObject elem, final Assignment assignment, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
-    boolean _not = (!(elem instanceof AbstractElement));
-    if (_not) {
+    if ((!(elem instanceof AbstractElement))) {
       return;
     }
     List<Variable> _variablesDefinedBefore = ExpressionsModelUtil.variablesDefinedBefore(((AbstractElement) elem));

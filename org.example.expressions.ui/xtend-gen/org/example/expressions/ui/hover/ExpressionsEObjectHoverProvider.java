@@ -30,7 +30,7 @@ public class ExpressionsEObjectHoverProvider extends DefaultEObjectHoverProvider
       _and = false;
     } else {
       boolean _programHasNoError = this.programHasNoError(o);
-      _and = ((o instanceof AbstractElement) && _programHasNoError);
+      _and = _programHasNoError;
     }
     if (_and) {
       final AbstractElement elem = ((AbstractElement) o);
@@ -61,7 +61,6 @@ public class ExpressionsEObjectHoverProvider extends DefaultEObjectHoverProvider
     EObject _rootContainer = EcoreUtil.getRootContainer(o);
     Diagnostic _validate = Diagnostician.INSTANCE.validate(_rootContainer);
     List<Diagnostic> _children = _validate.getChildren();
-    boolean _isEmpty = _children.isEmpty();
-    return _isEmpty;
+    return _children.isEmpty();
   }
 }

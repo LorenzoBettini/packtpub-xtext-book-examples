@@ -10,7 +10,6 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Extension;
-import org.eclipse.xtext.xbase.lib.Functions.Function0;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.ListExtensions;
@@ -47,83 +46,54 @@ public class SmallJavaTypeProvider {
   
   private final SmallJavaPackage ep = SmallJavaPackage.eINSTANCE;
   
-  public final static SJClass stringType = new Function0<SJClass>() {
-    public SJClass apply() {
-      SJClass _createSJClass = SmallJavaFactory.eINSTANCE.createSJClass();
-      final Procedure1<SJClass> _function = new Procedure1<SJClass>() {
-        public void apply(final SJClass it) {
-          it.setName("stringType");
-        }
-      };
-      SJClass _doubleArrow = ObjectExtensions.<SJClass>operator_doubleArrow(_createSJClass, _function);
-      return _doubleArrow;
+  public final static SJClass stringType = ObjectExtensions.<SJClass>operator_doubleArrow(
+    SmallJavaFactory.eINSTANCE.createSJClass(), new Procedure1<SJClass>() {
+    public void apply(final SJClass it) {
+      it.setName("stringType");
     }
-  }.apply();
+  });
   
-  public final static SJClass intType = new Function0<SJClass>() {
-    public SJClass apply() {
-      SJClass _createSJClass = SmallJavaFactory.eINSTANCE.createSJClass();
-      final Procedure1<SJClass> _function = new Procedure1<SJClass>() {
-        public void apply(final SJClass it) {
-          it.setName("intType");
-        }
-      };
-      SJClass _doubleArrow = ObjectExtensions.<SJClass>operator_doubleArrow(_createSJClass, _function);
-      return _doubleArrow;
+  public final static SJClass intType = ObjectExtensions.<SJClass>operator_doubleArrow(
+    SmallJavaFactory.eINSTANCE.createSJClass(), new Procedure1<SJClass>() {
+    public void apply(final SJClass it) {
+      it.setName("intType");
     }
-  }.apply();
+  });
   
-  public final static SJClass booleanType = new Function0<SJClass>() {
-    public SJClass apply() {
-      SJClass _createSJClass = SmallJavaFactory.eINSTANCE.createSJClass();
-      final Procedure1<SJClass> _function = new Procedure1<SJClass>() {
-        public void apply(final SJClass it) {
-          it.setName("booleanType");
-        }
-      };
-      SJClass _doubleArrow = ObjectExtensions.<SJClass>operator_doubleArrow(_createSJClass, _function);
-      return _doubleArrow;
+  public final static SJClass booleanType = ObjectExtensions.<SJClass>operator_doubleArrow(
+    SmallJavaFactory.eINSTANCE.createSJClass(), new Procedure1<SJClass>() {
+    public void apply(final SJClass it) {
+      it.setName("booleanType");
     }
-  }.apply();
+  });
   
-  public final static SJClass nullType = new Function0<SJClass>() {
-    public SJClass apply() {
-      SJClass _createSJClass = SmallJavaFactory.eINSTANCE.createSJClass();
-      final Procedure1<SJClass> _function = new Procedure1<SJClass>() {
-        public void apply(final SJClass it) {
-          it.setName("nullType");
-        }
-      };
-      SJClass _doubleArrow = ObjectExtensions.<SJClass>operator_doubleArrow(_createSJClass, _function);
-      return _doubleArrow;
+  public final static SJClass nullType = ObjectExtensions.<SJClass>operator_doubleArrow(
+    SmallJavaFactory.eINSTANCE.createSJClass(), new Procedure1<SJClass>() {
+    public void apply(final SJClass it) {
+      it.setName("nullType");
     }
-  }.apply();
+  });
   
   public SJClass typeFor(final SJExpression e) {
     SJClass _switchResult = null;
     boolean _matched = false;
     if (!_matched) {
       if (e instanceof SJThis) {
-        final SJThis _sJThis = (SJThis)e;
         _matched=true;
-        SJClass _containingClass = SmallJavaModelUtil.containingClass(_sJThis);
-        _switchResult = _containingClass;
+        _switchResult = SmallJavaModelUtil.containingClass(e);
       }
     }
     if (!_matched) {
       if (e instanceof SJSuper) {
-        final SJSuper _sJSuper = (SJSuper)e;
         _matched=true;
-        SJClass _containingClass = SmallJavaModelUtil.containingClass(_sJSuper);
-        SJClass _superclassOrObject = this._smallJavaLib.getSuperclassOrObject(_containingClass);
-        _switchResult = _superclassOrObject;
+        SJClass _containingClass = SmallJavaModelUtil.containingClass(e);
+        _switchResult = this._smallJavaLib.getSuperclassOrObject(_containingClass);
       }
     }
     if (!_matched) {
       if (e instanceof SJSymbolRef) {
-        final SJSymbolRef _sJSymbolRef = (SJSymbolRef)e;
         _matched=true;
-        SJSymbol _symbol = _sJSymbolRef.getSymbol();
+        SJSymbol _symbol = ((SJSymbolRef)e).getSymbol();
         SJClass _type = null;
         if (_symbol!=null) {
           _type=_symbol.getType();
@@ -133,17 +103,14 @@ public class SmallJavaTypeProvider {
     }
     if (!_matched) {
       if (e instanceof SJNew) {
-        final SJNew _sJNew = (SJNew)e;
         _matched=true;
-        SJClass _type = _sJNew.getType();
-        _switchResult = _type;
+        _switchResult = ((SJNew)e).getType();
       }
     }
     if (!_matched) {
       if (e instanceof SJMemberSelection) {
-        final SJMemberSelection _sJMemberSelection = (SJMemberSelection)e;
         _matched=true;
-        SJMember _member = _sJMemberSelection.getMember();
+        SJMember _member = ((SJMemberSelection)e).getMember();
         SJClass _type = null;
         if (_member!=null) {
           _type=_member.getType();
@@ -153,28 +120,24 @@ public class SmallJavaTypeProvider {
     }
     if (!_matched) {
       if (e instanceof SJNull) {
-        final SJNull _sJNull = (SJNull)e;
         _matched=true;
         _switchResult = SmallJavaTypeProvider.nullType;
       }
     }
     if (!_matched) {
       if (e instanceof SJStringConstant) {
-        final SJStringConstant _sJStringConstant = (SJStringConstant)e;
         _matched=true;
         _switchResult = SmallJavaTypeProvider.stringType;
       }
     }
     if (!_matched) {
       if (e instanceof SJIntConstant) {
-        final SJIntConstant _sJIntConstant = (SJIntConstant)e;
         _matched=true;
         _switchResult = SmallJavaTypeProvider.intType;
       }
     }
     if (!_matched) {
       if (e instanceof SJBoolConstant) {
-        final SJBoolConstant _sJBoolConstant = (SJBoolConstant)e;
         _matched=true;
         _switchResult = SmallJavaTypeProvider.booleanType;
       }
@@ -191,58 +154,50 @@ public class SmallJavaTypeProvider {
       boolean _matched = false;
       if (!_matched) {
         if (c instanceof SJVariableDeclaration) {
-          final SJVariableDeclaration _sJVariableDeclaration = (SJVariableDeclaration)c;
           EReference _sJVariableDeclaration_Expression = this.ep.getSJVariableDeclaration_Expression();
           boolean _equals = Objects.equal(f, _sJVariableDeclaration_Expression);
           if (_equals) {
             _matched=true;
-            SJClass _type = _sJVariableDeclaration.getType();
-            _switchResult = _type;
+            _switchResult = ((SJVariableDeclaration)c).getType();
           }
         }
       }
       if (!_matched) {
         if (c instanceof SJAssignment) {
-          final SJAssignment _sJAssignment = (SJAssignment)c;
           EReference _sJAssignment_Right = this.ep.getSJAssignment_Right();
           boolean _equals = Objects.equal(f, _sJAssignment_Right);
           if (_equals) {
             _matched=true;
-            SJExpression _left = _sJAssignment.getLeft();
-            SJClass _typeFor = this.typeFor(_left);
-            _switchResult = _typeFor;
+            SJExpression _left = ((SJAssignment)c).getLeft();
+            _switchResult = this.typeFor(_left);
           }
         }
       }
       if (!_matched) {
         if (c instanceof SJReturn) {
-          final SJReturn _sJReturn = (SJReturn)c;
           EReference _sJReturn_Expression = this.ep.getSJReturn_Expression();
           boolean _equals = Objects.equal(f, _sJReturn_Expression);
           if (_equals) {
             _matched=true;
-            SJMethod _containingMethod = SmallJavaModelUtil.containingMethod(_sJReturn);
-            SJClass _type = _containingMethod.getType();
-            _switchResult = _type;
+            SJMethod _containingMethod = SmallJavaModelUtil.containingMethod(c);
+            _switchResult = _containingMethod.getType();
           }
         }
       }
       if (!_matched) {
         if (c instanceof SJMemberSelection) {
-          final SJMemberSelection _sJMemberSelection = (SJMemberSelection)c;
           EReference _sJMemberSelection_Args = this.ep.getSJMemberSelection_Args();
           boolean _equals = Objects.equal(f, _sJMemberSelection_Args);
           if (_equals) {
             _matched=true;
             SJClass _xtrycatchfinallyexpression = null;
             try {
-              SJMember _member = _sJMemberSelection.getMember();
+              SJMember _member = ((SJMemberSelection)c).getMember();
               EList<SJParameter> _params = ((SJMethod) _member).getParams();
-              EList<SJExpression> _args = _sJMemberSelection.getArgs();
+              EList<SJExpression> _args = ((SJMemberSelection)c).getArgs();
               int _indexOf = _args.indexOf(e);
               SJParameter _get = _params.get(_indexOf);
-              SJClass _type = _get.getType();
-              _xtrycatchfinallyexpression = _type;
+              _xtrycatchfinallyexpression = _get.getType();
             } catch (final Throwable _t) {
               if (_t instanceof Throwable) {
                 final Throwable t = (Throwable)_t;
@@ -283,13 +238,11 @@ public class SmallJavaTypeProvider {
     List<String> _map = ListExtensions.<SJExpression, String>map(_args, _function);
     String _join = IterableExtensions.join(_map, ", ");
     String _plus = ("(" + _join);
-    String _plus_1 = (_plus + ")");
-    return _plus_1;
+    return (_plus + ")");
   }
   
   public boolean isPrimitive(final SJClass c) {
     Resource _eResource = c.eResource();
-    boolean _equals = Objects.equal(_eResource, null);
-    return _equals;
+    return Objects.equal(_eResource, null);
   }
 }

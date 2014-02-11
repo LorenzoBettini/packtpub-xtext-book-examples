@@ -9,11 +9,9 @@ public class ExtensionMethodsParameters {
   public Object m(@Extension final MyListExtensions e) {
     Object _xblockexpression = null;
     {
-      ArrayList<String> _arrayList = new ArrayList<String>();
-      final ArrayList<String> list = _arrayList;
+      final ArrayList<String> list = new ArrayList<String>();
       e.aListMethod(list);
-      Object _anotherListMethod = e.anotherListMethod(list);
-      _xblockexpression = (_anotherListMethod);
+      _xblockexpression = (e.anotherListMethod(list));
     }
     return _xblockexpression;
   }

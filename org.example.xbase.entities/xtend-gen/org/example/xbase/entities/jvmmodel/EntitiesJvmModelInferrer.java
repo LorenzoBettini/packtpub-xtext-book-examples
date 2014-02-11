@@ -17,11 +17,9 @@ import org.eclipse.xtext.xbase.XExpression;
 import org.eclipse.xtext.xbase.compiler.output.ITreeAppendable;
 import org.eclipse.xtext.xbase.jvmmodel.AbstractModelInferrer;
 import org.eclipse.xtext.xbase.jvmmodel.IJvmDeclaredTypeAcceptor;
-import org.eclipse.xtext.xbase.jvmmodel.IJvmDeclaredTypeAcceptor.IPostIndexingInitializing;
 import org.eclipse.xtext.xbase.jvmmodel.JvmTypesBuilder;
 import org.eclipse.xtext.xbase.lib.Extension;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
-import org.eclipse.xtext.xbase.lib.ObjectExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 import org.example.xbase.entities.entities.Attribute;
 import org.example.xbase.entities.entities.Entity;
@@ -68,7 +66,7 @@ public class EntitiesJvmModelInferrer extends AbstractModelInferrer {
     String _name = entity.getName();
     String _plus = ("entities." + _name);
     JvmGenericType _class = this._jvmTypesBuilder.toClass(entity, _plus);
-    IPostIndexingInitializing<JvmGenericType> _accept = acceptor.<JvmGenericType>accept(_class);
+    IJvmDeclaredTypeAcceptor.IPostIndexingInitializing<JvmGenericType> _accept = acceptor.<JvmGenericType>accept(_class);
     final Procedure1<JvmGenericType> _function = new Procedure1<JvmGenericType>() {
       public void apply(final JvmGenericType it) {
         String _documentation = EntitiesJvmModelInferrer.this._jvmTypesBuilder.getDocumentation(entity);
@@ -89,12 +87,12 @@ public class EntitiesJvmModelInferrer extends AbstractModelInferrer {
             if (_type != null) {
               _elvis = _type;
             } else {
-              JvmTypeReference _inferredType = null;
               XExpression _initexpression = a.getInitexpression();
+              JvmTypeReference _inferredType = null;
               if (_initexpression!=null) {
                 _inferredType=EntitiesJvmModelInferrer.this._jvmTypesBuilder.inferredType(_initexpression);
               }
-              _elvis = ObjectExtensions.<JvmTypeReference>operator_elvis(_type, _inferredType);
+              _elvis = _inferredType;
             }
             final JvmTypeReference type = _elvis;
             EList<JvmMember> _members = it.getMembers();
@@ -135,7 +133,7 @@ public class EntitiesJvmModelInferrer extends AbstractModelInferrer {
               _elvis = _type;
             } else {
               JvmTypeReference _inferredType = EntitiesJvmModelInferrer.this._jvmTypesBuilder.inferredType();
-              _elvis = ObjectExtensions.<JvmTypeReference>operator_elvis(_type, _inferredType);
+              _elvis = _inferredType;
             }
             final Procedure1<JvmOperation> _function = new Procedure1<JvmOperation>() {
               public void apply(final JvmOperation it) {
@@ -178,10 +176,10 @@ public class EntitiesJvmModelInferrer extends AbstractModelInferrer {
                     _builder.append("\t");
                     _builder.append("\"\\t");
                     String _name_1 = a.getName();
-                    _builder.append(_name_1, "	");
+                    _builder.append(_name_1, "\t");
                     _builder.append(" = \" + ");
                     String _name_2 = a.getName();
-                    _builder.append(_name_2, "	");
+                    _builder.append(_name_2, "\t");
                     _builder.append(".toString() + \"\\n\" +");
                     _builder.newLineIfNotEmpty();
                   }

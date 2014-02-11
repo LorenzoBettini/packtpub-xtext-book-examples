@@ -461,15 +461,14 @@ public class SmallJavaParserTest {
     boolean _matched = false;
     if (!_matched) {
       if (s instanceof SJAssignment) {
-        final SJAssignment _sJAssignment = (SJAssignment)s;
         _matched=true;
         StringConcatenation _builder = new StringConcatenation();
         _builder.append("(");
-        SJExpression _left = _sJAssignment.getLeft();
+        SJExpression _left = ((SJAssignment)s).getLeft();
         String _stringRepr = this.stringRepr(_left);
         _builder.append(_stringRepr, "");
         _builder.append(" = ");
-        SJExpression _right = _sJAssignment.getRight();
+        SJExpression _right = ((SJAssignment)s).getRight();
         String _stringRepr_1 = this.stringRepr(_right);
         _builder.append(_stringRepr_1, "");
         _builder.append(")");
@@ -478,15 +477,14 @@ public class SmallJavaParserTest {
     }
     if (!_matched) {
       if (s instanceof SJMemberSelection) {
-        final SJMemberSelection _sJMemberSelection = (SJMemberSelection)s;
         _matched=true;
         StringConcatenation _builder = new StringConcatenation();
         _builder.append("(");
-        SJExpression _receiver = _sJMemberSelection.getReceiver();
+        SJExpression _receiver = ((SJMemberSelection)s).getReceiver();
         String _stringRepr = this.stringRepr(_receiver);
         _builder.append(_stringRepr, "");
         _builder.append(".");
-        SJMember _member = _sJMemberSelection.getMember();
+        SJMember _member = ((SJMemberSelection)s).getMember();
         String _name = _member.getName();
         _builder.append(_name, "");
         _builder.append(")");
@@ -495,18 +493,16 @@ public class SmallJavaParserTest {
     }
     if (!_matched) {
       if (s instanceof SJThis) {
-        final SJThis _sJThis = (SJThis)s;
         _matched=true;
         _switchResult = "this";
       }
     }
     if (!_matched) {
       if (s instanceof SJNew) {
-        final SJNew _sJNew = (SJNew)s;
         _matched=true;
         StringConcatenation _builder = new StringConcatenation();
         _builder.append("new ");
-        SJClass _type = _sJNew.getType();
+        SJClass _type = ((SJNew)s).getType();
         String _name = _type.getName();
         _builder.append(_name, "");
         _builder.append("()");
@@ -515,27 +511,22 @@ public class SmallJavaParserTest {
     }
     if (!_matched) {
       if (s instanceof SJNull) {
-        final SJNull _sJNull = (SJNull)s;
         _matched=true;
         _switchResult = "null";
       }
     }
     if (!_matched) {
       if (s instanceof SJSymbolRef) {
-        final SJSymbolRef _sJSymbolRef = (SJSymbolRef)s;
         _matched=true;
-        SJSymbol _symbol = _sJSymbolRef.getSymbol();
-        String _name = _symbol.getName();
-        _switchResult = _name;
+        SJSymbol _symbol = ((SJSymbolRef)s).getSymbol();
+        _switchResult = _symbol.getName();
       }
     }
     if (!_matched) {
       if (s instanceof SJReturn) {
-        final SJReturn _sJReturn = (SJReturn)s;
         _matched=true;
-        SJExpression _expression = _sJReturn.getExpression();
-        String _stringRepr = this.stringRepr(_expression);
-        _switchResult = _stringRepr;
+        SJExpression _expression = ((SJReturn)s).getExpression();
+        _switchResult = this.stringRepr(_expression);
       }
     }
     return _switchResult;

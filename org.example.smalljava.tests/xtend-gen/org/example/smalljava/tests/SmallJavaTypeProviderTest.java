@@ -74,7 +74,7 @@ public class SmallJavaTypeProviderTest {
       _builder.append("V v = null;");
       _builder.newLine();
       _builder.append("\t\t");
-      _builder.append(testExp, "		");
+      _builder.append(testExp, "\t\t");
       _builder.append(";");
       _builder.newLineIfNotEmpty();
       _builder.append("\t\t");
@@ -101,16 +101,14 @@ public class SmallJavaTypeProviderTest {
           Assert.assertEquals(expectedClassName, _name);
         }
       };
-      SJProgram _doubleArrow = ObjectExtensions.<SJProgram>operator_doubleArrow(_parse, _function);
-      return _doubleArrow;
+      return ObjectExtensions.<SJProgram>operator_doubleArrow(_parse, _function);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }
   }
   
   private SJClass statementExpressionType(final SJStatement s) {
-    SJClass _typeFor = this._smallJavaTypeProvider.typeFor(((SJExpression) s));
-    return _typeFor;
+    return this._smallJavaTypeProvider.typeFor(((SJExpression) s));
   }
   
   @Test
@@ -248,7 +246,7 @@ public class SmallJavaTypeProviderTest {
       _builder.append("R m(P1 p1, P2 p2) {");
       _builder.newLine();
       _builder.append("\t\t");
-      _builder.append(statement, "		");
+      _builder.append(statement, "\t\t");
       _builder.newLineIfNotEmpty();
       _builder.append("\t\t");
       _builder.append("return null;");
@@ -264,8 +262,7 @@ public class SmallJavaTypeProviderTest {
       Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_last);
       SJMethod _last_1 = IterableExtensions.<SJMethod>last(_methods);
       SJMethodBody _body = _last_1.getBody();
-      EList<SJStatement> _statements = _body.getStatements();
-      return _statements;
+      return _body.getStatements();
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }
@@ -434,7 +431,6 @@ public class SmallJavaTypeProviderTest {
   private String methodInvocationArgsTypesAsString(final SJMethod m) {
     SJReturn _returnStatement = SmallJavaModelUtil.returnStatement(m);
     SJExpression _expression = _returnStatement.getExpression();
-    String _argsTypesAsStrings = this._smallJavaTypeProvider.argsTypesAsStrings(((SJMemberSelection) _expression));
-    return _argsTypesAsStrings;
+    return this._smallJavaTypeProvider.argsTypesAsStrings(((SJMemberSelection) _expression));
   }
 }

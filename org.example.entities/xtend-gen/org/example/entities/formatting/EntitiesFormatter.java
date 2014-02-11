@@ -8,11 +8,7 @@ import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.TerminalRule;
 import org.eclipse.xtext.formatting.impl.AbstractDeclarativeFormatter;
 import org.eclipse.xtext.formatting.impl.FormattingConfig;
-import org.eclipse.xtext.formatting.impl.FormattingConfig.LinewrapLocator;
-import org.eclipse.xtext.formatting.impl.FormattingConfig.NoSpaceLocator;
 import org.example.entities.services.EntitiesGrammarAccess;
-import org.example.entities.services.EntitiesGrammarAccess.AttributeElements;
-import org.example.entities.services.EntitiesGrammarAccess.EntityElements;
 
 /**
  * This class contains custom formatting description.
@@ -28,30 +24,30 @@ public class EntitiesFormatter extends AbstractDeclarativeFormatter {
   private EntitiesGrammarAccess g;
   
   protected void configureFormatting(final FormattingConfig c) {
-    final EntityElements e = this.g.getEntityAccess();
+    final EntitiesGrammarAccess.EntityElements e = this.g.getEntityAccess();
     Keyword _leftCurlyBracketKeyword_3 = e.getLeftCurlyBracketKeyword_3();
     Keyword _rightCurlyBracketKeyword_5 = e.getRightCurlyBracketKeyword_5();
     c.setIndentation(_leftCurlyBracketKeyword_3, _rightCurlyBracketKeyword_5);
-    LinewrapLocator _setLinewrap = c.setLinewrap();
+    FormattingConfig.LinewrapLocator _setLinewrap = c.setLinewrap();
     Keyword _leftCurlyBracketKeyword_3_1 = e.getLeftCurlyBracketKeyword_3();
     _setLinewrap.after(_leftCurlyBracketKeyword_3_1);
-    LinewrapLocator _setLinewrap_1 = c.setLinewrap(2);
+    FormattingConfig.LinewrapLocator _setLinewrap_1 = c.setLinewrap(2);
     Keyword _rightCurlyBracketKeyword_5_1 = e.getRightCurlyBracketKeyword_5();
     _setLinewrap_1.after(_rightCurlyBracketKeyword_5_1);
-    final AttributeElements a = this.g.getAttributeAccess();
-    LinewrapLocator _setLinewrap_2 = c.setLinewrap(1);
+    final EntitiesGrammarAccess.AttributeElements a = this.g.getAttributeAccess();
+    FormattingConfig.LinewrapLocator _setLinewrap_2 = c.setLinewrap(1);
     Keyword _semicolonKeyword_2 = a.getSemicolonKeyword_2();
     _setLinewrap_2.after(_semicolonKeyword_2);
-    NoSpaceLocator _setNoSpace = c.setNoSpace();
+    FormattingConfig.NoSpaceLocator _setNoSpace = c.setNoSpace();
     Keyword _semicolonKeyword_2_1 = a.getSemicolonKeyword_2();
     _setNoSpace.before(_semicolonKeyword_2_1);
-    LinewrapLocator _setLinewrap_3 = c.setLinewrap(0, 1, 2);
+    FormattingConfig.LinewrapLocator _setLinewrap_3 = c.setLinewrap(0, 1, 2);
     TerminalRule _sL_COMMENTRule = this.g.getSL_COMMENTRule();
     _setLinewrap_3.before(_sL_COMMENTRule);
-    LinewrapLocator _setLinewrap_4 = c.setLinewrap(0, 1, 2);
+    FormattingConfig.LinewrapLocator _setLinewrap_4 = c.setLinewrap(0, 1, 2);
     TerminalRule _mL_COMMENTRule = this.g.getML_COMMENTRule();
     _setLinewrap_4.before(_mL_COMMENTRule);
-    LinewrapLocator _setLinewrap_5 = c.setLinewrap(0, 1, 1);
+    FormattingConfig.LinewrapLocator _setLinewrap_5 = c.setLinewrap(0, 1, 1);
     TerminalRule _mL_COMMENTRule_1 = this.g.getML_COMMENTRule();
     _setLinewrap_5.after(_mL_COMMENTRule_1);
   }

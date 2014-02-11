@@ -1,7 +1,7 @@
 package org.example.xtend.examples;
 
 import org.eclipse.xtext.xbase.lib.Extension;
-import org.example.xtend.examples.MyClass.Result;
+import org.example.xtend.examples.MyClass;
 
 @SuppressWarnings("all")
 public class XtendMethods {
@@ -13,11 +13,10 @@ public class XtendMethods {
     String _xblockexpression = null;
     {
       @Extension
-      final Result r = null;
+      final MyClass.Result r = null;
       r.getFoo("a");
       r.getFoo("a");
-      String _bar = this.getBar("a");
-      _xblockexpression = (_bar);
+      _xblockexpression = (this.getBar("a"));
     }
     return _xblockexpression;
   }

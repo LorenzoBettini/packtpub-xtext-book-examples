@@ -9,14 +9,11 @@ public class ExtensionMethodsVariables {
   public Object m() {
     Object _xblockexpression = null;
     {
-      MyListExtensions _myListExtensions = new MyListExtensions();
       @Extension
-      final MyListExtensions e = _myListExtensions;
-      ArrayList<String> _arrayList = new ArrayList<String>();
-      final ArrayList<String> list = _arrayList;
+      final MyListExtensions e = new MyListExtensions();
+      final ArrayList<String> list = new ArrayList<String>();
       e.aListMethod(list);
-      Object _anotherListMethod = e.anotherListMethod(list);
-      _xblockexpression = (_anotherListMethod);
+      _xblockexpression = (e.anotherListMethod(list));
     }
     return _xblockexpression;
   }

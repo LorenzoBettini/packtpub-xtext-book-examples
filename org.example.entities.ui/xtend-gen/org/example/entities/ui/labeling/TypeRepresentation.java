@@ -16,22 +16,18 @@ public class TypeRepresentation {
       boolean _matched = false;
       if (!_matched) {
         if (elementType instanceof BasicType) {
-          final BasicType _basicType = (BasicType)elementType;
           _matched=true;
-          String _typeName = _basicType.getTypeName();
-          _switchResult = _typeName;
+          _switchResult = ((BasicType)elementType).getTypeName();
         }
       }
       if (!_matched) {
         if (elementType instanceof EntityType) {
-          final EntityType _entityType = (EntityType)elementType;
           _matched=true;
           Entity _entity = null;
-          if (_entityType!=null) {
-            _entity=_entityType.getEntity();
+          if (((EntityType)elementType)!=null) {
+            _entity=((EntityType)elementType).getEntity();
           }
-          String _name = _entity.getName();
-          _switchResult = _name;
+          _switchResult = _entity.getName();
         }
       }
       final String elementTypeRepr = _switchResult;
@@ -42,8 +38,7 @@ public class TypeRepresentation {
       } else {
         _xifexpression = "";
       }
-      String _plus = (elementTypeRepr + _xifexpression);
-      _xblockexpression = (_plus);
+      _xblockexpression = ((elementTypeRepr + _xifexpression));
     }
     return _xblockexpression;
   }
