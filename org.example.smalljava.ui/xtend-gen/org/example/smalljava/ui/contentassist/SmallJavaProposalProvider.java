@@ -43,19 +43,14 @@ public class SmallJavaProposalProvider extends AbstractSmallJavaProposalProvider
   public StyledString getStyledDisplayString(final EObject element, final String qualifiedNameAsString, final String shortName) {
     StyledString _xifexpression = null;
     if ((element instanceof SJMember)) {
-      StyledString _xblockexpression = null;
-      {
-        final SJMember member = ((SJMember) element);
-        String _memberAsStringWithType = SmallJavaModelUtil.memberAsStringWithType(member);
-        StyledString _styledString = new StyledString(_memberAsStringWithType);
-        SJClass _containingClass = SmallJavaModelUtil.containingClass(member);
-        String _name = _containingClass.getName();
-        String _plus = (" - " + _name);
-        StyledString _styledString_1 = new StyledString(_plus, 
-          StyledString.QUALIFIER_STYLER);
-        _xblockexpression = (_styledString.append(_styledString_1));
-      }
-      _xifexpression = _xblockexpression;
+      String _memberAsStringWithType = SmallJavaModelUtil.memberAsStringWithType(((SJMember)element));
+      StyledString _styledString = new StyledString(_memberAsStringWithType);
+      SJClass _containingClass = SmallJavaModelUtil.containingClass(element);
+      String _name = _containingClass.getName();
+      String _plus = (" - " + _name);
+      StyledString _styledString_1 = new StyledString(_plus, 
+        StyledString.QUALIFIER_STYLER);
+      _xifexpression = _styledString.append(_styledString_1);
     } else {
       _xifexpression = super.getStyledDisplayString(element, qualifiedNameAsString, shortName);
     }

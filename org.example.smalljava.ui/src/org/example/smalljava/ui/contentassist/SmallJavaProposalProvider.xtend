@@ -34,9 +34,10 @@ class SmallJavaProposalProvider extends AbstractSmallJavaProposalProvider {
 
 	override getStyledDisplayString(EObject element, String qualifiedNameAsString, String shortName) {
 		if (element instanceof SJMember) {
-			val member = element as SJMember
-			new StyledString(member.memberAsStringWithType).
-				append(new StyledString(" - " + member.containingClass.name,
+			// val member = element as SJMember
+			// the cast is not necessary in Xtext 2.5.0
+			new StyledString(element.memberAsStringWithType).
+				append(new StyledString(" - " + element.containingClass.name,
 					StyledString::QUALIFIER_STYLER))
 		} else
 			super.getStyledDisplayString(element, qualifiedNameAsString, shortName)
