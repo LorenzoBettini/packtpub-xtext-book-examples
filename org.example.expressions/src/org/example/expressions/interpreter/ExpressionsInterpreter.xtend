@@ -64,6 +64,7 @@ class ExpressionsInterpreter {
 						case '>': left > right 
 						case '>=': left >= right
 						case '<=': left <= right
+						default: false
 					}
 				} else {
 					val left = e.left.interpret as Integer
@@ -74,6 +75,7 @@ class ExpressionsInterpreter {
 						case '>': left > right 
 						case '>=': left >= right
 						case '<=': left <= right
+						default: false
 					}
 				}
 			}

@@ -223,6 +223,9 @@ public class ExpressionsInterpreter {
                 _switchResult_1 = (left.compareTo(right) <= 0);
               }
             }
+            if (!_matched_1) {
+              _switchResult_1 = false;
+            }
             _xblockexpression = (_switchResult_1);
           }
           _xifexpression = _xblockexpression;
@@ -261,6 +264,9 @@ public class ExpressionsInterpreter {
                 _matched_1=true;
                 _switchResult_1 = (left.compareTo(right) <= 0);
               }
+            }
+            if (!_matched_1) {
+              _switchResult_1 = false;
             }
             _xblockexpression_1 = (_switchResult_1);
           }
