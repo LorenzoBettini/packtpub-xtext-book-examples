@@ -45,7 +45,7 @@ public class SmallJavaResourceDescriptionsStrategy extends DefaultResourceDescri
           }
         };
         IterableExtensions.<SJClass>forEach(_classes, _function);
-        _xblockexpression = (true);
+        _xblockexpression = true;
       }
       _xifexpression = _xblockexpression;
     } else {

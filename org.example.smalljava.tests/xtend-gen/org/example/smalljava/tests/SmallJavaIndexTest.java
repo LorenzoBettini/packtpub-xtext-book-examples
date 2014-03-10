@@ -254,7 +254,7 @@ public class SmallJavaIndexTest {
         }
       };
       Iterable<QualifiedName> _map = IterableExtensions.<IEObjectDescription, QualifiedName>map(_visibleEObjectDescriptions, _function);
-      _xblockexpression = (IterableExtensions.join(_map, ","));
+      _xblockexpression = IterableExtensions.join(_map, ",");
     }
     return _xblockexpression;
   }
@@ -289,7 +289,7 @@ public class SmallJavaIndexTest {
         }
       };
       Iterable<QualifiedName> _map = IterableExtensions.<IEObjectDescription, QualifiedName>map(_visibleEObjectDescriptions, _function);
-      _xblockexpression = (IterableExtensions.join(_map, ","));
+      _xblockexpression = IterableExtensions.join(_map, ",");
     }
     return _xblockexpression;
   }

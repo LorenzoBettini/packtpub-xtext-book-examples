@@ -437,7 +437,7 @@ public class SmallJavaParserTest {
     Assert.assertEquals(access, _access);
   }
   
-  private void assertReturnExpressionOfType(final SJProgram p, final Class<? extends Object> type) {
+  private void assertReturnExpressionOfType(final SJProgram p, final Class<?> type) {
     this._validationTestHelper.assertNoErrors(p);
     EList<SJClass> _classes = p.getClasses();
     SJClass _head = IterableExtensions.<SJClass>head(_classes);

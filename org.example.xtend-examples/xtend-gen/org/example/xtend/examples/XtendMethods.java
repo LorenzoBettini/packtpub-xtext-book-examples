@@ -16,7 +16,7 @@ public class XtendMethods {
       final MyClass.Result r = null;
       r.getFoo("a");
       r.getFoo("a");
-      _xblockexpression = (this.getBar("a"));
+      _xblockexpression = this.getBar("a");
     }
     return _xblockexpression;
   }

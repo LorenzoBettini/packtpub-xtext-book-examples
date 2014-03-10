@@ -22,7 +22,7 @@ public class MyFirstXtendClass {
         boolean _greaterThan = (_size > 0);
         _or = _greaterThan;
       }
-      _xblockexpression = (_or);
+      _xblockexpression = _or;
     }
     return _xblockexpression;
   }

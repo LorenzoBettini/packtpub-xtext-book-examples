@@ -123,7 +123,7 @@ public class ExpressionsTypeProvider {
       } else {
         _xifexpression = ExpressionsTypeProvider.intType;
       }
-      _xblockexpression = (_xifexpression);
+      _xblockexpression = _xifexpression;
     }
     return _xblockexpression;
   }

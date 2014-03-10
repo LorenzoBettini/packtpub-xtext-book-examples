@@ -18,7 +18,7 @@ public class ExtensionMethodsFields {
     {
       final ArrayList<String> list = new ArrayList<String>();
       this._myListExtensions.aListMethod(list);
-      _xblockexpression = (this._myListExtensions.anotherListMethod(list));
+      _xblockexpression = this._myListExtensions.anotherListMethod(list);
     }
     return _xblockexpression;
   }
@@ -28,12 +28,12 @@ public class ExtensionMethodsFields {
     {
       final ArrayList<String> list = new ArrayList<String>();
       extensions.aListMethod(list);
-      _xblockexpression = (extensions.anotherListMethod(list));
+      _xblockexpression = extensions.anotherListMethod(list);
     }
     return _xblockexpression;
   }
   
-  public Object myStringMeth(final List<? extends Object> list) {
+  public Object myStringMeth(final List<?> list) {
     return null;
   }
   
@@ -41,7 +41,7 @@ public class ExtensionMethodsFields {
     Object _xblockexpression = null;
     {
       final ArrayList<String> list = new ArrayList<String>();
-      _xblockexpression = (this.myStringMeth(list));
+      _xblockexpression = this.myStringMeth(list);
     }
     return _xblockexpression;
   }

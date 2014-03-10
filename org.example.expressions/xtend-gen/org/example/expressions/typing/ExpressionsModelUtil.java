@@ -25,7 +25,7 @@ public class ExpressionsModelUtil {
       final AbstractElement containingElement = IterableExtensions.<AbstractElement>findFirst(allElements, _function);
       int _indexOf = allElements.indexOf(containingElement);
       List<AbstractElement> _subList = allElements.subList(0, _indexOf);
-      _xblockexpression = (EcoreUtil2.<Variable>typeSelect(_subList, Variable.class));
+      _xblockexpression = EcoreUtil2.<Variable>typeSelect(_subList, Variable.class);
     }
     return _xblockexpression;
   }

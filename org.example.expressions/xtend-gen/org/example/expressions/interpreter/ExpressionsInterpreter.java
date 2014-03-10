@@ -77,7 +77,7 @@ public class ExpressionsInterpreter {
           } else {
             _xifexpression = ((left).intValue() / (right).intValue());
           }
-          _xblockexpression = (_xifexpression);
+          _xblockexpression = _xifexpression;
         }
         _switchResult = Integer.valueOf(_xblockexpression);
       }
@@ -226,7 +226,7 @@ public class ExpressionsInterpreter {
             if (!_matched_1) {
               _switchResult_1 = false;
             }
-            _xblockexpression = (_switchResult_1);
+            _xblockexpression = _switchResult_1;
           }
           _xifexpression = _xblockexpression;
         } else {
@@ -268,7 +268,7 @@ public class ExpressionsInterpreter {
             if (!_matched_1) {
               _switchResult_1 = false;
             }
-            _xblockexpression_1 = (_switchResult_1);
+            _xblockexpression_1 = _switchResult_1;
           }
           _xifexpression = _xblockexpression_1;
         }

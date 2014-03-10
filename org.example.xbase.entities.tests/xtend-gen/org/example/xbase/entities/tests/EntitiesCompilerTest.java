@@ -373,7 +373,7 @@ public class EntitiesCompilerTest {
       final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
         public void accept(final CompilationTestHelper.Result it) {
           try {
-            Class<? extends Object> _compiledClass = it.getCompiledClass();
+            Class<?> _compiledClass = it.getCompiledClass();
             final Object obj = _compiledClass.newInstance();
             StringConcatenation _builder = new StringConcatenation();
             _builder.append("entity C {");

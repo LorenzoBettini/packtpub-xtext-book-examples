@@ -38,7 +38,7 @@ public class TypeRepresentation {
       } else {
         _xifexpression = "";
       }
-      _xblockexpression = ((elementTypeRepr + _xifexpression));
+      _xblockexpression = (elementTypeRepr + _xifexpression);
     }
     return _xblockexpression;
   }

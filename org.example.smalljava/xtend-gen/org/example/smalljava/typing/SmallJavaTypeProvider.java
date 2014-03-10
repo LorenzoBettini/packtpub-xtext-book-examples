@@ -218,7 +218,7 @@ public class SmallJavaTypeProvider {
           _switchResult = SmallJavaTypeProvider.booleanType;
         }
       }
-      _xblockexpression = (_switchResult);
+      _xblockexpression = _switchResult;
     }
     return _xblockexpression;
   }

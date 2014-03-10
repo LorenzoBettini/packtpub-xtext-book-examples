@@ -72,7 +72,7 @@ public class SmallJavaScopeProvider extends AbstractDeclarativeScopeProvider {
         parentScope = _scopeFor;
       }
       Iterable<SJMember> _selectMembers_1 = this.selectMembers(type, sel);
-      _xblockexpression = (Scopes.scopeFor(_selectMembers_1, parentScope));
+      _xblockexpression = Scopes.scopeFor(_selectMembers_1, parentScope);
     }
     return _xblockexpression;
   }

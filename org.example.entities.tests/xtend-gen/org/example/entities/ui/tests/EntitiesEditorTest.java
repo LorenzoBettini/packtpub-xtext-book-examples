@@ -141,7 +141,7 @@ public class EntitiesEditorTest extends AbstractEditorTest {
               }
             };
             Entity _doubleArrow = ObjectExtensions.<Entity>operator_doubleArrow(_createEntity, _function);
-            _xblockexpression = (_entities_1.add(_doubleArrow));
+            _xblockexpression = _entities_1.add(_doubleArrow);
           }
           return Boolean.valueOf(_xblockexpression);
         }
@@ -182,7 +182,7 @@ public class EntitiesEditorTest extends AbstractEditorTest {
             EObject _get = _contents.get(0);
             EList<Entity> _entities = ((Model) _get).getEntities();
             final Entity currentEntity = _entities.get(0);
-            _xblockexpression = (EntitiesModelUtil.addEntityAfter(currentEntity, "Added"));
+            _xblockexpression = EntitiesModelUtil.addEntityAfter(currentEntity, "Added");
           }
           return _xblockexpression;
         }

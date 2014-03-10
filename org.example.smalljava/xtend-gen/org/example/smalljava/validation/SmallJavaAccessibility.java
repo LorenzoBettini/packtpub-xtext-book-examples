@@ -42,7 +42,7 @@ public class SmallJavaAccessibility {
         SJAccessLevel _access_1 = member.getAccess();
         _switchResult = Objects.equal(_access_1, SJAccessLevel.PUBLIC);
       }
-      _xblockexpression = (_switchResult);
+      _xblockexpression = _switchResult;
     }
     return _xblockexpression;
   }

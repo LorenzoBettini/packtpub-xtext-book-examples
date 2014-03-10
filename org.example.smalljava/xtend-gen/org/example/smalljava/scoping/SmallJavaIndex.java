@@ -68,7 +68,7 @@ public class SmallJavaIndex {
       } else {
         _xifexpression = CollectionLiterals.<IContainer>emptyList();
       }
-      _xblockexpression = (_xifexpression);
+      _xblockexpression = _xifexpression;
     }
     return _xblockexpression;
   }
@@ -80,7 +80,7 @@ public class SmallJavaIndex {
       final IResourceDescriptions index = this.rdp.getResourceDescriptions(_eResource);
       Resource _eResource_1 = o.eResource();
       URI _uRI = _eResource_1.getURI();
-      _xblockexpression = (index.getResourceDescription(_uRI));
+      _xblockexpression = index.getResourceDescription(_uRI);
     }
     return _xblockexpression;
   }

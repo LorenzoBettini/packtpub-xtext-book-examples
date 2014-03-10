@@ -10,7 +10,7 @@ public class ItExamples {
     String _xblockexpression = null;
     {
       String it = s;
-      _xblockexpression = (it.toLowerCase());
+      _xblockexpression = it.toLowerCase();
     }
     return _xblockexpression;
   }

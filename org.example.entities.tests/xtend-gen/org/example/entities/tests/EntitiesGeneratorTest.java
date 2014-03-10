@@ -179,9 +179,9 @@ public class EntitiesGeneratorTest {
       _builder.newLine();
       final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
         public void accept(final CompilationTestHelper.Result it) {
-          Class<? extends Object> _compiledClass = it.getCompiledClass("entities.FirstEntity");
+          Class<?> _compiledClass = it.getCompiledClass("entities.FirstEntity");
           Assert.assertNotNull(_compiledClass);
-          Class<? extends Object> _compiledClass_1 = it.getCompiledClass("entities.SecondEntity");
+          Class<?> _compiledClass_1 = it.getCompiledClass("entities.SecondEntity");
           Assert.assertNotNull(_compiledClass_1);
         }
       };
@@ -205,7 +205,7 @@ public class EntitiesGeneratorTest {
       final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
         public void accept(final CompilationTestHelper.Result it) {
           try {
-            Class<? extends Object> _compiledClass = it.getCompiledClass();
+            Class<?> _compiledClass = it.getCompiledClass();
             Object _newInstance = _compiledClass.newInstance();
             final Procedure1<Object> _function = new Procedure1<Object>() {
               public void apply(final Object it) {
@@ -327,9 +327,9 @@ public class EntitiesGeneratorTest {
       final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
         public void accept(final CompilationTestHelper.Result it) {
           try {
-            Class<? extends Object> _compiledClass = it.getCompiledClass("entities.FirstEntity");
+            Class<?> _compiledClass = it.getCompiledClass("entities.FirstEntity");
             final Object FirstEntity = _compiledClass.newInstance();
-            Class<? extends Object> _compiledClass_1 = it.getCompiledClass("entities.SecondEntity");
+            Class<?> _compiledClass_1 = it.getCompiledClass("entities.SecondEntity");
             final Object SecondEntity = _compiledClass_1.newInstance();
             EntitiesGeneratorTest.this._reflectExtensions.invoke(SecondEntity, "setS", "testvalue");
             EntitiesGeneratorTest.this._reflectExtensions.invoke(FirstEntity, "setMyAttribute", SecondEntity);

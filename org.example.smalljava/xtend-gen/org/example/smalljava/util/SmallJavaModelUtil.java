@@ -56,7 +56,7 @@ public class SmallJavaModelUtil {
         }
         _while = _and_1;
       }
-      _xblockexpression = (visited);
+      _xblockexpression = visited;
     }
     return _xblockexpression;
   }

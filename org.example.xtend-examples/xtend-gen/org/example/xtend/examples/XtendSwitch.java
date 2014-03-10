@@ -28,7 +28,7 @@ public class XtendSwitch {
           _switchResult = _entity.getName();
         }
       }
-      _xblockexpression = (_switchResult);
+      _xblockexpression = _switchResult;
     }
     return _xblockexpression;
   }

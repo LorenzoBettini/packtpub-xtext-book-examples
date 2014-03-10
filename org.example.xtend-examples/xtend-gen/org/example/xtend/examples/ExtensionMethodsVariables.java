@@ -13,7 +13,7 @@ public class ExtensionMethodsVariables {
       final MyListExtensions e = new MyListExtensions();
       final ArrayList<String> list = new ArrayList<String>();
       e.aListMethod(list);
-      _xblockexpression = (e.anotherListMethod(list));
+      _xblockexpression = e.anotherListMethod(list);
     }
     return _xblockexpression;
   }

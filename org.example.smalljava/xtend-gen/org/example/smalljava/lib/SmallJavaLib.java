@@ -67,7 +67,7 @@ public class SmallJavaLib {
           }
         }
       };
-      _xblockexpression = (ObjectExtensions.<ResourceSet>operator_doubleArrow(_get, _function));
+      _xblockexpression = ObjectExtensions.<ResourceSet>operator_doubleArrow(_get, _function);
     }
     return _xblockexpression;
   }
@@ -93,7 +93,7 @@ public class SmallJavaLib {
           hierarchy.add(smallJavaObjectClass);
         }
       }
-      _xblockexpression = (hierarchy);
+      _xblockexpression = hierarchy;
     }
     return _xblockexpression;
   }
@@ -135,7 +135,7 @@ public class SmallJavaLib {
         EObject _eObject = _resourceSet.getEObject(_eObjectURI, true);
         o = _eObject;
       }
-      _xblockexpression = (((SJClass) o));
+      _xblockexpression = ((SJClass) o);
     }
     return _xblockexpression;
   }

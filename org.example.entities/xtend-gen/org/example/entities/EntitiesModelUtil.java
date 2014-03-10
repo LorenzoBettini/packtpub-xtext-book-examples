@@ -26,7 +26,7 @@ public class EntitiesModelUtil {
           _entities.add(_plus, it);
         }
       };
-      _xblockexpression = (ObjectExtensions.<Entity>operator_doubleArrow(_createEntity, _function));
+      _xblockexpression = ObjectExtensions.<Entity>operator_doubleArrow(_createEntity, _function);
     }
     return _xblockexpression;
   }
