@@ -8,6 +8,10 @@
   <rm:locator pattern="^com\.google.*" searchPathRef="xtext"/>
   <rm:locator pattern="^org\.antlr.*" searchPathRef="xtext"/>
   <rm:locator pattern="javax.inject" searchPathRef="xtext"/>
+  <rm:locator pattern="^org\.objectweb\.asm.*" searchPathRef="xtext"/>
+  <rm:locator pattern="^org\.apache\.commons\.lang.*" searchPathRef="xtext"/>
+  <rm:locator pattern="^org\.apache\.log4j.*" searchPathRef="xtext"/>
+  <rm:locator pattern="^org\.eclipse\.emf.*" searchPathRef="xtext"/>
   <rm:locator searchPathRef="eclipse"/>
   <rm:searchPath name="xtext">
     <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false">
