@@ -6,5 +6,9 @@ import "http://www.eclipse.org/xtext/xbase/Xbase"
 
 ExpressionsModel returns XBlockExpression:
 	{ExpressionsModel}
-	(expressions+=XExpressionInsideBlock)*;
+	(expressions+=XExpressionOrVarDeclaration)*;
 
+// NOTE: in the book it was written as follows:
+//	(expressions+=XExpressionInsideBlock)*;
+// but in Xbase 2.6.0 XExpressionInsideBlock was removed
+// and XExpressionOrVarDeclaration has to be used instead

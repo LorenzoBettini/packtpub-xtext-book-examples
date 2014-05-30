@@ -4,7 +4,7 @@
     editorDirectory="/org.example.entities.editor/src" modelPluginID="org.example.entities"
     forceOverwrite="true" modelName="Entities" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="org.example.entities.edit"
-    editorPluginID="org.example.entities.editor" runtimeVersion="2.9">
+    editorPluginID="org.example.entities.editor" runtimeVersion="2.10">
   <genPackages prefix="Entities" basePackage="org.example.entities" disposableProviderFactory="true"
       fileExtensions="entities" ecorePackage="Entities.ecore#/">
     <genClasses ecoreClass="Entities.ecore#//Model">

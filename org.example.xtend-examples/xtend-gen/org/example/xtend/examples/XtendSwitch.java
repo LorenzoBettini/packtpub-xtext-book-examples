@@ -54,7 +54,7 @@ public class XtendSwitch {
       }
     }
     if (!_matched) {
-      if (Objects.equal(e,specialEntity)) {
+      if (Objects.equal(e, specialEntity)) {
         _matched=true;
         _switchResult = "special entity";
       }

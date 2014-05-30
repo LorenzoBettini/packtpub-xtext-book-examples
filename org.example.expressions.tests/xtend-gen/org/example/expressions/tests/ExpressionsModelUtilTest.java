@@ -65,7 +65,7 @@ public class ExpressionsModelUtilTest {
     EList<AbstractElement> _elements = model.getElements();
     AbstractElement _get = _elements.get(elemIndex);
     List<Variable> _variablesDefinedBefore = ExpressionsModelUtil.variablesDefinedBefore(_get);
-    final Function1<Variable,String> _function = new Function1<Variable,String>() {
+    final Function1<Variable, String> _function = new Function1<Variable, String>() {
       public String apply(final Variable it) {
         return it.getName();
       }

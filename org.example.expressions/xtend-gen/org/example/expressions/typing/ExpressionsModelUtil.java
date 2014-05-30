@@ -17,7 +17,7 @@ public class ExpressionsModelUtil {
     {
       ExpressionsModel _containerOfType = EcoreUtil2.<ExpressionsModel>getContainerOfType(e, ExpressionsModel.class);
       final EList<AbstractElement> allElements = _containerOfType.getElements();
-      final Function1<AbstractElement,Boolean> _function = new Function1<AbstractElement,Boolean>() {
+      final Function1<AbstractElement, Boolean> _function = new Function1<AbstractElement, Boolean>() {
         public Boolean apply(final AbstractElement it) {
           return Boolean.valueOf(EcoreUtil.isAncestor(it, e));
         }

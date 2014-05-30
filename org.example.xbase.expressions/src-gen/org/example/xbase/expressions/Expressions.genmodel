@@ -4,7 +4,7 @@
     editorDirectory="/org.example.xbase.expressions.editor/src" modelPluginID="org.example.xbase.expressions"
     forceOverwrite="true" modelName="Expressions" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="org.example.xbase.expressions.edit"
-    editorPluginID="org.example.xbase.expressions.editor" runtimeVersion="2.9" usedGenPackages="../../../../../../org.eclipse.xtext.xbase/model/Xbase.genmodel#//xbase">
+    editorPluginID="org.example.xbase.expressions.editor" runtimeVersion="2.10" usedGenPackages="platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel#//xbase">
   <genPackages prefix="Expressions" basePackage="org.example.xbase.expressions" disposableProviderFactory="true"
       fileExtensions="xexpressions" ecorePackage="Expressions.ecore#/">
     <genClasses ecoreClass="Expressions.ecore#//ExpressionsModel"/>

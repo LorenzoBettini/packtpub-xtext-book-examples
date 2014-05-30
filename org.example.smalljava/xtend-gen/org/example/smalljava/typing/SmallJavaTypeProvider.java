@@ -225,7 +225,7 @@ public class SmallJavaTypeProvider {
   
   public String argsTypesAsStrings(final SJMemberSelection sel) {
     EList<SJExpression> _args = sel.getArgs();
-    final Function1<SJExpression,String> _function = new Function1<SJExpression,String>() {
+    final Function1<SJExpression, String> _function = new Function1<SJExpression, String>() {
       public String apply(final SJExpression it) {
         SJClass _typeFor = SmallJavaTypeProvider.this.typeFor(it);
         String _name = null;

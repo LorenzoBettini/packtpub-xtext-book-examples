@@ -60,7 +60,7 @@ public class SmallJavaLib {
           try {
             URI _createURI = URI.createURI(SmallJavaLib.MAIN_LIB);
             final Resource resource = resourceSet.createResource(_createURI);
-            Map<Object,Object> _loadOptions = resourceSet.getLoadOptions();
+            Map<Object, Object> _loadOptions = resourceSet.getLoadOptions();
             resource.load(stream, _loadOptions);
           } catch (Throwable _e) {
             throw Exceptions.sneakyThrow(_e);
@@ -114,7 +114,7 @@ public class SmallJavaLib {
     SJClass _xblockexpression = null;
     {
       Iterable<IEObjectDescription> _visibleClassesDescriptions = this._smallJavaIndex.getVisibleClassesDescriptions(context);
-      final Function1<IEObjectDescription,Boolean> _function = new Function1<IEObjectDescription,Boolean>() {
+      final Function1<IEObjectDescription, Boolean> _function = new Function1<IEObjectDescription, Boolean>() {
         public Boolean apply(final IEObjectDescription it) {
           QualifiedName _qualifiedName = it.getQualifiedName();
           String _string = _qualifiedName.toString();

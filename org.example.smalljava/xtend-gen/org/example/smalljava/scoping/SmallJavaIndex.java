@@ -28,7 +28,7 @@ public class SmallJavaIndex {
   
   public Iterable<IEObjectDescription> getVisibleEObjectDescriptions(final EObject o) {
     List<IContainer> _visibleContainers = this.getVisibleContainers(o);
-    final Function1<IContainer,Iterable<IEObjectDescription>> _function = new Function1<IContainer,Iterable<IEObjectDescription>>() {
+    final Function1<IContainer, Iterable<IEObjectDescription>> _function = new Function1<IContainer, Iterable<IEObjectDescription>>() {
       public Iterable<IEObjectDescription> apply(final IContainer container) {
         return container.getExportedObjects();
       }
@@ -39,7 +39,7 @@ public class SmallJavaIndex {
   
   public Iterable<IEObjectDescription> getVisibleEObjectDescriptions(final EObject o, final EClass type) {
     List<IContainer> _visibleContainers = this.getVisibleContainers(o);
-    final Function1<IContainer,Iterable<IEObjectDescription>> _function = new Function1<IContainer,Iterable<IEObjectDescription>>() {
+    final Function1<IContainer, Iterable<IEObjectDescription>> _function = new Function1<IContainer, Iterable<IEObjectDescription>>() {
       public Iterable<IEObjectDescription> apply(final IContainer container) {
         return container.getExportedObjectsByType(type);
       }

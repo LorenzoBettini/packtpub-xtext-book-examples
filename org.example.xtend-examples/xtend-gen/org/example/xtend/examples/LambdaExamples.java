@@ -12,13 +12,13 @@ import org.eclipse.xtext.xbase.lib.IterableExtensions;
 
 @SuppressWarnings("all")
 public class LambdaExamples {
-  public static String execute(final Function2<? super String,? super Integer,? extends String> f) {
+  public static String execute(final Function2<? super String, ? super Integer, ? extends String> f) {
     return f.apply("s", Integer.valueOf(10));
   }
   
   public static void main(final String[] args) {
     final String c = "aaa";
-    final Function2<String,Integer,String> _function = new Function2<String,Integer,String>() {
+    final Function2<String, Integer, String> _function = new Function2<String, Integer, String>() {
       public String apply(final String s, final Integer i) {
         return ((s + i) + c);
       }
@@ -35,7 +35,7 @@ public class LambdaExamples {
     for (final String s : list) {
     }
     final ArrayList<String> strings = CollectionLiterals.<String>newArrayList("Second", "First", "Third");
-    final Function1<String,Boolean> _function_2 = new Function1<String,Boolean>() {
+    final Function1<String, Boolean> _function_2 = new Function1<String, Boolean>() {
       public Boolean apply(final String it) {
         return Boolean.valueOf(it.startsWith("F"));
       }

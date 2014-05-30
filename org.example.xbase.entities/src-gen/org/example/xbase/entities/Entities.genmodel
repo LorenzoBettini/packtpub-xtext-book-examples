@@ -4,7 +4,7 @@
     editorDirectory="/org.example.xbase.entities.editor/src" modelPluginID="org.example.xbase.entities"
     forceOverwrite="true" modelName="Entities" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="org.example.xbase.entities.edit"
-    editorPluginID="org.example.xbase.entities.editor" runtimeVersion="2.9" usedGenPackages="../../../../../../org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel#//types ../../../../../../org.eclipse.xtext.xbase/model/Xbase.genmodel#//xbase ../../../../../../org.eclipse.xtext.xbase/model/Xbase.genmodel#//xtype">
+    editorPluginID="org.example.xbase.entities.editor" runtimeVersion="2.10" usedGenPackages="platform:/resource/org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel#//types platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel#//xbase platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel#//xtype">
   <genPackages prefix="Entities" basePackage="org.example.xbase.entities" disposableProviderFactory="true"
       fileExtensions="xentities" ecorePackage="Entities.ecore#/">
     <genClasses ecoreClass="Entities.ecore#//Model">

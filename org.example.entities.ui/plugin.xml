@@ -250,7 +250,9 @@
    <extension
          point="org.eclipse.xtext.builder.participant">
       <participant
-            class="org.example.entities.ui.EntitiesExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant">
+            class="org.example.entities.ui.EntitiesExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
+            fileExtensions="entities"
+            >
       </participant>
    </extension>
    <extension

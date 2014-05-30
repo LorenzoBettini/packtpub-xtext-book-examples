@@ -184,7 +184,7 @@ public class SmallJavaModelUtilTest {
   private void assertHierarchy(final SJClass c, final CharSequence expected) {
     String _string = expected.toString();
     ArrayList<SJClass> _classHierarchy = SmallJavaModelUtil.classHierarchy(c);
-    final Function1<SJClass,String> _function = new Function1<SJClass,String>() {
+    final Function1<SJClass, String> _function = new Function1<SJClass, String>() {
       public String apply(final SJClass it) {
         return it.getName();
       }

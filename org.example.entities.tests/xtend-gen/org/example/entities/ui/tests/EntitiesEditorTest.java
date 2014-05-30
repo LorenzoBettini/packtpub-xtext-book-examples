@@ -100,7 +100,7 @@ public class EntitiesEditorTest extends AbstractEditorTest {
       IFile _createTestFile = this.createTestFile("entity E {}");
       XtextEditor _openEditor = this.openEditor(_createTestFile);
       IXtextDocument _document = _openEditor.getDocument();
-      final IUnitOfWork<Model,XtextResource> _function = new IUnitOfWork<Model,XtextResource>() {
+      final IUnitOfWork<Model, XtextResource> _function = new IUnitOfWork<Model, XtextResource>() {
         public Model exec(final XtextResource it) throws Exception {
           EList<EObject> _contents = it.getContents();
           EObject _get = _contents.get(0);
@@ -123,7 +123,7 @@ public class EntitiesEditorTest extends AbstractEditorTest {
       IFile _createTestFile = this.createTestFile("entity E {}");
       final XtextEditor editor = this.openEditor(_createTestFile);
       IXtextDocument _document = editor.getDocument();
-      final IUnitOfWork<Boolean,XtextResource> _function = new IUnitOfWork<Boolean,XtextResource>() {
+      final IUnitOfWork<Boolean, XtextResource> _function = new IUnitOfWork<Boolean, XtextResource>() {
         public Boolean exec(final XtextResource it) throws Exception {
           boolean _xblockexpression = false;
           {
@@ -174,7 +174,7 @@ public class EntitiesEditorTest extends AbstractEditorTest {
       IFile _createTestFile = this.createTestFile(_builder.toString());
       final XtextEditor editor = this.openEditor(_createTestFile);
       IXtextDocument _document = editor.getDocument();
-      final IUnitOfWork<Entity,XtextResource> _function = new IUnitOfWork<Entity,XtextResource>() {
+      final IUnitOfWork<Entity, XtextResource> _function = new IUnitOfWork<Entity, XtextResource>() {
         public Entity exec(final XtextResource it) throws Exception {
           Entity _xblockexpression = null;
           {

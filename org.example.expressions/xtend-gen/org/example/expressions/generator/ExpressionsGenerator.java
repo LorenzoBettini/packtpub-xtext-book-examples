@@ -52,7 +52,7 @@ public class ExpressionsGenerator implements IGenerator {
   
   public String interpretExpressions(final ExpressionsModel model) {
     EList<AbstractElement> _elements = model.getElements();
-    final Function1<AbstractElement,String> _function = new Function1<AbstractElement,String>() {
+    final Function1<AbstractElement, String> _function = new Function1<AbstractElement, String>() {
       public String apply(final AbstractElement it) {
         StringConcatenation _builder = new StringConcatenation();
         ICompositeNode _node = NodeModelUtils.getNode(it);

@@ -205,7 +205,7 @@ public class SmallJavaScopeProviderTest {
       Iterator<SJVariableDeclaration> _filter = Iterators.<SJVariableDeclaration>filter(_eAllContents, SJVariableDeclaration.class);
       final Procedure1<Iterator<SJVariableDeclaration>> _function = new Procedure1<Iterator<SJVariableDeclaration>>() {
         public void apply(final Iterator<SJVariableDeclaration> it) {
-          final Function1<SJVariableDeclaration,Boolean> _function = new Function1<SJVariableDeclaration,Boolean>() {
+          final Function1<SJVariableDeclaration, Boolean> _function = new Function1<SJVariableDeclaration, Boolean>() {
             public Boolean apply(final SJVariableDeclaration it) {
               String _name = it.getName();
               return Boolean.valueOf(Objects.equal(_name, "v3"));
@@ -216,7 +216,7 @@ public class SmallJavaScopeProviderTest {
           EReference _sJSymbolRef_Symbol = SmallJavaPackage.eINSTANCE.getSJSymbolRef_Symbol();
           SmallJavaScopeProviderTest.this.assertScope(_expression, _sJSymbolRef_Symbol, 
             "v2, v1, p");
-          final Function1<SJVariableDeclaration,Boolean> _function_1 = new Function1<SJVariableDeclaration,Boolean>() {
+          final Function1<SJVariableDeclaration, Boolean> _function_1 = new Function1<SJVariableDeclaration, Boolean>() {
             public Boolean apply(final SJVariableDeclaration it) {
               String _name = it.getName();
               return Boolean.valueOf(Objects.equal(_name, "v4"));
@@ -363,7 +363,7 @@ public class SmallJavaScopeProviderTest {
       Iterator<SJVariableDeclaration> _filter = Iterators.<SJVariableDeclaration>filter(_eAllContents, SJVariableDeclaration.class);
       final Procedure1<Iterator<SJVariableDeclaration>> _function = new Procedure1<Iterator<SJVariableDeclaration>>() {
         public void apply(final Iterator<SJVariableDeclaration> it) {
-          final Function1<SJVariableDeclaration,Boolean> _function = new Function1<SJVariableDeclaration,Boolean>() {
+          final Function1<SJVariableDeclaration, Boolean> _function = new Function1<SJVariableDeclaration, Boolean>() {
             public Boolean apply(final SJVariableDeclaration it) {
               String _name = it.getName();
               return Boolean.valueOf(Objects.equal(_name, "v3"));
@@ -1043,7 +1043,7 @@ public class SmallJavaScopeProviderTest {
     String _string = expected.toString();
     IScope _scope = this._iScopeProvider.getScope(context, reference);
     Iterable<IEObjectDescription> _allElements = _scope.getAllElements();
-    final Function1<IEObjectDescription,QualifiedName> _function = new Function1<IEObjectDescription,QualifiedName>() {
+    final Function1<IEObjectDescription, QualifiedName> _function = new Function1<IEObjectDescription, QualifiedName>() {
       public QualifiedName apply(final IEObjectDescription it) {
         return it.getName();
       }

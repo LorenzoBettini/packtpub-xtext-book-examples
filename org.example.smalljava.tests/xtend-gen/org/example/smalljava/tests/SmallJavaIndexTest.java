@@ -248,7 +248,7 @@ public class SmallJavaIndexTest {
       this._validationTestHelper.assertNoErrors(o);
       EClass _eClass = o.eClass();
       Iterable<IEObjectDescription> _visibleEObjectDescriptions = this._smallJavaIndex.getVisibleEObjectDescriptions(o, _eClass);
-      final Function1<IEObjectDescription,QualifiedName> _function = new Function1<IEObjectDescription,QualifiedName>() {
+      final Function1<IEObjectDescription, QualifiedName> _function = new Function1<IEObjectDescription, QualifiedName>() {
         public QualifiedName apply(final IEObjectDescription it) {
           return it.getQualifiedName();
         }
@@ -268,7 +268,7 @@ public class SmallJavaIndexTest {
   private void assertExportedEObjectDescriptions(final EObject o, final CharSequence expected) {
     String _string = expected.toString();
     Iterable<IEObjectDescription> _exportedEObjectDescriptions = this._smallJavaIndex.getExportedEObjectDescriptions(o);
-    final Function1<IEObjectDescription,QualifiedName> _function = new Function1<IEObjectDescription,QualifiedName>() {
+    final Function1<IEObjectDescription, QualifiedName> _function = new Function1<IEObjectDescription, QualifiedName>() {
       public QualifiedName apply(final IEObjectDescription it) {
         return it.getQualifiedName();
       }
@@ -283,7 +283,7 @@ public class SmallJavaIndexTest {
     {
       this._validationTestHelper.assertNoErrors(o);
       Iterable<IEObjectDescription> _visibleEObjectDescriptions = this._smallJavaIndex.getVisibleEObjectDescriptions(o);
-      final Function1<IEObjectDescription,QualifiedName> _function = new Function1<IEObjectDescription,QualifiedName>() {
+      final Function1<IEObjectDescription, QualifiedName> _function = new Function1<IEObjectDescription, QualifiedName>() {
         public QualifiedName apply(final IEObjectDescription it) {
           return it.getQualifiedName();
         }
@@ -297,7 +297,7 @@ public class SmallJavaIndexTest {
   private void assertClassesInIndex(final EObject o, final String expected) {
     this._validationTestHelper.assertNoErrors(o);
     Iterable<IEObjectDescription> _visibleClassesDescriptions = this._smallJavaIndex.getVisibleClassesDescriptions(o);
-    final Function1<IEObjectDescription,QualifiedName> _function = new Function1<IEObjectDescription,QualifiedName>() {
+    final Function1<IEObjectDescription, QualifiedName> _function = new Function1<IEObjectDescription, QualifiedName>() {
       public QualifiedName apply(final IEObjectDescription it) {
         return it.getQualifiedName();
       }

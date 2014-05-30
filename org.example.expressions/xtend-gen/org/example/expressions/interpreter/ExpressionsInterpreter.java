@@ -123,7 +123,7 @@ public class ExpressionsInterpreter {
           Object _interpret_3 = this.interpret(_right_2);
           _xifexpression = Integer.valueOf(((((Integer) _interpret_2)).intValue() + (((Integer) _interpret_3)).intValue()));
         }
-        _switchResult = ((Comparable<Object>)_xifexpression);
+        _switchResult = ((Comparable<?>)_xifexpression);
       }
     }
     if (!_matched) {
@@ -200,25 +200,25 @@ public class ExpressionsInterpreter {
             String _op = ((Comparison)e).getOp();
             boolean _matched_1 = false;
             if (!_matched_1) {
-              if (Objects.equal(_op,"<")) {
+              if (Objects.equal(_op, "<")) {
                 _matched_1=true;
                 _switchResult_1 = (left.compareTo(right) < 0);
               }
             }
             if (!_matched_1) {
-              if (Objects.equal(_op,">")) {
+              if (Objects.equal(_op, ">")) {
                 _matched_1=true;
                 _switchResult_1 = (left.compareTo(right) > 0);
               }
             }
             if (!_matched_1) {
-              if (Objects.equal(_op,">=")) {
+              if (Objects.equal(_op, ">=")) {
                 _matched_1=true;
                 _switchResult_1 = (left.compareTo(right) >= 0);
               }
             }
             if (!_matched_1) {
-              if (Objects.equal(_op,"<=")) {
+              if (Objects.equal(_op, "<=")) {
                 _matched_1=true;
                 _switchResult_1 = (left.compareTo(right) <= 0);
               }
@@ -242,25 +242,25 @@ public class ExpressionsInterpreter {
             String _op = ((Comparison)e).getOp();
             boolean _matched_1 = false;
             if (!_matched_1) {
-              if (Objects.equal(_op,"<")) {
+              if (Objects.equal(_op, "<")) {
                 _matched_1=true;
                 _switchResult_1 = (left.compareTo(right) < 0);
               }
             }
             if (!_matched_1) {
-              if (Objects.equal(_op,">")) {
+              if (Objects.equal(_op, ">")) {
                 _matched_1=true;
                 _switchResult_1 = (left.compareTo(right) > 0);
               }
             }
             if (!_matched_1) {
-              if (Objects.equal(_op,">=")) {
+              if (Objects.equal(_op, ">=")) {
                 _matched_1=true;
                 _switchResult_1 = (left.compareTo(right) >= 0);
               }
             }
             if (!_matched_1) {
-              if (Objects.equal(_op,"<=")) {
+              if (Objects.equal(_op, "<=")) {
                 _matched_1=true;
                 _switchResult_1 = (left.compareTo(right) <= 0);
               }
