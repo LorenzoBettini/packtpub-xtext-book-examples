@@ -43,6 +43,9 @@ you can simply write
 
 ## Xtext 2.6
 
+
+### Xbase
+
 The Xbase rule **XExpressionInsideBlock** has changed into **XExpressionOrVarDeclaration**.
 
 Thus, the Xbase Expressions example's grammar now reads:
@@ -52,6 +55,8 @@ Thus, the Xbase Expressions example's grammar now reads:
 		(expressions+=XExpressionOrVarDeclaration)*;
 
 ## Xtext 2.7
+
+### Model inferrer in Xbase
 
 Some methods in the JvmModelInferrer have been deprecated and should be updated in the examples as follows:
 
@@ -83,3 +88,7 @@ For example, instead of
 You should write (recall that typeof is not required anymore to specify a type literal):
 
 	entity.toMethod("toString", typeRef(String))
+
+### Xtext Buckminster Wizard
+
+This wizard provided by Xtext was not updated and it generates the projects-platform.rmap incorrectly (see also [this forum post](https://www.eclipse.org/forums/index.php/t/811323/)); the quickiest way to fix it is to change the property _eclipse.target.platform_ from _juno_ (or _kepler_) to _luna_ so that the new version of EMF, required by Xtext 2.7, will be found in the Luna update site. (see the updated [projects-platform.rmap](https://github.com/LorenzoBettini/packtpub-xtext-book-examples/blob/master/org.example.build.hello.buckminster/projects-platform.rmap "projects-platform.rmap") file in the org.example.build.hello.buckminster example).
