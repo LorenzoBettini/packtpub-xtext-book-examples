@@ -8,7 +8,6 @@ public class XtendHelloWorld {
     InputOutput.<String>println("Hello World");
     int i = 0;
     int k = 0;
-    int _k = k = 1;
-    i = _k;
+    i = (k = 1);
   }
 }

@@ -29,32 +29,12 @@ public class SmallJavaModelUtil {
     {
       final ArrayList<SJClass> visited = CollectionLiterals.<SJClass>newArrayList();
       SJClass current = c.getSuperclass();
-      boolean _and = false;
-      boolean _notEquals = (!Objects.equal(current, null));
-      if (!_notEquals) {
-        _and = false;
-      } else {
-        boolean _contains = visited.contains(current);
-        boolean _not = (!_contains);
-        _and = _not;
-      }
-      boolean _while = _and;
-      while (_while) {
+      while (((!Objects.equal(current, null)) && (!visited.contains(current)))) {
         {
           visited.add(current);
           SJClass _superclass = current.getSuperclass();
           current = _superclass;
         }
-        boolean _and_1 = false;
-        boolean _notEquals_1 = (!Objects.equal(current, null));
-        if (!_notEquals_1) {
-          _and_1 = false;
-        } else {
-          boolean _contains_1 = visited.contains(current);
-          boolean _not_1 = (!_contains_1);
-          _and_1 = _not_1;
-        }
-        _while = _and_1;
       }
       _xblockexpression = visited;
     }

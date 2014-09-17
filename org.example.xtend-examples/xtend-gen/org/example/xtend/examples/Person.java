@@ -1,6 +1,7 @@
 package org.example.xtend.examples;
 
 import org.eclipse.xtend.lib.Data;
+import org.eclipse.xtext.xbase.lib.Pure;
 import org.eclipse.xtext.xbase.lib.util.ToStringHelper;
 
 @Data
@@ -8,21 +9,9 @@ import org.eclipse.xtext.xbase.lib.util.ToStringHelper;
 public class Person {
   private final String _firstname;
   
-  public String getFirstname() {
-    return this._firstname;
-  }
-  
   private final String _surname;
   
-  public String getSurname() {
-    return this._surname;
-  }
-  
   private final int _age;
-  
-  public int getAge() {
-    return this._age;
-  }
   
   public Person(final String firstname, final String surname, final int age) {
     super();
@@ -32,16 +21,18 @@ public class Person {
   }
   
   @Override
+  @Pure
   public int hashCode() {
     final int prime = 31;
     int result = 1;
-    result = prime * result + ((_firstname== null) ? 0 : _firstname.hashCode());
-    result = prime * result + ((_surname== null) ? 0 : _surname.hashCode());
-    result = prime * result + _age;
+    result = prime * result + ((this._firstname== null) ? 0 : this._firstname.hashCode());
+    result = prime * result + ((this._surname== null) ? 0 : this._surname.hashCode());
+    result = prime * result + this._age;
     return result;
   }
   
   @Override
+  @Pure
   public boolean equals(final Object obj) {
     if (this == obj)
       return true;
@@ -50,24 +41,40 @@ public class Person {
     if (getClass() != obj.getClass())
       return false;
     Person other = (Person) obj;
-    if (_firstname == null) {
+    if (this._firstname == null) {
       if (other._firstname != null)
         return false;
-    } else if (!_firstname.equals(other._firstname))
+    } else if (!this._firstname.equals(other._firstname))
       return false;
-    if (_surname == null) {
+    if (this._surname == null) {
       if (other._surname != null)
         return false;
-    } else if (!_surname.equals(other._surname))
+    } else if (!this._surname.equals(other._surname))
       return false;
-    if (other._age != _age)
+    if (other._age != this._age)
       return false;
     return true;
   }
   
   @Override
+  @Pure
   public String toString() {
     String result = new ToStringHelper().toString(this);
     return result;
+  }
+  
+  @Pure
+  public String getFirstname() {
+    return this._firstname;
+  }
+  
+  @Pure
+  public String getSurname() {
+    return this._surname;
+  }
+  
+  @Pure
+  public int getAge() {
+    return this._age;
   }
 }

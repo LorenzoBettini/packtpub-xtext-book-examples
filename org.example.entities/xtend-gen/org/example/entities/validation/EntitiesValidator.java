@@ -37,9 +37,7 @@ public class EntitiesValidator extends AbstractEntitiesValidator {
     final HashSet<Entity> visitedEntities = CollectionLiterals.<Entity>newHashSet();
     visitedEntities.add(entity);
     Entity current = entity.getSuperType();
-    boolean _notEquals = (!Objects.equal(current, null));
-    boolean _while = _notEquals;
-    while (_while) {
+    while ((!Objects.equal(current, null))) {
       {
         boolean _contains = visitedEntities.contains(current);
         if (_contains) {
@@ -57,8 +55,6 @@ public class EntitiesValidator extends AbstractEntitiesValidator {
         Entity _superType_2 = current.getSuperType();
         current = _superType_2;
       }
-      boolean _notEquals_1 = (!Objects.equal(current, null));
-      _while = _notEquals_1;
     }
   }
   
