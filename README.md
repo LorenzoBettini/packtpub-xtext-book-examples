@@ -79,7 +79,7 @@ The symptom is this exception when running the Junit tests that use CompilationT
 
 To solve this problem the missing bindings in languages that do not use Xbase must be added explicitly; there are two ways of solving this:
 
-1. **Add the bindings in the runtime module of the language**
+**1. Add the bindings in the runtime module of the language**
 
 For example, for the Entities example, you must add the following bindings in the _EntitiesRuntimeModule_ (first, make sure you have the following dependencies in the MANIFEST.MF: _org.eclipse.xtend.lib.macro_ and _org.eclipse.xtext.xbase_):
 
@@ -100,7 +100,7 @@ public class EntitiesRuntimeModule extends org.example.entities.AbstractEntities
 } 
 ```
 
-2. **Add the bindings in a custom InjectorProvider in the tests project**
+**2. Add the bindings in a custom InjectorProvider in the tests project**
 
 If you do not want to add these bindings in the main DSL runtime module (after all, you need them only for testing), you can create a custom injector provider in the tests project (inheriting from the generated one in src-gen folder) to be used only for the test(s) that use CompilationTestHelper.  This custom injector provider must define a custom Guice module, inheriting from the DSL main module, and provide the additional bindings.
 
