@@ -83,7 +83,7 @@ To solve this problem the missing bindings in languages that do not use Xbase mu
 
 For example, for the Entities example, you must add the following bindings in the _EntitiesRuntimeModule_ (first, make sure you have the following dependencies in the MANIFEST.MF: _org.eclipse.xtend.lib.macro_ and _org.eclipse.xtext.xbase_):
 
-```
+```javascript
 public class EntitiesRuntimeModule extends org.example.entities.AbstractEntitiesRuntimeModule {
 
     //... existing bindings
@@ -106,7 +106,7 @@ If you do not want to add these bindings in the main DSL runtime module (after a
 
 For example, for the Expressions example, you must add the following class in the test project (first, make sure you have the following dependencies in the MANIFEST.MF: _org.eclipse.xtend.lib.macro_ and _org.eclipse.xtext.xbase_):
 
-```
+```javascript
 package org.example.expressions.tests;
 
 import org.example.expressions.ExpressionsInjectorProvider;
@@ -146,7 +146,7 @@ public class ExpressionsInjectorProviderCustom extends ExpressionsInjectorProvid
 
 And then you must use this injector provider in the @InjectWith annotation of the test that uses CompilationTestHelper; in this example:
 
-```
+```javascript
 @RunWith(typeof(XtextRunner))
 @InjectWith(typeof(ExpressionsInjectorProviderCustom))
 class ExpressionsGeneratorTest {
@@ -162,7 +162,7 @@ This is not a strict requirement, but Xtext 2.7 introduced an improved version o
 
 If you want to use this improved version, you need to inject it with the @Rule annotation, e.g.,
 
-```
+```javascript
 import org.eclipse.xtext.junit4.TemporaryFolder
 
 @RunWith(typeof(XtextRunner))
@@ -190,14 +190,18 @@ You should now pass directly as the last argument a lambda expression
 
 This method in the JvmTypesBuilder has been deprecated
 
-	@Deprecated
-	public JvmTypeReference newTypeRef(EObject ctx, Class<?> clazz, JvmTypeReference... typeArgs) {
-		return references.getTypeForName(clazz, ctx, typeArgs);
-	}
+```javascript
+@Deprecated
+public JvmTypeReference newTypeRef(EObject ctx, Class<?> clazz, JvmTypeReference... typeArgs) {
+	return references.getTypeForName(clazz, ctx, typeArgs);
+}
+```
 
 In the inferrer you should call directly 
 
-	public JvmTypeReference typeRef(Class<?> clazz, JvmTypeReference... typeArgs) {
+```javascript
+public JvmTypeReference typeRef(Class<?> clazz, JvmTypeReference... typeArgs) {
+```
 
 (So the EObject context is not required anymore).
 
