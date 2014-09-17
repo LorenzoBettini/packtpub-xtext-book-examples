@@ -1365,11 +1365,11 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                 {
                 int LA12_1 = input.LA(2);
 
-                if ( (LA12_1==18) ) {
-                    alt12=1;
-                }
-                else if ( (LA12_1==EOF||(LA12_1>=RULE_ID && LA12_1<=RULE_DECIMAL)||(LA12_1>=14 && LA12_1<=16)||LA12_1==19||(LA12_1>=21 && LA12_1<=60)||(LA12_1>=62 && LA12_1<=87)) ) {
+                if ( (LA12_1==EOF||(LA12_1>=RULE_ID && LA12_1<=RULE_DECIMAL)||(LA12_1>=14 && LA12_1<=16)||LA12_1==19||(LA12_1>=21 && LA12_1<=60)||(LA12_1>=62 && LA12_1<=87)) ) {
                     alt12=2;
+                }
+                else if ( (LA12_1==18) ) {
+                    alt12=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
@@ -1384,11 +1384,11 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                 {
                 int LA12_2 = input.LA(2);
 
-                if ( (LA12_2==18) ) {
-                    alt12=1;
-                }
-                else if ( (LA12_2==EOF||(LA12_2>=RULE_ID && LA12_2<=RULE_DECIMAL)||(LA12_2>=14 && LA12_2<=16)||LA12_2==19||(LA12_2>=21 && LA12_2<=60)||(LA12_2>=62 && LA12_2<=87)) ) {
+                if ( (LA12_2==EOF||(LA12_2>=RULE_ID && LA12_2<=RULE_DECIMAL)||(LA12_2>=14 && LA12_2<=16)||LA12_2==19||(LA12_2>=21 && LA12_2<=60)||(LA12_2>=62 && LA12_2<=87)) ) {
                     alt12=2;
+                }
+                else if ( (LA12_2==18) ) {
+                    alt12=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
@@ -1422,11 +1422,11 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                 {
                 int LA12_4 = input.LA(2);
 
-                if ( (LA12_4==EOF||(LA12_4>=RULE_ID && LA12_4<=RULE_DECIMAL)||(LA12_4>=14 && LA12_4<=16)||LA12_4==19||(LA12_4>=21 && LA12_4<=60)||(LA12_4>=62 && LA12_4<=87)) ) {
-                    alt12=2;
-                }
-                else if ( (LA12_4==18) ) {
+                if ( (LA12_4==18) ) {
                     alt12=1;
+                }
+                else if ( (LA12_4==EOF||(LA12_4>=RULE_ID && LA12_4<=RULE_DECIMAL)||(LA12_4>=14 && LA12_4<=16)||LA12_4==19||(LA12_4>=21 && LA12_4<=60)||(LA12_4>=62 && LA12_4<=87)) ) {
+                    alt12=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
@@ -1441,11 +1441,11 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                 {
                 int LA12_5 = input.LA(2);
 
-                if ( (LA12_5==18) ) {
-                    alt12=1;
-                }
-                else if ( (LA12_5==EOF||(LA12_5>=RULE_ID && LA12_5<=RULE_DECIMAL)||(LA12_5>=14 && LA12_5<=16)||LA12_5==19||(LA12_5>=21 && LA12_5<=60)||(LA12_5>=62 && LA12_5<=87)) ) {
+                if ( (LA12_5==EOF||(LA12_5>=RULE_ID && LA12_5<=RULE_DECIMAL)||(LA12_5>=14 && LA12_5<=16)||LA12_5==19||(LA12_5>=21 && LA12_5<=60)||(LA12_5>=62 && LA12_5<=87)) ) {
                     alt12=2;
+                }
+                else if ( (LA12_5==18) ) {
+                    alt12=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
@@ -9779,13 +9779,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXCasePart"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3350:1: ruleXCasePart returns [EObject current=null] : ( () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | otherlv_6= ',' ) ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3350:1: ruleXCasePart returns [EObject current=null] : ( () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | ( (lv_fallThrough_6_0= ',' ) ) ) ) ;
     public final EObject ruleXCasePart() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_2=null;
         Token otherlv_4=null;
-        Token otherlv_6=null;
+        Token lv_fallThrough_6_0=null;
         EObject lv_typeGuard_1_0 = null;
 
         EObject lv_case_3_0 = null;
@@ -9796,11 +9796,11 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3353:28: ( ( () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | otherlv_6= ',' ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3354:1: ( () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | otherlv_6= ',' ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3353:28: ( ( () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | ( (lv_fallThrough_6_0= ',' ) ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3354:1: ( () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | ( (lv_fallThrough_6_0= ',' ) ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3354:1: ( () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | otherlv_6= ',' ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3354:2: () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | otherlv_6= ',' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3354:1: ( () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | ( (lv_fallThrough_6_0= ',' ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3354:2: () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | ( (lv_fallThrough_6_0= ',' ) ) )
             {
             // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3354:2: ()
             // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3355:5: 
@@ -9919,7 +9919,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3400:4: ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | otherlv_6= ',' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3400:4: ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | ( (lv_fallThrough_6_0= ',' ) ) )
             int alt64=2;
             int LA64_0 = input.LA(1);
 
@@ -9991,14 +9991,34 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3423:7: otherlv_6= ','
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3423:6: ( (lv_fallThrough_6_0= ',' ) )
                     {
-                    otherlv_6=(Token)match(input,22,FOLLOW_22_in_ruleXCasePart8137); if (state.failed) return current;
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3423:6: ( (lv_fallThrough_6_0= ',' ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3424:1: (lv_fallThrough_6_0= ',' )
+                    {
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3424:1: (lv_fallThrough_6_0= ',' )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3425:3: lv_fallThrough_6_0= ','
+                    {
+                    lv_fallThrough_6_0=(Token)match(input,22,FOLLOW_22_in_ruleXCasePart8143); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                          	newLeafNode(otherlv_6, grammarAccess.getXCasePartAccess().getCommaKeyword_3_1());
+                              newLeafNode(lv_fallThrough_6_0, grammarAccess.getXCasePartAccess().getFallThroughCommaKeyword_3_1_0());
                           
                     }
+                    if ( state.backtracking==0 ) {
+
+                      	        if (current==null) {
+                      	            current = createModelElement(grammarAccess.getXCasePartRule());
+                      	        }
+                             		setWithLastConsumed(current, "fallThrough", true, ",");
+                      	    
+                    }
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
@@ -10028,7 +10048,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXForLoopExpression"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3435:1: entryRuleXForLoopExpression returns [EObject current=null] : iv_ruleXForLoopExpression= ruleXForLoopExpression EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3446:1: entryRuleXForLoopExpression returns [EObject current=null] : iv_ruleXForLoopExpression= ruleXForLoopExpression EOF ;
     public final EObject entryRuleXForLoopExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10036,13 +10056,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3436:2: (iv_ruleXForLoopExpression= ruleXForLoopExpression EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3437:2: iv_ruleXForLoopExpression= ruleXForLoopExpression EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3447:2: (iv_ruleXForLoopExpression= ruleXForLoopExpression EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3448:2: iv_ruleXForLoopExpression= ruleXForLoopExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXForLoopExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleXForLoopExpression_in_entryRuleXForLoopExpression8174);
+            pushFollow(FOLLOW_ruleXForLoopExpression_in_entryRuleXForLoopExpression8193);
             iv_ruleXForLoopExpression=ruleXForLoopExpression();
 
             state._fsp--;
@@ -10050,7 +10070,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXForLoopExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXForLoopExpression8184); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXForLoopExpression8203); if (state.failed) return current;
 
             }
 
@@ -10068,7 +10088,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXForLoopExpression"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3444:1: ruleXForLoopExpression returns [EObject current=null] : ( ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) ) ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3455:1: ruleXForLoopExpression returns [EObject current=null] : ( ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) ) ) ;
     public final EObject ruleXForLoopExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10086,20 +10106,20 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3447:28: ( ( ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3448:1: ( ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3458:28: ( ( ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3459:1: ( ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3448:1: ( ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3448:2: ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3459:1: ( ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3459:2: ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3448:2: ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3448:3: ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3459:2: ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3459:3: ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3456:5: ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3456:6: () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':'
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3467:5: ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3467:6: () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':'
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3456:6: ()
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3457:5: 
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3467:6: ()
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3468:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -10111,30 +10131,30 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,68,FOLLOW_68_in_ruleXForLoopExpression8261); if (state.failed) return current;
+            otherlv_1=(Token)match(input,68,FOLLOW_68_in_ruleXForLoopExpression8280); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXForLoopExpressionAccess().getForKeyword_0_0_1());
                   
             }
-            otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleXForLoopExpression8273); if (state.failed) return current;
+            otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleXForLoopExpression8292); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getXForLoopExpressionAccess().getLeftParenthesisKeyword_0_0_2());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3470:1: ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3471:1: (lv_declaredParam_3_0= ruleJvmFormalParameter )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3481:1: ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3482:1: (lv_declaredParam_3_0= ruleJvmFormalParameter )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3471:1: (lv_declaredParam_3_0= ruleJvmFormalParameter )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3472:3: lv_declaredParam_3_0= ruleJvmFormalParameter
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3482:1: (lv_declaredParam_3_0= ruleJvmFormalParameter )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3483:3: lv_declaredParam_3_0= ruleJvmFormalParameter
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXForLoopExpressionAccess().getDeclaredParamJvmFormalParameterParserRuleCall_0_0_3_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleJvmFormalParameter_in_ruleXForLoopExpression8294);
+            pushFollow(FOLLOW_ruleJvmFormalParameter_in_ruleXForLoopExpression8313);
             lv_declaredParam_3_0=ruleJvmFormalParameter();
 
             state._fsp--;
@@ -10158,7 +10178,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,65,FOLLOW_65_in_ruleXForLoopExpression8306); if (state.failed) return current;
+            otherlv_4=(Token)match(input,65,FOLLOW_65_in_ruleXForLoopExpression8325); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getXForLoopExpressionAccess().getColonKeyword_0_0_4());
@@ -10170,18 +10190,18 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3492:3: ( (lv_forExpression_5_0= ruleXExpression ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3493:1: (lv_forExpression_5_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3503:3: ( (lv_forExpression_5_0= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3504:1: (lv_forExpression_5_0= ruleXExpression )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3493:1: (lv_forExpression_5_0= ruleXExpression )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3494:3: lv_forExpression_5_0= ruleXExpression
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3504:1: (lv_forExpression_5_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3505:3: lv_forExpression_5_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXForLoopExpressionAccess().getForExpressionXExpressionParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleXExpression_in_ruleXForLoopExpression8329);
+            pushFollow(FOLLOW_ruleXExpression_in_ruleXForLoopExpression8348);
             lv_forExpression_5_0=ruleXExpression();
 
             state._fsp--;
@@ -10205,24 +10225,24 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,23,FOLLOW_23_in_ruleXForLoopExpression8341); if (state.failed) return current;
+            otherlv_6=(Token)match(input,23,FOLLOW_23_in_ruleXForLoopExpression8360); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_6, grammarAccess.getXForLoopExpressionAccess().getRightParenthesisKeyword_2());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3514:1: ( (lv_eachExpression_7_0= ruleXExpression ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3515:1: (lv_eachExpression_7_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3525:1: ( (lv_eachExpression_7_0= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3526:1: (lv_eachExpression_7_0= ruleXExpression )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3515:1: (lv_eachExpression_7_0= ruleXExpression )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3516:3: lv_eachExpression_7_0= ruleXExpression
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3526:1: (lv_eachExpression_7_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3527:3: lv_eachExpression_7_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXForLoopExpressionAccess().getEachExpressionXExpressionParserRuleCall_3_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleXExpression_in_ruleXForLoopExpression8362);
+            pushFollow(FOLLOW_ruleXExpression_in_ruleXForLoopExpression8381);
             lv_eachExpression_7_0=ruleXExpression();
 
             state._fsp--;
@@ -10269,7 +10289,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXBasicForLoopExpression"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3540:1: entryRuleXBasicForLoopExpression returns [EObject current=null] : iv_ruleXBasicForLoopExpression= ruleXBasicForLoopExpression EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3551:1: entryRuleXBasicForLoopExpression returns [EObject current=null] : iv_ruleXBasicForLoopExpression= ruleXBasicForLoopExpression EOF ;
     public final EObject entryRuleXBasicForLoopExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10277,13 +10297,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3541:2: (iv_ruleXBasicForLoopExpression= ruleXBasicForLoopExpression EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3542:2: iv_ruleXBasicForLoopExpression= ruleXBasicForLoopExpression EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3552:2: (iv_ruleXBasicForLoopExpression= ruleXBasicForLoopExpression EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3553:2: iv_ruleXBasicForLoopExpression= ruleXBasicForLoopExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXBasicForLoopExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleXBasicForLoopExpression_in_entryRuleXBasicForLoopExpression8398);
+            pushFollow(FOLLOW_ruleXBasicForLoopExpression_in_entryRuleXBasicForLoopExpression8417);
             iv_ruleXBasicForLoopExpression=ruleXBasicForLoopExpression();
 
             state._fsp--;
@@ -10291,7 +10311,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXBasicForLoopExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXBasicForLoopExpression8408); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXBasicForLoopExpression8427); if (state.failed) return current;
 
             }
 
@@ -10309,7 +10329,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXBasicForLoopExpression"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3549:1: ruleXBasicForLoopExpression returns [EObject current=null] : ( () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) ) ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3560:1: ruleXBasicForLoopExpression returns [EObject current=null] : ( () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) ) ) ;
     public final EObject ruleXBasicForLoopExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10336,14 +10356,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3552:28: ( ( () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3553:1: ( () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3563:28: ( ( () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3564:1: ( () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3553:1: ( () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3553:2: () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3564:1: ( () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3564:2: () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3553:2: ()
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3554:5: 
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3564:2: ()
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3565:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -10355,19 +10375,19 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,68,FOLLOW_68_in_ruleXBasicForLoopExpression8454); if (state.failed) return current;
+            otherlv_1=(Token)match(input,68,FOLLOW_68_in_ruleXBasicForLoopExpression8473); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXBasicForLoopExpressionAccess().getForKeyword_1());
                   
             }
-            otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleXBasicForLoopExpression8466); if (state.failed) return current;
+            otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleXBasicForLoopExpression8485); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getXBasicForLoopExpressionAccess().getLeftParenthesisKeyword_2());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3567:1: ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3578:1: ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )?
             int alt66=2;
             int LA66_0 = input.LA(1);
 
@@ -10376,20 +10396,20 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             }
             switch (alt66) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3567:2: ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )*
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3578:2: ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )*
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3567:2: ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3568:1: (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3578:2: ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3579:1: (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3568:1: (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3569:3: lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3579:1: (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3580:3: lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXBasicForLoopExpressionAccess().getInitExpressionsXExpressionOrVarDeclarationParserRuleCall_3_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleXExpressionOrVarDeclaration_in_ruleXBasicForLoopExpression8488);
+                    pushFollow(FOLLOW_ruleXExpressionOrVarDeclaration_in_ruleXBasicForLoopExpression8507);
                     lv_initExpressions_3_0=ruleXExpressionOrVarDeclaration();
 
                     state._fsp--;
@@ -10413,7 +10433,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3585:2: (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )*
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3596:2: (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )*
                     loop65:
                     do {
                         int alt65=2;
@@ -10426,26 +10446,26 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                         switch (alt65) {
                     	case 1 :
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3585:4: otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3596:4: otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) )
                     	    {
-                    	    otherlv_4=(Token)match(input,22,FOLLOW_22_in_ruleXBasicForLoopExpression8501); if (state.failed) return current;
+                    	    otherlv_4=(Token)match(input,22,FOLLOW_22_in_ruleXBasicForLoopExpression8520); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_4, grammarAccess.getXBasicForLoopExpressionAccess().getCommaKeyword_3_1_0());
                     	          
                     	    }
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3589:1: ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) )
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3590:1: (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3600:1: ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3601:1: (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration )
                     	    {
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3590:1: (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration )
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3591:3: lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3601:1: (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3602:3: lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getXBasicForLoopExpressionAccess().getInitExpressionsXExpressionOrVarDeclarationParserRuleCall_3_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_ruleXExpressionOrVarDeclaration_in_ruleXBasicForLoopExpression8522);
+                    	    pushFollow(FOLLOW_ruleXExpressionOrVarDeclaration_in_ruleXBasicForLoopExpression8541);
                     	    lv_initExpressions_5_0=ruleXExpressionOrVarDeclaration();
 
                     	    state._fsp--;
@@ -10484,13 +10504,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,19,FOLLOW_19_in_ruleXBasicForLoopExpression8538); if (state.failed) return current;
+            otherlv_6=(Token)match(input,19,FOLLOW_19_in_ruleXBasicForLoopExpression8557); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_6, grammarAccess.getXBasicForLoopExpressionAccess().getSemicolonKeyword_4());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3611:1: ( (lv_expression_7_0= ruleXExpression ) )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3622:1: ( (lv_expression_7_0= ruleXExpression ) )?
             int alt67=2;
             int LA67_0 = input.LA(1);
 
@@ -10499,17 +10519,17 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             }
             switch (alt67) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3612:1: (lv_expression_7_0= ruleXExpression )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3623:1: (lv_expression_7_0= ruleXExpression )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3612:1: (lv_expression_7_0= ruleXExpression )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3613:3: lv_expression_7_0= ruleXExpression
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3623:1: (lv_expression_7_0= ruleXExpression )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3624:3: lv_expression_7_0= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXBasicForLoopExpressionAccess().getExpressionXExpressionParserRuleCall_5_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleXExpression_in_ruleXBasicForLoopExpression8559);
+                    pushFollow(FOLLOW_ruleXExpression_in_ruleXBasicForLoopExpression8578);
                     lv_expression_7_0=ruleXExpression();
 
                     state._fsp--;
@@ -10536,13 +10556,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,19,FOLLOW_19_in_ruleXBasicForLoopExpression8572); if (state.failed) return current;
+            otherlv_8=(Token)match(input,19,FOLLOW_19_in_ruleXBasicForLoopExpression8591); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_8, grammarAccess.getXBasicForLoopExpressionAccess().getSemicolonKeyword_6());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3633:1: ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3644:1: ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )?
             int alt69=2;
             int LA69_0 = input.LA(1);
 
@@ -10551,20 +10571,20 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             }
             switch (alt69) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3633:2: ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )*
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3644:2: ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )*
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3633:2: ( (lv_updateExpressions_9_0= ruleXExpression ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3634:1: (lv_updateExpressions_9_0= ruleXExpression )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3644:2: ( (lv_updateExpressions_9_0= ruleXExpression ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3645:1: (lv_updateExpressions_9_0= ruleXExpression )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3634:1: (lv_updateExpressions_9_0= ruleXExpression )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3635:3: lv_updateExpressions_9_0= ruleXExpression
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3645:1: (lv_updateExpressions_9_0= ruleXExpression )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3646:3: lv_updateExpressions_9_0= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXBasicForLoopExpressionAccess().getUpdateExpressionsXExpressionParserRuleCall_7_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleXExpression_in_ruleXBasicForLoopExpression8594);
+                    pushFollow(FOLLOW_ruleXExpression_in_ruleXBasicForLoopExpression8613);
                     lv_updateExpressions_9_0=ruleXExpression();
 
                     state._fsp--;
@@ -10588,7 +10608,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3651:2: (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )*
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3662:2: (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )*
                     loop68:
                     do {
                         int alt68=2;
@@ -10601,26 +10621,26 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                         switch (alt68) {
                     	case 1 :
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3651:4: otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3662:4: otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) )
                     	    {
-                    	    otherlv_10=(Token)match(input,22,FOLLOW_22_in_ruleXBasicForLoopExpression8607); if (state.failed) return current;
+                    	    otherlv_10=(Token)match(input,22,FOLLOW_22_in_ruleXBasicForLoopExpression8626); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_10, grammarAccess.getXBasicForLoopExpressionAccess().getCommaKeyword_7_1_0());
                     	          
                     	    }
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3655:1: ( (lv_updateExpressions_11_0= ruleXExpression ) )
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3656:1: (lv_updateExpressions_11_0= ruleXExpression )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3666:1: ( (lv_updateExpressions_11_0= ruleXExpression ) )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3667:1: (lv_updateExpressions_11_0= ruleXExpression )
                     	    {
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3656:1: (lv_updateExpressions_11_0= ruleXExpression )
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3657:3: lv_updateExpressions_11_0= ruleXExpression
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3667:1: (lv_updateExpressions_11_0= ruleXExpression )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3668:3: lv_updateExpressions_11_0= ruleXExpression
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getXBasicForLoopExpressionAccess().getUpdateExpressionsXExpressionParserRuleCall_7_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_ruleXExpression_in_ruleXBasicForLoopExpression8628);
+                    	    pushFollow(FOLLOW_ruleXExpression_in_ruleXBasicForLoopExpression8647);
                     	    lv_updateExpressions_11_0=ruleXExpression();
 
                     	    state._fsp--;
@@ -10659,24 +10679,24 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_12=(Token)match(input,23,FOLLOW_23_in_ruleXBasicForLoopExpression8644); if (state.failed) return current;
+            otherlv_12=(Token)match(input,23,FOLLOW_23_in_ruleXBasicForLoopExpression8663); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_12, grammarAccess.getXBasicForLoopExpressionAccess().getRightParenthesisKeyword_8());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3677:1: ( (lv_eachExpression_13_0= ruleXExpression ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3678:1: (lv_eachExpression_13_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3688:1: ( (lv_eachExpression_13_0= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3689:1: (lv_eachExpression_13_0= ruleXExpression )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3678:1: (lv_eachExpression_13_0= ruleXExpression )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3679:3: lv_eachExpression_13_0= ruleXExpression
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3689:1: (lv_eachExpression_13_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3690:3: lv_eachExpression_13_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXBasicForLoopExpressionAccess().getEachExpressionXExpressionParserRuleCall_9_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleXExpression_in_ruleXBasicForLoopExpression8665);
+            pushFollow(FOLLOW_ruleXExpression_in_ruleXBasicForLoopExpression8684);
             lv_eachExpression_13_0=ruleXExpression();
 
             state._fsp--;
@@ -10723,7 +10743,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXWhileExpression"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3703:1: entryRuleXWhileExpression returns [EObject current=null] : iv_ruleXWhileExpression= ruleXWhileExpression EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3714:1: entryRuleXWhileExpression returns [EObject current=null] : iv_ruleXWhileExpression= ruleXWhileExpression EOF ;
     public final EObject entryRuleXWhileExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10731,13 +10751,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3704:2: (iv_ruleXWhileExpression= ruleXWhileExpression EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3705:2: iv_ruleXWhileExpression= ruleXWhileExpression EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3715:2: (iv_ruleXWhileExpression= ruleXWhileExpression EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3716:2: iv_ruleXWhileExpression= ruleXWhileExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXWhileExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleXWhileExpression_in_entryRuleXWhileExpression8701);
+            pushFollow(FOLLOW_ruleXWhileExpression_in_entryRuleXWhileExpression8720);
             iv_ruleXWhileExpression=ruleXWhileExpression();
 
             state._fsp--;
@@ -10745,7 +10765,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXWhileExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXWhileExpression8711); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXWhileExpression8730); if (state.failed) return current;
 
             }
 
@@ -10763,7 +10783,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXWhileExpression"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3712:1: ruleXWhileExpression returns [EObject current=null] : ( () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) ) ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3723:1: ruleXWhileExpression returns [EObject current=null] : ( () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) ) ) ;
     public final EObject ruleXWhileExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10778,14 +10798,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3715:28: ( ( () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3716:1: ( () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3726:28: ( ( () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3727:1: ( () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3716:1: ( () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3716:2: () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3727:1: ( () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3727:2: () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3716:2: ()
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3717:5: 
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3727:2: ()
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3728:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -10797,30 +10817,30 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,69,FOLLOW_69_in_ruleXWhileExpression8757); if (state.failed) return current;
+            otherlv_1=(Token)match(input,69,FOLLOW_69_in_ruleXWhileExpression8776); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXWhileExpressionAccess().getWhileKeyword_1());
                   
             }
-            otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleXWhileExpression8769); if (state.failed) return current;
+            otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleXWhileExpression8788); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getXWhileExpressionAccess().getLeftParenthesisKeyword_2());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3730:1: ( (lv_predicate_3_0= ruleXExpression ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3731:1: (lv_predicate_3_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3741:1: ( (lv_predicate_3_0= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3742:1: (lv_predicate_3_0= ruleXExpression )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3731:1: (lv_predicate_3_0= ruleXExpression )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3732:3: lv_predicate_3_0= ruleXExpression
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3742:1: (lv_predicate_3_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3743:3: lv_predicate_3_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXWhileExpressionAccess().getPredicateXExpressionParserRuleCall_3_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleXExpression_in_ruleXWhileExpression8790);
+            pushFollow(FOLLOW_ruleXExpression_in_ruleXWhileExpression8809);
             lv_predicate_3_0=ruleXExpression();
 
             state._fsp--;
@@ -10844,24 +10864,24 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,23,FOLLOW_23_in_ruleXWhileExpression8802); if (state.failed) return current;
+            otherlv_4=(Token)match(input,23,FOLLOW_23_in_ruleXWhileExpression8821); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getXWhileExpressionAccess().getRightParenthesisKeyword_4());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3752:1: ( (lv_body_5_0= ruleXExpression ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3753:1: (lv_body_5_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3763:1: ( (lv_body_5_0= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3764:1: (lv_body_5_0= ruleXExpression )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3753:1: (lv_body_5_0= ruleXExpression )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3754:3: lv_body_5_0= ruleXExpression
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3764:1: (lv_body_5_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3765:3: lv_body_5_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXWhileExpressionAccess().getBodyXExpressionParserRuleCall_5_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleXExpression_in_ruleXWhileExpression8823);
+            pushFollow(FOLLOW_ruleXExpression_in_ruleXWhileExpression8842);
             lv_body_5_0=ruleXExpression();
 
             state._fsp--;
@@ -10908,7 +10928,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXDoWhileExpression"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3778:1: entryRuleXDoWhileExpression returns [EObject current=null] : iv_ruleXDoWhileExpression= ruleXDoWhileExpression EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3789:1: entryRuleXDoWhileExpression returns [EObject current=null] : iv_ruleXDoWhileExpression= ruleXDoWhileExpression EOF ;
     public final EObject entryRuleXDoWhileExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10916,13 +10936,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3779:2: (iv_ruleXDoWhileExpression= ruleXDoWhileExpression EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3780:2: iv_ruleXDoWhileExpression= ruleXDoWhileExpression EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3790:2: (iv_ruleXDoWhileExpression= ruleXDoWhileExpression EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3791:2: iv_ruleXDoWhileExpression= ruleXDoWhileExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXDoWhileExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleXDoWhileExpression_in_entryRuleXDoWhileExpression8859);
+            pushFollow(FOLLOW_ruleXDoWhileExpression_in_entryRuleXDoWhileExpression8878);
             iv_ruleXDoWhileExpression=ruleXDoWhileExpression();
 
             state._fsp--;
@@ -10930,7 +10950,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXDoWhileExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXDoWhileExpression8869); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXDoWhileExpression8888); if (state.failed) return current;
 
             }
 
@@ -10948,7 +10968,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXDoWhileExpression"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3787:1: ruleXDoWhileExpression returns [EObject current=null] : ( () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')' ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3798:1: ruleXDoWhileExpression returns [EObject current=null] : ( () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')' ) ;
     public final EObject ruleXDoWhileExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10964,14 +10984,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3790:28: ( ( () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')' ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3791:1: ( () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3801:28: ( ( () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')' ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3802:1: ( () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')' )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3791:1: ( () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')' )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3791:2: () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')'
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3802:1: ( () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3802:2: () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')'
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3791:2: ()
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3792:5: 
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3802:2: ()
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3803:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -10983,24 +11003,24 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,70,FOLLOW_70_in_ruleXDoWhileExpression8915); if (state.failed) return current;
+            otherlv_1=(Token)match(input,70,FOLLOW_70_in_ruleXDoWhileExpression8934); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXDoWhileExpressionAccess().getDoKeyword_1());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3801:1: ( (lv_body_2_0= ruleXExpression ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3802:1: (lv_body_2_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3812:1: ( (lv_body_2_0= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3813:1: (lv_body_2_0= ruleXExpression )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3802:1: (lv_body_2_0= ruleXExpression )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3803:3: lv_body_2_0= ruleXExpression
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3813:1: (lv_body_2_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3814:3: lv_body_2_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXDoWhileExpressionAccess().getBodyXExpressionParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleXExpression_in_ruleXDoWhileExpression8936);
+            pushFollow(FOLLOW_ruleXExpression_in_ruleXDoWhileExpression8955);
             lv_body_2_0=ruleXExpression();
 
             state._fsp--;
@@ -11024,30 +11044,30 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,69,FOLLOW_69_in_ruleXDoWhileExpression8948); if (state.failed) return current;
+            otherlv_3=(Token)match(input,69,FOLLOW_69_in_ruleXDoWhileExpression8967); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getXDoWhileExpressionAccess().getWhileKeyword_3());
                   
             }
-            otherlv_4=(Token)match(input,21,FOLLOW_21_in_ruleXDoWhileExpression8960); if (state.failed) return current;
+            otherlv_4=(Token)match(input,21,FOLLOW_21_in_ruleXDoWhileExpression8979); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getXDoWhileExpressionAccess().getLeftParenthesisKeyword_4());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3827:1: ( (lv_predicate_5_0= ruleXExpression ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3828:1: (lv_predicate_5_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3838:1: ( (lv_predicate_5_0= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3839:1: (lv_predicate_5_0= ruleXExpression )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3828:1: (lv_predicate_5_0= ruleXExpression )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3829:3: lv_predicate_5_0= ruleXExpression
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3839:1: (lv_predicate_5_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3840:3: lv_predicate_5_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXDoWhileExpressionAccess().getPredicateXExpressionParserRuleCall_5_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleXExpression_in_ruleXDoWhileExpression8981);
+            pushFollow(FOLLOW_ruleXExpression_in_ruleXDoWhileExpression9000);
             lv_predicate_5_0=ruleXExpression();
 
             state._fsp--;
@@ -11071,7 +11091,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,23,FOLLOW_23_in_ruleXDoWhileExpression8993); if (state.failed) return current;
+            otherlv_6=(Token)match(input,23,FOLLOW_23_in_ruleXDoWhileExpression9012); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_6, grammarAccess.getXDoWhileExpressionAccess().getRightParenthesisKeyword_6());
@@ -11100,7 +11120,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXBlockExpression"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3857:1: entryRuleXBlockExpression returns [EObject current=null] : iv_ruleXBlockExpression= ruleXBlockExpression EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3868:1: entryRuleXBlockExpression returns [EObject current=null] : iv_ruleXBlockExpression= ruleXBlockExpression EOF ;
     public final EObject entryRuleXBlockExpression() throws RecognitionException {
         EObject current = null;
 
@@ -11108,13 +11128,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3858:2: (iv_ruleXBlockExpression= ruleXBlockExpression EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3859:2: iv_ruleXBlockExpression= ruleXBlockExpression EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3869:2: (iv_ruleXBlockExpression= ruleXBlockExpression EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3870:2: iv_ruleXBlockExpression= ruleXBlockExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXBlockExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleXBlockExpression_in_entryRuleXBlockExpression9029);
+            pushFollow(FOLLOW_ruleXBlockExpression_in_entryRuleXBlockExpression9048);
             iv_ruleXBlockExpression=ruleXBlockExpression();
 
             state._fsp--;
@@ -11122,7 +11142,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXBlockExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXBlockExpression9039); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXBlockExpression9058); if (state.failed) return current;
 
             }
 
@@ -11140,7 +11160,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXBlockExpression"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3866:1: ruleXBlockExpression returns [EObject current=null] : ( () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}' ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3877:1: ruleXBlockExpression returns [EObject current=null] : ( () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}' ) ;
     public final EObject ruleXBlockExpression() throws RecognitionException {
         EObject current = null;
 
@@ -11153,14 +11173,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3869:28: ( ( () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}' ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3870:1: ( () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3880:28: ( ( () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}' ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3881:1: ( () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}' )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3870:1: ( () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}' )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3870:2: () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}'
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3881:1: ( () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3881:2: () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}'
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3870:2: ()
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3871:5: 
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3881:2: ()
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3882:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -11172,13 +11192,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleXBlockExpression9085); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleXBlockExpression9104); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXBlockExpressionAccess().getLeftCurlyBracketKeyword_1());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3880:1: ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )*
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3891:1: ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )*
             loop71:
             do {
                 int alt71=2;
@@ -11191,20 +11211,20 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                 switch (alt71) {
             	case 1 :
-            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3880:2: ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )?
+            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3891:2: ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )?
             	    {
-            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3880:2: ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) )
-            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3881:1: (lv_expressions_2_0= ruleXExpressionOrVarDeclaration )
+            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3891:2: ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) )
+            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3892:1: (lv_expressions_2_0= ruleXExpressionOrVarDeclaration )
             	    {
-            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3881:1: (lv_expressions_2_0= ruleXExpressionOrVarDeclaration )
-            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3882:3: lv_expressions_2_0= ruleXExpressionOrVarDeclaration
+            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3892:1: (lv_expressions_2_0= ruleXExpressionOrVarDeclaration )
+            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3893:3: lv_expressions_2_0= ruleXExpressionOrVarDeclaration
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXBlockExpressionAccess().getExpressionsXExpressionOrVarDeclarationParserRuleCall_2_0_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleXExpressionOrVarDeclaration_in_ruleXBlockExpression9107);
+            	    pushFollow(FOLLOW_ruleXExpressionOrVarDeclaration_in_ruleXBlockExpression9126);
             	    lv_expressions_2_0=ruleXExpressionOrVarDeclaration();
 
             	    state._fsp--;
@@ -11228,7 +11248,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3898:2: (otherlv_3= ';' )?
+            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3909:2: (otherlv_3= ';' )?
             	    int alt70=2;
             	    int LA70_0 = input.LA(1);
 
@@ -11237,9 +11257,9 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt70) {
             	        case 1 :
-            	            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3898:4: otherlv_3= ';'
+            	            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3909:4: otherlv_3= ';'
             	            {
-            	            otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleXBlockExpression9120); if (state.failed) return current;
+            	            otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleXBlockExpression9139); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                  	newLeafNode(otherlv_3, grammarAccess.getXBlockExpressionAccess().getSemicolonKeyword_2_1());
@@ -11260,7 +11280,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleXBlockExpression9136); if (state.failed) return current;
+            otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleXBlockExpression9155); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getXBlockExpressionAccess().getRightCurlyBracketKeyword_3());
@@ -11289,7 +11309,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXExpressionOrVarDeclaration"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3914:1: entryRuleXExpressionOrVarDeclaration returns [EObject current=null] : iv_ruleXExpressionOrVarDeclaration= ruleXExpressionOrVarDeclaration EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3925:1: entryRuleXExpressionOrVarDeclaration returns [EObject current=null] : iv_ruleXExpressionOrVarDeclaration= ruleXExpressionOrVarDeclaration EOF ;
     public final EObject entryRuleXExpressionOrVarDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -11297,13 +11317,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3915:2: (iv_ruleXExpressionOrVarDeclaration= ruleXExpressionOrVarDeclaration EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3916:2: iv_ruleXExpressionOrVarDeclaration= ruleXExpressionOrVarDeclaration EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3926:2: (iv_ruleXExpressionOrVarDeclaration= ruleXExpressionOrVarDeclaration EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3927:2: iv_ruleXExpressionOrVarDeclaration= ruleXExpressionOrVarDeclaration EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXExpressionOrVarDeclarationRule()); 
             }
-            pushFollow(FOLLOW_ruleXExpressionOrVarDeclaration_in_entryRuleXExpressionOrVarDeclaration9172);
+            pushFollow(FOLLOW_ruleXExpressionOrVarDeclaration_in_entryRuleXExpressionOrVarDeclaration9191);
             iv_ruleXExpressionOrVarDeclaration=ruleXExpressionOrVarDeclaration();
 
             state._fsp--;
@@ -11311,7 +11331,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXExpressionOrVarDeclaration; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXExpressionOrVarDeclaration9182); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXExpressionOrVarDeclaration9201); if (state.failed) return current;
 
             }
 
@@ -11329,7 +11349,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXExpressionOrVarDeclaration"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3923:1: ruleXExpressionOrVarDeclaration returns [EObject current=null] : (this_XVariableDeclaration_0= ruleXVariableDeclaration | this_XExpression_1= ruleXExpression ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3934:1: ruleXExpressionOrVarDeclaration returns [EObject current=null] : (this_XVariableDeclaration_0= ruleXVariableDeclaration | this_XExpression_1= ruleXExpression ) ;
     public final EObject ruleXExpressionOrVarDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -11341,10 +11361,10 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3926:28: ( (this_XVariableDeclaration_0= ruleXVariableDeclaration | this_XExpression_1= ruleXExpression ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3927:1: (this_XVariableDeclaration_0= ruleXVariableDeclaration | this_XExpression_1= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3937:28: ( (this_XVariableDeclaration_0= ruleXVariableDeclaration | this_XExpression_1= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3938:1: (this_XVariableDeclaration_0= ruleXVariableDeclaration | this_XExpression_1= ruleXExpression )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3927:1: (this_XVariableDeclaration_0= ruleXVariableDeclaration | this_XExpression_1= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3938:1: (this_XVariableDeclaration_0= ruleXVariableDeclaration | this_XExpression_1= ruleXExpression )
             int alt72=2;
             int LA72_0 = input.LA(1);
 
@@ -11363,14 +11383,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             }
             switch (alt72) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3928:5: this_XVariableDeclaration_0= ruleXVariableDeclaration
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3939:5: this_XVariableDeclaration_0= ruleXVariableDeclaration
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getXExpressionOrVarDeclarationAccess().getXVariableDeclarationParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleXVariableDeclaration_in_ruleXExpressionOrVarDeclaration9229);
+                    pushFollow(FOLLOW_ruleXVariableDeclaration_in_ruleXExpressionOrVarDeclaration9248);
                     this_XVariableDeclaration_0=ruleXVariableDeclaration();
 
                     state._fsp--;
@@ -11385,14 +11405,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3938:5: this_XExpression_1= ruleXExpression
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3949:5: this_XExpression_1= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getXExpressionOrVarDeclarationAccess().getXExpressionParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleXExpression_in_ruleXExpressionOrVarDeclaration9256);
+                    pushFollow(FOLLOW_ruleXExpression_in_ruleXExpressionOrVarDeclaration9275);
                     this_XExpression_1=ruleXExpression();
 
                     state._fsp--;
@@ -11429,7 +11449,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXVariableDeclaration"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3954:1: entryRuleXVariableDeclaration returns [EObject current=null] : iv_ruleXVariableDeclaration= ruleXVariableDeclaration EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3965:1: entryRuleXVariableDeclaration returns [EObject current=null] : iv_ruleXVariableDeclaration= ruleXVariableDeclaration EOF ;
     public final EObject entryRuleXVariableDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -11437,13 +11457,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3955:2: (iv_ruleXVariableDeclaration= ruleXVariableDeclaration EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3956:2: iv_ruleXVariableDeclaration= ruleXVariableDeclaration EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3966:2: (iv_ruleXVariableDeclaration= ruleXVariableDeclaration EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3967:2: iv_ruleXVariableDeclaration= ruleXVariableDeclaration EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXVariableDeclarationRule()); 
             }
-            pushFollow(FOLLOW_ruleXVariableDeclaration_in_entryRuleXVariableDeclaration9291);
+            pushFollow(FOLLOW_ruleXVariableDeclaration_in_entryRuleXVariableDeclaration9310);
             iv_ruleXVariableDeclaration=ruleXVariableDeclaration();
 
             state._fsp--;
@@ -11451,7 +11471,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXVariableDeclaration; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXVariableDeclaration9301); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXVariableDeclaration9320); if (state.failed) return current;
 
             }
 
@@ -11469,7 +11489,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXVariableDeclaration"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3963:1: ruleXVariableDeclaration returns [EObject current=null] : ( () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )? ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3974:1: ruleXVariableDeclaration returns [EObject current=null] : ( () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )? ) ;
     public final EObject ruleXVariableDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -11488,14 +11508,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3966:28: ( ( () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )? ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3967:1: ( () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )? )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3977:28: ( ( () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )? ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3978:1: ( () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )? )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3967:1: ( () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )? )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3967:2: () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3978:1: ( () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )? )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3978:2: () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )?
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3967:2: ()
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3968:5: 
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3978:2: ()
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3979:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -11507,7 +11527,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3973:2: ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3984:2: ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' )
             int alt73=2;
             int LA73_0 = input.LA(1);
 
@@ -11526,15 +11546,15 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             }
             switch (alt73) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3973:3: ( (lv_writeable_1_0= 'var' ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3984:3: ( (lv_writeable_1_0= 'var' ) )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3973:3: ( (lv_writeable_1_0= 'var' ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3974:1: (lv_writeable_1_0= 'var' )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3984:3: ( (lv_writeable_1_0= 'var' ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3985:1: (lv_writeable_1_0= 'var' )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3974:1: (lv_writeable_1_0= 'var' )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3975:3: lv_writeable_1_0= 'var'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3985:1: (lv_writeable_1_0= 'var' )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3986:3: lv_writeable_1_0= 'var'
                     {
-                    lv_writeable_1_0=(Token)match(input,71,FOLLOW_71_in_ruleXVariableDeclaration9354); if (state.failed) return current;
+                    lv_writeable_1_0=(Token)match(input,71,FOLLOW_71_in_ruleXVariableDeclaration9373); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_writeable_1_0, grammarAccess.getXVariableDeclarationAccess().getWriteableVarKeyword_1_0_0());
@@ -11558,9 +11578,9 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3989:7: otherlv_2= 'val'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4000:7: otherlv_2= 'val'
                     {
-                    otherlv_2=(Token)match(input,72,FOLLOW_72_in_ruleXVariableDeclaration9385); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,72,FOLLOW_72_in_ruleXVariableDeclaration9404); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getXVariableDeclarationAccess().getValKeyword_1_1());
@@ -11572,7 +11592,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3993:2: ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4004:2: ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) )
             int alt74=2;
             int LA74_0 = input.LA(1);
 
@@ -11608,26 +11628,26 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             }
             switch (alt74) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3993:3: ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4004:3: ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3993:3: ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3993:4: ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4004:3: ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4004:4: ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4001:6: ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4001:7: ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4012:6: ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4012:7: ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4001:7: ( (lv_type_3_0= ruleJvmTypeReference ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4002:1: (lv_type_3_0= ruleJvmTypeReference )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4012:7: ( (lv_type_3_0= ruleJvmTypeReference ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4013:1: (lv_type_3_0= ruleJvmTypeReference )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4002:1: (lv_type_3_0= ruleJvmTypeReference )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4003:3: lv_type_3_0= ruleJvmTypeReference
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4013:1: (lv_type_3_0= ruleJvmTypeReference )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4014:3: lv_type_3_0= ruleJvmTypeReference
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXVariableDeclarationAccess().getTypeJvmTypeReferenceParserRuleCall_2_0_0_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleXVariableDeclaration9433);
+                    pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleXVariableDeclaration9452);
                     lv_type_3_0=ruleJvmTypeReference();
 
                     state._fsp--;
@@ -11651,18 +11671,18 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4019:2: ( (lv_name_4_0= ruleValidID ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4020:1: (lv_name_4_0= ruleValidID )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4030:2: ( (lv_name_4_0= ruleValidID ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4031:1: (lv_name_4_0= ruleValidID )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4020:1: (lv_name_4_0= ruleValidID )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4021:3: lv_name_4_0= ruleValidID
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4031:1: (lv_name_4_0= ruleValidID )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4032:3: lv_name_4_0= ruleValidID
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXVariableDeclarationAccess().getNameValidIDParserRuleCall_2_0_0_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleValidID_in_ruleXVariableDeclaration9454);
+                    pushFollow(FOLLOW_ruleValidID_in_ruleXVariableDeclaration9473);
                     lv_name_4_0=ruleValidID();
 
                     state._fsp--;
@@ -11696,20 +11716,20 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4038:6: ( (lv_name_5_0= ruleValidID ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4049:6: ( (lv_name_5_0= ruleValidID ) )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4038:6: ( (lv_name_5_0= ruleValidID ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4039:1: (lv_name_5_0= ruleValidID )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4049:6: ( (lv_name_5_0= ruleValidID ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4050:1: (lv_name_5_0= ruleValidID )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4039:1: (lv_name_5_0= ruleValidID )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4040:3: lv_name_5_0= ruleValidID
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4050:1: (lv_name_5_0= ruleValidID )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4051:3: lv_name_5_0= ruleValidID
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXVariableDeclarationAccess().getNameValidIDParserRuleCall_2_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleValidID_in_ruleXVariableDeclaration9483);
+                    pushFollow(FOLLOW_ruleValidID_in_ruleXVariableDeclaration9502);
                     lv_name_5_0=ruleValidID();
 
                     state._fsp--;
@@ -11739,7 +11759,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4056:3: (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4067:3: (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )?
             int alt75=2;
             int LA75_0 = input.LA(1);
 
@@ -11748,26 +11768,26 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             }
             switch (alt75) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4056:5: otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4067:5: otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) )
                     {
-                    otherlv_6=(Token)match(input,18,FOLLOW_18_in_ruleXVariableDeclaration9497); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,18,FOLLOW_18_in_ruleXVariableDeclaration9516); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_6, grammarAccess.getXVariableDeclarationAccess().getEqualsSignKeyword_3_0());
                           
                     }
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4060:1: ( (lv_right_7_0= ruleXExpression ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4061:1: (lv_right_7_0= ruleXExpression )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4071:1: ( (lv_right_7_0= ruleXExpression ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4072:1: (lv_right_7_0= ruleXExpression )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4061:1: (lv_right_7_0= ruleXExpression )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4062:3: lv_right_7_0= ruleXExpression
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4072:1: (lv_right_7_0= ruleXExpression )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4073:3: lv_right_7_0= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXVariableDeclarationAccess().getRightXExpressionParserRuleCall_3_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleXExpression_in_ruleXVariableDeclaration9518);
+                    pushFollow(FOLLOW_ruleXExpression_in_ruleXVariableDeclaration9537);
                     lv_right_7_0=ruleXExpression();
 
                     state._fsp--;
@@ -11820,7 +11840,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJvmFormalParameter"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4086:1: entryRuleJvmFormalParameter returns [EObject current=null] : iv_ruleJvmFormalParameter= ruleJvmFormalParameter EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4097:1: entryRuleJvmFormalParameter returns [EObject current=null] : iv_ruleJvmFormalParameter= ruleJvmFormalParameter EOF ;
     public final EObject entryRuleJvmFormalParameter() throws RecognitionException {
         EObject current = null;
 
@@ -11828,13 +11848,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4087:2: (iv_ruleJvmFormalParameter= ruleJvmFormalParameter EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4088:2: iv_ruleJvmFormalParameter= ruleJvmFormalParameter EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4098:2: (iv_ruleJvmFormalParameter= ruleJvmFormalParameter EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4099:2: iv_ruleJvmFormalParameter= ruleJvmFormalParameter EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getJvmFormalParameterRule()); 
             }
-            pushFollow(FOLLOW_ruleJvmFormalParameter_in_entryRuleJvmFormalParameter9556);
+            pushFollow(FOLLOW_ruleJvmFormalParameter_in_entryRuleJvmFormalParameter9575);
             iv_ruleJvmFormalParameter=ruleJvmFormalParameter();
 
             state._fsp--;
@@ -11842,7 +11862,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleJvmFormalParameter; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleJvmFormalParameter9566); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleJvmFormalParameter9585); if (state.failed) return current;
 
             }
 
@@ -11860,7 +11880,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJvmFormalParameter"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4095:1: ruleJvmFormalParameter returns [EObject current=null] : ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) ) ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4106:1: ruleJvmFormalParameter returns [EObject current=null] : ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) ) ) ;
     public final EObject ruleJvmFormalParameter() throws RecognitionException {
         EObject current = null;
 
@@ -11872,13 +11892,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4098:28: ( ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4099:1: ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4109:28: ( ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4110:1: ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4099:1: ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4099:2: ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4110:1: ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4110:2: ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4099:2: ( (lv_parameterType_0_0= ruleJvmTypeReference ) )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4110:2: ( (lv_parameterType_0_0= ruleJvmTypeReference ) )?
             int alt76=2;
             int LA76_0 = input.LA(1);
 
@@ -11894,17 +11914,17 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             }
             switch (alt76) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4100:1: (lv_parameterType_0_0= ruleJvmTypeReference )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4111:1: (lv_parameterType_0_0= ruleJvmTypeReference )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4100:1: (lv_parameterType_0_0= ruleJvmTypeReference )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4101:3: lv_parameterType_0_0= ruleJvmTypeReference
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4111:1: (lv_parameterType_0_0= ruleJvmTypeReference )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4112:3: lv_parameterType_0_0= ruleJvmTypeReference
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getJvmFormalParameterAccess().getParameterTypeJvmTypeReferenceParserRuleCall_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleJvmFormalParameter9612);
+                    pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleJvmFormalParameter9631);
                     lv_parameterType_0_0=ruleJvmTypeReference();
 
                     state._fsp--;
@@ -11931,18 +11951,18 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4117:3: ( (lv_name_1_0= ruleValidID ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4118:1: (lv_name_1_0= ruleValidID )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4128:3: ( (lv_name_1_0= ruleValidID ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4129:1: (lv_name_1_0= ruleValidID )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4118:1: (lv_name_1_0= ruleValidID )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4119:3: lv_name_1_0= ruleValidID
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4129:1: (lv_name_1_0= ruleValidID )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4130:3: lv_name_1_0= ruleValidID
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getJvmFormalParameterAccess().getNameValidIDParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleValidID_in_ruleJvmFormalParameter9634);
+            pushFollow(FOLLOW_ruleValidID_in_ruleJvmFormalParameter9653);
             lv_name_1_0=ruleValidID();
 
             state._fsp--;
@@ -11989,7 +12009,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFullJvmFormalParameter"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4143:1: entryRuleFullJvmFormalParameter returns [EObject current=null] : iv_ruleFullJvmFormalParameter= ruleFullJvmFormalParameter EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4154:1: entryRuleFullJvmFormalParameter returns [EObject current=null] : iv_ruleFullJvmFormalParameter= ruleFullJvmFormalParameter EOF ;
     public final EObject entryRuleFullJvmFormalParameter() throws RecognitionException {
         EObject current = null;
 
@@ -11997,13 +12017,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4144:2: (iv_ruleFullJvmFormalParameter= ruleFullJvmFormalParameter EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4145:2: iv_ruleFullJvmFormalParameter= ruleFullJvmFormalParameter EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4155:2: (iv_ruleFullJvmFormalParameter= ruleFullJvmFormalParameter EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4156:2: iv_ruleFullJvmFormalParameter= ruleFullJvmFormalParameter EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFullJvmFormalParameterRule()); 
             }
-            pushFollow(FOLLOW_ruleFullJvmFormalParameter_in_entryRuleFullJvmFormalParameter9670);
+            pushFollow(FOLLOW_ruleFullJvmFormalParameter_in_entryRuleFullJvmFormalParameter9689);
             iv_ruleFullJvmFormalParameter=ruleFullJvmFormalParameter();
 
             state._fsp--;
@@ -12011,7 +12031,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleFullJvmFormalParameter; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFullJvmFormalParameter9680); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFullJvmFormalParameter9699); if (state.failed) return current;
 
             }
 
@@ -12029,7 +12049,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFullJvmFormalParameter"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4152:1: ruleFullJvmFormalParameter returns [EObject current=null] : ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) ) ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4163:1: ruleFullJvmFormalParameter returns [EObject current=null] : ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) ) ) ;
     public final EObject ruleFullJvmFormalParameter() throws RecognitionException {
         EObject current = null;
 
@@ -12041,24 +12061,24 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4155:28: ( ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4156:1: ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4166:28: ( ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4167:1: ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4156:1: ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4156:2: ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4167:1: ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4167:2: ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4156:2: ( (lv_parameterType_0_0= ruleJvmTypeReference ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4157:1: (lv_parameterType_0_0= ruleJvmTypeReference )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4167:2: ( (lv_parameterType_0_0= ruleJvmTypeReference ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4168:1: (lv_parameterType_0_0= ruleJvmTypeReference )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4157:1: (lv_parameterType_0_0= ruleJvmTypeReference )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4158:3: lv_parameterType_0_0= ruleJvmTypeReference
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4168:1: (lv_parameterType_0_0= ruleJvmTypeReference )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4169:3: lv_parameterType_0_0= ruleJvmTypeReference
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getFullJvmFormalParameterAccess().getParameterTypeJvmTypeReferenceParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleFullJvmFormalParameter9726);
+            pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleFullJvmFormalParameter9745);
             lv_parameterType_0_0=ruleJvmTypeReference();
 
             state._fsp--;
@@ -12082,18 +12102,18 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4174:2: ( (lv_name_1_0= ruleValidID ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4175:1: (lv_name_1_0= ruleValidID )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4185:2: ( (lv_name_1_0= ruleValidID ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4186:1: (lv_name_1_0= ruleValidID )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4175:1: (lv_name_1_0= ruleValidID )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4176:3: lv_name_1_0= ruleValidID
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4186:1: (lv_name_1_0= ruleValidID )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4187:3: lv_name_1_0= ruleValidID
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getFullJvmFormalParameterAccess().getNameValidIDParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleValidID_in_ruleFullJvmFormalParameter9747);
+            pushFollow(FOLLOW_ruleValidID_in_ruleFullJvmFormalParameter9766);
             lv_name_1_0=ruleValidID();
 
             state._fsp--;
@@ -12140,7 +12160,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXFeatureCall"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4200:1: entryRuleXFeatureCall returns [EObject current=null] : iv_ruleXFeatureCall= ruleXFeatureCall EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4211:1: entryRuleXFeatureCall returns [EObject current=null] : iv_ruleXFeatureCall= ruleXFeatureCall EOF ;
     public final EObject entryRuleXFeatureCall() throws RecognitionException {
         EObject current = null;
 
@@ -12148,13 +12168,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4201:2: (iv_ruleXFeatureCall= ruleXFeatureCall EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4202:2: iv_ruleXFeatureCall= ruleXFeatureCall EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4212:2: (iv_ruleXFeatureCall= ruleXFeatureCall EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4213:2: iv_ruleXFeatureCall= ruleXFeatureCall EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXFeatureCallRule()); 
             }
-            pushFollow(FOLLOW_ruleXFeatureCall_in_entryRuleXFeatureCall9783);
+            pushFollow(FOLLOW_ruleXFeatureCall_in_entryRuleXFeatureCall9802);
             iv_ruleXFeatureCall=ruleXFeatureCall();
 
             state._fsp--;
@@ -12162,7 +12182,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXFeatureCall; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXFeatureCall9793); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXFeatureCall9812); if (state.failed) return current;
 
             }
 
@@ -12180,7 +12200,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXFeatureCall"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4209:1: ruleXFeatureCall returns [EObject current=null] : ( () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )? ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4220:1: ruleXFeatureCall returns [EObject current=null] : ( () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )? ) ;
     public final EObject ruleXFeatureCall() throws RecognitionException {
         EObject current = null;
 
@@ -12206,14 +12226,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4212:28: ( ( () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )? ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4213:1: ( () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )? )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4223:28: ( ( () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )? ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4224:1: ( () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )? )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4213:1: ( () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )? )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4213:2: () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4224:1: ( () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )? )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4224:2: () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )?
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4213:2: ()
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4214:5: 
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4224:2: ()
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4225:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -12225,7 +12245,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4219:2: (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4230:2: (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )?
             int alt78=2;
             int LA78_0 = input.LA(1);
 
@@ -12234,26 +12254,26 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             }
             switch (alt78) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4219:4: otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4230:4: otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>'
                     {
-                    otherlv_1=(Token)match(input,29,FOLLOW_29_in_ruleXFeatureCall9840); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,29,FOLLOW_29_in_ruleXFeatureCall9859); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getXFeatureCallAccess().getLessThanSignKeyword_1_0());
                           
                     }
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4223:1: ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4224:1: (lv_typeArguments_2_0= ruleJvmArgumentTypeReference )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4234:1: ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4235:1: (lv_typeArguments_2_0= ruleJvmArgumentTypeReference )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4224:1: (lv_typeArguments_2_0= ruleJvmArgumentTypeReference )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4225:3: lv_typeArguments_2_0= ruleJvmArgumentTypeReference
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4235:1: (lv_typeArguments_2_0= ruleJvmArgumentTypeReference )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4236:3: lv_typeArguments_2_0= ruleJvmArgumentTypeReference
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXFeatureCallAccess().getTypeArgumentsJvmArgumentTypeReferenceParserRuleCall_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleJvmArgumentTypeReference_in_ruleXFeatureCall9861);
+                    pushFollow(FOLLOW_ruleJvmArgumentTypeReference_in_ruleXFeatureCall9880);
                     lv_typeArguments_2_0=ruleJvmArgumentTypeReference();
 
                     state._fsp--;
@@ -12277,7 +12297,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4241:2: (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )*
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4252:2: (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )*
                     loop77:
                     do {
                         int alt77=2;
@@ -12290,26 +12310,26 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                         switch (alt77) {
                     	case 1 :
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4241:4: otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4252:4: otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) )
                     	    {
-                    	    otherlv_3=(Token)match(input,22,FOLLOW_22_in_ruleXFeatureCall9874); if (state.failed) return current;
+                    	    otherlv_3=(Token)match(input,22,FOLLOW_22_in_ruleXFeatureCall9893); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_3, grammarAccess.getXFeatureCallAccess().getCommaKeyword_1_2_0());
                     	          
                     	    }
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4245:1: ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) )
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4246:1: (lv_typeArguments_4_0= ruleJvmArgumentTypeReference )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4256:1: ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4257:1: (lv_typeArguments_4_0= ruleJvmArgumentTypeReference )
                     	    {
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4246:1: (lv_typeArguments_4_0= ruleJvmArgumentTypeReference )
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4247:3: lv_typeArguments_4_0= ruleJvmArgumentTypeReference
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4257:1: (lv_typeArguments_4_0= ruleJvmArgumentTypeReference )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4258:3: lv_typeArguments_4_0= ruleJvmArgumentTypeReference
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getXFeatureCallAccess().getTypeArgumentsJvmArgumentTypeReferenceParserRuleCall_1_2_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_ruleJvmArgumentTypeReference_in_ruleXFeatureCall9895);
+                    	    pushFollow(FOLLOW_ruleJvmArgumentTypeReference_in_ruleXFeatureCall9914);
                     	    lv_typeArguments_4_0=ruleJvmArgumentTypeReference();
 
                     	    state._fsp--;
@@ -12342,7 +12362,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_5=(Token)match(input,30,FOLLOW_30_in_ruleXFeatureCall9909); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,30,FOLLOW_30_in_ruleXFeatureCall9928); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_5, grammarAccess.getXFeatureCallAccess().getGreaterThanSignKeyword_1_3());
@@ -12354,11 +12374,11 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4267:3: ( ( ruleIdOrSuper ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4268:1: ( ruleIdOrSuper )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4278:3: ( ( ruleIdOrSuper ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4279:1: ( ruleIdOrSuper )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4268:1: ( ruleIdOrSuper )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4269:3: ruleIdOrSuper
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4279:1: ( ruleIdOrSuper )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4280:3: ruleIdOrSuper
             {
             if ( state.backtracking==0 ) {
 
@@ -12372,7 +12392,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getXFeatureCallAccess().getFeatureJvmIdentifiableElementCrossReference_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleIdOrSuper_in_ruleXFeatureCall9934);
+            pushFollow(FOLLOW_ruleIdOrSuper_in_ruleXFeatureCall9953);
             ruleIdOrSuper();
 
             state._fsp--;
@@ -12388,20 +12408,20 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4282:2: ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4293:2: ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )?
             int alt81=2;
             alt81 = dfa81.predict(input);
             switch (alt81) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4282:3: ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4293:3: ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')'
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4282:3: ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4282:4: ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4293:3: ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4293:4: ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4289:1: (lv_explicitOperationCall_7_0= '(' )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4290:3: lv_explicitOperationCall_7_0= '('
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4300:1: (lv_explicitOperationCall_7_0= '(' )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4301:3: lv_explicitOperationCall_7_0= '('
                     {
-                    lv_explicitOperationCall_7_0=(Token)match(input,21,FOLLOW_21_in_ruleXFeatureCall9968); if (state.failed) return current;
+                    lv_explicitOperationCall_7_0=(Token)match(input,21,FOLLOW_21_in_ruleXFeatureCall9987); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_explicitOperationCall_7_0, grammarAccess.getXFeatureCallAccess().getExplicitOperationCallLeftParenthesisKeyword_3_0_0());
@@ -12421,25 +12441,25 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4303:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )?
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4314:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )?
                     int alt80=3;
                     alt80 = dfa80.predict(input);
                     switch (alt80) {
                         case 1 :
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4303:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4314:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) )
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4303:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4303:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4314:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4314:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure )
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4320:1: (lv_featureCallArguments_8_0= ruleXShortClosure )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4321:3: lv_featureCallArguments_8_0= ruleXShortClosure
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4331:1: (lv_featureCallArguments_8_0= ruleXShortClosure )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4332:3: lv_featureCallArguments_8_0= ruleXShortClosure
                             {
                             if ( state.backtracking==0 ) {
                                
                               	        newCompositeNode(grammarAccess.getXFeatureCallAccess().getFeatureCallArgumentsXShortClosureParserRuleCall_3_1_0_0()); 
                               	    
                             }
-                            pushFollow(FOLLOW_ruleXShortClosure_in_ruleXFeatureCall10053);
+                            pushFollow(FOLLOW_ruleXShortClosure_in_ruleXFeatureCall10072);
                             lv_featureCallArguments_8_0=ruleXShortClosure();
 
                             state._fsp--;
@@ -12467,23 +12487,23 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4338:6: ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4349:6: ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* )
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4338:6: ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4338:7: ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )*
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4349:6: ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4349:7: ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )*
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4338:7: ( (lv_featureCallArguments_9_0= ruleXExpression ) )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4339:1: (lv_featureCallArguments_9_0= ruleXExpression )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4349:7: ( (lv_featureCallArguments_9_0= ruleXExpression ) )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4350:1: (lv_featureCallArguments_9_0= ruleXExpression )
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4339:1: (lv_featureCallArguments_9_0= ruleXExpression )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4340:3: lv_featureCallArguments_9_0= ruleXExpression
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4350:1: (lv_featureCallArguments_9_0= ruleXExpression )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4351:3: lv_featureCallArguments_9_0= ruleXExpression
                             {
                             if ( state.backtracking==0 ) {
                                
                               	        newCompositeNode(grammarAccess.getXFeatureCallAccess().getFeatureCallArgumentsXExpressionParserRuleCall_3_1_1_0_0()); 
                               	    
                             }
-                            pushFollow(FOLLOW_ruleXExpression_in_ruleXFeatureCall10081);
+                            pushFollow(FOLLOW_ruleXExpression_in_ruleXFeatureCall10100);
                             lv_featureCallArguments_9_0=ruleXExpression();
 
                             state._fsp--;
@@ -12507,7 +12527,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4356:2: (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )*
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4367:2: (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )*
                             loop79:
                             do {
                                 int alt79=2;
@@ -12520,26 +12540,26 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                                 switch (alt79) {
                             	case 1 :
-                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4356:4: otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) )
+                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4367:4: otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) )
                             	    {
-                            	    otherlv_10=(Token)match(input,22,FOLLOW_22_in_ruleXFeatureCall10094); if (state.failed) return current;
+                            	    otherlv_10=(Token)match(input,22,FOLLOW_22_in_ruleXFeatureCall10113); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
 
                             	          	newLeafNode(otherlv_10, grammarAccess.getXFeatureCallAccess().getCommaKeyword_3_1_1_1_0());
                             	          
                             	    }
-                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4360:1: ( (lv_featureCallArguments_11_0= ruleXExpression ) )
-                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4361:1: (lv_featureCallArguments_11_0= ruleXExpression )
+                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4371:1: ( (lv_featureCallArguments_11_0= ruleXExpression ) )
+                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4372:1: (lv_featureCallArguments_11_0= ruleXExpression )
                             	    {
-                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4361:1: (lv_featureCallArguments_11_0= ruleXExpression )
-                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4362:3: lv_featureCallArguments_11_0= ruleXExpression
+                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4372:1: (lv_featureCallArguments_11_0= ruleXExpression )
+                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4373:3: lv_featureCallArguments_11_0= ruleXExpression
                             	    {
                             	    if ( state.backtracking==0 ) {
                             	       
                             	      	        newCompositeNode(grammarAccess.getXFeatureCallAccess().getFeatureCallArgumentsXExpressionParserRuleCall_3_1_1_1_1_0()); 
                             	      	    
                             	    }
-                            	    pushFollow(FOLLOW_ruleXExpression_in_ruleXFeatureCall10115);
+                            	    pushFollow(FOLLOW_ruleXExpression_in_ruleXFeatureCall10134);
                             	    lv_featureCallArguments_11_0=ruleXExpression();
 
                             	    state._fsp--;
@@ -12581,7 +12601,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_12=(Token)match(input,23,FOLLOW_23_in_ruleXFeatureCall10132); if (state.failed) return current;
+                    otherlv_12=(Token)match(input,23,FOLLOW_23_in_ruleXFeatureCall10151); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_12, grammarAccess.getXFeatureCallAccess().getRightParenthesisKeyword_3_2());
@@ -12593,22 +12613,22 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4382:3: ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4393:3: ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )?
             int alt82=2;
             alt82 = dfa82.predict(input);
             switch (alt82) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4382:4: ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4393:4: ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4385:1: (lv_featureCallArguments_13_0= ruleXClosure )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4386:3: lv_featureCallArguments_13_0= ruleXClosure
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4396:1: (lv_featureCallArguments_13_0= ruleXClosure )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4397:3: lv_featureCallArguments_13_0= ruleXClosure
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXFeatureCallAccess().getFeatureCallArgumentsXClosureParserRuleCall_4_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleXClosure_in_ruleXFeatureCall10167);
+                    pushFollow(FOLLOW_ruleXClosure_in_ruleXFeatureCall10186);
                     lv_featureCallArguments_13_0=ruleXClosure();
 
                     state._fsp--;
@@ -12658,7 +12678,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFeatureCallID"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4410:1: entryRuleFeatureCallID returns [String current=null] : iv_ruleFeatureCallID= ruleFeatureCallID EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4421:1: entryRuleFeatureCallID returns [String current=null] : iv_ruleFeatureCallID= ruleFeatureCallID EOF ;
     public final String entryRuleFeatureCallID() throws RecognitionException {
         String current = null;
 
@@ -12666,13 +12686,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4411:2: (iv_ruleFeatureCallID= ruleFeatureCallID EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4412:2: iv_ruleFeatureCallID= ruleFeatureCallID EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4422:2: (iv_ruleFeatureCallID= ruleFeatureCallID EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4423:2: iv_ruleFeatureCallID= ruleFeatureCallID EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFeatureCallIDRule()); 
             }
-            pushFollow(FOLLOW_ruleFeatureCallID_in_entryRuleFeatureCallID10205);
+            pushFollow(FOLLOW_ruleFeatureCallID_in_entryRuleFeatureCallID10224);
             iv_ruleFeatureCallID=ruleFeatureCallID();
 
             state._fsp--;
@@ -12680,7 +12700,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleFeatureCallID.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFeatureCallID10216); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFeatureCallID10235); if (state.failed) return current;
 
             }
 
@@ -12698,7 +12718,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFeatureCallID"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4419:1: ruleFeatureCallID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ValidID_0= ruleValidID | kw= 'extends' | kw= 'static' | kw= 'import' | kw= 'extension' ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4430:1: ruleFeatureCallID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ValidID_0= ruleValidID | kw= 'extends' | kw= 'static' | kw= 'import' | kw= 'extension' ) ;
     public final AntlrDatatypeRuleToken ruleFeatureCallID() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12709,10 +12729,10 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4422:28: ( (this_ValidID_0= ruleValidID | kw= 'extends' | kw= 'static' | kw= 'import' | kw= 'extension' ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4423:1: (this_ValidID_0= ruleValidID | kw= 'extends' | kw= 'static' | kw= 'import' | kw= 'extension' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4433:28: ( (this_ValidID_0= ruleValidID | kw= 'extends' | kw= 'static' | kw= 'import' | kw= 'extension' ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4434:1: (this_ValidID_0= ruleValidID | kw= 'extends' | kw= 'static' | kw= 'import' | kw= 'extension' )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4423:1: (this_ValidID_0= ruleValidID | kw= 'extends' | kw= 'static' | kw= 'import' | kw= 'extension' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4434:1: (this_ValidID_0= ruleValidID | kw= 'extends' | kw= 'static' | kw= 'import' | kw= 'extension' )
             int alt83=5;
             switch ( input.LA(1) ) {
             case RULE_ID:
@@ -12750,14 +12770,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             switch (alt83) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4424:5: this_ValidID_0= ruleValidID
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4435:5: this_ValidID_0= ruleValidID
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getFeatureCallIDAccess().getValidIDParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleValidID_in_ruleFeatureCallID10263);
+                    pushFollow(FOLLOW_ruleValidID_in_ruleFeatureCallID10282);
                     this_ValidID_0=ruleValidID();
 
                     state._fsp--;
@@ -12776,9 +12796,9 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4436:2: kw= 'extends'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4447:2: kw= 'extends'
                     {
-                    kw=(Token)match(input,14,FOLLOW_14_in_ruleFeatureCallID10287); if (state.failed) return current;
+                    kw=(Token)match(input,14,FOLLOW_14_in_ruleFeatureCallID10306); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -12789,9 +12809,9 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4443:2: kw= 'static'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4454:2: kw= 'static'
                     {
-                    kw=(Token)match(input,73,FOLLOW_73_in_ruleFeatureCallID10306); if (state.failed) return current;
+                    kw=(Token)match(input,73,FOLLOW_73_in_ruleFeatureCallID10325); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -12802,9 +12822,9 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4450:2: kw= 'import'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4461:2: kw= 'import'
                     {
-                    kw=(Token)match(input,74,FOLLOW_74_in_ruleFeatureCallID10325); if (state.failed) return current;
+                    kw=(Token)match(input,74,FOLLOW_74_in_ruleFeatureCallID10344); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -12815,9 +12835,9 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4457:2: kw= 'extension'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4468:2: kw= 'extension'
                     {
-                    kw=(Token)match(input,75,FOLLOW_75_in_ruleFeatureCallID10344); if (state.failed) return current;
+                    kw=(Token)match(input,75,FOLLOW_75_in_ruleFeatureCallID10363); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -12850,7 +12870,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIdOrSuper"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4470:1: entryRuleIdOrSuper returns [String current=null] : iv_ruleIdOrSuper= ruleIdOrSuper EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4481:1: entryRuleIdOrSuper returns [String current=null] : iv_ruleIdOrSuper= ruleIdOrSuper EOF ;
     public final String entryRuleIdOrSuper() throws RecognitionException {
         String current = null;
 
@@ -12858,13 +12878,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4471:2: (iv_ruleIdOrSuper= ruleIdOrSuper EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4472:2: iv_ruleIdOrSuper= ruleIdOrSuper EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4482:2: (iv_ruleIdOrSuper= ruleIdOrSuper EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4483:2: iv_ruleIdOrSuper= ruleIdOrSuper EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIdOrSuperRule()); 
             }
-            pushFollow(FOLLOW_ruleIdOrSuper_in_entryRuleIdOrSuper10385);
+            pushFollow(FOLLOW_ruleIdOrSuper_in_entryRuleIdOrSuper10404);
             iv_ruleIdOrSuper=ruleIdOrSuper();
 
             state._fsp--;
@@ -12872,7 +12892,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleIdOrSuper.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIdOrSuper10396); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIdOrSuper10415); if (state.failed) return current;
 
             }
 
@@ -12890,7 +12910,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIdOrSuper"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4479:1: ruleIdOrSuper returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_FeatureCallID_0= ruleFeatureCallID | kw= 'super' ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4490:1: ruleIdOrSuper returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_FeatureCallID_0= ruleFeatureCallID | kw= 'super' ) ;
     public final AntlrDatatypeRuleToken ruleIdOrSuper() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12901,10 +12921,10 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4482:28: ( (this_FeatureCallID_0= ruleFeatureCallID | kw= 'super' ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4483:1: (this_FeatureCallID_0= ruleFeatureCallID | kw= 'super' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4493:28: ( (this_FeatureCallID_0= ruleFeatureCallID | kw= 'super' ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4494:1: (this_FeatureCallID_0= ruleFeatureCallID | kw= 'super' )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4483:1: (this_FeatureCallID_0= ruleFeatureCallID | kw= 'super' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4494:1: (this_FeatureCallID_0= ruleFeatureCallID | kw= 'super' )
             int alt84=2;
             int LA84_0 = input.LA(1);
 
@@ -12923,14 +12943,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             }
             switch (alt84) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4484:5: this_FeatureCallID_0= ruleFeatureCallID
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4495:5: this_FeatureCallID_0= ruleFeatureCallID
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getIdOrSuperAccess().getFeatureCallIDParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleFeatureCallID_in_ruleIdOrSuper10443);
+                    pushFollow(FOLLOW_ruleFeatureCallID_in_ruleIdOrSuper10462);
                     this_FeatureCallID_0=ruleFeatureCallID();
 
                     state._fsp--;
@@ -12949,9 +12969,9 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4496:2: kw= 'super'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4507:2: kw= 'super'
                     {
-                    kw=(Token)match(input,76,FOLLOW_76_in_ruleIdOrSuper10467); if (state.failed) return current;
+                    kw=(Token)match(input,76,FOLLOW_76_in_ruleIdOrSuper10486); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -12984,7 +13004,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXConstructorCall"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4509:1: entryRuleXConstructorCall returns [EObject current=null] : iv_ruleXConstructorCall= ruleXConstructorCall EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4520:1: entryRuleXConstructorCall returns [EObject current=null] : iv_ruleXConstructorCall= ruleXConstructorCall EOF ;
     public final EObject entryRuleXConstructorCall() throws RecognitionException {
         EObject current = null;
 
@@ -12992,13 +13012,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4510:2: (iv_ruleXConstructorCall= ruleXConstructorCall EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4511:2: iv_ruleXConstructorCall= ruleXConstructorCall EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4521:2: (iv_ruleXConstructorCall= ruleXConstructorCall EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4522:2: iv_ruleXConstructorCall= ruleXConstructorCall EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXConstructorCallRule()); 
             }
-            pushFollow(FOLLOW_ruleXConstructorCall_in_entryRuleXConstructorCall10507);
+            pushFollow(FOLLOW_ruleXConstructorCall_in_entryRuleXConstructorCall10526);
             iv_ruleXConstructorCall=ruleXConstructorCall();
 
             state._fsp--;
@@ -13006,7 +13026,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXConstructorCall; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXConstructorCall10517); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXConstructorCall10536); if (state.failed) return current;
 
             }
 
@@ -13024,7 +13044,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXConstructorCall"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4518:1: ruleXConstructorCall returns [EObject current=null] : ( () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )? ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4529:1: ruleXConstructorCall returns [EObject current=null] : ( () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )? ) ;
     public final EObject ruleXConstructorCall() throws RecognitionException {
         EObject current = null;
 
@@ -13051,14 +13071,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4521:28: ( ( () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )? ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4522:1: ( () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )? )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4532:28: ( ( () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )? ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4533:1: ( () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )? )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4522:1: ( () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )? )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4522:2: () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4533:1: ( () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )? )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4533:2: () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )?
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4522:2: ()
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4523:5: 
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4533:2: ()
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4534:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -13070,17 +13090,17 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,77,FOLLOW_77_in_ruleXConstructorCall10563); if (state.failed) return current;
+            otherlv_1=(Token)match(input,77,FOLLOW_77_in_ruleXConstructorCall10582); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXConstructorCallAccess().getNewKeyword_1());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4532:1: ( ( ruleQualifiedName ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4533:1: ( ruleQualifiedName )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4543:1: ( ( ruleQualifiedName ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4544:1: ( ruleQualifiedName )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4533:1: ( ruleQualifiedName )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4534:3: ruleQualifiedName
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4544:1: ( ruleQualifiedName )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4545:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -13094,7 +13114,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getXConstructorCallAccess().getConstructorJvmConstructorCrossReference_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleXConstructorCall10586);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleXConstructorCall10605);
             ruleQualifiedName();
 
             state._fsp--;
@@ -13110,17 +13130,17 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4547:2: ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4558:2: ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )?
             int alt86=2;
             alt86 = dfa86.predict(input);
             switch (alt86) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4547:3: ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4558:3: ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>'
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4547:3: ( ( '<' )=>otherlv_3= '<' )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4547:4: ( '<' )=>otherlv_3= '<'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4558:3: ( ( '<' )=>otherlv_3= '<' )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4558:4: ( '<' )=>otherlv_3= '<'
                     {
-                    otherlv_3=(Token)match(input,29,FOLLOW_29_in_ruleXConstructorCall10607); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,29,FOLLOW_29_in_ruleXConstructorCall10626); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getXConstructorCallAccess().getLessThanSignKeyword_3_0());
@@ -13129,18 +13149,18 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4552:2: ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4553:1: (lv_typeArguments_4_0= ruleJvmArgumentTypeReference )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4563:2: ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4564:1: (lv_typeArguments_4_0= ruleJvmArgumentTypeReference )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4553:1: (lv_typeArguments_4_0= ruleJvmArgumentTypeReference )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4554:3: lv_typeArguments_4_0= ruleJvmArgumentTypeReference
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4564:1: (lv_typeArguments_4_0= ruleJvmArgumentTypeReference )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4565:3: lv_typeArguments_4_0= ruleJvmArgumentTypeReference
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXConstructorCallAccess().getTypeArgumentsJvmArgumentTypeReferenceParserRuleCall_3_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleJvmArgumentTypeReference_in_ruleXConstructorCall10629);
+                    pushFollow(FOLLOW_ruleJvmArgumentTypeReference_in_ruleXConstructorCall10648);
                     lv_typeArguments_4_0=ruleJvmArgumentTypeReference();
 
                     state._fsp--;
@@ -13164,7 +13184,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4570:2: (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )*
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4581:2: (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )*
                     loop85:
                     do {
                         int alt85=2;
@@ -13177,26 +13197,26 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                         switch (alt85) {
                     	case 1 :
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4570:4: otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4581:4: otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) )
                     	    {
-                    	    otherlv_5=(Token)match(input,22,FOLLOW_22_in_ruleXConstructorCall10642); if (state.failed) return current;
+                    	    otherlv_5=(Token)match(input,22,FOLLOW_22_in_ruleXConstructorCall10661); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_5, grammarAccess.getXConstructorCallAccess().getCommaKeyword_3_2_0());
                     	          
                     	    }
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4574:1: ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) )
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4575:1: (lv_typeArguments_6_0= ruleJvmArgumentTypeReference )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4585:1: ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4586:1: (lv_typeArguments_6_0= ruleJvmArgumentTypeReference )
                     	    {
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4575:1: (lv_typeArguments_6_0= ruleJvmArgumentTypeReference )
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4576:3: lv_typeArguments_6_0= ruleJvmArgumentTypeReference
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4586:1: (lv_typeArguments_6_0= ruleJvmArgumentTypeReference )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4587:3: lv_typeArguments_6_0= ruleJvmArgumentTypeReference
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getXConstructorCallAccess().getTypeArgumentsJvmArgumentTypeReferenceParserRuleCall_3_2_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_ruleJvmArgumentTypeReference_in_ruleXConstructorCall10663);
+                    	    pushFollow(FOLLOW_ruleJvmArgumentTypeReference_in_ruleXConstructorCall10682);
                     	    lv_typeArguments_6_0=ruleJvmArgumentTypeReference();
 
                     	    state._fsp--;
@@ -13229,7 +13249,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_7=(Token)match(input,30,FOLLOW_30_in_ruleXConstructorCall10677); if (state.failed) return current;
+                    otherlv_7=(Token)match(input,30,FOLLOW_30_in_ruleXConstructorCall10696); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_7, grammarAccess.getXConstructorCallAccess().getGreaterThanSignKeyword_3_3());
@@ -13241,20 +13261,20 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4596:3: ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4607:3: ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )?
             int alt89=2;
             alt89 = dfa89.predict(input);
             switch (alt89) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4596:4: ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4607:4: ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')'
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4596:4: ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4596:5: ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4607:4: ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4607:5: ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4603:1: (lv_explicitConstructorCall_8_0= '(' )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4604:3: lv_explicitConstructorCall_8_0= '('
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4614:1: (lv_explicitConstructorCall_8_0= '(' )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4615:3: lv_explicitConstructorCall_8_0= '('
                     {
-                    lv_explicitConstructorCall_8_0=(Token)match(input,21,FOLLOW_21_in_ruleXConstructorCall10713); if (state.failed) return current;
+                    lv_explicitConstructorCall_8_0=(Token)match(input,21,FOLLOW_21_in_ruleXConstructorCall10732); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_explicitConstructorCall_8_0, grammarAccess.getXConstructorCallAccess().getExplicitConstructorCallLeftParenthesisKeyword_4_0_0());
@@ -13274,25 +13294,25 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4617:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )?
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4628:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )?
                     int alt88=3;
                     alt88 = dfa88.predict(input);
                     switch (alt88) {
                         case 1 :
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4617:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4628:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) )
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4617:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4617:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4628:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4628:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure )
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4634:1: (lv_arguments_9_0= ruleXShortClosure )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4635:3: lv_arguments_9_0= ruleXShortClosure
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4645:1: (lv_arguments_9_0= ruleXShortClosure )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4646:3: lv_arguments_9_0= ruleXShortClosure
                             {
                             if ( state.backtracking==0 ) {
                                
                               	        newCompositeNode(grammarAccess.getXConstructorCallAccess().getArgumentsXShortClosureParserRuleCall_4_1_0_0()); 
                               	    
                             }
-                            pushFollow(FOLLOW_ruleXShortClosure_in_ruleXConstructorCall10798);
+                            pushFollow(FOLLOW_ruleXShortClosure_in_ruleXConstructorCall10817);
                             lv_arguments_9_0=ruleXShortClosure();
 
                             state._fsp--;
@@ -13320,23 +13340,23 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4652:6: ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4663:6: ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* )
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4652:6: ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4652:7: ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )*
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4663:6: ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4663:7: ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )*
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4652:7: ( (lv_arguments_10_0= ruleXExpression ) )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4653:1: (lv_arguments_10_0= ruleXExpression )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4663:7: ( (lv_arguments_10_0= ruleXExpression ) )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4664:1: (lv_arguments_10_0= ruleXExpression )
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4653:1: (lv_arguments_10_0= ruleXExpression )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4654:3: lv_arguments_10_0= ruleXExpression
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4664:1: (lv_arguments_10_0= ruleXExpression )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4665:3: lv_arguments_10_0= ruleXExpression
                             {
                             if ( state.backtracking==0 ) {
                                
                               	        newCompositeNode(grammarAccess.getXConstructorCallAccess().getArgumentsXExpressionParserRuleCall_4_1_1_0_0()); 
                               	    
                             }
-                            pushFollow(FOLLOW_ruleXExpression_in_ruleXConstructorCall10826);
+                            pushFollow(FOLLOW_ruleXExpression_in_ruleXConstructorCall10845);
                             lv_arguments_10_0=ruleXExpression();
 
                             state._fsp--;
@@ -13360,7 +13380,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4670:2: (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )*
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4681:2: (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )*
                             loop87:
                             do {
                                 int alt87=2;
@@ -13373,26 +13393,26 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                                 switch (alt87) {
                             	case 1 :
-                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4670:4: otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) )
+                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4681:4: otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) )
                             	    {
-                            	    otherlv_11=(Token)match(input,22,FOLLOW_22_in_ruleXConstructorCall10839); if (state.failed) return current;
+                            	    otherlv_11=(Token)match(input,22,FOLLOW_22_in_ruleXConstructorCall10858); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
 
                             	          	newLeafNode(otherlv_11, grammarAccess.getXConstructorCallAccess().getCommaKeyword_4_1_1_1_0());
                             	          
                             	    }
-                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4674:1: ( (lv_arguments_12_0= ruleXExpression ) )
-                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4675:1: (lv_arguments_12_0= ruleXExpression )
+                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4685:1: ( (lv_arguments_12_0= ruleXExpression ) )
+                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4686:1: (lv_arguments_12_0= ruleXExpression )
                             	    {
-                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4675:1: (lv_arguments_12_0= ruleXExpression )
-                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4676:3: lv_arguments_12_0= ruleXExpression
+                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4686:1: (lv_arguments_12_0= ruleXExpression )
+                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4687:3: lv_arguments_12_0= ruleXExpression
                             	    {
                             	    if ( state.backtracking==0 ) {
                             	       
                             	      	        newCompositeNode(grammarAccess.getXConstructorCallAccess().getArgumentsXExpressionParserRuleCall_4_1_1_1_1_0()); 
                             	      	    
                             	    }
-                            	    pushFollow(FOLLOW_ruleXExpression_in_ruleXConstructorCall10860);
+                            	    pushFollow(FOLLOW_ruleXExpression_in_ruleXConstructorCall10879);
                             	    lv_arguments_12_0=ruleXExpression();
 
                             	    state._fsp--;
@@ -13434,7 +13454,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_13=(Token)match(input,23,FOLLOW_23_in_ruleXConstructorCall10877); if (state.failed) return current;
+                    otherlv_13=(Token)match(input,23,FOLLOW_23_in_ruleXConstructorCall10896); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_13, grammarAccess.getXConstructorCallAccess().getRightParenthesisKeyword_4_2());
@@ -13446,22 +13466,22 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4696:3: ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4707:3: ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )?
             int alt90=2;
             alt90 = dfa90.predict(input);
             switch (alt90) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4696:4: ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4707:4: ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4699:1: (lv_arguments_14_0= ruleXClosure )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4700:3: lv_arguments_14_0= ruleXClosure
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4710:1: (lv_arguments_14_0= ruleXClosure )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4711:3: lv_arguments_14_0= ruleXClosure
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXConstructorCallAccess().getArgumentsXClosureParserRuleCall_5_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleXClosure_in_ruleXConstructorCall10912);
+                    pushFollow(FOLLOW_ruleXClosure_in_ruleXConstructorCall10931);
                     lv_arguments_14_0=ruleXClosure();
 
                     state._fsp--;
@@ -13511,7 +13531,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXBooleanLiteral"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4724:1: entryRuleXBooleanLiteral returns [EObject current=null] : iv_ruleXBooleanLiteral= ruleXBooleanLiteral EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4735:1: entryRuleXBooleanLiteral returns [EObject current=null] : iv_ruleXBooleanLiteral= ruleXBooleanLiteral EOF ;
     public final EObject entryRuleXBooleanLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -13519,13 +13539,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4725:2: (iv_ruleXBooleanLiteral= ruleXBooleanLiteral EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4726:2: iv_ruleXBooleanLiteral= ruleXBooleanLiteral EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4736:2: (iv_ruleXBooleanLiteral= ruleXBooleanLiteral EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4737:2: iv_ruleXBooleanLiteral= ruleXBooleanLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXBooleanLiteralRule()); 
             }
-            pushFollow(FOLLOW_ruleXBooleanLiteral_in_entryRuleXBooleanLiteral10949);
+            pushFollow(FOLLOW_ruleXBooleanLiteral_in_entryRuleXBooleanLiteral10968);
             iv_ruleXBooleanLiteral=ruleXBooleanLiteral();
 
             state._fsp--;
@@ -13533,7 +13553,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXBooleanLiteral; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXBooleanLiteral10959); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXBooleanLiteral10978); if (state.failed) return current;
 
             }
 
@@ -13551,7 +13571,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXBooleanLiteral"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4733:1: ruleXBooleanLiteral returns [EObject current=null] : ( () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) ) ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4744:1: ruleXBooleanLiteral returns [EObject current=null] : ( () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) ) ) ;
     public final EObject ruleXBooleanLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -13561,14 +13581,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4736:28: ( ( () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4737:1: ( () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4747:28: ( ( () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4748:1: ( () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4737:1: ( () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4737:2: () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4748:1: ( () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4748:2: () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4737:2: ()
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4738:5: 
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4748:2: ()
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4749:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -13580,7 +13600,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4743:2: (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4754:2: (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) )
             int alt91=2;
             int LA91_0 = input.LA(1);
 
@@ -13599,9 +13619,9 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             }
             switch (alt91) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4743:4: otherlv_1= 'false'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4754:4: otherlv_1= 'false'
                     {
-                    otherlv_1=(Token)match(input,78,FOLLOW_78_in_ruleXBooleanLiteral11006); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,78,FOLLOW_78_in_ruleXBooleanLiteral11025); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getXBooleanLiteralAccess().getFalseKeyword_1_0());
@@ -13611,15 +13631,15 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4748:6: ( (lv_isTrue_2_0= 'true' ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4759:6: ( (lv_isTrue_2_0= 'true' ) )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4748:6: ( (lv_isTrue_2_0= 'true' ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4749:1: (lv_isTrue_2_0= 'true' )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4759:6: ( (lv_isTrue_2_0= 'true' ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4760:1: (lv_isTrue_2_0= 'true' )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4749:1: (lv_isTrue_2_0= 'true' )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4750:3: lv_isTrue_2_0= 'true'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4760:1: (lv_isTrue_2_0= 'true' )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4761:3: lv_isTrue_2_0= 'true'
                     {
-                    lv_isTrue_2_0=(Token)match(input,79,FOLLOW_79_in_ruleXBooleanLiteral11030); if (state.failed) return current;
+                    lv_isTrue_2_0=(Token)match(input,79,FOLLOW_79_in_ruleXBooleanLiteral11049); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_isTrue_2_0, grammarAccess.getXBooleanLiteralAccess().getIsTrueTrueKeyword_1_1_0());
@@ -13668,7 +13688,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXNullLiteral"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4771:1: entryRuleXNullLiteral returns [EObject current=null] : iv_ruleXNullLiteral= ruleXNullLiteral EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4782:1: entryRuleXNullLiteral returns [EObject current=null] : iv_ruleXNullLiteral= ruleXNullLiteral EOF ;
     public final EObject entryRuleXNullLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -13676,13 +13696,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4772:2: (iv_ruleXNullLiteral= ruleXNullLiteral EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4773:2: iv_ruleXNullLiteral= ruleXNullLiteral EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4783:2: (iv_ruleXNullLiteral= ruleXNullLiteral EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4784:2: iv_ruleXNullLiteral= ruleXNullLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXNullLiteralRule()); 
             }
-            pushFollow(FOLLOW_ruleXNullLiteral_in_entryRuleXNullLiteral11080);
+            pushFollow(FOLLOW_ruleXNullLiteral_in_entryRuleXNullLiteral11099);
             iv_ruleXNullLiteral=ruleXNullLiteral();
 
             state._fsp--;
@@ -13690,7 +13710,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXNullLiteral; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXNullLiteral11090); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXNullLiteral11109); if (state.failed) return current;
 
             }
 
@@ -13708,7 +13728,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXNullLiteral"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4780:1: ruleXNullLiteral returns [EObject current=null] : ( () otherlv_1= 'null' ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4791:1: ruleXNullLiteral returns [EObject current=null] : ( () otherlv_1= 'null' ) ;
     public final EObject ruleXNullLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -13717,14 +13737,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4783:28: ( ( () otherlv_1= 'null' ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4784:1: ( () otherlv_1= 'null' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4794:28: ( ( () otherlv_1= 'null' ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4795:1: ( () otherlv_1= 'null' )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4784:1: ( () otherlv_1= 'null' )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4784:2: () otherlv_1= 'null'
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4795:1: ( () otherlv_1= 'null' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4795:2: () otherlv_1= 'null'
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4784:2: ()
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4785:5: 
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4795:2: ()
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4796:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -13736,7 +13756,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,80,FOLLOW_80_in_ruleXNullLiteral11136); if (state.failed) return current;
+            otherlv_1=(Token)match(input,80,FOLLOW_80_in_ruleXNullLiteral11155); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXNullLiteralAccess().getNullKeyword_1());
@@ -13765,7 +13785,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXNumberLiteral"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4802:1: entryRuleXNumberLiteral returns [EObject current=null] : iv_ruleXNumberLiteral= ruleXNumberLiteral EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4813:1: entryRuleXNumberLiteral returns [EObject current=null] : iv_ruleXNumberLiteral= ruleXNumberLiteral EOF ;
     public final EObject entryRuleXNumberLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -13773,13 +13793,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4803:2: (iv_ruleXNumberLiteral= ruleXNumberLiteral EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4804:2: iv_ruleXNumberLiteral= ruleXNumberLiteral EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4814:2: (iv_ruleXNumberLiteral= ruleXNumberLiteral EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4815:2: iv_ruleXNumberLiteral= ruleXNumberLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXNumberLiteralRule()); 
             }
-            pushFollow(FOLLOW_ruleXNumberLiteral_in_entryRuleXNumberLiteral11172);
+            pushFollow(FOLLOW_ruleXNumberLiteral_in_entryRuleXNumberLiteral11191);
             iv_ruleXNumberLiteral=ruleXNumberLiteral();
 
             state._fsp--;
@@ -13787,7 +13807,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXNumberLiteral; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXNumberLiteral11182); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXNumberLiteral11201); if (state.failed) return current;
 
             }
 
@@ -13805,7 +13825,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXNumberLiteral"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4811:1: ruleXNumberLiteral returns [EObject current=null] : ( () ( (lv_value_1_0= ruleNumber ) ) ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4822:1: ruleXNumberLiteral returns [EObject current=null] : ( () ( (lv_value_1_0= ruleNumber ) ) ) ;
     public final EObject ruleXNumberLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -13815,14 +13835,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4814:28: ( ( () ( (lv_value_1_0= ruleNumber ) ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4815:1: ( () ( (lv_value_1_0= ruleNumber ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4825:28: ( ( () ( (lv_value_1_0= ruleNumber ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4826:1: ( () ( (lv_value_1_0= ruleNumber ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4815:1: ( () ( (lv_value_1_0= ruleNumber ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4815:2: () ( (lv_value_1_0= ruleNumber ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4826:1: ( () ( (lv_value_1_0= ruleNumber ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4826:2: () ( (lv_value_1_0= ruleNumber ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4815:2: ()
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4816:5: 
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4826:2: ()
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4827:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -13834,18 +13854,18 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4821:2: ( (lv_value_1_0= ruleNumber ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4822:1: (lv_value_1_0= ruleNumber )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4832:2: ( (lv_value_1_0= ruleNumber ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4833:1: (lv_value_1_0= ruleNumber )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4822:1: (lv_value_1_0= ruleNumber )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4823:3: lv_value_1_0= ruleNumber
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4833:1: (lv_value_1_0= ruleNumber )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4834:3: lv_value_1_0= ruleNumber
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXNumberLiteralAccess().getValueNumberParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleNumber_in_ruleXNumberLiteral11237);
+            pushFollow(FOLLOW_ruleNumber_in_ruleXNumberLiteral11256);
             lv_value_1_0=ruleNumber();
 
             state._fsp--;
@@ -13892,7 +13912,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXStringLiteral"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4847:1: entryRuleXStringLiteral returns [EObject current=null] : iv_ruleXStringLiteral= ruleXStringLiteral EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4858:1: entryRuleXStringLiteral returns [EObject current=null] : iv_ruleXStringLiteral= ruleXStringLiteral EOF ;
     public final EObject entryRuleXStringLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -13900,13 +13920,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4848:2: (iv_ruleXStringLiteral= ruleXStringLiteral EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4849:2: iv_ruleXStringLiteral= ruleXStringLiteral EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4859:2: (iv_ruleXStringLiteral= ruleXStringLiteral EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4860:2: iv_ruleXStringLiteral= ruleXStringLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXStringLiteralRule()); 
             }
-            pushFollow(FOLLOW_ruleXStringLiteral_in_entryRuleXStringLiteral11273);
+            pushFollow(FOLLOW_ruleXStringLiteral_in_entryRuleXStringLiteral11292);
             iv_ruleXStringLiteral=ruleXStringLiteral();
 
             state._fsp--;
@@ -13914,7 +13934,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXStringLiteral; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXStringLiteral11283); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXStringLiteral11302); if (state.failed) return current;
 
             }
 
@@ -13932,7 +13952,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXStringLiteral"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4856:1: ruleXStringLiteral returns [EObject current=null] : ( () ( (lv_value_1_0= RULE_STRING ) ) ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4867:1: ruleXStringLiteral returns [EObject current=null] : ( () ( (lv_value_1_0= RULE_STRING ) ) ) ;
     public final EObject ruleXStringLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -13941,14 +13961,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4859:28: ( ( () ( (lv_value_1_0= RULE_STRING ) ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4860:1: ( () ( (lv_value_1_0= RULE_STRING ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4870:28: ( ( () ( (lv_value_1_0= RULE_STRING ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4871:1: ( () ( (lv_value_1_0= RULE_STRING ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4860:1: ( () ( (lv_value_1_0= RULE_STRING ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4860:2: () ( (lv_value_1_0= RULE_STRING ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4871:1: ( () ( (lv_value_1_0= RULE_STRING ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4871:2: () ( (lv_value_1_0= RULE_STRING ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4860:2: ()
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4861:5: 
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4871:2: ()
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4872:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -13960,13 +13980,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4866:2: ( (lv_value_1_0= RULE_STRING ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4867:1: (lv_value_1_0= RULE_STRING )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4877:2: ( (lv_value_1_0= RULE_STRING ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4878:1: (lv_value_1_0= RULE_STRING )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4867:1: (lv_value_1_0= RULE_STRING )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4868:3: lv_value_1_0= RULE_STRING
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4878:1: (lv_value_1_0= RULE_STRING )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4879:3: lv_value_1_0= RULE_STRING
             {
-            lv_value_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleXStringLiteral11334); if (state.failed) return current;
+            lv_value_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleXStringLiteral11353); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_value_1_0, grammarAccess.getXStringLiteralAccess().getValueSTRINGTerminalRuleCall_1_0()); 
@@ -14013,7 +14033,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXTypeLiteral"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4892:1: entryRuleXTypeLiteral returns [EObject current=null] : iv_ruleXTypeLiteral= ruleXTypeLiteral EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4903:1: entryRuleXTypeLiteral returns [EObject current=null] : iv_ruleXTypeLiteral= ruleXTypeLiteral EOF ;
     public final EObject entryRuleXTypeLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -14021,13 +14041,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4893:2: (iv_ruleXTypeLiteral= ruleXTypeLiteral EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4894:2: iv_ruleXTypeLiteral= ruleXTypeLiteral EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4904:2: (iv_ruleXTypeLiteral= ruleXTypeLiteral EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4905:2: iv_ruleXTypeLiteral= ruleXTypeLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXTypeLiteralRule()); 
             }
-            pushFollow(FOLLOW_ruleXTypeLiteral_in_entryRuleXTypeLiteral11375);
+            pushFollow(FOLLOW_ruleXTypeLiteral_in_entryRuleXTypeLiteral11394);
             iv_ruleXTypeLiteral=ruleXTypeLiteral();
 
             state._fsp--;
@@ -14035,7 +14055,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXTypeLiteral; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXTypeLiteral11385); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXTypeLiteral11404); if (state.failed) return current;
 
             }
 
@@ -14053,7 +14073,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXTypeLiteral"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4901:1: ruleXTypeLiteral returns [EObject current=null] : ( () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')' ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4912:1: ruleXTypeLiteral returns [EObject current=null] : ( () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')' ) ;
     public final EObject ruleXTypeLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -14066,14 +14086,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4904:28: ( ( () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')' ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4905:1: ( () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4915:28: ( ( () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')' ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4916:1: ( () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')' )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4905:1: ( () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')' )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4905:2: () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')'
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4916:1: ( () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4916:2: () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')'
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4905:2: ()
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4906:5: 
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4916:2: ()
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4917:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -14085,23 +14105,23 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,81,FOLLOW_81_in_ruleXTypeLiteral11431); if (state.failed) return current;
+            otherlv_1=(Token)match(input,81,FOLLOW_81_in_ruleXTypeLiteral11450); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXTypeLiteralAccess().getTypeofKeyword_1());
                   
             }
-            otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleXTypeLiteral11443); if (state.failed) return current;
+            otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleXTypeLiteral11462); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getXTypeLiteralAccess().getLeftParenthesisKeyword_2());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4919:1: ( ( ruleQualifiedName ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4920:1: ( ruleQualifiedName )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4930:1: ( ( ruleQualifiedName ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4931:1: ( ruleQualifiedName )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4920:1: ( ruleQualifiedName )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4921:3: ruleQualifiedName
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4931:1: ( ruleQualifiedName )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4932:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -14115,7 +14135,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getXTypeLiteralAccess().getTypeJvmTypeCrossReference_3_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleXTypeLiteral11466);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleXTypeLiteral11485);
             ruleQualifiedName();
 
             state._fsp--;
@@ -14131,7 +14151,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4934:2: ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )*
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4945:2: ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )*
             loop92:
             do {
                 int alt92=2;
@@ -14144,17 +14164,17 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                 switch (alt92) {
             	case 1 :
-            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4935:1: (lv_arrayDimensions_4_0= ruleArrayBrackets )
+            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4946:1: (lv_arrayDimensions_4_0= ruleArrayBrackets )
             	    {
-            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4935:1: (lv_arrayDimensions_4_0= ruleArrayBrackets )
-            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4936:3: lv_arrayDimensions_4_0= ruleArrayBrackets
+            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4946:1: (lv_arrayDimensions_4_0= ruleArrayBrackets )
+            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4947:3: lv_arrayDimensions_4_0= ruleArrayBrackets
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXTypeLiteralAccess().getArrayDimensionsArrayBracketsParserRuleCall_4_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleArrayBrackets_in_ruleXTypeLiteral11487);
+            	    pushFollow(FOLLOW_ruleArrayBrackets_in_ruleXTypeLiteral11506);
             	    lv_arrayDimensions_4_0=ruleArrayBrackets();
 
             	    state._fsp--;
@@ -14184,7 +14204,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_5=(Token)match(input,23,FOLLOW_23_in_ruleXTypeLiteral11500); if (state.failed) return current;
+            otherlv_5=(Token)match(input,23,FOLLOW_23_in_ruleXTypeLiteral11519); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_5, grammarAccess.getXTypeLiteralAccess().getRightParenthesisKeyword_5());
@@ -14213,7 +14233,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXThrowExpression"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4964:1: entryRuleXThrowExpression returns [EObject current=null] : iv_ruleXThrowExpression= ruleXThrowExpression EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4975:1: entryRuleXThrowExpression returns [EObject current=null] : iv_ruleXThrowExpression= ruleXThrowExpression EOF ;
     public final EObject entryRuleXThrowExpression() throws RecognitionException {
         EObject current = null;
 
@@ -14221,13 +14241,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4965:2: (iv_ruleXThrowExpression= ruleXThrowExpression EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4966:2: iv_ruleXThrowExpression= ruleXThrowExpression EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4976:2: (iv_ruleXThrowExpression= ruleXThrowExpression EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4977:2: iv_ruleXThrowExpression= ruleXThrowExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXThrowExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleXThrowExpression_in_entryRuleXThrowExpression11536);
+            pushFollow(FOLLOW_ruleXThrowExpression_in_entryRuleXThrowExpression11555);
             iv_ruleXThrowExpression=ruleXThrowExpression();
 
             state._fsp--;
@@ -14235,7 +14255,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXThrowExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXThrowExpression11546); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXThrowExpression11565); if (state.failed) return current;
 
             }
 
@@ -14253,7 +14273,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXThrowExpression"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4973:1: ruleXThrowExpression returns [EObject current=null] : ( () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) ) ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4984:1: ruleXThrowExpression returns [EObject current=null] : ( () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) ) ) ;
     public final EObject ruleXThrowExpression() throws RecognitionException {
         EObject current = null;
 
@@ -14264,14 +14284,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4976:28: ( ( () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4977:1: ( () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4987:28: ( ( () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4988:1: ( () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4977:1: ( () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4977:2: () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4988:1: ( () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4988:2: () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4977:2: ()
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4978:5: 
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4988:2: ()
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4989:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -14283,24 +14303,24 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,82,FOLLOW_82_in_ruleXThrowExpression11592); if (state.failed) return current;
+            otherlv_1=(Token)match(input,82,FOLLOW_82_in_ruleXThrowExpression11611); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXThrowExpressionAccess().getThrowKeyword_1());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4987:1: ( (lv_expression_2_0= ruleXExpression ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4988:1: (lv_expression_2_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4998:1: ( (lv_expression_2_0= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4999:1: (lv_expression_2_0= ruleXExpression )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4988:1: (lv_expression_2_0= ruleXExpression )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4989:3: lv_expression_2_0= ruleXExpression
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4999:1: (lv_expression_2_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5000:3: lv_expression_2_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXThrowExpressionAccess().getExpressionXExpressionParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleXExpression_in_ruleXThrowExpression11613);
+            pushFollow(FOLLOW_ruleXExpression_in_ruleXThrowExpression11632);
             lv_expression_2_0=ruleXExpression();
 
             state._fsp--;
@@ -14347,7 +14367,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXReturnExpression"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5013:1: entryRuleXReturnExpression returns [EObject current=null] : iv_ruleXReturnExpression= ruleXReturnExpression EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5024:1: entryRuleXReturnExpression returns [EObject current=null] : iv_ruleXReturnExpression= ruleXReturnExpression EOF ;
     public final EObject entryRuleXReturnExpression() throws RecognitionException {
         EObject current = null;
 
@@ -14355,13 +14375,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5014:2: (iv_ruleXReturnExpression= ruleXReturnExpression EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5015:2: iv_ruleXReturnExpression= ruleXReturnExpression EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5025:2: (iv_ruleXReturnExpression= ruleXReturnExpression EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5026:2: iv_ruleXReturnExpression= ruleXReturnExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXReturnExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleXReturnExpression_in_entryRuleXReturnExpression11649);
+            pushFollow(FOLLOW_ruleXReturnExpression_in_entryRuleXReturnExpression11668);
             iv_ruleXReturnExpression=ruleXReturnExpression();
 
             state._fsp--;
@@ -14369,7 +14389,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXReturnExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXReturnExpression11659); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXReturnExpression11678); if (state.failed) return current;
 
             }
 
@@ -14387,7 +14407,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXReturnExpression"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5022:1: ruleXReturnExpression returns [EObject current=null] : ( () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )? ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5033:1: ruleXReturnExpression returns [EObject current=null] : ( () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )? ) ;
     public final EObject ruleXReturnExpression() throws RecognitionException {
         EObject current = null;
 
@@ -14398,14 +14418,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5025:28: ( ( () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )? ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5026:1: ( () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )? )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5036:28: ( ( () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )? ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5037:1: ( () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )? )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5026:1: ( () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )? )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5026:2: () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5037:1: ( () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )? )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5037:2: () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )?
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5026:2: ()
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5027:5: 
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5037:2: ()
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5038:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -14417,28 +14437,28 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,83,FOLLOW_83_in_ruleXReturnExpression11705); if (state.failed) return current;
+            otherlv_1=(Token)match(input,83,FOLLOW_83_in_ruleXReturnExpression11724); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXReturnExpressionAccess().getReturnKeyword_1());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5036:1: ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5047:1: ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )?
             int alt93=2;
             alt93 = dfa93.predict(input);
             switch (alt93) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5036:2: ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5047:2: ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5064:1: (lv_expression_2_0= ruleXExpression )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5065:3: lv_expression_2_0= ruleXExpression
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5075:1: (lv_expression_2_0= ruleXExpression )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5076:3: lv_expression_2_0= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXReturnExpressionAccess().getExpressionXExpressionParserRuleCall_2_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleXExpression_in_ruleXReturnExpression11940);
+                    pushFollow(FOLLOW_ruleXExpression_in_ruleXReturnExpression11959);
                     lv_expression_2_0=ruleXExpression();
 
                     state._fsp--;
@@ -14488,7 +14508,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXTryCatchFinallyExpression"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5089:1: entryRuleXTryCatchFinallyExpression returns [EObject current=null] : iv_ruleXTryCatchFinallyExpression= ruleXTryCatchFinallyExpression EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5100:1: entryRuleXTryCatchFinallyExpression returns [EObject current=null] : iv_ruleXTryCatchFinallyExpression= ruleXTryCatchFinallyExpression EOF ;
     public final EObject entryRuleXTryCatchFinallyExpression() throws RecognitionException {
         EObject current = null;
 
@@ -14496,13 +14516,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5090:2: (iv_ruleXTryCatchFinallyExpression= ruleXTryCatchFinallyExpression EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5091:2: iv_ruleXTryCatchFinallyExpression= ruleXTryCatchFinallyExpression EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5101:2: (iv_ruleXTryCatchFinallyExpression= ruleXTryCatchFinallyExpression EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5102:2: iv_ruleXTryCatchFinallyExpression= ruleXTryCatchFinallyExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXTryCatchFinallyExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleXTryCatchFinallyExpression_in_entryRuleXTryCatchFinallyExpression11977);
+            pushFollow(FOLLOW_ruleXTryCatchFinallyExpression_in_entryRuleXTryCatchFinallyExpression11996);
             iv_ruleXTryCatchFinallyExpression=ruleXTryCatchFinallyExpression();
 
             state._fsp--;
@@ -14510,7 +14530,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXTryCatchFinallyExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXTryCatchFinallyExpression11987); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXTryCatchFinallyExpression12006); if (state.failed) return current;
 
             }
 
@@ -14528,7 +14548,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXTryCatchFinallyExpression"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5098:1: ruleXTryCatchFinallyExpression returns [EObject current=null] : ( () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) ) ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5109:1: ruleXTryCatchFinallyExpression returns [EObject current=null] : ( () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) ) ) ;
     public final EObject ruleXTryCatchFinallyExpression() throws RecognitionException {
         EObject current = null;
 
@@ -14547,14 +14567,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5101:28: ( ( () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5102:1: ( () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5112:28: ( ( () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5113:1: ( () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5102:1: ( () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5102:2: () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5113:1: ( () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5113:2: () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5102:2: ()
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5103:5: 
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5113:2: ()
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5114:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -14566,24 +14586,24 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,84,FOLLOW_84_in_ruleXTryCatchFinallyExpression12033); if (state.failed) return current;
+            otherlv_1=(Token)match(input,84,FOLLOW_84_in_ruleXTryCatchFinallyExpression12052); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXTryCatchFinallyExpressionAccess().getTryKeyword_1());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5112:1: ( (lv_expression_2_0= ruleXExpression ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5113:1: (lv_expression_2_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5123:1: ( (lv_expression_2_0= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5124:1: (lv_expression_2_0= ruleXExpression )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5113:1: (lv_expression_2_0= ruleXExpression )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5114:3: lv_expression_2_0= ruleXExpression
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5124:1: (lv_expression_2_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5125:3: lv_expression_2_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXTryCatchFinallyExpressionAccess().getExpressionXExpressionParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleXExpression_in_ruleXTryCatchFinallyExpression12054);
+            pushFollow(FOLLOW_ruleXExpression_in_ruleXTryCatchFinallyExpression12073);
             lv_expression_2_0=ruleXExpression();
 
             state._fsp--;
@@ -14607,7 +14627,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5130:2: ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5141:2: ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) )
             int alt96=2;
             int LA96_0 = input.LA(1);
 
@@ -14626,12 +14646,12 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             }
             switch (alt96) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5130:3: ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5141:3: ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5130:3: ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5130:4: ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )?
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5141:3: ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5141:4: ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )?
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5130:4: ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5141:4: ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+
                     int cnt94=0;
                     loop94:
                     do {
@@ -14651,17 +14671,17 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                         switch (alt94) {
                     	case 1 :
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5130:5: ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5141:5: ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause )
                     	    {
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5132:1: (lv_catchClauses_3_0= ruleXCatchClause )
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5133:3: lv_catchClauses_3_0= ruleXCatchClause
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5143:1: (lv_catchClauses_3_0= ruleXCatchClause )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5144:3: lv_catchClauses_3_0= ruleXCatchClause
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getXTryCatchFinallyExpressionAccess().getCatchClausesXCatchClauseParserRuleCall_3_0_0_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_ruleXCatchClause_in_ruleXTryCatchFinallyExpression12084);
+                    	    pushFollow(FOLLOW_ruleXCatchClause_in_ruleXTryCatchFinallyExpression12103);
                     	    lv_catchClauses_3_0=ruleXCatchClause();
 
                     	    state._fsp--;
@@ -14696,7 +14716,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                         cnt94++;
                     } while (true);
 
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5149:3: ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )?
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5160:3: ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )?
                     int alt95=2;
                     int LA95_0 = input.LA(1);
 
@@ -14709,12 +14729,12 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt95) {
                         case 1 :
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5149:4: ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5160:4: ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) )
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5149:4: ( ( 'finally' )=>otherlv_4= 'finally' )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5149:5: ( 'finally' )=>otherlv_4= 'finally'
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5160:4: ( ( 'finally' )=>otherlv_4= 'finally' )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5160:5: ( 'finally' )=>otherlv_4= 'finally'
                             {
-                            otherlv_4=(Token)match(input,85,FOLLOW_85_in_ruleXTryCatchFinallyExpression12106); if (state.failed) return current;
+                            otherlv_4=(Token)match(input,85,FOLLOW_85_in_ruleXTryCatchFinallyExpression12125); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_4, grammarAccess.getXTryCatchFinallyExpressionAccess().getFinallyKeyword_3_0_1_0());
@@ -14723,18 +14743,18 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5154:2: ( (lv_finallyExpression_5_0= ruleXExpression ) )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5155:1: (lv_finallyExpression_5_0= ruleXExpression )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5165:2: ( (lv_finallyExpression_5_0= ruleXExpression ) )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5166:1: (lv_finallyExpression_5_0= ruleXExpression )
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5155:1: (lv_finallyExpression_5_0= ruleXExpression )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5156:3: lv_finallyExpression_5_0= ruleXExpression
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5166:1: (lv_finallyExpression_5_0= ruleXExpression )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5167:3: lv_finallyExpression_5_0= ruleXExpression
                             {
                             if ( state.backtracking==0 ) {
                                
                               	        newCompositeNode(grammarAccess.getXTryCatchFinallyExpressionAccess().getFinallyExpressionXExpressionParserRuleCall_3_0_1_1_0()); 
                               	    
                             }
-                            pushFollow(FOLLOW_ruleXExpression_in_ruleXTryCatchFinallyExpression12128);
+                            pushFollow(FOLLOW_ruleXExpression_in_ruleXTryCatchFinallyExpression12147);
                             lv_finallyExpression_5_0=ruleXExpression();
 
                             state._fsp--;
@@ -14771,29 +14791,29 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5173:6: (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5184:6: (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5173:6: (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5173:8: otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5184:6: (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5184:8: otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) )
                     {
-                    otherlv_6=(Token)match(input,85,FOLLOW_85_in_ruleXTryCatchFinallyExpression12150); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,85,FOLLOW_85_in_ruleXTryCatchFinallyExpression12169); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_6, grammarAccess.getXTryCatchFinallyExpressionAccess().getFinallyKeyword_3_1_0());
                           
                     }
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5177:1: ( (lv_finallyExpression_7_0= ruleXExpression ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5178:1: (lv_finallyExpression_7_0= ruleXExpression )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5188:1: ( (lv_finallyExpression_7_0= ruleXExpression ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5189:1: (lv_finallyExpression_7_0= ruleXExpression )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5178:1: (lv_finallyExpression_7_0= ruleXExpression )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5179:3: lv_finallyExpression_7_0= ruleXExpression
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5189:1: (lv_finallyExpression_7_0= ruleXExpression )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5190:3: lv_finallyExpression_7_0= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXTryCatchFinallyExpressionAccess().getFinallyExpressionXExpressionParserRuleCall_3_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleXExpression_in_ruleXTryCatchFinallyExpression12171);
+                    pushFollow(FOLLOW_ruleXExpression_in_ruleXTryCatchFinallyExpression12190);
                     lv_finallyExpression_7_0=ruleXExpression();
 
                     state._fsp--;
@@ -14849,7 +14869,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXSynchronizedExpression"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5203:1: entryRuleXSynchronizedExpression returns [EObject current=null] : iv_ruleXSynchronizedExpression= ruleXSynchronizedExpression EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5214:1: entryRuleXSynchronizedExpression returns [EObject current=null] : iv_ruleXSynchronizedExpression= ruleXSynchronizedExpression EOF ;
     public final EObject entryRuleXSynchronizedExpression() throws RecognitionException {
         EObject current = null;
 
@@ -14857,13 +14877,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5204:2: (iv_ruleXSynchronizedExpression= ruleXSynchronizedExpression EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5205:2: iv_ruleXSynchronizedExpression= ruleXSynchronizedExpression EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5215:2: (iv_ruleXSynchronizedExpression= ruleXSynchronizedExpression EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5216:2: iv_ruleXSynchronizedExpression= ruleXSynchronizedExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXSynchronizedExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleXSynchronizedExpression_in_entryRuleXSynchronizedExpression12209);
+            pushFollow(FOLLOW_ruleXSynchronizedExpression_in_entryRuleXSynchronizedExpression12228);
             iv_ruleXSynchronizedExpression=ruleXSynchronizedExpression();
 
             state._fsp--;
@@ -14871,7 +14891,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXSynchronizedExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXSynchronizedExpression12219); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXSynchronizedExpression12238); if (state.failed) return current;
 
             }
 
@@ -14889,7 +14909,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXSynchronizedExpression"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5212:1: ruleXSynchronizedExpression returns [EObject current=null] : ( ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) ) ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5223:1: ruleXSynchronizedExpression returns [EObject current=null] : ( ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) ) ) ;
     public final EObject ruleXSynchronizedExpression() throws RecognitionException {
         EObject current = null;
 
@@ -14904,20 +14924,20 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5215:28: ( ( ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5216:1: ( ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5226:28: ( ( ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5227:1: ( ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5216:1: ( ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5216:2: ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5227:1: ( ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5227:2: ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5216:2: ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5216:3: ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5227:2: ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5227:3: ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5219:5: ( () otherlv_1= 'synchronized' otherlv_2= '(' )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5219:6: () otherlv_1= 'synchronized' otherlv_2= '('
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5230:5: ( () otherlv_1= 'synchronized' otherlv_2= '(' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5230:6: () otherlv_1= 'synchronized' otherlv_2= '('
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5219:6: ()
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5220:5: 
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5230:6: ()
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5231:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -14929,13 +14949,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,86,FOLLOW_86_in_ruleXSynchronizedExpression12283); if (state.failed) return current;
+            otherlv_1=(Token)match(input,86,FOLLOW_86_in_ruleXSynchronizedExpression12302); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXSynchronizedExpressionAccess().getSynchronizedKeyword_0_0_1());
                   
             }
-            otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleXSynchronizedExpression12295); if (state.failed) return current;
+            otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleXSynchronizedExpression12314); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getXSynchronizedExpressionAccess().getLeftParenthesisKeyword_0_0_2());
@@ -14947,18 +14967,18 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5233:3: ( (lv_param_3_0= ruleXExpression ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5234:1: (lv_param_3_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5244:3: ( (lv_param_3_0= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5245:1: (lv_param_3_0= ruleXExpression )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5234:1: (lv_param_3_0= ruleXExpression )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5235:3: lv_param_3_0= ruleXExpression
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5245:1: (lv_param_3_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5246:3: lv_param_3_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXSynchronizedExpressionAccess().getParamXExpressionParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleXExpression_in_ruleXSynchronizedExpression12318);
+            pushFollow(FOLLOW_ruleXExpression_in_ruleXSynchronizedExpression12337);
             lv_param_3_0=ruleXExpression();
 
             state._fsp--;
@@ -14982,24 +15002,24 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,23,FOLLOW_23_in_ruleXSynchronizedExpression12330); if (state.failed) return current;
+            otherlv_4=(Token)match(input,23,FOLLOW_23_in_ruleXSynchronizedExpression12349); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getXSynchronizedExpressionAccess().getRightParenthesisKeyword_2());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5255:1: ( (lv_expression_5_0= ruleXExpression ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5256:1: (lv_expression_5_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5266:1: ( (lv_expression_5_0= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5267:1: (lv_expression_5_0= ruleXExpression )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5256:1: (lv_expression_5_0= ruleXExpression )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5257:3: lv_expression_5_0= ruleXExpression
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5267:1: (lv_expression_5_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5268:3: lv_expression_5_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXSynchronizedExpressionAccess().getExpressionXExpressionParserRuleCall_3_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleXExpression_in_ruleXSynchronizedExpression12351);
+            pushFollow(FOLLOW_ruleXExpression_in_ruleXSynchronizedExpression12370);
             lv_expression_5_0=ruleXExpression();
 
             state._fsp--;
@@ -15046,7 +15066,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXCatchClause"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5281:1: entryRuleXCatchClause returns [EObject current=null] : iv_ruleXCatchClause= ruleXCatchClause EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5292:1: entryRuleXCatchClause returns [EObject current=null] : iv_ruleXCatchClause= ruleXCatchClause EOF ;
     public final EObject entryRuleXCatchClause() throws RecognitionException {
         EObject current = null;
 
@@ -15054,13 +15074,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5282:2: (iv_ruleXCatchClause= ruleXCatchClause EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5283:2: iv_ruleXCatchClause= ruleXCatchClause EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5293:2: (iv_ruleXCatchClause= ruleXCatchClause EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5294:2: iv_ruleXCatchClause= ruleXCatchClause EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXCatchClauseRule()); 
             }
-            pushFollow(FOLLOW_ruleXCatchClause_in_entryRuleXCatchClause12387);
+            pushFollow(FOLLOW_ruleXCatchClause_in_entryRuleXCatchClause12406);
             iv_ruleXCatchClause=ruleXCatchClause();
 
             state._fsp--;
@@ -15068,7 +15088,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXCatchClause; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXCatchClause12397); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXCatchClause12416); if (state.failed) return current;
 
             }
 
@@ -15086,7 +15106,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXCatchClause"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5290:1: ruleXCatchClause returns [EObject current=null] : ( ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) ) ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5301:1: ruleXCatchClause returns [EObject current=null] : ( ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) ) ) ;
     public final EObject ruleXCatchClause() throws RecognitionException {
         EObject current = null;
 
@@ -15101,16 +15121,16 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5293:28: ( ( ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5294:1: ( ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5304:28: ( ( ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5305:1: ( ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5294:1: ( ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5294:2: ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5305:1: ( ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5305:2: ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5294:2: ( ( 'catch' )=>otherlv_0= 'catch' )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5294:3: ( 'catch' )=>otherlv_0= 'catch'
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5305:2: ( ( 'catch' )=>otherlv_0= 'catch' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5305:3: ( 'catch' )=>otherlv_0= 'catch'
             {
-            otherlv_0=(Token)match(input,87,FOLLOW_87_in_ruleXCatchClause12442); if (state.failed) return current;
+            otherlv_0=(Token)match(input,87,FOLLOW_87_in_ruleXCatchClause12461); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getXCatchClauseAccess().getCatchKeyword_0());
@@ -15119,24 +15139,24 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,21,FOLLOW_21_in_ruleXCatchClause12455); if (state.failed) return current;
+            otherlv_1=(Token)match(input,21,FOLLOW_21_in_ruleXCatchClause12474); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXCatchClauseAccess().getLeftParenthesisKeyword_1());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5303:1: ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5304:1: (lv_declaredParam_2_0= ruleFullJvmFormalParameter )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5314:1: ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5315:1: (lv_declaredParam_2_0= ruleFullJvmFormalParameter )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5304:1: (lv_declaredParam_2_0= ruleFullJvmFormalParameter )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5305:3: lv_declaredParam_2_0= ruleFullJvmFormalParameter
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5315:1: (lv_declaredParam_2_0= ruleFullJvmFormalParameter )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5316:3: lv_declaredParam_2_0= ruleFullJvmFormalParameter
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXCatchClauseAccess().getDeclaredParamFullJvmFormalParameterParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleFullJvmFormalParameter_in_ruleXCatchClause12476);
+            pushFollow(FOLLOW_ruleFullJvmFormalParameter_in_ruleXCatchClause12495);
             lv_declaredParam_2_0=ruleFullJvmFormalParameter();
 
             state._fsp--;
@@ -15160,24 +15180,24 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,23,FOLLOW_23_in_ruleXCatchClause12488); if (state.failed) return current;
+            otherlv_3=(Token)match(input,23,FOLLOW_23_in_ruleXCatchClause12507); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getXCatchClauseAccess().getRightParenthesisKeyword_3());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5325:1: ( (lv_expression_4_0= ruleXExpression ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5326:1: (lv_expression_4_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5336:1: ( (lv_expression_4_0= ruleXExpression ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5337:1: (lv_expression_4_0= ruleXExpression )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5326:1: (lv_expression_4_0= ruleXExpression )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5327:3: lv_expression_4_0= ruleXExpression
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5337:1: (lv_expression_4_0= ruleXExpression )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5338:3: lv_expression_4_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXCatchClauseAccess().getExpressionXExpressionParserRuleCall_4_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleXExpression_in_ruleXCatchClause12509);
+            pushFollow(FOLLOW_ruleXExpression_in_ruleXCatchClause12528);
             lv_expression_4_0=ruleXExpression();
 
             state._fsp--;
@@ -15224,7 +15244,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5351:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5362:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -15232,13 +15252,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5352:2: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5353:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5363:2: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5364:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQualifiedNameRule()); 
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName12546);
+            pushFollow(FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName12565);
             iv_ruleQualifiedName=ruleQualifiedName();
 
             state._fsp--;
@@ -15246,7 +15266,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleQualifiedName.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedName12557); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedName12576); if (state.failed) return current;
 
             }
 
@@ -15264,7 +15284,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedName"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5360:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )* ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5371:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -15277,18 +15297,18 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5363:28: ( (this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )* ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5364:1: (this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )* )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5374:28: ( (this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )* ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5375:1: (this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )* )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5364:1: (this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )* )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5365:5: this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )*
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5375:1: (this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )* )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5376:5: this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )*
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getQualifiedNameAccess().getValidIDParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_ruleValidID_in_ruleQualifiedName12604);
+            pushFollow(FOLLOW_ruleValidID_in_ruleQualifiedName12623);
             this_ValidID_0=ruleValidID();
 
             state._fsp--;
@@ -15303,7 +15323,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5375:1: ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )*
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5386:1: ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )*
             loop97:
             do {
                 int alt97=2;
@@ -15328,12 +15348,12 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                 switch (alt97) {
             	case 1 :
-            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5375:2: ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID
+            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5386:2: ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID
             	    {
-            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5375:2: ( ( '.' )=>kw= '.' )
-            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5375:3: ( '.' )=>kw= '.'
+            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5386:2: ( ( '.' )=>kw= '.' )
+            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5386:3: ( '.' )=>kw= '.'
             	    {
-            	    kw=(Token)match(input,55,FOLLOW_55_in_ruleQualifiedName12632); if (state.failed) return current;
+            	    kw=(Token)match(input,55,FOLLOW_55_in_ruleQualifiedName12651); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              current.merge(kw);
@@ -15348,7 +15368,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             	              newCompositeNode(grammarAccess.getQualifiedNameAccess().getValidIDParserRuleCall_1_1()); 
             	          
             	    }
-            	    pushFollow(FOLLOW_ruleValidID_in_ruleQualifiedName12655);
+            	    pushFollow(FOLLOW_ruleValidID_in_ruleQualifiedName12674);
             	    this_ValidID_2=ruleValidID();
 
             	    state._fsp--;
@@ -15395,7 +15415,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNumber"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5402:1: entryRuleNumber returns [String current=null] : iv_ruleNumber= ruleNumber EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5413:1: entryRuleNumber returns [String current=null] : iv_ruleNumber= ruleNumber EOF ;
     public final String entryRuleNumber() throws RecognitionException {
         String current = null;
 
@@ -15406,13 +15426,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
         		HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens();
         	
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5406:2: (iv_ruleNumber= ruleNumber EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5407:2: iv_ruleNumber= ruleNumber EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5417:2: (iv_ruleNumber= ruleNumber EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5418:2: iv_ruleNumber= ruleNumber EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNumberRule()); 
             }
-            pushFollow(FOLLOW_ruleNumber_in_entryRuleNumber12709);
+            pushFollow(FOLLOW_ruleNumber_in_entryRuleNumber12728);
             iv_ruleNumber=ruleNumber();
 
             state._fsp--;
@@ -15420,7 +15440,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleNumber.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNumber12720); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNumber12739); if (state.failed) return current;
 
             }
 
@@ -15441,7 +15461,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumber"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5417:1: ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_HEX_0= RULE_HEX | ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? ) ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5428:1: ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_HEX_0= RULE_HEX | ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? ) ) ;
     public final AntlrDatatypeRuleToken ruleNumber() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -15456,10 +15476,10 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
         		HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens();
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5421:28: ( (this_HEX_0= RULE_HEX | ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5422:1: (this_HEX_0= RULE_HEX | ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5432:28: ( (this_HEX_0= RULE_HEX | ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5433:1: (this_HEX_0= RULE_HEX | ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5422:1: (this_HEX_0= RULE_HEX | ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5433:1: (this_HEX_0= RULE_HEX | ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? ) )
             int alt101=2;
             int LA101_0 = input.LA(1);
 
@@ -15478,9 +15498,9 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             }
             switch (alt101) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5422:6: this_HEX_0= RULE_HEX
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5433:6: this_HEX_0= RULE_HEX
                     {
-                    this_HEX_0=(Token)match(input,RULE_HEX,FOLLOW_RULE_HEX_in_ruleNumber12764); if (state.failed) return current;
+                    this_HEX_0=(Token)match(input,RULE_HEX,FOLLOW_RULE_HEX_in_ruleNumber12783); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       		current.merge(this_HEX_0);
@@ -15495,12 +15515,12 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5430:6: ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5441:6: ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5430:6: ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5430:7: (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )?
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5441:6: ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5441:7: (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )?
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5430:7: (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5441:7: (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL )
                     int alt98=2;
                     int LA98_0 = input.LA(1);
 
@@ -15519,9 +15539,9 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt98) {
                         case 1 :
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5430:12: this_INT_1= RULE_INT
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5441:12: this_INT_1= RULE_INT
                             {
-                            this_INT_1=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleNumber12792); if (state.failed) return current;
+                            this_INT_1=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleNumber12811); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               		current.merge(this_INT_1);
@@ -15536,9 +15556,9 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5438:10: this_DECIMAL_2= RULE_DECIMAL
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5449:10: this_DECIMAL_2= RULE_DECIMAL
                             {
-                            this_DECIMAL_2=(Token)match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_ruleNumber12818); if (state.failed) return current;
+                            this_DECIMAL_2=(Token)match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_ruleNumber12837); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               		current.merge(this_DECIMAL_2);
@@ -15555,7 +15575,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5445:2: (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )?
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5456:2: (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )?
                     int alt100=2;
                     int LA100_0 = input.LA(1);
 
@@ -15568,16 +15588,16 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt100) {
                         case 1 :
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5446:2: kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5457:2: kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL )
                             {
-                            kw=(Token)match(input,55,FOLLOW_55_in_ruleNumber12838); if (state.failed) return current;
+                            kw=(Token)match(input,55,FOLLOW_55_in_ruleNumber12857); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       current.merge(kw);
                                       newLeafNode(kw, grammarAccess.getNumberAccess().getFullStopKeyword_1_1_0()); 
                                   
                             }
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5451:1: (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5462:1: (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL )
                             int alt99=2;
                             int LA99_0 = input.LA(1);
 
@@ -15596,9 +15616,9 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                             }
                             switch (alt99) {
                                 case 1 :
-                                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5451:6: this_INT_4= RULE_INT
+                                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5462:6: this_INT_4= RULE_INT
                                     {
-                                    this_INT_4=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleNumber12854); if (state.failed) return current;
+                                    this_INT_4=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleNumber12873); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
                                       		current.merge(this_INT_4);
@@ -15613,9 +15633,9 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                                     }
                                     break;
                                 case 2 :
-                                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5459:10: this_DECIMAL_5= RULE_DECIMAL
+                                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5470:10: this_DECIMAL_5= RULE_DECIMAL
                                     {
-                                    this_DECIMAL_5=(Token)match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_ruleNumber12880); if (state.failed) return current;
+                                    this_DECIMAL_5=(Token)match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_ruleNumber12899); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
                                       		current.merge(this_DECIMAL_5);
@@ -15670,7 +15690,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJvmTypeReference"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5479:1: entryRuleJvmTypeReference returns [EObject current=null] : iv_ruleJvmTypeReference= ruleJvmTypeReference EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5490:1: entryRuleJvmTypeReference returns [EObject current=null] : iv_ruleJvmTypeReference= ruleJvmTypeReference EOF ;
     public final EObject entryRuleJvmTypeReference() throws RecognitionException {
         EObject current = null;
 
@@ -15678,13 +15698,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5480:2: (iv_ruleJvmTypeReference= ruleJvmTypeReference EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5481:2: iv_ruleJvmTypeReference= ruleJvmTypeReference EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5491:2: (iv_ruleJvmTypeReference= ruleJvmTypeReference EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5492:2: iv_ruleJvmTypeReference= ruleJvmTypeReference EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getJvmTypeReferenceRule()); 
             }
-            pushFollow(FOLLOW_ruleJvmTypeReference_in_entryRuleJvmTypeReference12935);
+            pushFollow(FOLLOW_ruleJvmTypeReference_in_entryRuleJvmTypeReference12954);
             iv_ruleJvmTypeReference=ruleJvmTypeReference();
 
             state._fsp--;
@@ -15692,7 +15712,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleJvmTypeReference; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleJvmTypeReference12945); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleJvmTypeReference12964); if (state.failed) return current;
 
             }
 
@@ -15710,7 +15730,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJvmTypeReference"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5488:1: ruleJvmTypeReference returns [EObject current=null] : ( (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* ) | this_XFunctionTypeRef_3= ruleXFunctionTypeRef ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5499:1: ruleJvmTypeReference returns [EObject current=null] : ( (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* ) | this_XFunctionTypeRef_3= ruleXFunctionTypeRef ) ;
     public final EObject ruleJvmTypeReference() throws RecognitionException {
         EObject current = null;
 
@@ -15722,10 +15742,10 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5491:28: ( ( (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* ) | this_XFunctionTypeRef_3= ruleXFunctionTypeRef ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5492:1: ( (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* ) | this_XFunctionTypeRef_3= ruleXFunctionTypeRef )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5502:28: ( ( (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* ) | this_XFunctionTypeRef_3= ruleXFunctionTypeRef ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5503:1: ( (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* ) | this_XFunctionTypeRef_3= ruleXFunctionTypeRef )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5492:1: ( (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* ) | this_XFunctionTypeRef_3= ruleXFunctionTypeRef )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5503:1: ( (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* ) | this_XFunctionTypeRef_3= ruleXFunctionTypeRef )
             int alt103=2;
             int LA103_0 = input.LA(1);
 
@@ -15744,17 +15764,17 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             }
             switch (alt103) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5492:2: (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5503:2: (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5492:2: (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5493:5: this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )*
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5503:2: (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5504:5: this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )*
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getJvmTypeReferenceAccess().getJvmParameterizedTypeReferenceParserRuleCall_0_0()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleJvmParameterizedTypeReference_in_ruleJvmTypeReference12993);
+                    pushFollow(FOLLOW_ruleJvmParameterizedTypeReference_in_ruleJvmTypeReference13012);
                     this_JvmParameterizedTypeReference_0=ruleJvmParameterizedTypeReference();
 
                     state._fsp--;
@@ -15765,7 +15785,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                               afterParserOrEnumRuleCall();
                           
                     }
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5501:1: ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )*
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5512:1: ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )*
                     loop102:
                     do {
                         int alt102=2;
@@ -15790,13 +15810,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                         switch (alt102) {
                     	case 1 :
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5501:2: ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5512:2: ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets )
                     	    {
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5502:24: ( () ruleArrayBrackets )
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5502:25: () ruleArrayBrackets
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5513:24: ( () ruleArrayBrackets )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5513:25: () ruleArrayBrackets
                     	    {
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5502:25: ()
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5503:5: 
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5513:25: ()
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5514:5: 
                     	    {
                     	    if ( state.backtracking==0 ) {
 
@@ -15813,7 +15833,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     	              newCompositeNode(grammarAccess.getJvmTypeReferenceAccess().getArrayBracketsParserRuleCall_0_1_0_1()); 
                     	          
                     	    }
-                    	    pushFollow(FOLLOW_ruleArrayBrackets_in_ruleJvmTypeReference13029);
+                    	    pushFollow(FOLLOW_ruleArrayBrackets_in_ruleJvmTypeReference13048);
                     	    ruleArrayBrackets();
 
                     	    state._fsp--;
@@ -15842,14 +15862,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5518:5: this_XFunctionTypeRef_3= ruleXFunctionTypeRef
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5529:5: this_XFunctionTypeRef_3= ruleXFunctionTypeRef
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getJvmTypeReferenceAccess().getXFunctionTypeRefParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleXFunctionTypeRef_in_ruleJvmTypeReference13060);
+                    pushFollow(FOLLOW_ruleXFunctionTypeRef_in_ruleJvmTypeReference13079);
                     this_XFunctionTypeRef_3=ruleXFunctionTypeRef();
 
                     state._fsp--;
@@ -15886,7 +15906,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleArrayBrackets"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5534:1: entryRuleArrayBrackets returns [String current=null] : iv_ruleArrayBrackets= ruleArrayBrackets EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5545:1: entryRuleArrayBrackets returns [String current=null] : iv_ruleArrayBrackets= ruleArrayBrackets EOF ;
     public final String entryRuleArrayBrackets() throws RecognitionException {
         String current = null;
 
@@ -15894,13 +15914,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5535:2: (iv_ruleArrayBrackets= ruleArrayBrackets EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5536:2: iv_ruleArrayBrackets= ruleArrayBrackets EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5546:2: (iv_ruleArrayBrackets= ruleArrayBrackets EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5547:2: iv_ruleArrayBrackets= ruleArrayBrackets EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getArrayBracketsRule()); 
             }
-            pushFollow(FOLLOW_ruleArrayBrackets_in_entryRuleArrayBrackets13096);
+            pushFollow(FOLLOW_ruleArrayBrackets_in_entryRuleArrayBrackets13115);
             iv_ruleArrayBrackets=ruleArrayBrackets();
 
             state._fsp--;
@@ -15908,7 +15928,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleArrayBrackets.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleArrayBrackets13107); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleArrayBrackets13126); if (state.failed) return current;
 
             }
 
@@ -15926,7 +15946,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleArrayBrackets"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5543:1: ruleArrayBrackets returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '[' kw= ']' ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5554:1: ruleArrayBrackets returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '[' kw= ']' ) ;
     public final AntlrDatatypeRuleToken ruleArrayBrackets() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -15935,20 +15955,20 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5546:28: ( (kw= '[' kw= ']' ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5547:1: (kw= '[' kw= ']' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5557:28: ( (kw= '[' kw= ']' ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5558:1: (kw= '[' kw= ']' )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5547:1: (kw= '[' kw= ']' )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5548:2: kw= '[' kw= ']'
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5558:1: (kw= '[' kw= ']' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5559:2: kw= '[' kw= ']'
             {
-            kw=(Token)match(input,59,FOLLOW_59_in_ruleArrayBrackets13145); if (state.failed) return current;
+            kw=(Token)match(input,59,FOLLOW_59_in_ruleArrayBrackets13164); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
                       newLeafNode(kw, grammarAccess.getArrayBracketsAccess().getLeftSquareBracketKeyword_0()); 
                   
             }
-            kw=(Token)match(input,60,FOLLOW_60_in_ruleArrayBrackets13158); if (state.failed) return current;
+            kw=(Token)match(input,60,FOLLOW_60_in_ruleArrayBrackets13177); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
@@ -15978,7 +15998,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXFunctionTypeRef"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5567:1: entryRuleXFunctionTypeRef returns [EObject current=null] : iv_ruleXFunctionTypeRef= ruleXFunctionTypeRef EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5578:1: entryRuleXFunctionTypeRef returns [EObject current=null] : iv_ruleXFunctionTypeRef= ruleXFunctionTypeRef EOF ;
     public final EObject entryRuleXFunctionTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -15986,13 +16006,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5568:2: (iv_ruleXFunctionTypeRef= ruleXFunctionTypeRef EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5569:2: iv_ruleXFunctionTypeRef= ruleXFunctionTypeRef EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5579:2: (iv_ruleXFunctionTypeRef= ruleXFunctionTypeRef EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5580:2: iv_ruleXFunctionTypeRef= ruleXFunctionTypeRef EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXFunctionTypeRefRule()); 
             }
-            pushFollow(FOLLOW_ruleXFunctionTypeRef_in_entryRuleXFunctionTypeRef13198);
+            pushFollow(FOLLOW_ruleXFunctionTypeRef_in_entryRuleXFunctionTypeRef13217);
             iv_ruleXFunctionTypeRef=ruleXFunctionTypeRef();
 
             state._fsp--;
@@ -16000,7 +16020,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXFunctionTypeRef; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXFunctionTypeRef13208); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXFunctionTypeRef13227); if (state.failed) return current;
 
             }
 
@@ -16018,7 +16038,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXFunctionTypeRef"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5576:1: ruleXFunctionTypeRef returns [EObject current=null] : ( (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) ) ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5587:1: ruleXFunctionTypeRef returns [EObject current=null] : ( (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) ) ) ;
     public final EObject ruleXFunctionTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -16036,13 +16056,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5579:28: ( ( (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5580:1: ( (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5590:28: ( ( (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5591:1: ( (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5580:1: ( (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5580:2: (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5591:1: ( (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5591:2: (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5580:2: (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5591:2: (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )?
             int alt106=2;
             int LA106_0 = input.LA(1);
 
@@ -16051,15 +16071,15 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             }
             switch (alt106) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5580:4: otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5591:4: otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')'
                     {
-                    otherlv_0=(Token)match(input,21,FOLLOW_21_in_ruleXFunctionTypeRef13246); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,21,FOLLOW_21_in_ruleXFunctionTypeRef13265); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_0, grammarAccess.getXFunctionTypeRefAccess().getLeftParenthesisKeyword_0_0());
                           
                     }
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5584:1: ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )?
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5595:1: ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )?
                     int alt105=2;
                     int LA105_0 = input.LA(1);
 
@@ -16068,20 +16088,20 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt105) {
                         case 1 :
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5584:2: ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )*
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5595:2: ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )*
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5584:2: ( (lv_paramTypes_1_0= ruleJvmTypeReference ) )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5585:1: (lv_paramTypes_1_0= ruleJvmTypeReference )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5595:2: ( (lv_paramTypes_1_0= ruleJvmTypeReference ) )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5596:1: (lv_paramTypes_1_0= ruleJvmTypeReference )
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5585:1: (lv_paramTypes_1_0= ruleJvmTypeReference )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5586:3: lv_paramTypes_1_0= ruleJvmTypeReference
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5596:1: (lv_paramTypes_1_0= ruleJvmTypeReference )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5597:3: lv_paramTypes_1_0= ruleJvmTypeReference
                             {
                             if ( state.backtracking==0 ) {
                                
                               	        newCompositeNode(grammarAccess.getXFunctionTypeRefAccess().getParamTypesJvmTypeReferenceParserRuleCall_0_1_0_0()); 
                               	    
                             }
-                            pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleXFunctionTypeRef13268);
+                            pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleXFunctionTypeRef13287);
                             lv_paramTypes_1_0=ruleJvmTypeReference();
 
                             state._fsp--;
@@ -16105,7 +16125,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5602:2: (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )*
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5613:2: (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )*
                             loop104:
                             do {
                                 int alt104=2;
@@ -16118,26 +16138,26 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                                 switch (alt104) {
                             	case 1 :
-                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5602:4: otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) )
+                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5613:4: otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) )
                             	    {
-                            	    otherlv_2=(Token)match(input,22,FOLLOW_22_in_ruleXFunctionTypeRef13281); if (state.failed) return current;
+                            	    otherlv_2=(Token)match(input,22,FOLLOW_22_in_ruleXFunctionTypeRef13300); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
 
                             	          	newLeafNode(otherlv_2, grammarAccess.getXFunctionTypeRefAccess().getCommaKeyword_0_1_1_0());
                             	          
                             	    }
-                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5606:1: ( (lv_paramTypes_3_0= ruleJvmTypeReference ) )
-                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5607:1: (lv_paramTypes_3_0= ruleJvmTypeReference )
+                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5617:1: ( (lv_paramTypes_3_0= ruleJvmTypeReference ) )
+                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5618:1: (lv_paramTypes_3_0= ruleJvmTypeReference )
                             	    {
-                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5607:1: (lv_paramTypes_3_0= ruleJvmTypeReference )
-                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5608:3: lv_paramTypes_3_0= ruleJvmTypeReference
+                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5618:1: (lv_paramTypes_3_0= ruleJvmTypeReference )
+                            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5619:3: lv_paramTypes_3_0= ruleJvmTypeReference
                             	    {
                             	    if ( state.backtracking==0 ) {
                             	       
                             	      	        newCompositeNode(grammarAccess.getXFunctionTypeRefAccess().getParamTypesJvmTypeReferenceParserRuleCall_0_1_1_1_0()); 
                             	      	    
                             	    }
-                            	    pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleXFunctionTypeRef13302);
+                            	    pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleXFunctionTypeRef13321);
                             	    lv_paramTypes_3_0=ruleJvmTypeReference();
 
                             	    state._fsp--;
@@ -16176,7 +16196,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_4=(Token)match(input,23,FOLLOW_23_in_ruleXFunctionTypeRef13318); if (state.failed) return current;
+                    otherlv_4=(Token)match(input,23,FOLLOW_23_in_ruleXFunctionTypeRef13337); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_4, grammarAccess.getXFunctionTypeRefAccess().getRightParenthesisKeyword_0_2());
@@ -16188,24 +16208,24 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,42,FOLLOW_42_in_ruleXFunctionTypeRef13332); if (state.failed) return current;
+            otherlv_5=(Token)match(input,42,FOLLOW_42_in_ruleXFunctionTypeRef13351); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_5, grammarAccess.getXFunctionTypeRefAccess().getEqualsSignGreaterThanSignKeyword_1());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5632:1: ( (lv_returnType_6_0= ruleJvmTypeReference ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5633:1: (lv_returnType_6_0= ruleJvmTypeReference )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5643:1: ( (lv_returnType_6_0= ruleJvmTypeReference ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5644:1: (lv_returnType_6_0= ruleJvmTypeReference )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5633:1: (lv_returnType_6_0= ruleJvmTypeReference )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5634:3: lv_returnType_6_0= ruleJvmTypeReference
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5644:1: (lv_returnType_6_0= ruleJvmTypeReference )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5645:3: lv_returnType_6_0= ruleJvmTypeReference
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXFunctionTypeRefAccess().getReturnTypeJvmTypeReferenceParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleXFunctionTypeRef13353);
+            pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleXFunctionTypeRef13372);
             lv_returnType_6_0=ruleJvmTypeReference();
 
             state._fsp--;
@@ -16252,7 +16272,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJvmParameterizedTypeReference"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5658:1: entryRuleJvmParameterizedTypeReference returns [EObject current=null] : iv_ruleJvmParameterizedTypeReference= ruleJvmParameterizedTypeReference EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5669:1: entryRuleJvmParameterizedTypeReference returns [EObject current=null] : iv_ruleJvmParameterizedTypeReference= ruleJvmParameterizedTypeReference EOF ;
     public final EObject entryRuleJvmParameterizedTypeReference() throws RecognitionException {
         EObject current = null;
 
@@ -16260,13 +16280,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5659:2: (iv_ruleJvmParameterizedTypeReference= ruleJvmParameterizedTypeReference EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5660:2: iv_ruleJvmParameterizedTypeReference= ruleJvmParameterizedTypeReference EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5670:2: (iv_ruleJvmParameterizedTypeReference= ruleJvmParameterizedTypeReference EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5671:2: iv_ruleJvmParameterizedTypeReference= ruleJvmParameterizedTypeReference EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getJvmParameterizedTypeReferenceRule()); 
             }
-            pushFollow(FOLLOW_ruleJvmParameterizedTypeReference_in_entryRuleJvmParameterizedTypeReference13389);
+            pushFollow(FOLLOW_ruleJvmParameterizedTypeReference_in_entryRuleJvmParameterizedTypeReference13408);
             iv_ruleJvmParameterizedTypeReference=ruleJvmParameterizedTypeReference();
 
             state._fsp--;
@@ -16274,7 +16294,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleJvmParameterizedTypeReference; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleJvmParameterizedTypeReference13399); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleJvmParameterizedTypeReference13418); if (state.failed) return current;
 
             }
 
@@ -16292,32 +16312,40 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJvmParameterizedTypeReference"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5667:1: ruleJvmParameterizedTypeReference returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5678:1: ruleJvmParameterizedTypeReference returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )? ) ;
     public final EObject ruleJvmParameterizedTypeReference() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
         Token otherlv_3=null;
         Token otherlv_5=null;
+        Token otherlv_7=null;
+        Token otherlv_9=null;
+        Token otherlv_11=null;
+        Token otherlv_13=null;
         EObject lv_arguments_2_0 = null;
 
         EObject lv_arguments_4_0 = null;
+
+        EObject lv_arguments_10_0 = null;
+
+        EObject lv_arguments_12_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5670:28: ( ( ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5671:1: ( ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5681:28: ( ( ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )? ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5682:1: ( ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )? )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5671:1: ( ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5671:2: ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5682:1: ( ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )? )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5682:2: ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )?
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5671:2: ( ( ruleQualifiedName ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5672:1: ( ruleQualifiedName )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5682:2: ( ( ruleQualifiedName ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5683:1: ( ruleQualifiedName )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5672:1: ( ruleQualifiedName )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5673:3: ruleQualifiedName
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5683:1: ( ruleQualifiedName )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5684:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -16331,7 +16359,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getJvmParameterizedTypeReferenceAccess().getTypeJvmTypeCrossReference_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleJvmParameterizedTypeReference13447);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleJvmParameterizedTypeReference13466);
             ruleQualifiedName();
 
             state._fsp--;
@@ -16347,17 +16375,17 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5686:2: ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )?
-            int alt108=2;
-            alt108 = dfa108.predict(input);
-            switch (alt108) {
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5697:2: ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )?
+            int alt111=2;
+            alt111 = dfa111.predict(input);
+            switch (alt111) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5686:3: ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5697:3: ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )*
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5686:3: ( ( '<' )=>otherlv_1= '<' )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5686:4: ( '<' )=>otherlv_1= '<'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5697:3: ( ( '<' )=>otherlv_1= '<' )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5697:4: ( '<' )=>otherlv_1= '<'
                     {
-                    otherlv_1=(Token)match(input,29,FOLLOW_29_in_ruleJvmParameterizedTypeReference13468); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,29,FOLLOW_29_in_ruleJvmParameterizedTypeReference13487); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getJvmParameterizedTypeReferenceAccess().getLessThanSignKeyword_1_0());
@@ -16366,18 +16394,18 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5691:2: ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5692:1: (lv_arguments_2_0= ruleJvmArgumentTypeReference )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5702:2: ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5703:1: (lv_arguments_2_0= ruleJvmArgumentTypeReference )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5692:1: (lv_arguments_2_0= ruleJvmArgumentTypeReference )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5693:3: lv_arguments_2_0= ruleJvmArgumentTypeReference
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5703:1: (lv_arguments_2_0= ruleJvmArgumentTypeReference )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5704:3: lv_arguments_2_0= ruleJvmArgumentTypeReference
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getJvmParameterizedTypeReferenceAccess().getArgumentsJvmArgumentTypeReferenceParserRuleCall_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleJvmArgumentTypeReference_in_ruleJvmParameterizedTypeReference13490);
+                    pushFollow(FOLLOW_ruleJvmArgumentTypeReference_in_ruleJvmParameterizedTypeReference13509);
                     lv_arguments_2_0=ruleJvmArgumentTypeReference();
 
                     state._fsp--;
@@ -16401,7 +16429,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5709:2: (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )*
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5720:2: (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )*
                     loop107:
                     do {
                         int alt107=2;
@@ -16414,26 +16442,26 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                         switch (alt107) {
                     	case 1 :
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5709:4: otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5720:4: otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) )
                     	    {
-                    	    otherlv_3=(Token)match(input,22,FOLLOW_22_in_ruleJvmParameterizedTypeReference13503); if (state.failed) return current;
+                    	    otherlv_3=(Token)match(input,22,FOLLOW_22_in_ruleJvmParameterizedTypeReference13522); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_3, grammarAccess.getJvmParameterizedTypeReferenceAccess().getCommaKeyword_1_2_0());
                     	          
                     	    }
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5713:1: ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) )
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5714:1: (lv_arguments_4_0= ruleJvmArgumentTypeReference )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5724:1: ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5725:1: (lv_arguments_4_0= ruleJvmArgumentTypeReference )
                     	    {
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5714:1: (lv_arguments_4_0= ruleJvmArgumentTypeReference )
-                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5715:3: lv_arguments_4_0= ruleJvmArgumentTypeReference
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5725:1: (lv_arguments_4_0= ruleJvmArgumentTypeReference )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5726:3: lv_arguments_4_0= ruleJvmArgumentTypeReference
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getJvmParameterizedTypeReferenceAccess().getArgumentsJvmArgumentTypeReferenceParserRuleCall_1_2_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_ruleJvmArgumentTypeReference_in_ruleJvmParameterizedTypeReference13524);
+                    	    pushFollow(FOLLOW_ruleJvmArgumentTypeReference_in_ruleJvmParameterizedTypeReference13543);
                     	    lv_arguments_4_0=ruleJvmArgumentTypeReference();
 
                     	    state._fsp--;
@@ -16466,12 +16494,244 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_5=(Token)match(input,30,FOLLOW_30_in_ruleJvmParameterizedTypeReference13538); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,30,FOLLOW_30_in_ruleJvmParameterizedTypeReference13557); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_5, grammarAccess.getJvmParameterizedTypeReferenceAccess().getGreaterThanSignKeyword_1_3());
                           
                     }
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5746:1: ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )*
+                    loop110:
+                    do {
+                        int alt110=2;
+                        int LA110_0 = input.LA(1);
+
+                        if ( (LA110_0==55) ) {
+                            int LA110_2 = input.LA(2);
+
+                            if ( (LA110_2==RULE_ID) ) {
+                                int LA110_3 = input.LA(3);
+
+                                if ( (synpred45_InternalEntities()) ) {
+                                    alt110=1;
+                                }
+
+
+                            }
+
+
+                        }
+
+
+                        switch (alt110) {
+                    	case 1 :
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5746:2: ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )?
+                    	    {
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5746:2: ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5746:3: ( ( () '.' ) )=> ( () otherlv_7= '.' )
+                    	    {
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5748:5: ( () otherlv_7= '.' )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5748:6: () otherlv_7= '.'
+                    	    {
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5748:6: ()
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5749:5: 
+                    	    {
+                    	    if ( state.backtracking==0 ) {
+
+                    	              current = forceCreateModelElementAndSet(
+                    	                  grammarAccess.getJvmParameterizedTypeReferenceAccess().getJvmInnerTypeReferenceOuterAction_1_4_0_0_0(),
+                    	                  current);
+                    	          
+                    	    }
+
+                    	    }
+
+                    	    otherlv_7=(Token)match(input,55,FOLLOW_55_in_ruleJvmParameterizedTypeReference13593); if (state.failed) return current;
+                    	    if ( state.backtracking==0 ) {
+
+                    	          	newLeafNode(otherlv_7, grammarAccess.getJvmParameterizedTypeReferenceAccess().getFullStopKeyword_1_4_0_0_1());
+                    	          
+                    	    }
+
+                    	    }
+
+
+                    	    }
+
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5758:3: ( ( ruleValidID ) )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5759:1: ( ruleValidID )
+                    	    {
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5759:1: ( ruleValidID )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5760:3: ruleValidID
+                    	    {
+                    	    if ( state.backtracking==0 ) {
+
+                    	      			if (current==null) {
+                    	      	            current = createModelElement(grammarAccess.getJvmParameterizedTypeReferenceRule());
+                    	      	        }
+                    	              
+                    	    }
+                    	    if ( state.backtracking==0 ) {
+                    	       
+                    	      	        newCompositeNode(grammarAccess.getJvmParameterizedTypeReferenceAccess().getTypeJvmTypeCrossReference_1_4_1_0()); 
+                    	      	    
+                    	    }
+                    	    pushFollow(FOLLOW_ruleValidID_in_ruleJvmParameterizedTypeReference13618);
+                    	    ruleValidID();
+
+                    	    state._fsp--;
+                    	    if (state.failed) return current;
+                    	    if ( state.backtracking==0 ) {
+                    	       
+                    	      	        afterParserOrEnumRuleCall();
+                    	      	    
+                    	    }
+
+                    	    }
+
+
+                    	    }
+
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5773:2: ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )?
+                    	    int alt109=2;
+                    	    alt109 = dfa109.predict(input);
+                    	    switch (alt109) {
+                    	        case 1 :
+                    	            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5773:3: ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>'
+                    	            {
+                    	            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5773:3: ( ( '<' )=>otherlv_9= '<' )
+                    	            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5773:4: ( '<' )=>otherlv_9= '<'
+                    	            {
+                    	            otherlv_9=(Token)match(input,29,FOLLOW_29_in_ruleJvmParameterizedTypeReference13639); if (state.failed) return current;
+                    	            if ( state.backtracking==0 ) {
+
+                    	                  	newLeafNode(otherlv_9, grammarAccess.getJvmParameterizedTypeReferenceAccess().getLessThanSignKeyword_1_4_2_0());
+                    	                  
+                    	            }
+
+                    	            }
+
+                    	            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5778:2: ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) )
+                    	            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5779:1: (lv_arguments_10_0= ruleJvmArgumentTypeReference )
+                    	            {
+                    	            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5779:1: (lv_arguments_10_0= ruleJvmArgumentTypeReference )
+                    	            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5780:3: lv_arguments_10_0= ruleJvmArgumentTypeReference
+                    	            {
+                    	            if ( state.backtracking==0 ) {
+                    	               
+                    	              	        newCompositeNode(grammarAccess.getJvmParameterizedTypeReferenceAccess().getArgumentsJvmArgumentTypeReferenceParserRuleCall_1_4_2_1_0()); 
+                    	              	    
+                    	            }
+                    	            pushFollow(FOLLOW_ruleJvmArgumentTypeReference_in_ruleJvmParameterizedTypeReference13661);
+                    	            lv_arguments_10_0=ruleJvmArgumentTypeReference();
+
+                    	            state._fsp--;
+                    	            if (state.failed) return current;
+                    	            if ( state.backtracking==0 ) {
+
+                    	              	        if (current==null) {
+                    	              	            current = createModelElementForParent(grammarAccess.getJvmParameterizedTypeReferenceRule());
+                    	              	        }
+                    	                     		add(
+                    	                     			current, 
+                    	                     			"arguments",
+                    	                      		lv_arguments_10_0, 
+                    	                      		"JvmArgumentTypeReference");
+                    	              	        afterParserOrEnumRuleCall();
+                    	              	    
+                    	            }
+
+                    	            }
+
+
+                    	            }
+
+                    	            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5796:2: (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )*
+                    	            loop108:
+                    	            do {
+                    	                int alt108=2;
+                    	                int LA108_0 = input.LA(1);
+
+                    	                if ( (LA108_0==22) ) {
+                    	                    alt108=1;
+                    	                }
+
+
+                    	                switch (alt108) {
+                    	            	case 1 :
+                    	            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5796:4: otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) )
+                    	            	    {
+                    	            	    otherlv_11=(Token)match(input,22,FOLLOW_22_in_ruleJvmParameterizedTypeReference13674); if (state.failed) return current;
+                    	            	    if ( state.backtracking==0 ) {
+
+                    	            	          	newLeafNode(otherlv_11, grammarAccess.getJvmParameterizedTypeReferenceAccess().getCommaKeyword_1_4_2_2_0());
+                    	            	          
+                    	            	    }
+                    	            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5800:1: ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) )
+                    	            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5801:1: (lv_arguments_12_0= ruleJvmArgumentTypeReference )
+                    	            	    {
+                    	            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5801:1: (lv_arguments_12_0= ruleJvmArgumentTypeReference )
+                    	            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5802:3: lv_arguments_12_0= ruleJvmArgumentTypeReference
+                    	            	    {
+                    	            	    if ( state.backtracking==0 ) {
+                    	            	       
+                    	            	      	        newCompositeNode(grammarAccess.getJvmParameterizedTypeReferenceAccess().getArgumentsJvmArgumentTypeReferenceParserRuleCall_1_4_2_2_1_0()); 
+                    	            	      	    
+                    	            	    }
+                    	            	    pushFollow(FOLLOW_ruleJvmArgumentTypeReference_in_ruleJvmParameterizedTypeReference13695);
+                    	            	    lv_arguments_12_0=ruleJvmArgumentTypeReference();
+
+                    	            	    state._fsp--;
+                    	            	    if (state.failed) return current;
+                    	            	    if ( state.backtracking==0 ) {
+
+                    	            	      	        if (current==null) {
+                    	            	      	            current = createModelElementForParent(grammarAccess.getJvmParameterizedTypeReferenceRule());
+                    	            	      	        }
+                    	            	             		add(
+                    	            	             			current, 
+                    	            	             			"arguments",
+                    	            	              		lv_arguments_12_0, 
+                    	            	              		"JvmArgumentTypeReference");
+                    	            	      	        afterParserOrEnumRuleCall();
+                    	            	      	    
+                    	            	    }
+
+                    	            	    }
+
+
+                    	            	    }
+
+
+                    	            	    }
+                    	            	    break;
+
+                    	            	default :
+                    	            	    break loop108;
+                    	                }
+                    	            } while (true);
+
+                    	            otherlv_13=(Token)match(input,30,FOLLOW_30_in_ruleJvmParameterizedTypeReference13709); if (state.failed) return current;
+                    	            if ( state.backtracking==0 ) {
+
+                    	                  	newLeafNode(otherlv_13, grammarAccess.getJvmParameterizedTypeReferenceAccess().getGreaterThanSignKeyword_1_4_2_3());
+                    	                  
+                    	            }
+
+                    	            }
+                    	            break;
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop110;
+                        }
+                    } while (true);
+
 
                     }
                     break;
@@ -16501,7 +16761,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJvmArgumentTypeReference"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5743:1: entryRuleJvmArgumentTypeReference returns [EObject current=null] : iv_ruleJvmArgumentTypeReference= ruleJvmArgumentTypeReference EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5830:1: entryRuleJvmArgumentTypeReference returns [EObject current=null] : iv_ruleJvmArgumentTypeReference= ruleJvmArgumentTypeReference EOF ;
     public final EObject entryRuleJvmArgumentTypeReference() throws RecognitionException {
         EObject current = null;
 
@@ -16509,13 +16769,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5744:2: (iv_ruleJvmArgumentTypeReference= ruleJvmArgumentTypeReference EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5745:2: iv_ruleJvmArgumentTypeReference= ruleJvmArgumentTypeReference EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5831:2: (iv_ruleJvmArgumentTypeReference= ruleJvmArgumentTypeReference EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5832:2: iv_ruleJvmArgumentTypeReference= ruleJvmArgumentTypeReference EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getJvmArgumentTypeReferenceRule()); 
             }
-            pushFollow(FOLLOW_ruleJvmArgumentTypeReference_in_entryRuleJvmArgumentTypeReference13576);
+            pushFollow(FOLLOW_ruleJvmArgumentTypeReference_in_entryRuleJvmArgumentTypeReference13751);
             iv_ruleJvmArgumentTypeReference=ruleJvmArgumentTypeReference();
 
             state._fsp--;
@@ -16523,7 +16783,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleJvmArgumentTypeReference; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleJvmArgumentTypeReference13586); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleJvmArgumentTypeReference13761); if (state.failed) return current;
 
             }
 
@@ -16541,7 +16801,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJvmArgumentTypeReference"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5752:1: ruleJvmArgumentTypeReference returns [EObject current=null] : (this_JvmTypeReference_0= ruleJvmTypeReference | this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5839:1: ruleJvmArgumentTypeReference returns [EObject current=null] : (this_JvmTypeReference_0= ruleJvmTypeReference | this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference ) ;
     public final EObject ruleJvmArgumentTypeReference() throws RecognitionException {
         EObject current = null;
 
@@ -16553,36 +16813,36 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5755:28: ( (this_JvmTypeReference_0= ruleJvmTypeReference | this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5756:1: (this_JvmTypeReference_0= ruleJvmTypeReference | this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5842:28: ( (this_JvmTypeReference_0= ruleJvmTypeReference | this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5843:1: (this_JvmTypeReference_0= ruleJvmTypeReference | this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5756:1: (this_JvmTypeReference_0= ruleJvmTypeReference | this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference )
-            int alt109=2;
-            int LA109_0 = input.LA(1);
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5843:1: (this_JvmTypeReference_0= ruleJvmTypeReference | this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference )
+            int alt112=2;
+            int LA112_0 = input.LA(1);
 
-            if ( (LA109_0==RULE_ID||LA109_0==21||LA109_0==42) ) {
-                alt109=1;
+            if ( (LA112_0==RULE_ID||LA112_0==21||LA112_0==42) ) {
+                alt112=1;
             }
-            else if ( (LA109_0==88) ) {
-                alt109=2;
+            else if ( (LA112_0==88) ) {
+                alt112=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 109, 0, input);
+                    new NoViableAltException("", 112, 0, input);
 
                 throw nvae;
             }
-            switch (alt109) {
+            switch (alt112) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5757:5: this_JvmTypeReference_0= ruleJvmTypeReference
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5844:5: this_JvmTypeReference_0= ruleJvmTypeReference
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getJvmArgumentTypeReferenceAccess().getJvmTypeReferenceParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleJvmArgumentTypeReference13633);
+                    pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleJvmArgumentTypeReference13808);
                     this_JvmTypeReference_0=ruleJvmTypeReference();
 
                     state._fsp--;
@@ -16597,14 +16857,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5767:5: this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5854:5: this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getJvmArgumentTypeReferenceAccess().getJvmWildcardTypeReferenceParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleJvmWildcardTypeReference_in_ruleJvmArgumentTypeReference13660);
+                    pushFollow(FOLLOW_ruleJvmWildcardTypeReference_in_ruleJvmArgumentTypeReference13835);
                     this_JvmWildcardTypeReference_1=ruleJvmWildcardTypeReference();
 
                     state._fsp--;
@@ -16641,7 +16901,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJvmWildcardTypeReference"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5783:1: entryRuleJvmWildcardTypeReference returns [EObject current=null] : iv_ruleJvmWildcardTypeReference= ruleJvmWildcardTypeReference EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5870:1: entryRuleJvmWildcardTypeReference returns [EObject current=null] : iv_ruleJvmWildcardTypeReference= ruleJvmWildcardTypeReference EOF ;
     public final EObject entryRuleJvmWildcardTypeReference() throws RecognitionException {
         EObject current = null;
 
@@ -16649,13 +16909,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5784:2: (iv_ruleJvmWildcardTypeReference= ruleJvmWildcardTypeReference EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5785:2: iv_ruleJvmWildcardTypeReference= ruleJvmWildcardTypeReference EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5871:2: (iv_ruleJvmWildcardTypeReference= ruleJvmWildcardTypeReference EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5872:2: iv_ruleJvmWildcardTypeReference= ruleJvmWildcardTypeReference EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getJvmWildcardTypeReferenceRule()); 
             }
-            pushFollow(FOLLOW_ruleJvmWildcardTypeReference_in_entryRuleJvmWildcardTypeReference13695);
+            pushFollow(FOLLOW_ruleJvmWildcardTypeReference_in_entryRuleJvmWildcardTypeReference13870);
             iv_ruleJvmWildcardTypeReference=ruleJvmWildcardTypeReference();
 
             state._fsp--;
@@ -16663,7 +16923,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleJvmWildcardTypeReference; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleJvmWildcardTypeReference13705); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleJvmWildcardTypeReference13880); if (state.failed) return current;
 
             }
 
@@ -16681,7 +16941,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJvmWildcardTypeReference"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5792:1: ruleJvmWildcardTypeReference returns [EObject current=null] : ( () otherlv_1= '?' ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) | ( (lv_constraints_3_0= ruleJvmLowerBound ) ) )? ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5879:1: ruleJvmWildcardTypeReference returns [EObject current=null] : ( () otherlv_1= '?' ( ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* ) | ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* ) )? ) ;
     public final EObject ruleJvmWildcardTypeReference() throws RecognitionException {
         EObject current = null;
 
@@ -16690,18 +16950,22 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
         EObject lv_constraints_3_0 = null;
 
+        EObject lv_constraints_4_0 = null;
+
+        EObject lv_constraints_5_0 = null;
+
 
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5795:28: ( ( () otherlv_1= '?' ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) | ( (lv_constraints_3_0= ruleJvmLowerBound ) ) )? ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5796:1: ( () otherlv_1= '?' ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) | ( (lv_constraints_3_0= ruleJvmLowerBound ) ) )? )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5882:28: ( ( () otherlv_1= '?' ( ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* ) | ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* ) )? ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5883:1: ( () otherlv_1= '?' ( ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* ) | ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* ) )? )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5796:1: ( () otherlv_1= '?' ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) | ( (lv_constraints_3_0= ruleJvmLowerBound ) ) )? )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5796:2: () otherlv_1= '?' ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) | ( (lv_constraints_3_0= ruleJvmLowerBound ) ) )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5883:1: ( () otherlv_1= '?' ( ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* ) | ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* ) )? )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5883:2: () otherlv_1= '?' ( ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* ) | ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* ) )?
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5796:2: ()
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5797:5: 
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5883:2: ()
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5884:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -16713,38 +16977,41 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,88,FOLLOW_88_in_ruleJvmWildcardTypeReference13751); if (state.failed) return current;
+            otherlv_1=(Token)match(input,88,FOLLOW_88_in_ruleJvmWildcardTypeReference13926); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getJvmWildcardTypeReferenceAccess().getQuestionMarkKeyword_1());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5806:1: ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) | ( (lv_constraints_3_0= ruleJvmLowerBound ) ) )?
-            int alt110=3;
-            int LA110_0 = input.LA(1);
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5893:1: ( ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* ) | ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* ) )?
+            int alt115=3;
+            int LA115_0 = input.LA(1);
 
-            if ( (LA110_0==14) ) {
-                alt110=1;
+            if ( (LA115_0==14) ) {
+                alt115=1;
             }
-            else if ( (LA110_0==76) ) {
-                alt110=2;
+            else if ( (LA115_0==76) ) {
+                alt115=2;
             }
-            switch (alt110) {
+            switch (alt115) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5806:2: ( (lv_constraints_2_0= ruleJvmUpperBound ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5893:2: ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5806:2: ( (lv_constraints_2_0= ruleJvmUpperBound ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5807:1: (lv_constraints_2_0= ruleJvmUpperBound )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5893:2: ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5893:3: ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )*
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5807:1: (lv_constraints_2_0= ruleJvmUpperBound )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5808:3: lv_constraints_2_0= ruleJvmUpperBound
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5893:3: ( (lv_constraints_2_0= ruleJvmUpperBound ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5894:1: (lv_constraints_2_0= ruleJvmUpperBound )
+                    {
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5894:1: (lv_constraints_2_0= ruleJvmUpperBound )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5895:3: lv_constraints_2_0= ruleJvmUpperBound
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	        newCompositeNode(grammarAccess.getJvmWildcardTypeReferenceAccess().getConstraintsJvmUpperBoundParserRuleCall_2_0_0()); 
+                      	        newCompositeNode(grammarAccess.getJvmWildcardTypeReferenceAccess().getConstraintsJvmUpperBoundParserRuleCall_2_0_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleJvmUpperBound_in_ruleJvmWildcardTypeReference13773);
+                    pushFollow(FOLLOW_ruleJvmUpperBound_in_ruleJvmWildcardTypeReference13949);
                     lv_constraints_2_0=ruleJvmUpperBound();
 
                     state._fsp--;
@@ -16768,25 +17035,84 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                     }
 
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5911:2: ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )*
+                    loop113:
+                    do {
+                        int alt113=2;
+                        int LA113_0 = input.LA(1);
+
+                        if ( (LA113_0==89) ) {
+                            alt113=1;
+                        }
+
+
+                        switch (alt113) {
+                    	case 1 :
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5912:1: (lv_constraints_3_0= ruleJvmUpperBoundAnded )
+                    	    {
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5912:1: (lv_constraints_3_0= ruleJvmUpperBoundAnded )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5913:3: lv_constraints_3_0= ruleJvmUpperBoundAnded
+                    	    {
+                    	    if ( state.backtracking==0 ) {
+                    	       
+                    	      	        newCompositeNode(grammarAccess.getJvmWildcardTypeReferenceAccess().getConstraintsJvmUpperBoundAndedParserRuleCall_2_0_1_0()); 
+                    	      	    
+                    	    }
+                    	    pushFollow(FOLLOW_ruleJvmUpperBoundAnded_in_ruleJvmWildcardTypeReference13970);
+                    	    lv_constraints_3_0=ruleJvmUpperBoundAnded();
+
+                    	    state._fsp--;
+                    	    if (state.failed) return current;
+                    	    if ( state.backtracking==0 ) {
+
+                    	      	        if (current==null) {
+                    	      	            current = createModelElementForParent(grammarAccess.getJvmWildcardTypeReferenceRule());
+                    	      	        }
+                    	             		add(
+                    	             			current, 
+                    	             			"constraints",
+                    	              		lv_constraints_3_0, 
+                    	              		"JvmUpperBoundAnded");
+                    	      	        afterParserOrEnumRuleCall();
+                    	      	    
+                    	    }
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop113;
+                        }
+                    } while (true);
+
+
+                    }
+
 
                     }
                     break;
                 case 2 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5825:6: ( (lv_constraints_3_0= ruleJvmLowerBound ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5930:6: ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5825:6: ( (lv_constraints_3_0= ruleJvmLowerBound ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5826:1: (lv_constraints_3_0= ruleJvmLowerBound )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5930:6: ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5930:7: ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )*
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5826:1: (lv_constraints_3_0= ruleJvmLowerBound )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5827:3: lv_constraints_3_0= ruleJvmLowerBound
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5930:7: ( (lv_constraints_4_0= ruleJvmLowerBound ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5931:1: (lv_constraints_4_0= ruleJvmLowerBound )
+                    {
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5931:1: (lv_constraints_4_0= ruleJvmLowerBound )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5932:3: lv_constraints_4_0= ruleJvmLowerBound
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	        newCompositeNode(grammarAccess.getJvmWildcardTypeReferenceAccess().getConstraintsJvmLowerBoundParserRuleCall_2_1_0()); 
+                      	        newCompositeNode(grammarAccess.getJvmWildcardTypeReferenceAccess().getConstraintsJvmLowerBoundParserRuleCall_2_1_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleJvmLowerBound_in_ruleJvmWildcardTypeReference13800);
-                    lv_constraints_3_0=ruleJvmLowerBound();
+                    pushFollow(FOLLOW_ruleJvmLowerBound_in_ruleJvmWildcardTypeReference14000);
+                    lv_constraints_4_0=ruleJvmLowerBound();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -16798,13 +17124,69 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                              		add(
                              			current, 
                              			"constraints",
-                              		lv_constraints_3_0, 
+                              		lv_constraints_4_0, 
                               		"JvmLowerBound");
                       	        afterParserOrEnumRuleCall();
                       	    
                     }
 
                     }
+
+
+                    }
+
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5948:2: ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )*
+                    loop114:
+                    do {
+                        int alt114=2;
+                        int LA114_0 = input.LA(1);
+
+                        if ( (LA114_0==89) ) {
+                            alt114=1;
+                        }
+
+
+                        switch (alt114) {
+                    	case 1 :
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5949:1: (lv_constraints_5_0= ruleJvmLowerBoundAnded )
+                    	    {
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5949:1: (lv_constraints_5_0= ruleJvmLowerBoundAnded )
+                    	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5950:3: lv_constraints_5_0= ruleJvmLowerBoundAnded
+                    	    {
+                    	    if ( state.backtracking==0 ) {
+                    	       
+                    	      	        newCompositeNode(grammarAccess.getJvmWildcardTypeReferenceAccess().getConstraintsJvmLowerBoundAndedParserRuleCall_2_1_1_0()); 
+                    	      	    
+                    	    }
+                    	    pushFollow(FOLLOW_ruleJvmLowerBoundAnded_in_ruleJvmWildcardTypeReference14021);
+                    	    lv_constraints_5_0=ruleJvmLowerBoundAnded();
+
+                    	    state._fsp--;
+                    	    if (state.failed) return current;
+                    	    if ( state.backtracking==0 ) {
+
+                    	      	        if (current==null) {
+                    	      	            current = createModelElementForParent(grammarAccess.getJvmWildcardTypeReferenceRule());
+                    	      	        }
+                    	             		add(
+                    	             			current, 
+                    	             			"constraints",
+                    	              		lv_constraints_5_0, 
+                    	              		"JvmLowerBoundAnded");
+                    	      	        afterParserOrEnumRuleCall();
+                    	      	    
+                    	    }
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop114;
+                        }
+                    } while (true);
 
 
                     }
@@ -16838,7 +17220,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJvmUpperBound"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5851:1: entryRuleJvmUpperBound returns [EObject current=null] : iv_ruleJvmUpperBound= ruleJvmUpperBound EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5974:1: entryRuleJvmUpperBound returns [EObject current=null] : iv_ruleJvmUpperBound= ruleJvmUpperBound EOF ;
     public final EObject entryRuleJvmUpperBound() throws RecognitionException {
         EObject current = null;
 
@@ -16846,13 +17228,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5852:2: (iv_ruleJvmUpperBound= ruleJvmUpperBound EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5853:2: iv_ruleJvmUpperBound= ruleJvmUpperBound EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5975:2: (iv_ruleJvmUpperBound= ruleJvmUpperBound EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5976:2: iv_ruleJvmUpperBound= ruleJvmUpperBound EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getJvmUpperBoundRule()); 
             }
-            pushFollow(FOLLOW_ruleJvmUpperBound_in_entryRuleJvmUpperBound13838);
+            pushFollow(FOLLOW_ruleJvmUpperBound_in_entryRuleJvmUpperBound14061);
             iv_ruleJvmUpperBound=ruleJvmUpperBound();
 
             state._fsp--;
@@ -16860,7 +17242,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleJvmUpperBound; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleJvmUpperBound13848); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleJvmUpperBound14071); if (state.failed) return current;
 
             }
 
@@ -16878,7 +17260,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJvmUpperBound"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5860:1: ruleJvmUpperBound returns [EObject current=null] : (otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5983:1: ruleJvmUpperBound returns [EObject current=null] : (otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) ;
     public final EObject ruleJvmUpperBound() throws RecognitionException {
         EObject current = null;
 
@@ -16889,30 +17271,30 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5863:28: ( (otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5864:1: (otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5986:28: ( (otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5987:1: (otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5864:1: (otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5864:3: otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5987:1: (otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5987:3: otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
             {
-            otherlv_0=(Token)match(input,14,FOLLOW_14_in_ruleJvmUpperBound13885); if (state.failed) return current;
+            otherlv_0=(Token)match(input,14,FOLLOW_14_in_ruleJvmUpperBound14108); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getJvmUpperBoundAccess().getExtendsKeyword_0());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5868:1: ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5869:1: (lv_typeReference_1_0= ruleJvmTypeReference )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5991:1: ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5992:1: (lv_typeReference_1_0= ruleJvmTypeReference )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5869:1: (lv_typeReference_1_0= ruleJvmTypeReference )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5870:3: lv_typeReference_1_0= ruleJvmTypeReference
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5992:1: (lv_typeReference_1_0= ruleJvmTypeReference )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5993:3: lv_typeReference_1_0= ruleJvmTypeReference
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getJvmUpperBoundAccess().getTypeReferenceJvmTypeReferenceParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleJvmUpperBound13906);
+            pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleJvmUpperBound14129);
             lv_typeReference_1_0=ruleJvmTypeReference();
 
             state._fsp--;
@@ -16959,7 +17341,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJvmUpperBoundAnded"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5894:1: entryRuleJvmUpperBoundAnded returns [EObject current=null] : iv_ruleJvmUpperBoundAnded= ruleJvmUpperBoundAnded EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6017:1: entryRuleJvmUpperBoundAnded returns [EObject current=null] : iv_ruleJvmUpperBoundAnded= ruleJvmUpperBoundAnded EOF ;
     public final EObject entryRuleJvmUpperBoundAnded() throws RecognitionException {
         EObject current = null;
 
@@ -16967,13 +17349,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5895:2: (iv_ruleJvmUpperBoundAnded= ruleJvmUpperBoundAnded EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5896:2: iv_ruleJvmUpperBoundAnded= ruleJvmUpperBoundAnded EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6018:2: (iv_ruleJvmUpperBoundAnded= ruleJvmUpperBoundAnded EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6019:2: iv_ruleJvmUpperBoundAnded= ruleJvmUpperBoundAnded EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getJvmUpperBoundAndedRule()); 
             }
-            pushFollow(FOLLOW_ruleJvmUpperBoundAnded_in_entryRuleJvmUpperBoundAnded13942);
+            pushFollow(FOLLOW_ruleJvmUpperBoundAnded_in_entryRuleJvmUpperBoundAnded14165);
             iv_ruleJvmUpperBoundAnded=ruleJvmUpperBoundAnded();
 
             state._fsp--;
@@ -16981,7 +17363,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleJvmUpperBoundAnded; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleJvmUpperBoundAnded13952); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleJvmUpperBoundAnded14175); if (state.failed) return current;
 
             }
 
@@ -16999,7 +17381,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJvmUpperBoundAnded"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5903:1: ruleJvmUpperBoundAnded returns [EObject current=null] : (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6026:1: ruleJvmUpperBoundAnded returns [EObject current=null] : (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) ;
     public final EObject ruleJvmUpperBoundAnded() throws RecognitionException {
         EObject current = null;
 
@@ -17010,30 +17392,30 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5906:28: ( (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5907:1: (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6029:28: ( (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6030:1: (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5907:1: (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5907:3: otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6030:1: (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6030:3: otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
             {
-            otherlv_0=(Token)match(input,89,FOLLOW_89_in_ruleJvmUpperBoundAnded13989); if (state.failed) return current;
+            otherlv_0=(Token)match(input,89,FOLLOW_89_in_ruleJvmUpperBoundAnded14212); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getJvmUpperBoundAndedAccess().getAmpersandKeyword_0());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5911:1: ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5912:1: (lv_typeReference_1_0= ruleJvmTypeReference )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6034:1: ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6035:1: (lv_typeReference_1_0= ruleJvmTypeReference )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5912:1: (lv_typeReference_1_0= ruleJvmTypeReference )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5913:3: lv_typeReference_1_0= ruleJvmTypeReference
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6035:1: (lv_typeReference_1_0= ruleJvmTypeReference )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6036:3: lv_typeReference_1_0= ruleJvmTypeReference
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getJvmUpperBoundAndedAccess().getTypeReferenceJvmTypeReferenceParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleJvmUpperBoundAnded14010);
+            pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleJvmUpperBoundAnded14233);
             lv_typeReference_1_0=ruleJvmTypeReference();
 
             state._fsp--;
@@ -17080,7 +17462,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJvmLowerBound"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5937:1: entryRuleJvmLowerBound returns [EObject current=null] : iv_ruleJvmLowerBound= ruleJvmLowerBound EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6060:1: entryRuleJvmLowerBound returns [EObject current=null] : iv_ruleJvmLowerBound= ruleJvmLowerBound EOF ;
     public final EObject entryRuleJvmLowerBound() throws RecognitionException {
         EObject current = null;
 
@@ -17088,13 +17470,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5938:2: (iv_ruleJvmLowerBound= ruleJvmLowerBound EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5939:2: iv_ruleJvmLowerBound= ruleJvmLowerBound EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6061:2: (iv_ruleJvmLowerBound= ruleJvmLowerBound EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6062:2: iv_ruleJvmLowerBound= ruleJvmLowerBound EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getJvmLowerBoundRule()); 
             }
-            pushFollow(FOLLOW_ruleJvmLowerBound_in_entryRuleJvmLowerBound14046);
+            pushFollow(FOLLOW_ruleJvmLowerBound_in_entryRuleJvmLowerBound14269);
             iv_ruleJvmLowerBound=ruleJvmLowerBound();
 
             state._fsp--;
@@ -17102,7 +17484,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleJvmLowerBound; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleJvmLowerBound14056); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleJvmLowerBound14279); if (state.failed) return current;
 
             }
 
@@ -17120,7 +17502,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJvmLowerBound"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5946:1: ruleJvmLowerBound returns [EObject current=null] : (otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6069:1: ruleJvmLowerBound returns [EObject current=null] : (otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) ;
     public final EObject ruleJvmLowerBound() throws RecognitionException {
         EObject current = null;
 
@@ -17131,30 +17513,30 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5949:28: ( (otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5950:1: (otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6072:28: ( (otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6073:1: (otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5950:1: (otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5950:3: otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6073:1: (otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6073:3: otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
             {
-            otherlv_0=(Token)match(input,76,FOLLOW_76_in_ruleJvmLowerBound14093); if (state.failed) return current;
+            otherlv_0=(Token)match(input,76,FOLLOW_76_in_ruleJvmLowerBound14316); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getJvmLowerBoundAccess().getSuperKeyword_0());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5954:1: ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5955:1: (lv_typeReference_1_0= ruleJvmTypeReference )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6077:1: ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6078:1: (lv_typeReference_1_0= ruleJvmTypeReference )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5955:1: (lv_typeReference_1_0= ruleJvmTypeReference )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5956:3: lv_typeReference_1_0= ruleJvmTypeReference
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6078:1: (lv_typeReference_1_0= ruleJvmTypeReference )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6079:3: lv_typeReference_1_0= ruleJvmTypeReference
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getJvmLowerBoundAccess().getTypeReferenceJvmTypeReferenceParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleJvmLowerBound14114);
+            pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleJvmLowerBound14337);
             lv_typeReference_1_0=ruleJvmTypeReference();
 
             state._fsp--;
@@ -17200,8 +17582,129 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleJvmLowerBound"
 
 
+    // $ANTLR start "entryRuleJvmLowerBoundAnded"
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6103:1: entryRuleJvmLowerBoundAnded returns [EObject current=null] : iv_ruleJvmLowerBoundAnded= ruleJvmLowerBoundAnded EOF ;
+    public final EObject entryRuleJvmLowerBoundAnded() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleJvmLowerBoundAnded = null;
+
+
+        try {
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6104:2: (iv_ruleJvmLowerBoundAnded= ruleJvmLowerBoundAnded EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6105:2: iv_ruleJvmLowerBoundAnded= ruleJvmLowerBoundAnded EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getJvmLowerBoundAndedRule()); 
+            }
+            pushFollow(FOLLOW_ruleJvmLowerBoundAnded_in_entryRuleJvmLowerBoundAnded14373);
+            iv_ruleJvmLowerBoundAnded=ruleJvmLowerBoundAnded();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_ruleJvmLowerBoundAnded; 
+            }
+            match(input,EOF,FOLLOW_EOF_in_entryRuleJvmLowerBoundAnded14383); if (state.failed) return current;
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleJvmLowerBoundAnded"
+
+
+    // $ANTLR start "ruleJvmLowerBoundAnded"
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6112:1: ruleJvmLowerBoundAnded returns [EObject current=null] : (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) ;
+    public final EObject ruleJvmLowerBoundAnded() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        EObject lv_typeReference_1_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6115:28: ( (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6116:1: (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
+            {
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6116:1: (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6116:3: otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
+            {
+            otherlv_0=(Token)match(input,89,FOLLOW_89_in_ruleJvmLowerBoundAnded14420); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+                  	newLeafNode(otherlv_0, grammarAccess.getJvmLowerBoundAndedAccess().getAmpersandKeyword_0());
+                  
+            }
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6120:1: ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6121:1: (lv_typeReference_1_0= ruleJvmTypeReference )
+            {
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6121:1: (lv_typeReference_1_0= ruleJvmTypeReference )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6122:3: lv_typeReference_1_0= ruleJvmTypeReference
+            {
+            if ( state.backtracking==0 ) {
+               
+              	        newCompositeNode(grammarAccess.getJvmLowerBoundAndedAccess().getTypeReferenceJvmTypeReferenceParserRuleCall_1_0()); 
+              	    
+            }
+            pushFollow(FOLLOW_ruleJvmTypeReference_in_ruleJvmLowerBoundAnded14441);
+            lv_typeReference_1_0=ruleJvmTypeReference();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              	        if (current==null) {
+              	            current = createModelElementForParent(grammarAccess.getJvmLowerBoundAndedRule());
+              	        }
+                     		set(
+                     			current, 
+                     			"typeReference",
+                      		lv_typeReference_1_0, 
+                      		"JvmTypeReference");
+              	        afterParserOrEnumRuleCall();
+              	    
+            }
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+               leaveRule(); 
+            }
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleJvmLowerBoundAnded"
+
+
     // $ANTLR start "entryRuleQualifiedNameWithWildcard"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5982:1: entryRuleQualifiedNameWithWildcard returns [String current=null] : iv_ruleQualifiedNameWithWildcard= ruleQualifiedNameWithWildcard EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6148:1: entryRuleQualifiedNameWithWildcard returns [String current=null] : iv_ruleQualifiedNameWithWildcard= ruleQualifiedNameWithWildcard EOF ;
     public final String entryRuleQualifiedNameWithWildcard() throws RecognitionException {
         String current = null;
 
@@ -17209,13 +17712,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5983:2: (iv_ruleQualifiedNameWithWildcard= ruleQualifiedNameWithWildcard EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5984:2: iv_ruleQualifiedNameWithWildcard= ruleQualifiedNameWithWildcard EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6149:2: (iv_ruleQualifiedNameWithWildcard= ruleQualifiedNameWithWildcard EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6150:2: iv_ruleQualifiedNameWithWildcard= ruleQualifiedNameWithWildcard EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQualifiedNameWithWildcardRule()); 
             }
-            pushFollow(FOLLOW_ruleQualifiedNameWithWildcard_in_entryRuleQualifiedNameWithWildcard14153);
+            pushFollow(FOLLOW_ruleQualifiedNameWithWildcard_in_entryRuleQualifiedNameWithWildcard14480);
             iv_ruleQualifiedNameWithWildcard=ruleQualifiedNameWithWildcard();
 
             state._fsp--;
@@ -17223,7 +17726,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleQualifiedNameWithWildcard.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedNameWithWildcard14164); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedNameWithWildcard14491); if (state.failed) return current;
 
             }
 
@@ -17241,7 +17744,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedNameWithWildcard"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5991:1: ruleQualifiedNameWithWildcard returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*' ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6157:1: ruleQualifiedNameWithWildcard returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*' ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedNameWithWildcard() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -17252,18 +17755,18 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5994:28: ( (this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*' ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5995:1: (this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6160:28: ( (this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*' ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6161:1: (this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*' )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5995:1: (this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*' )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5996:5: this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*'
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6161:1: (this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*' )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6162:5: this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*'
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getQualifiedNameWithWildcardAccess().getQualifiedNameParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleQualifiedNameWithWildcard14211);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleQualifiedNameWithWildcard14538);
             this_QualifiedName_0=ruleQualifiedName();
 
             state._fsp--;
@@ -17278,14 +17781,14 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            kw=(Token)match(input,55,FOLLOW_55_in_ruleQualifiedNameWithWildcard14229); if (state.failed) return current;
+            kw=(Token)match(input,55,FOLLOW_55_in_ruleQualifiedNameWithWildcard14556); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
                       newLeafNode(kw, grammarAccess.getQualifiedNameWithWildcardAccess().getFullStopKeyword_1()); 
                   
             }
-            kw=(Token)match(input,47,FOLLOW_47_in_ruleQualifiedNameWithWildcard14242); if (state.failed) return current;
+            kw=(Token)match(input,47,FOLLOW_47_in_ruleQualifiedNameWithWildcard14569); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
@@ -17315,7 +17818,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleValidID"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6026:1: entryRuleValidID returns [String current=null] : iv_ruleValidID= ruleValidID EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6192:1: entryRuleValidID returns [String current=null] : iv_ruleValidID= ruleValidID EOF ;
     public final String entryRuleValidID() throws RecognitionException {
         String current = null;
 
@@ -17323,13 +17826,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6027:2: (iv_ruleValidID= ruleValidID EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6028:2: iv_ruleValidID= ruleValidID EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6193:2: (iv_ruleValidID= ruleValidID EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6194:2: iv_ruleValidID= ruleValidID EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getValidIDRule()); 
             }
-            pushFollow(FOLLOW_ruleValidID_in_entryRuleValidID14283);
+            pushFollow(FOLLOW_ruleValidID_in_entryRuleValidID14610);
             iv_ruleValidID=ruleValidID();
 
             state._fsp--;
@@ -17337,7 +17840,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleValidID.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleValidID14294); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleValidID14621); if (state.failed) return current;
 
             }
 
@@ -17355,7 +17858,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleValidID"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6035:1: ruleValidID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6201:1: ruleValidID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
     public final AntlrDatatypeRuleToken ruleValidID() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -17364,10 +17867,10 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6038:28: (this_ID_0= RULE_ID )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6039:5: this_ID_0= RULE_ID
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6204:28: (this_ID_0= RULE_ID )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6205:5: this_ID_0= RULE_ID
             {
-            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleValidID14333); if (state.failed) return current;
+            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleValidID14660); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(this_ID_0);
@@ -17398,7 +17901,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXImportSection"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6054:1: entryRuleXImportSection returns [EObject current=null] : iv_ruleXImportSection= ruleXImportSection EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6220:1: entryRuleXImportSection returns [EObject current=null] : iv_ruleXImportSection= ruleXImportSection EOF ;
     public final EObject entryRuleXImportSection() throws RecognitionException {
         EObject current = null;
 
@@ -17406,13 +17909,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6055:2: (iv_ruleXImportSection= ruleXImportSection EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6056:2: iv_ruleXImportSection= ruleXImportSection EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6221:2: (iv_ruleXImportSection= ruleXImportSection EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6222:2: iv_ruleXImportSection= ruleXImportSection EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXImportSectionRule()); 
             }
-            pushFollow(FOLLOW_ruleXImportSection_in_entryRuleXImportSection14377);
+            pushFollow(FOLLOW_ruleXImportSection_in_entryRuleXImportSection14704);
             iv_ruleXImportSection=ruleXImportSection();
 
             state._fsp--;
@@ -17420,7 +17923,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXImportSection; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXImportSection14387); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXImportSection14714); if (state.failed) return current;
 
             }
 
@@ -17438,7 +17941,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXImportSection"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6063:1: ruleXImportSection returns [EObject current=null] : ( (lv_importDeclarations_0_0= ruleXImportDeclaration ) )+ ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6229:1: ruleXImportSection returns [EObject current=null] : ( (lv_importDeclarations_0_0= ruleXImportDeclaration ) )+ ;
     public final EObject ruleXImportSection() throws RecognitionException {
         EObject current = null;
 
@@ -17448,34 +17951,34 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6066:28: ( ( (lv_importDeclarations_0_0= ruleXImportDeclaration ) )+ )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6067:1: ( (lv_importDeclarations_0_0= ruleXImportDeclaration ) )+
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6232:28: ( ( (lv_importDeclarations_0_0= ruleXImportDeclaration ) )+ )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6233:1: ( (lv_importDeclarations_0_0= ruleXImportDeclaration ) )+
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6067:1: ( (lv_importDeclarations_0_0= ruleXImportDeclaration ) )+
-            int cnt111=0;
-            loop111:
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6233:1: ( (lv_importDeclarations_0_0= ruleXImportDeclaration ) )+
+            int cnt116=0;
+            loop116:
             do {
-                int alt111=2;
-                int LA111_0 = input.LA(1);
+                int alt116=2;
+                int LA116_0 = input.LA(1);
 
-                if ( (LA111_0==74) ) {
-                    alt111=1;
+                if ( (LA116_0==74) ) {
+                    alt116=1;
                 }
 
 
-                switch (alt111) {
+                switch (alt116) {
             	case 1 :
-            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6068:1: (lv_importDeclarations_0_0= ruleXImportDeclaration )
+            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6234:1: (lv_importDeclarations_0_0= ruleXImportDeclaration )
             	    {
-            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6068:1: (lv_importDeclarations_0_0= ruleXImportDeclaration )
-            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6069:3: lv_importDeclarations_0_0= ruleXImportDeclaration
+            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6234:1: (lv_importDeclarations_0_0= ruleXImportDeclaration )
+            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6235:3: lv_importDeclarations_0_0= ruleXImportDeclaration
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXImportSectionAccess().getImportDeclarationsXImportDeclarationParserRuleCall_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleXImportDeclaration_in_ruleXImportSection14432);
+            	    pushFollow(FOLLOW_ruleXImportDeclaration_in_ruleXImportSection14759);
             	    lv_importDeclarations_0_0=ruleXImportDeclaration();
 
             	    state._fsp--;
@@ -17501,13 +18004,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt111 >= 1 ) break loop111;
+            	    if ( cnt116 >= 1 ) break loop116;
             	    if (state.backtracking>0) {state.failed=true; return current;}
                         EarlyExitException eee =
-                            new EarlyExitException(111, input);
+                            new EarlyExitException(116, input);
                         throw eee;
                 }
-                cnt111++;
+                cnt116++;
             } while (true);
 
 
@@ -17530,7 +18033,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXImportDeclaration"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6093:1: entryRuleXImportDeclaration returns [EObject current=null] : iv_ruleXImportDeclaration= ruleXImportDeclaration EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6259:1: entryRuleXImportDeclaration returns [EObject current=null] : iv_ruleXImportDeclaration= ruleXImportDeclaration EOF ;
     public final EObject entryRuleXImportDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -17538,13 +18041,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6094:2: (iv_ruleXImportDeclaration= ruleXImportDeclaration EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6095:2: iv_ruleXImportDeclaration= ruleXImportDeclaration EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6260:2: (iv_ruleXImportDeclaration= ruleXImportDeclaration EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6261:2: iv_ruleXImportDeclaration= ruleXImportDeclaration EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXImportDeclarationRule()); 
             }
-            pushFollow(FOLLOW_ruleXImportDeclaration_in_entryRuleXImportDeclaration14468);
+            pushFollow(FOLLOW_ruleXImportDeclaration_in_entryRuleXImportDeclaration14795);
             iv_ruleXImportDeclaration=ruleXImportDeclaration();
 
             state._fsp--;
@@ -17552,7 +18055,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXImportDeclaration; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXImportDeclaration14478); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXImportDeclaration14805); if (state.failed) return current;
 
             }
 
@@ -17570,7 +18073,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXImportDeclaration"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6102:1: ruleXImportDeclaration returns [EObject current=null] : (otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )? ) ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6268:1: ruleXImportDeclaration returns [EObject current=null] : (otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )? ) ;
     public final EObject ruleXImportDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -17587,35 +18090,35 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6105:28: ( (otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )? ) )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6106:1: (otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )? )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6271:28: ( (otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )? ) )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6272:1: (otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )? )
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6106:1: (otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )? )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6106:3: otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )?
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6272:1: (otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )? )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6272:3: otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )?
             {
-            otherlv_0=(Token)match(input,74,FOLLOW_74_in_ruleXImportDeclaration14515); if (state.failed) return current;
+            otherlv_0=(Token)match(input,74,FOLLOW_74_in_ruleXImportDeclaration14842); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getXImportDeclarationAccess().getImportKeyword_0());
                   
             }
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6110:1: ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) )
-            int alt114=3;
-            alt114 = dfa114.predict(input);
-            switch (alt114) {
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6276:1: ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) )
+            int alt119=3;
+            alt119 = dfa119.predict(input);
+            switch (alt119) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6110:2: ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6276:2: ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6110:2: ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6110:3: ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6276:2: ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6276:3: ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6110:3: ( (lv_static_1_0= 'static' ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6111:1: (lv_static_1_0= 'static' )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6276:3: ( (lv_static_1_0= 'static' ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6277:1: (lv_static_1_0= 'static' )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6111:1: (lv_static_1_0= 'static' )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6112:3: lv_static_1_0= 'static'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6277:1: (lv_static_1_0= 'static' )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6278:3: lv_static_1_0= 'static'
                     {
-                    lv_static_1_0=(Token)match(input,73,FOLLOW_73_in_ruleXImportDeclaration14535); if (state.failed) return current;
+                    lv_static_1_0=(Token)match(input,73,FOLLOW_73_in_ruleXImportDeclaration14862); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_static_1_0, grammarAccess.getXImportDeclarationAccess().getStaticStaticKeyword_1_0_0_0());
@@ -17635,21 +18138,21 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6125:2: ( (lv_extension_2_0= 'extension' ) )?
-                    int alt112=2;
-                    int LA112_0 = input.LA(1);
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6291:2: ( (lv_extension_2_0= 'extension' ) )?
+                    int alt117=2;
+                    int LA117_0 = input.LA(1);
 
-                    if ( (LA112_0==75) ) {
-                        alt112=1;
+                    if ( (LA117_0==75) ) {
+                        alt117=1;
                     }
-                    switch (alt112) {
+                    switch (alt117) {
                         case 1 :
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6126:1: (lv_extension_2_0= 'extension' )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6292:1: (lv_extension_2_0= 'extension' )
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6126:1: (lv_extension_2_0= 'extension' )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6127:3: lv_extension_2_0= 'extension'
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6292:1: (lv_extension_2_0= 'extension' )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6293:3: lv_extension_2_0= 'extension'
                             {
-                            lv_extension_2_0=(Token)match(input,75,FOLLOW_75_in_ruleXImportDeclaration14566); if (state.failed) return current;
+                            lv_extension_2_0=(Token)match(input,75,FOLLOW_75_in_ruleXImportDeclaration14893); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       newLeafNode(lv_extension_2_0, grammarAccess.getXImportDeclarationAccess().getExtensionExtensionKeyword_1_0_1_0());
@@ -17672,11 +18175,11 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6140:3: ( ( ruleQualifiedNameInStaticImport ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6141:1: ( ruleQualifiedNameInStaticImport )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6306:3: ( ( ruleQualifiedNameInStaticImport ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6307:1: ( ruleQualifiedNameInStaticImport )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6141:1: ( ruleQualifiedNameInStaticImport )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6142:3: ruleQualifiedNameInStaticImport
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6307:1: ( ruleQualifiedNameInStaticImport )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6308:3: ruleQualifiedNameInStaticImport
                     {
                     if ( state.backtracking==0 ) {
 
@@ -17690,7 +18193,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                       	        newCompositeNode(grammarAccess.getXImportDeclarationAccess().getImportedTypeJvmDeclaredTypeCrossReference_1_0_2_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleQualifiedNameInStaticImport_in_ruleXImportDeclaration14603);
+                    pushFollow(FOLLOW_ruleQualifiedNameInStaticImport_in_ruleXImportDeclaration14930);
                     ruleQualifiedNameInStaticImport();
 
                     state._fsp--;
@@ -17706,34 +18209,34 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6155:2: ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) )
-                    int alt113=2;
-                    int LA113_0 = input.LA(1);
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6321:2: ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) )
+                    int alt118=2;
+                    int LA118_0 = input.LA(1);
 
-                    if ( (LA113_0==47) ) {
-                        alt113=1;
+                    if ( (LA118_0==47) ) {
+                        alt118=1;
                     }
-                    else if ( (LA113_0==RULE_ID) ) {
-                        alt113=2;
+                    else if ( (LA118_0==RULE_ID) ) {
+                        alt118=2;
                     }
                     else {
                         if (state.backtracking>0) {state.failed=true; return current;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 113, 0, input);
+                            new NoViableAltException("", 118, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt113) {
+                    switch (alt118) {
                         case 1 :
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6155:3: ( (lv_wildcard_4_0= '*' ) )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6321:3: ( (lv_wildcard_4_0= '*' ) )
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6155:3: ( (lv_wildcard_4_0= '*' ) )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6156:1: (lv_wildcard_4_0= '*' )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6321:3: ( (lv_wildcard_4_0= '*' ) )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6322:1: (lv_wildcard_4_0= '*' )
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6156:1: (lv_wildcard_4_0= '*' )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6157:3: lv_wildcard_4_0= '*'
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6322:1: (lv_wildcard_4_0= '*' )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6323:3: lv_wildcard_4_0= '*'
                             {
-                            lv_wildcard_4_0=(Token)match(input,47,FOLLOW_47_in_ruleXImportDeclaration14622); if (state.failed) return current;
+                            lv_wildcard_4_0=(Token)match(input,47,FOLLOW_47_in_ruleXImportDeclaration14949); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       newLeafNode(lv_wildcard_4_0, grammarAccess.getXImportDeclarationAccess().getWildcardAsteriskKeyword_1_0_3_0_0());
@@ -17757,20 +18260,20 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6171:6: ( (lv_memberName_5_0= ruleValidID ) )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6337:6: ( (lv_memberName_5_0= ruleValidID ) )
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6171:6: ( (lv_memberName_5_0= ruleValidID ) )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6172:1: (lv_memberName_5_0= ruleValidID )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6337:6: ( (lv_memberName_5_0= ruleValidID ) )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6338:1: (lv_memberName_5_0= ruleValidID )
                             {
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6172:1: (lv_memberName_5_0= ruleValidID )
-                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6173:3: lv_memberName_5_0= ruleValidID
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6338:1: (lv_memberName_5_0= ruleValidID )
+                            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6339:3: lv_memberName_5_0= ruleValidID
                             {
                             if ( state.backtracking==0 ) {
                                
                               	        newCompositeNode(grammarAccess.getXImportDeclarationAccess().getMemberNameValidIDParserRuleCall_1_0_3_1_0()); 
                               	    
                             }
-                            pushFollow(FOLLOW_ruleValidID_in_ruleXImportDeclaration14662);
+                            pushFollow(FOLLOW_ruleValidID_in_ruleXImportDeclaration14989);
                             lv_memberName_5_0=ruleValidID();
 
                             state._fsp--;
@@ -17807,13 +18310,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6190:6: ( ( ruleQualifiedName ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6356:6: ( ( ruleQualifiedName ) )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6190:6: ( ( ruleQualifiedName ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6191:1: ( ruleQualifiedName )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6356:6: ( ( ruleQualifiedName ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6357:1: ( ruleQualifiedName )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6191:1: ( ruleQualifiedName )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6192:3: ruleQualifiedName
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6357:1: ( ruleQualifiedName )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6358:3: ruleQualifiedName
                     {
                     if ( state.backtracking==0 ) {
 
@@ -17827,7 +18330,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                       	        newCompositeNode(grammarAccess.getXImportDeclarationAccess().getImportedTypeJvmDeclaredTypeCrossReference_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleXImportDeclaration14693);
+                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleXImportDeclaration15020);
                     ruleQualifiedName();
 
                     state._fsp--;
@@ -17847,20 +18350,20 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6206:6: ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6372:6: ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6206:6: ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6207:1: (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6372:6: ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6373:1: (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard )
                     {
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6207:1: (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard )
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6208:3: lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6373:1: (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard )
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6374:3: lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXImportDeclarationAccess().getImportedNamespaceQualifiedNameWithWildcardParserRuleCall_1_2_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleQualifiedNameWithWildcard_in_ruleXImportDeclaration14720);
+                    pushFollow(FOLLOW_ruleQualifiedNameWithWildcard_in_ruleXImportDeclaration15047);
                     lv_importedNamespace_7_0=ruleQualifiedNameWithWildcard();
 
                     state._fsp--;
@@ -17890,18 +18393,18 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6224:3: (otherlv_8= ';' )?
-            int alt115=2;
-            int LA115_0 = input.LA(1);
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6390:3: (otherlv_8= ';' )?
+            int alt120=2;
+            int LA120_0 = input.LA(1);
 
-            if ( (LA115_0==19) ) {
-                alt115=1;
+            if ( (LA120_0==19) ) {
+                alt120=1;
             }
-            switch (alt115) {
+            switch (alt120) {
                 case 1 :
-                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6224:5: otherlv_8= ';'
+                    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6390:5: otherlv_8= ';'
                     {
-                    otherlv_8=(Token)match(input,19,FOLLOW_19_in_ruleXImportDeclaration14734); if (state.failed) return current;
+                    otherlv_8=(Token)match(input,19,FOLLOW_19_in_ruleXImportDeclaration15061); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_8, grammarAccess.getXImportDeclarationAccess().getSemicolonKeyword_2());
@@ -17936,7 +18439,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedNameInStaticImport"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6236:1: entryRuleQualifiedNameInStaticImport returns [String current=null] : iv_ruleQualifiedNameInStaticImport= ruleQualifiedNameInStaticImport EOF ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6402:1: entryRuleQualifiedNameInStaticImport returns [String current=null] : iv_ruleQualifiedNameInStaticImport= ruleQualifiedNameInStaticImport EOF ;
     public final String entryRuleQualifiedNameInStaticImport() throws RecognitionException {
         String current = null;
 
@@ -17944,13 +18447,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6237:2: (iv_ruleQualifiedNameInStaticImport= ruleQualifiedNameInStaticImport EOF )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6238:2: iv_ruleQualifiedNameInStaticImport= ruleQualifiedNameInStaticImport EOF
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6403:2: (iv_ruleQualifiedNameInStaticImport= ruleQualifiedNameInStaticImport EOF )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6404:2: iv_ruleQualifiedNameInStaticImport= ruleQualifiedNameInStaticImport EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQualifiedNameInStaticImportRule()); 
             }
-            pushFollow(FOLLOW_ruleQualifiedNameInStaticImport_in_entryRuleQualifiedNameInStaticImport14773);
+            pushFollow(FOLLOW_ruleQualifiedNameInStaticImport_in_entryRuleQualifiedNameInStaticImport15100);
             iv_ruleQualifiedNameInStaticImport=ruleQualifiedNameInStaticImport();
 
             state._fsp--;
@@ -17958,7 +18461,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleQualifiedNameInStaticImport.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedNameInStaticImport14784); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedNameInStaticImport15111); if (state.failed) return current;
 
             }
 
@@ -17976,7 +18479,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedNameInStaticImport"
-    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6245:1: ruleQualifiedNameInStaticImport returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ValidID_0= ruleValidID kw= '.' )+ ;
+    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6411:1: ruleQualifiedNameInStaticImport returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ValidID_0= ruleValidID kw= '.' )+ ;
     public final AntlrDatatypeRuleToken ruleQualifiedNameInStaticImport() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -17987,37 +18490,37 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6248:28: ( (this_ValidID_0= ruleValidID kw= '.' )+ )
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6249:1: (this_ValidID_0= ruleValidID kw= '.' )+
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6414:28: ( (this_ValidID_0= ruleValidID kw= '.' )+ )
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6415:1: (this_ValidID_0= ruleValidID kw= '.' )+
             {
-            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6249:1: (this_ValidID_0= ruleValidID kw= '.' )+
-            int cnt116=0;
-            loop116:
+            // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6415:1: (this_ValidID_0= ruleValidID kw= '.' )+
+            int cnt121=0;
+            loop121:
             do {
-                int alt116=2;
-                int LA116_0 = input.LA(1);
+                int alt121=2;
+                int LA121_0 = input.LA(1);
 
-                if ( (LA116_0==RULE_ID) ) {
-                    int LA116_2 = input.LA(2);
+                if ( (LA121_0==RULE_ID) ) {
+                    int LA121_2 = input.LA(2);
 
-                    if ( (LA116_2==55) ) {
-                        alt116=1;
+                    if ( (LA121_2==55) ) {
+                        alt121=1;
                     }
 
 
                 }
 
 
-                switch (alt116) {
+                switch (alt121) {
             	case 1 :
-            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6250:5: this_ValidID_0= ruleValidID kw= '.'
+            	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:6416:5: this_ValidID_0= ruleValidID kw= '.'
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	              newCompositeNode(grammarAccess.getQualifiedNameInStaticImportAccess().getValidIDParserRuleCall_0()); 
             	          
             	    }
-            	    pushFollow(FOLLOW_ruleValidID_in_ruleQualifiedNameInStaticImport14831);
+            	    pushFollow(FOLLOW_ruleValidID_in_ruleQualifiedNameInStaticImport15158);
             	    this_ValidID_0=ruleValidID();
 
             	    state._fsp--;
@@ -18032,7 +18535,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             	              afterParserOrEnumRuleCall();
             	          
             	    }
-            	    kw=(Token)match(input,55,FOLLOW_55_in_ruleQualifiedNameInStaticImport14849); if (state.failed) return current;
+            	    kw=(Token)match(input,55,FOLLOW_55_in_ruleQualifiedNameInStaticImport15176); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              current.merge(kw);
@@ -18044,13 +18547,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt116 >= 1 ) break loop116;
+            	    if ( cnt121 >= 1 ) break loop121;
             	    if (state.backtracking>0) {state.failed=true; return current;}
                         EarlyExitException eee =
-                            new EarlyExitException(116, input);
+                            new EarlyExitException(121, input);
                         throw eee;
                 }
-                cnt116++;
+                cnt121++;
             } while (true);
 
 
@@ -18507,23 +19010,23 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
         }
 
         // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:1932:2: ( '.' | ( ( '::' ) ) )
-        int alt117=2;
-        int LA117_0 = input.LA(1);
+        int alt122=2;
+        int LA122_0 = input.LA(1);
 
-        if ( (LA117_0==55) ) {
-            alt117=1;
+        if ( (LA122_0==55) ) {
+            alt122=1;
         }
-        else if ( (LA117_0==56) ) {
-            alt117=2;
+        else if ( (LA122_0==56) ) {
+            alt122=2;
         }
         else {
             if (state.backtracking>0) {state.failed=true; return ;}
             NoViableAltException nvae =
-                new NoViableAltException("", 117, 0, input);
+                new NoViableAltException("", 122, 0, input);
 
             throw nvae;
         }
-        switch (alt117) {
+        switch (alt122) {
             case 1 :
                 // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:1932:4: '.'
                 {
@@ -18597,32 +19100,32 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
         }
 
         // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:2013:2: ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) )
-        int alt118=3;
+        int alt123=3;
         switch ( input.LA(1) ) {
         case 55:
             {
-            alt118=1;
+            alt123=1;
             }
             break;
         case 57:
             {
-            alt118=2;
+            alt123=2;
             }
             break;
         case 56:
             {
-            alt118=3;
+            alt123=3;
             }
             break;
         default:
             if (state.backtracking>0) {state.failed=true; return ;}
             NoViableAltException nvae =
-                new NoViableAltException("", 118, 0, input);
+                new NoViableAltException("", 123, 0, input);
 
             throw nvae;
         }
 
-        switch (alt118) {
+        switch (alt123) {
             case 1 :
                 // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:2013:4: '.'
                 {
@@ -18710,13 +19213,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
         }
 
         // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:2155:2: ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )?
-        int alt120=2;
-        int LA120_0 = input.LA(1);
+        int alt125=2;
+        int LA125_0 = input.LA(1);
 
-        if ( (LA120_0==RULE_ID||LA120_0==21||LA120_0==42) ) {
-            alt120=1;
+        if ( (LA125_0==RULE_ID||LA125_0==21||LA125_0==42) ) {
+            alt125=1;
         }
-        switch (alt120) {
+        switch (alt125) {
             case 1 :
                 // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:2155:3: ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )*
                 {
@@ -18738,17 +19241,17 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                 }
 
                 // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:2159:2: ( ',' ( ( ruleJvmFormalParameter ) ) )*
-                loop119:
+                loop124:
                 do {
-                    int alt119=2;
-                    int LA119_0 = input.LA(1);
+                    int alt124=2;
+                    int LA124_0 = input.LA(1);
 
-                    if ( (LA119_0==22) ) {
-                        alt119=1;
+                    if ( (LA124_0==22) ) {
+                        alt124=1;
                     }
 
 
-                    switch (alt119) {
+                    switch (alt124) {
                 	case 1 :
                 	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:2159:4: ',' ( ( ruleJvmFormalParameter ) )
                 	    {
@@ -18775,7 +19278,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                 	    break;
 
                 	default :
-                	    break loop119;
+                	    break loop124;
                     }
                 } while (true);
 
@@ -18923,13 +19426,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
         // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:2757:6: ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) )
         {
         // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:2757:6: ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )?
-        int alt122=2;
-        int LA122_0 = input.LA(1);
+        int alt127=2;
+        int LA127_0 = input.LA(1);
 
-        if ( (LA122_0==RULE_ID||LA122_0==21||LA122_0==42) ) {
-            alt122=1;
+        if ( (LA127_0==RULE_ID||LA127_0==21||LA127_0==42) ) {
+            alt127=1;
         }
-        switch (alt122) {
+        switch (alt127) {
             case 1 :
                 // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:2757:7: ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )*
                 {
@@ -18951,17 +19454,17 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                 }
 
                 // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:2761:2: ( ',' ( ( ruleJvmFormalParameter ) ) )*
-                loop121:
+                loop126:
                 do {
-                    int alt121=2;
-                    int LA121_0 = input.LA(1);
+                    int alt126=2;
+                    int LA126_0 = input.LA(1);
 
-                    if ( (LA121_0==22) ) {
-                        alt121=1;
+                    if ( (LA126_0==22) ) {
+                        alt126=1;
                     }
 
 
-                    switch (alt121) {
+                    switch (alt126) {
                 	case 1 :
                 	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:2761:4: ',' ( ( ruleJvmFormalParameter ) )
                 	    {
@@ -18988,7 +19491,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                 	    break;
 
                 	default :
-                	    break loop121;
+                	    break loop126;
                     }
                 } while (true);
 
@@ -19101,19 +19604,19 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred29_InternalEntities
     public final void synpred29_InternalEntities_fragment() throws RecognitionException {   
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3993:4: ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3993:5: ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4004:4: ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4004:5: ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) )
         {
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3993:5: ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3993:6: ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4004:5: ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4004:6: ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) )
         {
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3993:6: ( ( ruleJvmTypeReference ) )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3994:1: ( ruleJvmTypeReference )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4004:6: ( ( ruleJvmTypeReference ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4005:1: ( ruleJvmTypeReference )
         {
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3994:1: ( ruleJvmTypeReference )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3995:1: ruleJvmTypeReference
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4005:1: ( ruleJvmTypeReference )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4006:1: ruleJvmTypeReference
         {
-        pushFollow(FOLLOW_ruleJvmTypeReference_in_synpred29_InternalEntities9403);
+        pushFollow(FOLLOW_ruleJvmTypeReference_in_synpred29_InternalEntities9422);
         ruleJvmTypeReference();
 
         state._fsp--;
@@ -19124,13 +19627,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
         }
 
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3997:2: ( ( ruleValidID ) )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3998:1: ( ruleValidID )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4008:2: ( ( ruleValidID ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4009:1: ( ruleValidID )
         {
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3998:1: ( ruleValidID )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:3999:1: ruleValidID
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4009:1: ( ruleValidID )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4010:1: ruleValidID
         {
-        pushFollow(FOLLOW_ruleValidID_in_synpred29_InternalEntities9412);
+        pushFollow(FOLLOW_ruleValidID_in_synpred29_InternalEntities9431);
         ruleValidID();
 
         state._fsp--;
@@ -19151,13 +19654,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred30_InternalEntities
     public final void synpred30_InternalEntities_fragment() throws RecognitionException {   
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4282:4: ( ( '(' ) )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4283:1: ( '(' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4293:4: ( ( '(' ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4294:1: ( '(' )
         {
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4283:1: ( '(' )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4284:2: '('
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4294:1: ( '(' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4295:2: '('
         {
-        match(input,21,FOLLOW_21_in_synpred30_InternalEntities9950); if (state.failed) return ;
+        match(input,21,FOLLOW_21_in_synpred30_InternalEntities9969); if (state.failed) return ;
 
         }
 
@@ -19168,35 +19671,35 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred31_InternalEntities
     public final void synpred31_InternalEntities_fragment() throws RecognitionException {   
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4303:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4303:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4314:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4314:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
         {
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4303:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4303:6: () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4314:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4314:6: () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) )
         {
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4303:6: ()
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4304:1: 
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4314:6: ()
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4315:1: 
         {
         }
 
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4304:2: ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )?
-        int alt126=2;
-        int LA126_0 = input.LA(1);
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4315:2: ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )?
+        int alt131=2;
+        int LA131_0 = input.LA(1);
 
-        if ( (LA126_0==RULE_ID||LA126_0==21||LA126_0==42) ) {
-            alt126=1;
+        if ( (LA131_0==RULE_ID||LA131_0==21||LA131_0==42) ) {
+            alt131=1;
         }
-        switch (alt126) {
+        switch (alt131) {
             case 1 :
-                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4304:3: ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )*
+                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4315:3: ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )*
                 {
-                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4304:3: ( ( ruleJvmFormalParameter ) )
-                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4305:1: ( ruleJvmFormalParameter )
+                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4315:3: ( ( ruleJvmFormalParameter ) )
+                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4316:1: ( ruleJvmFormalParameter )
                 {
-                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4305:1: ( ruleJvmFormalParameter )
-                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4306:1: ruleJvmFormalParameter
+                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4316:1: ( ruleJvmFormalParameter )
+                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4317:1: ruleJvmFormalParameter
                 {
-                pushFollow(FOLLOW_ruleJvmFormalParameter_in_synpred31_InternalEntities10002);
+                pushFollow(FOLLOW_ruleJvmFormalParameter_in_synpred31_InternalEntities10021);
                 ruleJvmFormalParameter();
 
                 state._fsp--;
@@ -19207,29 +19710,29 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                 }
 
-                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4308:2: ( ',' ( ( ruleJvmFormalParameter ) ) )*
-                loop125:
+                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4319:2: ( ',' ( ( ruleJvmFormalParameter ) ) )*
+                loop130:
                 do {
-                    int alt125=2;
-                    int LA125_0 = input.LA(1);
+                    int alt130=2;
+                    int LA130_0 = input.LA(1);
 
-                    if ( (LA125_0==22) ) {
-                        alt125=1;
+                    if ( (LA130_0==22) ) {
+                        alt130=1;
                     }
 
 
-                    switch (alt125) {
+                    switch (alt130) {
                 	case 1 :
-                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4308:4: ',' ( ( ruleJvmFormalParameter ) )
+                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4319:4: ',' ( ( ruleJvmFormalParameter ) )
                 	    {
-                	    match(input,22,FOLLOW_22_in_synpred31_InternalEntities10009); if (state.failed) return ;
-                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4309:1: ( ( ruleJvmFormalParameter ) )
-                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4310:1: ( ruleJvmFormalParameter )
+                	    match(input,22,FOLLOW_22_in_synpred31_InternalEntities10028); if (state.failed) return ;
+                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4320:1: ( ( ruleJvmFormalParameter ) )
+                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4321:1: ( ruleJvmFormalParameter )
                 	    {
-                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4310:1: ( ruleJvmFormalParameter )
-                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4311:1: ruleJvmFormalParameter
+                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4321:1: ( ruleJvmFormalParameter )
+                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4322:1: ruleJvmFormalParameter
                 	    {
-                	    pushFollow(FOLLOW_ruleJvmFormalParameter_in_synpred31_InternalEntities10016);
+                	    pushFollow(FOLLOW_ruleJvmFormalParameter_in_synpred31_InternalEntities10035);
                 	    ruleJvmFormalParameter();
 
                 	    state._fsp--;
@@ -19245,7 +19748,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                 	    break;
 
                 	default :
-                	    break loop125;
+                	    break loop130;
                     }
                 } while (true);
 
@@ -19255,13 +19758,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
         }
 
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4313:6: ( ( '|' ) )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4314:1: ( '|' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4324:6: ( ( '|' ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4325:1: ( '|' )
         {
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4314:1: ( '|' )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4315:2: '|'
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4325:1: ( '|' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4326:2: '|'
         {
-        match(input,61,FOLLOW_61_in_synpred31_InternalEntities10030); if (state.failed) return ;
+        match(input,61,FOLLOW_61_in_synpred31_InternalEntities10049); if (state.failed) return ;
 
         }
 
@@ -19278,18 +19781,18 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred32_InternalEntities
     public final void synpred32_InternalEntities_fragment() throws RecognitionException {   
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4382:4: ( ( () '[' ) )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4382:5: ( () '[' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4393:4: ( ( () '[' ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4393:5: ( () '[' )
         {
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4382:5: ( () '[' )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4382:6: () '['
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4393:5: ( () '[' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4393:6: () '['
         {
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4382:6: ()
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4383:1: 
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4393:6: ()
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4394:1: 
         {
         }
 
-        match(input,59,FOLLOW_59_in_synpred32_InternalEntities10150); if (state.failed) return ;
+        match(input,59,FOLLOW_59_in_synpred32_InternalEntities10169); if (state.failed) return ;
 
         }
 
@@ -19300,10 +19803,10 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred33_InternalEntities
     public final void synpred33_InternalEntities_fragment() throws RecognitionException {   
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4547:4: ( '<' )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4547:6: '<'
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4558:4: ( '<' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4558:6: '<'
         {
-        match(input,29,FOLLOW_29_in_synpred33_InternalEntities10599); if (state.failed) return ;
+        match(input,29,FOLLOW_29_in_synpred33_InternalEntities10618); if (state.failed) return ;
 
         }
     }
@@ -19311,13 +19814,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred34_InternalEntities
     public final void synpred34_InternalEntities_fragment() throws RecognitionException {   
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4596:5: ( ( '(' ) )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4597:1: ( '(' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4607:5: ( ( '(' ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4608:1: ( '(' )
         {
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4597:1: ( '(' )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4598:2: '('
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4608:1: ( '(' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4609:2: '('
         {
-        match(input,21,FOLLOW_21_in_synpred34_InternalEntities10695); if (state.failed) return ;
+        match(input,21,FOLLOW_21_in_synpred34_InternalEntities10714); if (state.failed) return ;
 
         }
 
@@ -19328,35 +19831,35 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred35_InternalEntities
     public final void synpred35_InternalEntities_fragment() throws RecognitionException {   
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4617:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4617:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4628:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4628:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
         {
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4617:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4617:6: () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4628:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4628:6: () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) )
         {
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4617:6: ()
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4618:1: 
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4628:6: ()
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4629:1: 
         {
         }
 
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4618:2: ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )?
-        int alt128=2;
-        int LA128_0 = input.LA(1);
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4629:2: ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )?
+        int alt133=2;
+        int LA133_0 = input.LA(1);
 
-        if ( (LA128_0==RULE_ID||LA128_0==21||LA128_0==42) ) {
-            alt128=1;
+        if ( (LA133_0==RULE_ID||LA133_0==21||LA133_0==42) ) {
+            alt133=1;
         }
-        switch (alt128) {
+        switch (alt133) {
             case 1 :
-                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4618:3: ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )*
+                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4629:3: ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )*
                 {
-                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4618:3: ( ( ruleJvmFormalParameter ) )
-                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4619:1: ( ruleJvmFormalParameter )
+                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4629:3: ( ( ruleJvmFormalParameter ) )
+                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4630:1: ( ruleJvmFormalParameter )
                 {
-                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4619:1: ( ruleJvmFormalParameter )
-                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4620:1: ruleJvmFormalParameter
+                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4630:1: ( ruleJvmFormalParameter )
+                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4631:1: ruleJvmFormalParameter
                 {
-                pushFollow(FOLLOW_ruleJvmFormalParameter_in_synpred35_InternalEntities10747);
+                pushFollow(FOLLOW_ruleJvmFormalParameter_in_synpred35_InternalEntities10766);
                 ruleJvmFormalParameter();
 
                 state._fsp--;
@@ -19367,29 +19870,29 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                 }
 
-                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4622:2: ( ',' ( ( ruleJvmFormalParameter ) ) )*
-                loop127:
+                // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4633:2: ( ',' ( ( ruleJvmFormalParameter ) ) )*
+                loop132:
                 do {
-                    int alt127=2;
-                    int LA127_0 = input.LA(1);
+                    int alt132=2;
+                    int LA132_0 = input.LA(1);
 
-                    if ( (LA127_0==22) ) {
-                        alt127=1;
+                    if ( (LA132_0==22) ) {
+                        alt132=1;
                     }
 
 
-                    switch (alt127) {
+                    switch (alt132) {
                 	case 1 :
-                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4622:4: ',' ( ( ruleJvmFormalParameter ) )
+                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4633:4: ',' ( ( ruleJvmFormalParameter ) )
                 	    {
-                	    match(input,22,FOLLOW_22_in_synpred35_InternalEntities10754); if (state.failed) return ;
-                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4623:1: ( ( ruleJvmFormalParameter ) )
-                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4624:1: ( ruleJvmFormalParameter )
+                	    match(input,22,FOLLOW_22_in_synpred35_InternalEntities10773); if (state.failed) return ;
+                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4634:1: ( ( ruleJvmFormalParameter ) )
+                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4635:1: ( ruleJvmFormalParameter )
                 	    {
-                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4624:1: ( ruleJvmFormalParameter )
-                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4625:1: ruleJvmFormalParameter
+                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4635:1: ( ruleJvmFormalParameter )
+                	    // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4636:1: ruleJvmFormalParameter
                 	    {
-                	    pushFollow(FOLLOW_ruleJvmFormalParameter_in_synpred35_InternalEntities10761);
+                	    pushFollow(FOLLOW_ruleJvmFormalParameter_in_synpred35_InternalEntities10780);
                 	    ruleJvmFormalParameter();
 
                 	    state._fsp--;
@@ -19405,7 +19908,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                 	    break;
 
                 	default :
-                	    break loop127;
+                	    break loop132;
                     }
                 } while (true);
 
@@ -19415,13 +19918,13 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
         }
 
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4627:6: ( ( '|' ) )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4628:1: ( '|' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4638:6: ( ( '|' ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4639:1: ( '|' )
         {
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4628:1: ( '|' )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4629:2: '|'
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4639:1: ( '|' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4640:2: '|'
         {
-        match(input,61,FOLLOW_61_in_synpred35_InternalEntities10775); if (state.failed) return ;
+        match(input,61,FOLLOW_61_in_synpred35_InternalEntities10794); if (state.failed) return ;
 
         }
 
@@ -19438,18 +19941,18 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred36_InternalEntities
     public final void synpred36_InternalEntities_fragment() throws RecognitionException {   
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4696:4: ( ( () '[' ) )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4696:5: ( () '[' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4707:4: ( ( () '[' ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4707:5: ( () '[' )
         {
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4696:5: ( () '[' )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4696:6: () '['
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4707:5: ( () '[' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4707:6: () '['
         {
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4696:6: ()
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4697:1: 
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4707:6: ()
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:4708:1: 
         {
         }
 
-        match(input,59,FOLLOW_59_in_synpred36_InternalEntities10895); if (state.failed) return ;
+        match(input,59,FOLLOW_59_in_synpred36_InternalEntities10914); if (state.failed) return ;
 
         }
 
@@ -19460,7 +19963,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred37_InternalEntities
     public final void synpred37_InternalEntities_fragment() throws RecognitionException {   
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5036:2: ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5047:2: ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )
         // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:
         {
         if ( (input.LA(1)>=RULE_ID && input.LA(1)<=RULE_DECIMAL)||(input.LA(1)>=14 && input.LA(1)<=15)||input.LA(1)==21||input.LA(1)==29||(input.LA(1)>=45 && input.LA(1)<=46)||input.LA(1)==51||(input.LA(1)>=58 && input.LA(1)<=59)||input.LA(1)==62||input.LA(1)==64||(input.LA(1)>=68 && input.LA(1)<=70)||(input.LA(1)>=73 && input.LA(1)<=84)||input.LA(1)==86 ) {
@@ -19480,10 +19983,10 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred38_InternalEntities
     public final void synpred38_InternalEntities_fragment() throws RecognitionException {   
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5130:5: ( 'catch' )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5130:7: 'catch'
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5141:5: ( 'catch' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5141:7: 'catch'
         {
-        match(input,87,FOLLOW_87_in_synpred38_InternalEntities12068); if (state.failed) return ;
+        match(input,87,FOLLOW_87_in_synpred38_InternalEntities12087); if (state.failed) return ;
 
         }
     }
@@ -19491,10 +19994,10 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred39_InternalEntities
     public final void synpred39_InternalEntities_fragment() throws RecognitionException {   
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5149:5: ( 'finally' )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5149:7: 'finally'
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5160:5: ( 'finally' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5160:7: 'finally'
         {
-        match(input,85,FOLLOW_85_in_synpred39_InternalEntities12098); if (state.failed) return ;
+        match(input,85,FOLLOW_85_in_synpred39_InternalEntities12117); if (state.failed) return ;
 
         }
     }
@@ -19502,10 +20005,10 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred42_InternalEntities
     public final void synpred42_InternalEntities_fragment() throws RecognitionException {   
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5375:3: ( '.' )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5376:2: '.'
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5386:3: ( '.' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5387:2: '.'
         {
-        match(input,55,FOLLOW_55_in_synpred42_InternalEntities12623); if (state.failed) return ;
+        match(input,55,FOLLOW_55_in_synpred42_InternalEntities12642); if (state.failed) return ;
 
         }
     }
@@ -19513,18 +20016,18 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred43_InternalEntities
     public final void synpred43_InternalEntities_fragment() throws RecognitionException {   
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5501:2: ( ( () ruleArrayBrackets ) )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5501:3: ( () ruleArrayBrackets )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5512:2: ( ( () ruleArrayBrackets ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5512:3: ( () ruleArrayBrackets )
         {
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5501:3: ( () ruleArrayBrackets )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5501:4: () ruleArrayBrackets
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5512:3: ( () ruleArrayBrackets )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5512:4: () ruleArrayBrackets
         {
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5501:4: ()
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5502:1: 
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5512:4: ()
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5513:1: 
         {
         }
 
-        pushFollow(FOLLOW_ruleArrayBrackets_in_synpred43_InternalEntities13008);
+        pushFollow(FOLLOW_ruleArrayBrackets_in_synpred43_InternalEntities13027);
         ruleArrayBrackets();
 
         state._fsp--;
@@ -19539,14 +20042,47 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred44_InternalEntities
     public final void synpred44_InternalEntities_fragment() throws RecognitionException {   
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5686:4: ( '<' )
-        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5686:6: '<'
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5697:4: ( '<' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5697:6: '<'
         {
-        match(input,29,FOLLOW_29_in_synpred44_InternalEntities13460); if (state.failed) return ;
+        match(input,29,FOLLOW_29_in_synpred44_InternalEntities13479); if (state.failed) return ;
 
         }
     }
     // $ANTLR end synpred44_InternalEntities
+
+    // $ANTLR start synpred45_InternalEntities
+    public final void synpred45_InternalEntities_fragment() throws RecognitionException {   
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5746:3: ( ( () '.' ) )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5746:4: ( () '.' )
+        {
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5746:4: ( () '.' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5746:5: () '.'
+        {
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5746:5: ()
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5747:1: 
+        {
+        }
+
+        match(input,55,FOLLOW_55_in_synpred45_InternalEntities13574); if (state.failed) return ;
+
+        }
+
+
+        }
+    }
+    // $ANTLR end synpred45_InternalEntities
+
+    // $ANTLR start synpred46_InternalEntities
+    public final void synpred46_InternalEntities_fragment() throws RecognitionException {   
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5773:4: ( '<' )
+        // ../org.example.xbase.entities/src-gen/org/example/xbase/entities/parser/antlr/internal/InternalEntities.g:5773:6: '<'
+        {
+        match(input,29,FOLLOW_29_in_synpred46_InternalEntities13631); if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred46_InternalEntities
 
     // Delegated rules
 
@@ -19597,6 +20133,20 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
         int start = input.mark();
         try {
             synpred16_InternalEntities_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred45_InternalEntities() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred45_InternalEntities_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -19737,6 +20287,20 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
         int start = input.mark();
         try {
             synpred10_InternalEntities_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred46_InternalEntities() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred46_InternalEntities_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -20116,8 +20680,9 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
     protected DFA88 dfa88 = new DFA88(this);
     protected DFA90 dfa90 = new DFA90(this);
     protected DFA93 dfa93 = new DFA93(this);
-    protected DFA108 dfa108 = new DFA108(this);
-    protected DFA114 dfa114 = new DFA114(this);
+    protected DFA111 dfa111 = new DFA111(this);
+    protected DFA109 dfa109 = new DFA109(this);
+    protected DFA119 dfa119 = new DFA119(this);
     static final String DFA11_eotS =
         "\12\uffff";
     static final String DFA11_eofS =
@@ -20129,10 +20694,9 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
     static final String DFA11_acceptS =
         "\10\uffff\1\2\1\1";
     static final String DFA11_specialS =
-        "\1\uffff\1\5\1\6\1\3\1\4\1\2\1\1\1\0\2\uffff}>";
+        "\1\uffff\1\0\1\4\1\3\1\6\1\5\1\2\1\1\2\uffff}>";
     static final String[] DFA11_transitionS = {
-            "\5\10\5\uffff\3\10\2\uffff\1\10\1\uffff\3\10\1\1\1\2\1\3\1\4"+
-            "\1\5\1\6\1\7\36\10\1\uffff\32\10",
+            "\5\10\5\uffff\3\10\2\uffff\1\10\1\uffff\3\10\1\1\1\2\1\3\1\4\1\5\1\6\1\7\36\10\1\uffff\32\10",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -20181,6 +20745,21 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA11_1 = input.LA(1);
+
+                         
+                        int index11_1 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred1_InternalEntities()) ) {s = 9;}
+
+                        else if ( (true) ) {s = 8;}
+
+                         
+                        input.seek(index11_1);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
                         int LA11_7 = input.LA(1);
 
                          
@@ -20195,7 +20774,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                         input.seek(index11_7);
                         if ( s>=0 ) return s;
                         break;
-                    case 1 : 
+                    case 2 : 
                         int LA11_6 = input.LA(1);
 
                          
@@ -20208,21 +20787,6 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                          
                         input.seek(index11_6);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA11_5 = input.LA(1);
-
-                         
-                        int index11_5 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred1_InternalEntities()) ) {s = 9;}
-
-                        else if ( (true) ) {s = 8;}
-
-                         
-                        input.seek(index11_5);
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
@@ -20241,36 +20805,6 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
-                        int LA11_4 = input.LA(1);
-
-                         
-                        int index11_4 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred1_InternalEntities()) ) {s = 9;}
-
-                        else if ( (true) ) {s = 8;}
-
-                         
-                        input.seek(index11_4);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 5 : 
-                        int LA11_1 = input.LA(1);
-
-                         
-                        int index11_1 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred1_InternalEntities()) ) {s = 9;}
-
-                        else if ( (true) ) {s = 8;}
-
-                         
-                        input.seek(index11_1);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 6 : 
                         int LA11_2 = input.LA(1);
 
                          
@@ -20283,6 +20817,36 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                          
                         input.seek(index11_2);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 5 : 
+                        int LA11_5 = input.LA(1);
+
+                         
+                        int index11_5 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred1_InternalEntities()) ) {s = 9;}
+
+                        else if ( (true) ) {s = 8;}
+
+                         
+                        input.seek(index11_5);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 6 : 
+                        int LA11_4 = input.LA(1);
+
+                         
+                        int index11_4 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred1_InternalEntities()) ) {s = 9;}
+
+                        else if ( (true) ) {s = 8;}
+
+                         
+                        input.seek(index11_4);
                         if ( s>=0 ) return s;
                         break;
             }
@@ -20304,10 +20868,9 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
     static final String DFA21_acceptS =
         "\1\uffff\1\2\10\uffff\1\1";
     static final String DFA21_specialS =
-        "\2\uffff\1\5\1\2\1\4\1\1\1\0\1\7\1\3\1\6\1\uffff}>";
+        "\2\uffff\1\0\1\7\1\4\1\5\1\3\1\6\1\1\1\2\1\uffff}>";
     static final String[] DFA21_transitionS = {
-            "\5\1\5\uffff\3\1\2\uffff\1\1\1\uffff\10\1\1\2\1\3\10\1\1\4\1"+
-            "\5\1\6\1\7\1\10\1\11\20\1\1\uffff\32\1",
+            "\5\1\5\uffff\3\1\2\uffff\1\1\1\uffff\10\1\1\2\1\3\10\1\1\4\1\5\1\6\1\7\1\10\1\11\20\1\1\uffff\32\1",
             "",
             "\1\uffff",
             "\1\uffff",
@@ -20357,10 +20920,10 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA21_6 = input.LA(1);
+                        int LA21_2 = input.LA(1);
 
                          
-                        int index21_6 = input.index();
+                        int index21_2 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred7_InternalEntities()) ) {s = 10;}
@@ -20368,40 +20931,10 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                         else if ( (true) ) {s = 1;}
 
                          
-                        input.seek(index21_6);
+                        input.seek(index21_2);
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA21_5 = input.LA(1);
-
-                         
-                        int index21_5 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred7_InternalEntities()) ) {s = 10;}
-
-                        else if ( (true) ) {s = 1;}
-
-                         
-                        input.seek(index21_5);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA21_3 = input.LA(1);
-
-                         
-                        int index21_3 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred7_InternalEntities()) ) {s = 10;}
-
-                        else if ( (true) ) {s = 1;}
-
-                         
-                        input.seek(index21_3);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 3 : 
                         int LA21_8 = input.LA(1);
 
                          
@@ -20414,6 +20947,36 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                          
                         input.seek(index21_8);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA21_9 = input.LA(1);
+
+                         
+                        int index21_9 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred7_InternalEntities()) ) {s = 10;}
+
+                        else if ( (true) ) {s = 1;}
+
+                         
+                        input.seek(index21_9);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 3 : 
+                        int LA21_6 = input.LA(1);
+
+                         
+                        int index21_6 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred7_InternalEntities()) ) {s = 10;}
+
+                        else if ( (true) ) {s = 1;}
+
+                         
+                        input.seek(index21_6);
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
@@ -20432,10 +20995,10 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                         if ( s>=0 ) return s;
                         break;
                     case 5 : 
-                        int LA21_2 = input.LA(1);
+                        int LA21_5 = input.LA(1);
 
                          
-                        int index21_2 = input.index();
+                        int index21_5 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred7_InternalEntities()) ) {s = 10;}
@@ -20443,25 +21006,10 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
                         else if ( (true) ) {s = 1;}
 
                          
-                        input.seek(index21_2);
+                        input.seek(index21_5);
                         if ( s>=0 ) return s;
                         break;
                     case 6 : 
-                        int LA21_9 = input.LA(1);
-
-                         
-                        int index21_9 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred7_InternalEntities()) ) {s = 10;}
-
-                        else if ( (true) ) {s = 1;}
-
-                         
-                        input.seek(index21_9);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 7 : 
                         int LA21_7 = input.LA(1);
 
                          
@@ -20474,6 +21022,21 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
 
                          
                         input.seek(index21_7);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 7 : 
+                        int LA21_3 = input.LA(1);
+
+                         
+                        int index21_3 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred7_InternalEntities()) ) {s = 10;}
+
+                        else if ( (true) ) {s = 1;}
+
+                         
+                        input.seek(index21_3);
                         if ( s>=0 ) return s;
                         break;
             }
@@ -20708,9 +21271,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
     static final String DFA39_specialS =
         "\1\0\1\1\1\2\41\uffff}>";
     static final String[] DFA39_transitionS = {
-            "\1\1\4\5\5\uffff\2\5\5\uffff\1\2\1\uffff\1\43\5\uffff\1\5\14"+
-            "\uffff\1\3\2\uffff\2\5\4\uffff\1\5\6\uffff\2\5\1\uffff\1\4\1"+
-            "\5\1\uffff\1\5\3\uffff\3\5\2\uffff\14\5\1\uffff\1\5",
+            "\1\1\4\5\5\uffff\2\5\5\uffff\1\2\1\uffff\1\43\5\uffff\1\5\14\uffff\1\3\2\uffff\2\5\4\uffff\1\5\6\uffff\2\5\1\uffff\1\4\1\5\1\uffff\1\5\3\uffff\3\5\2\uffff\14\5\1\uffff\1\5",
             "\1\uffff",
             "\1\uffff",
             "",
@@ -20858,8 +21419,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
     static final String DFA41_specialS =
         "\1\uffff\1\0\114\uffff}>";
     static final String[] DFA41_transitionS = {
-            "\5\2\5\uffff\3\2\2\uffff\1\2\1\uffff\46\2\1\1\1\2\1\uffff\32"+
-            "\2",
+            "\5\2\5\uffff\3\2\2\uffff\1\2\1\uffff\46\2\1\1\1\2\1\uffff\32\2",
             "\1\uffff",
             "",
             "",
@@ -21007,14 +21567,11 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
     static final String DFA43_maxS =
         "\1\126\26\uffff\1\0\10\uffff";
     static final String DFA43_acceptS =
-        "\1\uffff\1\1\1\2\1\3\1\4\1\5\6\uffff\1\6\11\uffff\1\7\1\uffff\1"+
-        "\12\1\13\1\14\1\15\1\16\1\17\1\10\1\11";
+        "\1\uffff\1\1\1\2\1\3\1\4\1\5\6\uffff\1\6\11\uffff\1\7\1\uffff\1\12\1\13\1\14\1\15\1\16\1\17\1\10\1\11";
     static final String DFA43_specialS =
         "\1\0\26\uffff\1\1\10\uffff}>";
     static final String[] DFA43_transitionS = {
-            "\1\5\4\14\5\uffff\1\5\1\2\5\uffff\1\35\7\uffff\1\5\34\uffff"+
-            "\2\14\2\uffff\1\26\1\uffff\1\3\3\uffff\1\27\1\30\1\31\2\uffff"+
-            "\4\5\1\1\4\14\1\32\1\33\1\34\1\uffff\1\4",
+            "\1\5\4\14\5\uffff\1\5\1\2\5\uffff\1\35\7\uffff\1\5\34\uffff\2\14\2\uffff\1\26\1\uffff\1\3\3\uffff\1\27\1\30\1\31\2\uffff\4\5\1\1\4\14\1\32\1\33\1\34\1\uffff\1\4",
             "",
             "",
             "",
@@ -21159,9 +21716,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
     static final String DFA52_specialS =
         "\1\0\1\1\1\2\43\uffff}>";
     static final String[] DFA52_transitionS = {
-            "\1\1\4\5\5\uffff\2\5\5\uffff\1\2\7\uffff\1\5\14\uffff\1\3\2"+
-            "\uffff\2\5\4\uffff\1\5\6\uffff\3\5\1\4\1\5\1\uffff\1\5\3\uffff"+
-            "\21\5\1\uffff\1\5",
+            "\1\1\4\5\5\uffff\2\5\5\uffff\1\2\7\uffff\1\5\14\uffff\1\3\2\uffff\2\5\4\uffff\1\5\6\uffff\3\5\1\4\1\5\1\uffff\1\5\3\uffff\21\5\1\uffff\1\5",
             "\1\uffff",
             "\1\uffff",
             "",
@@ -21309,9 +21864,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
     static final String DFA59_specialS =
         "\1\uffff\1\0\41\uffff}>";
     static final String[] DFA59_transitionS = {
-            "\5\2\5\uffff\2\2\5\uffff\1\1\7\uffff\1\2\14\uffff\1\2\2\uffff"+
-            "\2\2\4\uffff\1\2\6\uffff\2\2\2\uffff\1\2\1\uffff\1\2\3\uffff"+
-            "\3\2\2\uffff\14\2\1\uffff\1\2",
+            "\5\2\5\uffff\2\2\5\uffff\1\1\7\uffff\1\2\14\uffff\1\2\2\uffff\2\2\4\uffff\1\2\6\uffff\2\2\2\uffff\1\2\1\uffff\1\2\3\uffff\3\2\2\uffff\14\2\1\uffff\1\2",
             "\1\uffff",
             "",
             "",
@@ -21420,9 +21973,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
     static final String DFA58_specialS =
         "\1\0\1\1\1\2\37\uffff}>";
     static final String[] DFA58_transitionS = {
-            "\1\1\4\4\5\uffff\2\4\5\uffff\1\2\7\uffff\1\4\14\uffff\1\3\2"+
-            "\uffff\2\4\4\uffff\1\4\6\uffff\2\4\2\uffff\1\4\1\uffff\1\4\3"+
-            "\uffff\3\4\2\uffff\14\4\1\uffff\1\4",
+            "\1\1\4\4\5\uffff\2\4\5\uffff\1\2\7\uffff\1\4\14\uffff\1\3\2\uffff\2\4\4\uffff\1\4\6\uffff\2\4\2\uffff\1\4\1\uffff\1\4\3\uffff\3\4\2\uffff\14\4\1\uffff\1\4",
             "\1\uffff",
             "\1\uffff",
             "",
@@ -21674,7 +22225,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             this.transition = DFA81_transition;
         }
         public String getDescription() {
-            return "4282:2: ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )?";
+            return "4293:2: ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -21716,9 +22267,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
     static final String DFA80_specialS =
         "\1\0\1\1\1\2\41\uffff}>";
     static final String[] DFA80_transitionS = {
-            "\1\1\4\5\5\uffff\2\5\5\uffff\1\2\1\uffff\1\43\5\uffff\1\5\14"+
-            "\uffff\1\3\2\uffff\2\5\4\uffff\1\5\6\uffff\2\5\1\uffff\1\4\1"+
-            "\5\1\uffff\1\5\3\uffff\3\5\2\uffff\14\5\1\uffff\1\5",
+            "\1\1\4\5\5\uffff\2\5\5\uffff\1\2\1\uffff\1\43\5\uffff\1\5\14\uffff\1\3\2\uffff\2\5\4\uffff\1\5\6\uffff\2\5\1\uffff\1\4\1\5\1\uffff\1\5\3\uffff\3\5\2\uffff\14\5\1\uffff\1\5",
             "\1\uffff",
             "\1\uffff",
             "",
@@ -21786,7 +22335,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             this.transition = DFA80_transition;
         }
         public String getDescription() {
-            return "4303:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )?";
+            return "4314:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -21866,8 +22415,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
     static final String DFA82_specialS =
         "\1\uffff\1\0\114\uffff}>";
     static final String[] DFA82_transitionS = {
-            "\5\2\5\uffff\3\2\2\uffff\1\2\1\uffff\46\2\1\1\1\2\1\uffff\32"+
-            "\2",
+            "\5\2\5\uffff\3\2\2\uffff\1\2\1\uffff\46\2\1\1\1\2\1\uffff\32\2",
             "\1\uffff",
             "",
             "",
@@ -21977,7 +22525,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             this.transition = DFA82_transition;
         }
         public String getDescription() {
-            return "4382:3: ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )?";
+            return "4393:3: ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -22019,8 +22567,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
     static final String DFA86_specialS =
         "\1\uffff\1\0\114\uffff}>";
     static final String[] DFA86_transitionS = {
-            "\5\2\5\uffff\3\2\2\uffff\1\2\1\uffff\10\2\1\1\37\2\1\uffff\32"+
-            "\2",
+            "\5\2\5\uffff\3\2\2\uffff\1\2\1\uffff\10\2\1\1\37\2\1\uffff\32\2",
             "\1\uffff",
             "",
             "",
@@ -22130,7 +22677,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             this.transition = DFA86_transition;
         }
         public String getDescription() {
-            return "4547:2: ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )?";
+            return "4558:2: ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -22282,7 +22829,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             this.transition = DFA89_transition;
         }
         public String getDescription() {
-            return "4596:3: ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )?";
+            return "4607:3: ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -22324,9 +22871,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
     static final String DFA88_specialS =
         "\1\0\1\1\1\2\41\uffff}>";
     static final String[] DFA88_transitionS = {
-            "\1\1\4\5\5\uffff\2\5\5\uffff\1\2\1\uffff\1\43\5\uffff\1\5\14"+
-            "\uffff\1\3\2\uffff\2\5\4\uffff\1\5\6\uffff\2\5\1\uffff\1\4\1"+
-            "\5\1\uffff\1\5\3\uffff\3\5\2\uffff\14\5\1\uffff\1\5",
+            "\1\1\4\5\5\uffff\2\5\5\uffff\1\2\1\uffff\1\43\5\uffff\1\5\14\uffff\1\3\2\uffff\2\5\4\uffff\1\5\6\uffff\2\5\1\uffff\1\4\1\5\1\uffff\1\5\3\uffff\3\5\2\uffff\14\5\1\uffff\1\5",
             "\1\uffff",
             "\1\uffff",
             "",
@@ -22394,7 +22939,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             this.transition = DFA88_transition;
         }
         public String getDescription() {
-            return "4617:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )?";
+            return "4628:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -22474,8 +23019,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
     static final String DFA90_specialS =
         "\1\uffff\1\0\114\uffff}>";
     static final String[] DFA90_transitionS = {
-            "\5\2\5\uffff\3\2\2\uffff\1\2\1\uffff\46\2\1\1\1\2\1\uffff\32"+
-            "\2",
+            "\5\2\5\uffff\3\2\2\uffff\1\2\1\uffff\46\2\1\1\1\2\1\uffff\32\2",
             "\1\uffff",
             "",
             "",
@@ -22585,7 +23129,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             this.transition = DFA90_transition;
         }
         public String getDescription() {
-            return "4696:3: ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )?";
+            return "4707:3: ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -22625,15 +23169,9 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
     static final String DFA93_acceptS =
         "\41\uffff\1\2\53\uffff\1\1";
     static final String DFA93_specialS =
-        "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14"+
-        "\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24\1\25\1\26\1\27\1\30\1\31"+
-        "\1\32\1\33\1\34\1\35\1\36\1\37\55\uffff}>";
+        "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24\1\25\1\26\1\27\1\30\1\31\1\32\1\33\1\34\1\35\1\36\1\37\55\uffff}>";
     static final String[] DFA93_transitionS = {
-            "\1\1\1\27\1\23\1\24\1\25\5\uffff\1\2\1\12\1\41\2\uffff\1\41"+
-            "\1\uffff\1\40\7\41\1\15\17\41\1\10\1\7\4\41\1\6\6\41\1\17\1"+
-            "\20\1\41\1\uffff\1\31\1\41\1\13\3\41\1\32\1\33\1\34\2\41\1\3"+
-            "\1\4\1\5\1\16\1\11\1\21\1\22\1\26\1\30\1\35\1\36\1\37\1\41\1"+
-            "\14\1\41",
+            "\1\1\1\27\1\23\1\24\1\25\5\uffff\1\2\1\12\1\41\2\uffff\1\41\1\uffff\1\40\7\41\1\15\17\41\1\10\1\7\4\41\1\6\6\41\1\17\1\20\1\41\1\uffff\1\31\1\41\1\13\3\41\1\32\1\33\1\34\2\41\1\3\1\4\1\5\1\16\1\11\1\21\1\22\1\26\1\30\1\35\1\36\1\37\1\41\1\14\1\41",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -22743,7 +23281,7 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             this.transition = DFA93_transition;
         }
         public String getDescription() {
-            return "5036:1: ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )?";
+            return "5047:1: ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -23237,22 +23775,22 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             throw nvae;
         }
     }
-    static final String DFA108_eotS =
-        "\116\uffff";
-    static final String DFA108_eofS =
-        "\1\2\115\uffff";
-    static final String DFA108_minS =
-        "\1\4\1\0\114\uffff";
-    static final String DFA108_maxS =
-        "\1\127\1\0\114\uffff";
-    static final String DFA108_acceptS =
-        "\2\uffff\1\2\112\uffff\1\1";
-    static final String DFA108_specialS =
-        "\1\uffff\1\0\114\uffff}>";
-    static final String[] DFA108_transitionS = {
-            "\5\2\5\uffff\3\2\2\uffff\1\2\1\uffff\10\2\1\1\37\2\1\uffff\32"+
-            "\2",
+    static final String DFA111_eotS =
+        "\117\uffff";
+    static final String DFA111_eofS =
+        "\1\2\116\uffff";
+    static final String DFA111_minS =
+        "\1\4\1\0\115\uffff";
+    static final String DFA111_maxS =
+        "\1\131\1\0\115\uffff";
+    static final String DFA111_acceptS =
+        "\2\uffff\1\2\113\uffff\1\1";
+    static final String DFA111_specialS =
+        "\1\uffff\1\0\115\uffff}>";
+    static final String[] DFA111_transitionS = {
+            "\5\2\5\uffff\3\2\2\uffff\1\2\1\uffff\10\2\1\1\37\2\1\uffff\32\2\1\uffff\1\2",
             "\1\uffff",
+            "",
             "",
             "",
             "",
@@ -23331,118 +23869,271 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
             ""
     };
 
-    static final short[] DFA108_eot = DFA.unpackEncodedString(DFA108_eotS);
-    static final short[] DFA108_eof = DFA.unpackEncodedString(DFA108_eofS);
-    static final char[] DFA108_min = DFA.unpackEncodedStringToUnsignedChars(DFA108_minS);
-    static final char[] DFA108_max = DFA.unpackEncodedStringToUnsignedChars(DFA108_maxS);
-    static final short[] DFA108_accept = DFA.unpackEncodedString(DFA108_acceptS);
-    static final short[] DFA108_special = DFA.unpackEncodedString(DFA108_specialS);
-    static final short[][] DFA108_transition;
+    static final short[] DFA111_eot = DFA.unpackEncodedString(DFA111_eotS);
+    static final short[] DFA111_eof = DFA.unpackEncodedString(DFA111_eofS);
+    static final char[] DFA111_min = DFA.unpackEncodedStringToUnsignedChars(DFA111_minS);
+    static final char[] DFA111_max = DFA.unpackEncodedStringToUnsignedChars(DFA111_maxS);
+    static final short[] DFA111_accept = DFA.unpackEncodedString(DFA111_acceptS);
+    static final short[] DFA111_special = DFA.unpackEncodedString(DFA111_specialS);
+    static final short[][] DFA111_transition;
 
     static {
-        int numStates = DFA108_transitionS.length;
-        DFA108_transition = new short[numStates][];
+        int numStates = DFA111_transitionS.length;
+        DFA111_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA108_transition[i] = DFA.unpackEncodedString(DFA108_transitionS[i]);
+            DFA111_transition[i] = DFA.unpackEncodedString(DFA111_transitionS[i]);
         }
     }
 
-    class DFA108 extends DFA {
+    class DFA111 extends DFA {
 
-        public DFA108(BaseRecognizer recognizer) {
+        public DFA111(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 108;
-            this.eot = DFA108_eot;
-            this.eof = DFA108_eof;
-            this.min = DFA108_min;
-            this.max = DFA108_max;
-            this.accept = DFA108_accept;
-            this.special = DFA108_special;
-            this.transition = DFA108_transition;
+            this.decisionNumber = 111;
+            this.eot = DFA111_eot;
+            this.eof = DFA111_eof;
+            this.min = DFA111_min;
+            this.max = DFA111_max;
+            this.accept = DFA111_accept;
+            this.special = DFA111_special;
+            this.transition = DFA111_transition;
         }
         public String getDescription() {
-            return "5686:2: ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )?";
+            return "5697:2: ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA108_1 = input.LA(1);
+                        int LA111_1 = input.LA(1);
 
                          
-                        int index108_1 = input.index();
+                        int index111_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred44_InternalEntities()) ) {s = 77;}
+                        if ( (synpred44_InternalEntities()) ) {s = 78;}
 
                         else if ( (true) ) {s = 2;}
 
                          
-                        input.seek(index108_1);
+                        input.seek(index111_1);
                         if ( s>=0 ) return s;
                         break;
             }
             if (state.backtracking>0) {state.failed=true; return -1;}
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 108, _s, input);
+                new NoViableAltException(getDescription(), 111, _s, input);
             error(nvae);
             throw nvae;
         }
     }
-    static final String DFA114_eotS =
-        "\7\uffff";
-    static final String DFA114_eofS =
-        "\2\uffff\1\4\3\uffff\1\4";
-    static final String DFA114_minS =
-        "\1\4\1\uffff\1\15\1\4\2\uffff\1\15";
-    static final String DFA114_maxS =
-        "\1\111\1\uffff\1\112\1\57\2\uffff\1\112";
-    static final String DFA114_acceptS =
-        "\1\uffff\1\1\2\uffff\1\2\1\3\1\uffff";
-    static final String DFA114_specialS =
-        "\7\uffff}>";
-    static final String[] DFA114_transitionS = {
-            "\1\2\104\uffff\1\1",
-            "",
-            "\1\4\5\uffff\1\4\43\uffff\1\3\22\uffff\1\4",
-            "\1\6\52\uffff\1\5",
+    static final String DFA109_eotS =
+        "\117\uffff";
+    static final String DFA109_eofS =
+        "\1\2\116\uffff";
+    static final String DFA109_minS =
+        "\1\4\1\0\115\uffff";
+    static final String DFA109_maxS =
+        "\1\131\1\0\115\uffff";
+    static final String DFA109_acceptS =
+        "\2\uffff\1\2\113\uffff\1\1";
+    static final String DFA109_specialS =
+        "\1\uffff\1\0\115\uffff}>";
+    static final String[] DFA109_transitionS = {
+            "\5\2\5\uffff\3\2\2\uffff\1\2\1\uffff\10\2\1\1\37\2\1\uffff\32\2\1\uffff\1\2",
+            "\1\uffff",
             "",
             "",
-            "\1\4\5\uffff\1\4\43\uffff\1\3\22\uffff\1\4"
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
     };
 
-    static final short[] DFA114_eot = DFA.unpackEncodedString(DFA114_eotS);
-    static final short[] DFA114_eof = DFA.unpackEncodedString(DFA114_eofS);
-    static final char[] DFA114_min = DFA.unpackEncodedStringToUnsignedChars(DFA114_minS);
-    static final char[] DFA114_max = DFA.unpackEncodedStringToUnsignedChars(DFA114_maxS);
-    static final short[] DFA114_accept = DFA.unpackEncodedString(DFA114_acceptS);
-    static final short[] DFA114_special = DFA.unpackEncodedString(DFA114_specialS);
-    static final short[][] DFA114_transition;
+    static final short[] DFA109_eot = DFA.unpackEncodedString(DFA109_eotS);
+    static final short[] DFA109_eof = DFA.unpackEncodedString(DFA109_eofS);
+    static final char[] DFA109_min = DFA.unpackEncodedStringToUnsignedChars(DFA109_minS);
+    static final char[] DFA109_max = DFA.unpackEncodedStringToUnsignedChars(DFA109_maxS);
+    static final short[] DFA109_accept = DFA.unpackEncodedString(DFA109_acceptS);
+    static final short[] DFA109_special = DFA.unpackEncodedString(DFA109_specialS);
+    static final short[][] DFA109_transition;
 
     static {
-        int numStates = DFA114_transitionS.length;
-        DFA114_transition = new short[numStates][];
+        int numStates = DFA109_transitionS.length;
+        DFA109_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA114_transition[i] = DFA.unpackEncodedString(DFA114_transitionS[i]);
+            DFA109_transition[i] = DFA.unpackEncodedString(DFA109_transitionS[i]);
         }
     }
 
-    class DFA114 extends DFA {
+    class DFA109 extends DFA {
 
-        public DFA114(BaseRecognizer recognizer) {
+        public DFA109(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 114;
-            this.eot = DFA114_eot;
-            this.eof = DFA114_eof;
-            this.min = DFA114_min;
-            this.max = DFA114_max;
-            this.accept = DFA114_accept;
-            this.special = DFA114_special;
-            this.transition = DFA114_transition;
+            this.decisionNumber = 109;
+            this.eot = DFA109_eot;
+            this.eof = DFA109_eof;
+            this.min = DFA109_min;
+            this.max = DFA109_max;
+            this.accept = DFA109_accept;
+            this.special = DFA109_special;
+            this.transition = DFA109_transition;
         }
         public String getDescription() {
-            return "6110:1: ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) )";
+            return "5773:2: ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )?";
+        }
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+            TokenStream input = (TokenStream)_input;
+        	int _s = s;
+            switch ( s ) {
+                    case 0 : 
+                        int LA109_1 = input.LA(1);
+
+                         
+                        int index109_1 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred46_InternalEntities()) ) {s = 78;}
+
+                        else if ( (true) ) {s = 2;}
+
+                         
+                        input.seek(index109_1);
+                        if ( s>=0 ) return s;
+                        break;
+            }
+            if (state.backtracking>0) {state.failed=true; return -1;}
+            NoViableAltException nvae =
+                new NoViableAltException(getDescription(), 109, _s, input);
+            error(nvae);
+            throw nvae;
+        }
+    }
+    static final String DFA119_eotS =
+        "\7\uffff";
+    static final String DFA119_eofS =
+        "\2\uffff\1\4\2\uffff\1\4\1\uffff";
+    static final String DFA119_minS =
+        "\1\4\1\uffff\1\15\1\4\1\uffff\1\15\1\uffff";
+    static final String DFA119_maxS =
+        "\1\111\1\uffff\1\112\1\57\1\uffff\1\112\1\uffff";
+    static final String DFA119_acceptS =
+        "\1\uffff\1\1\2\uffff\1\2\1\uffff\1\3";
+    static final String DFA119_specialS =
+        "\7\uffff}>";
+    static final String[] DFA119_transitionS = {
+            "\1\2\104\uffff\1\1",
+            "",
+            "\1\4\5\uffff\1\4\43\uffff\1\3\22\uffff\1\4",
+            "\1\5\52\uffff\1\6",
+            "",
+            "\1\4\5\uffff\1\4\43\uffff\1\3\22\uffff\1\4",
+            ""
+    };
+
+    static final short[] DFA119_eot = DFA.unpackEncodedString(DFA119_eotS);
+    static final short[] DFA119_eof = DFA.unpackEncodedString(DFA119_eofS);
+    static final char[] DFA119_min = DFA.unpackEncodedStringToUnsignedChars(DFA119_minS);
+    static final char[] DFA119_max = DFA.unpackEncodedStringToUnsignedChars(DFA119_maxS);
+    static final short[] DFA119_accept = DFA.unpackEncodedString(DFA119_acceptS);
+    static final short[] DFA119_special = DFA.unpackEncodedString(DFA119_specialS);
+    static final short[][] DFA119_transition;
+
+    static {
+        int numStates = DFA119_transitionS.length;
+        DFA119_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA119_transition[i] = DFA.unpackEncodedString(DFA119_transitionS[i]);
+        }
+    }
+
+    class DFA119 extends DFA {
+
+        public DFA119(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 119;
+            this.eot = DFA119_eot;
+            this.eof = DFA119_eof;
+            this.min = DFA119_min;
+            this.max = DFA119_max;
+            this.accept = DFA119_accept;
+            this.special = DFA119_special;
+            this.transition = DFA119_transition;
+        }
+        public String getDescription() {
+            return "6276:1: ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) )";
         }
     }
  
@@ -23743,252 +24434,265 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleXExpression_in_ruleXCasePart8081 = new BitSet(new long[]{0x0000000000400000L,0x0000000000000002L});
     public static final BitSet FOLLOW_65_in_ruleXCasePart8097 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
     public static final BitSet FOLLOW_ruleXExpression_in_ruleXCasePart8118 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_ruleXCasePart8137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXForLoopExpression_in_entryRuleXForLoopExpression8174 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXForLoopExpression8184 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_ruleXForLoopExpression8261 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleXForLoopExpression8273 = new BitSet(new long[]{0x0000040000200010L});
-    public static final BitSet FOLLOW_ruleJvmFormalParameter_in_ruleXForLoopExpression8294 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
-    public static final BitSet FOLLOW_65_in_ruleXForLoopExpression8306 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXForLoopExpression8329 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleXForLoopExpression8341 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXForLoopExpression8362 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXBasicForLoopExpression_in_entryRuleXBasicForLoopExpression8398 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXBasicForLoopExpression8408 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_ruleXBasicForLoopExpression8454 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleXBasicForLoopExpression8466 = new BitSet(new long[]{0x4C0860002028C1F0L,0x00000000005FFFF1L});
-    public static final BitSet FOLLOW_ruleXExpressionOrVarDeclaration_in_ruleXBasicForLoopExpression8488 = new BitSet(new long[]{0x0000000000480000L});
-    public static final BitSet FOLLOW_22_in_ruleXBasicForLoopExpression8501 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFFF1L});
-    public static final BitSet FOLLOW_ruleXExpressionOrVarDeclaration_in_ruleXBasicForLoopExpression8522 = new BitSet(new long[]{0x0000000000480000L});
-    public static final BitSet FOLLOW_19_in_ruleXBasicForLoopExpression8538 = new BitSet(new long[]{0x4C0860002028C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXBasicForLoopExpression8559 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleXBasicForLoopExpression8572 = new BitSet(new long[]{0x4C08600020A0C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXBasicForLoopExpression8594 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_22_in_ruleXBasicForLoopExpression8607 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXBasicForLoopExpression8628 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_23_in_ruleXBasicForLoopExpression8644 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXBasicForLoopExpression8665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXWhileExpression_in_entryRuleXWhileExpression8701 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXWhileExpression8711 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_ruleXWhileExpression8757 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleXWhileExpression8769 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXWhileExpression8790 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleXWhileExpression8802 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXWhileExpression8823 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXDoWhileExpression_in_entryRuleXDoWhileExpression8859 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXDoWhileExpression8869 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_ruleXDoWhileExpression8915 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXDoWhileExpression8936 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_69_in_ruleXDoWhileExpression8948 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleXDoWhileExpression8960 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXDoWhileExpression8981 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleXDoWhileExpression8993 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXBlockExpression_in_entryRuleXBlockExpression9029 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXBlockExpression9039 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_ruleXBlockExpression9085 = new BitSet(new long[]{0x4C0860002021C1F0L,0x00000000005FFFF1L});
-    public static final BitSet FOLLOW_ruleXExpressionOrVarDeclaration_in_ruleXBlockExpression9107 = new BitSet(new long[]{0x4C0860002029C1F0L,0x00000000005FFFF1L});
-    public static final BitSet FOLLOW_19_in_ruleXBlockExpression9120 = new BitSet(new long[]{0x4C0860002021C1F0L,0x00000000005FFFF1L});
-    public static final BitSet FOLLOW_16_in_ruleXBlockExpression9136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXExpressionOrVarDeclaration_in_entryRuleXExpressionOrVarDeclaration9172 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXExpressionOrVarDeclaration9182 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXVariableDeclaration_in_ruleXExpressionOrVarDeclaration9229 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXExpressionOrVarDeclaration9256 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXVariableDeclaration_in_entryRuleXVariableDeclaration9291 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXVariableDeclaration9301 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_71_in_ruleXVariableDeclaration9354 = new BitSet(new long[]{0x0000040000200010L});
-    public static final BitSet FOLLOW_72_in_ruleXVariableDeclaration9385 = new BitSet(new long[]{0x0000040000200010L});
-    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleXVariableDeclaration9433 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleValidID_in_ruleXVariableDeclaration9454 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_ruleValidID_in_ruleXVariableDeclaration9483 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_18_in_ruleXVariableDeclaration9497 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXVariableDeclaration9518 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJvmFormalParameter_in_entryRuleJvmFormalParameter9556 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleJvmFormalParameter9566 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleJvmFormalParameter9612 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleValidID_in_ruleJvmFormalParameter9634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFullJvmFormalParameter_in_entryRuleFullJvmFormalParameter9670 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFullJvmFormalParameter9680 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleFullJvmFormalParameter9726 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleValidID_in_ruleFullJvmFormalParameter9747 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXFeatureCall_in_entryRuleXFeatureCall9783 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXFeatureCall9793 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleXFeatureCall9840 = new BitSet(new long[]{0x0000040000200010L,0x0000000001000000L});
-    public static final BitSet FOLLOW_ruleJvmArgumentTypeReference_in_ruleXFeatureCall9861 = new BitSet(new long[]{0x0000000040400000L});
-    public static final BitSet FOLLOW_22_in_ruleXFeatureCall9874 = new BitSet(new long[]{0x0000040000200010L,0x0000000001000000L});
-    public static final BitSet FOLLOW_ruleJvmArgumentTypeReference_in_ruleXFeatureCall9895 = new BitSet(new long[]{0x0000000040400000L});
-    public static final BitSet FOLLOW_30_in_ruleXFeatureCall9909 = new BitSet(new long[]{0x0000000020004010L,0x0000000000001E00L});
-    public static final BitSet FOLLOW_ruleIdOrSuper_in_ruleXFeatureCall9934 = new BitSet(new long[]{0x0800000000200002L});
-    public static final BitSet FOLLOW_21_in_ruleXFeatureCall9968 = new BitSet(new long[]{0x6C08640020A0C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXShortClosure_in_ruleXFeatureCall10053 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXFeatureCall10081 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_22_in_ruleXFeatureCall10094 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXFeatureCall10115 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_23_in_ruleXFeatureCall10132 = new BitSet(new long[]{0x0800000000000002L});
-    public static final BitSet FOLLOW_ruleXClosure_in_ruleXFeatureCall10167 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFeatureCallID_in_entryRuleFeatureCallID10205 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFeatureCallID10216 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValidID_in_ruleFeatureCallID10263 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_ruleFeatureCallID10287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_73_in_ruleFeatureCallID10306 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_74_in_ruleFeatureCallID10325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_75_in_ruleFeatureCallID10344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdOrSuper_in_entryRuleIdOrSuper10385 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIdOrSuper10396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFeatureCallID_in_ruleIdOrSuper10443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_76_in_ruleIdOrSuper10467 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXConstructorCall_in_entryRuleXConstructorCall10507 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXConstructorCall10517 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_77_in_ruleXConstructorCall10563 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleXConstructorCall10586 = new BitSet(new long[]{0x0800000020200002L});
-    public static final BitSet FOLLOW_29_in_ruleXConstructorCall10607 = new BitSet(new long[]{0x0000040000200010L,0x0000000001000000L});
-    public static final BitSet FOLLOW_ruleJvmArgumentTypeReference_in_ruleXConstructorCall10629 = new BitSet(new long[]{0x0000000040400000L});
-    public static final BitSet FOLLOW_22_in_ruleXConstructorCall10642 = new BitSet(new long[]{0x0000040000200010L,0x0000000001000000L});
-    public static final BitSet FOLLOW_ruleJvmArgumentTypeReference_in_ruleXConstructorCall10663 = new BitSet(new long[]{0x0000000040400000L});
-    public static final BitSet FOLLOW_30_in_ruleXConstructorCall10677 = new BitSet(new long[]{0x0800000000200002L});
-    public static final BitSet FOLLOW_21_in_ruleXConstructorCall10713 = new BitSet(new long[]{0x6C08640020A0C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXShortClosure_in_ruleXConstructorCall10798 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXConstructorCall10826 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_22_in_ruleXConstructorCall10839 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXConstructorCall10860 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_23_in_ruleXConstructorCall10877 = new BitSet(new long[]{0x0800000000000002L});
-    public static final BitSet FOLLOW_ruleXClosure_in_ruleXConstructorCall10912 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXBooleanLiteral_in_entryRuleXBooleanLiteral10949 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXBooleanLiteral10959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_78_in_ruleXBooleanLiteral11006 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_79_in_ruleXBooleanLiteral11030 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXNullLiteral_in_entryRuleXNullLiteral11080 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXNullLiteral11090 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_80_in_ruleXNullLiteral11136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXNumberLiteral_in_entryRuleXNumberLiteral11172 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXNumberLiteral11182 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumber_in_ruleXNumberLiteral11237 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXStringLiteral_in_entryRuleXStringLiteral11273 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXStringLiteral11283 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleXStringLiteral11334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXTypeLiteral_in_entryRuleXTypeLiteral11375 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXTypeLiteral11385 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_81_in_ruleXTypeLiteral11431 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleXTypeLiteral11443 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleXTypeLiteral11466 = new BitSet(new long[]{0x0800000000800000L});
-    public static final BitSet FOLLOW_ruleArrayBrackets_in_ruleXTypeLiteral11487 = new BitSet(new long[]{0x0800000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleXTypeLiteral11500 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXThrowExpression_in_entryRuleXThrowExpression11536 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXThrowExpression11546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_82_in_ruleXThrowExpression11592 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXThrowExpression11613 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXReturnExpression_in_entryRuleXReturnExpression11649 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXReturnExpression11659 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_ruleXReturnExpression11705 = new BitSet(new long[]{0x4C0860002020C1F2L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXReturnExpression11940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXTryCatchFinallyExpression_in_entryRuleXTryCatchFinallyExpression11977 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXTryCatchFinallyExpression11987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_84_in_ruleXTryCatchFinallyExpression12033 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXTryCatchFinallyExpression12054 = new BitSet(new long[]{0x0000000000000000L,0x0000000000A00000L});
-    public static final BitSet FOLLOW_ruleXCatchClause_in_ruleXTryCatchFinallyExpression12084 = new BitSet(new long[]{0x0000000000000002L,0x0000000000A00000L});
-    public static final BitSet FOLLOW_85_in_ruleXTryCatchFinallyExpression12106 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXTryCatchFinallyExpression12128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_85_in_ruleXTryCatchFinallyExpression12150 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXTryCatchFinallyExpression12171 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXSynchronizedExpression_in_entryRuleXSynchronizedExpression12209 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXSynchronizedExpression12219 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_86_in_ruleXSynchronizedExpression12283 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleXSynchronizedExpression12295 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXSynchronizedExpression12318 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleXSynchronizedExpression12330 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXSynchronizedExpression12351 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXCatchClause_in_entryRuleXCatchClause12387 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXCatchClause12397 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_87_in_ruleXCatchClause12442 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleXCatchClause12455 = new BitSet(new long[]{0x0000040000200010L});
-    public static final BitSet FOLLOW_ruleFullJvmFormalParameter_in_ruleXCatchClause12476 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleXCatchClause12488 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
-    public static final BitSet FOLLOW_ruleXExpression_in_ruleXCatchClause12509 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName12546 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName12557 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValidID_in_ruleQualifiedName12604 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_55_in_ruleQualifiedName12632 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleValidID_in_ruleQualifiedName12655 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_ruleNumber_in_entryRuleNumber12709 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNumber12720 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_HEX_in_ruleNumber12764 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleNumber12792 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_RULE_DECIMAL_in_ruleNumber12818 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_55_in_ruleNumber12838 = new BitSet(new long[]{0x0000000000000180L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleNumber12854 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DECIMAL_in_ruleNumber12880 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJvmTypeReference_in_entryRuleJvmTypeReference12935 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleJvmTypeReference12945 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJvmParameterizedTypeReference_in_ruleJvmTypeReference12993 = new BitSet(new long[]{0x0800000000000002L});
-    public static final BitSet FOLLOW_ruleArrayBrackets_in_ruleJvmTypeReference13029 = new BitSet(new long[]{0x0800000000000002L});
-    public static final BitSet FOLLOW_ruleXFunctionTypeRef_in_ruleJvmTypeReference13060 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArrayBrackets_in_entryRuleArrayBrackets13096 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleArrayBrackets13107 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_ruleArrayBrackets13145 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_60_in_ruleArrayBrackets13158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXFunctionTypeRef_in_entryRuleXFunctionTypeRef13198 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXFunctionTypeRef13208 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_ruleXFunctionTypeRef13246 = new BitSet(new long[]{0x0000040000A00010L});
-    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleXFunctionTypeRef13268 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_22_in_ruleXFunctionTypeRef13281 = new BitSet(new long[]{0x0000040000200010L});
-    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleXFunctionTypeRef13302 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_23_in_ruleXFunctionTypeRef13318 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_42_in_ruleXFunctionTypeRef13332 = new BitSet(new long[]{0x0000040000200010L});
-    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleXFunctionTypeRef13353 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJvmParameterizedTypeReference_in_entryRuleJvmParameterizedTypeReference13389 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleJvmParameterizedTypeReference13399 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleJvmParameterizedTypeReference13447 = new BitSet(new long[]{0x0000000020000002L});
-    public static final BitSet FOLLOW_29_in_ruleJvmParameterizedTypeReference13468 = new BitSet(new long[]{0x0000040000200010L,0x0000000001000000L});
-    public static final BitSet FOLLOW_ruleJvmArgumentTypeReference_in_ruleJvmParameterizedTypeReference13490 = new BitSet(new long[]{0x0000000040400000L});
-    public static final BitSet FOLLOW_22_in_ruleJvmParameterizedTypeReference13503 = new BitSet(new long[]{0x0000040000200010L,0x0000000001000000L});
-    public static final BitSet FOLLOW_ruleJvmArgumentTypeReference_in_ruleJvmParameterizedTypeReference13524 = new BitSet(new long[]{0x0000000040400000L});
-    public static final BitSet FOLLOW_30_in_ruleJvmParameterizedTypeReference13538 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJvmArgumentTypeReference_in_entryRuleJvmArgumentTypeReference13576 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleJvmArgumentTypeReference13586 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleJvmArgumentTypeReference13633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJvmWildcardTypeReference_in_ruleJvmArgumentTypeReference13660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJvmWildcardTypeReference_in_entryRuleJvmWildcardTypeReference13695 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleJvmWildcardTypeReference13705 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_88_in_ruleJvmWildcardTypeReference13751 = new BitSet(new long[]{0x0000000000004002L,0x0000000000001000L});
-    public static final BitSet FOLLOW_ruleJvmUpperBound_in_ruleJvmWildcardTypeReference13773 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJvmLowerBound_in_ruleJvmWildcardTypeReference13800 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJvmUpperBound_in_entryRuleJvmUpperBound13838 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleJvmUpperBound13848 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_ruleJvmUpperBound13885 = new BitSet(new long[]{0x0000040000200010L});
-    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleJvmUpperBound13906 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJvmUpperBoundAnded_in_entryRuleJvmUpperBoundAnded13942 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleJvmUpperBoundAnded13952 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_89_in_ruleJvmUpperBoundAnded13989 = new BitSet(new long[]{0x0000040000200010L});
-    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleJvmUpperBoundAnded14010 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJvmLowerBound_in_entryRuleJvmLowerBound14046 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleJvmLowerBound14056 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_76_in_ruleJvmLowerBound14093 = new BitSet(new long[]{0x0000040000200010L});
-    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleJvmLowerBound14114 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedNameWithWildcard_in_entryRuleQualifiedNameWithWildcard14153 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedNameWithWildcard14164 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleQualifiedNameWithWildcard14211 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_55_in_ruleQualifiedNameWithWildcard14229 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_47_in_ruleQualifiedNameWithWildcard14242 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValidID_in_entryRuleValidID14283 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleValidID14294 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleValidID14333 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXImportSection_in_entryRuleXImportSection14377 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXImportSection14387 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXImportDeclaration_in_ruleXImportSection14432 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000400L});
-    public static final BitSet FOLLOW_ruleXImportDeclaration_in_entryRuleXImportDeclaration14468 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXImportDeclaration14478 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_74_in_ruleXImportDeclaration14515 = new BitSet(new long[]{0x0000000000000010L,0x0000000000000200L});
-    public static final BitSet FOLLOW_73_in_ruleXImportDeclaration14535 = new BitSet(new long[]{0x0000000000000010L,0x0000000000000800L});
-    public static final BitSet FOLLOW_75_in_ruleXImportDeclaration14566 = new BitSet(new long[]{0x0000000000000010L,0x0000000000000800L});
-    public static final BitSet FOLLOW_ruleQualifiedNameInStaticImport_in_ruleXImportDeclaration14603 = new BitSet(new long[]{0x0000800000000010L});
-    public static final BitSet FOLLOW_47_in_ruleXImportDeclaration14622 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_ruleValidID_in_ruleXImportDeclaration14662 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleXImportDeclaration14693 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_ruleQualifiedNameWithWildcard_in_ruleXImportDeclaration14720 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_19_in_ruleXImportDeclaration14734 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedNameInStaticImport_in_entryRuleQualifiedNameInStaticImport14773 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedNameInStaticImport14784 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValidID_in_ruleQualifiedNameInStaticImport14831 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_55_in_ruleQualifiedNameInStaticImport14849 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_22_in_ruleXCasePart8143 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXForLoopExpression_in_entryRuleXForLoopExpression8193 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXForLoopExpression8203 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_ruleXForLoopExpression8280 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleXForLoopExpression8292 = new BitSet(new long[]{0x0000040000200010L});
+    public static final BitSet FOLLOW_ruleJvmFormalParameter_in_ruleXForLoopExpression8313 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_ruleXForLoopExpression8325 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXForLoopExpression8348 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_23_in_ruleXForLoopExpression8360 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXForLoopExpression8381 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXBasicForLoopExpression_in_entryRuleXBasicForLoopExpression8417 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXBasicForLoopExpression8427 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_ruleXBasicForLoopExpression8473 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleXBasicForLoopExpression8485 = new BitSet(new long[]{0x4C0860002028C1F0L,0x00000000005FFFF1L});
+    public static final BitSet FOLLOW_ruleXExpressionOrVarDeclaration_in_ruleXBasicForLoopExpression8507 = new BitSet(new long[]{0x0000000000480000L});
+    public static final BitSet FOLLOW_22_in_ruleXBasicForLoopExpression8520 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFFF1L});
+    public static final BitSet FOLLOW_ruleXExpressionOrVarDeclaration_in_ruleXBasicForLoopExpression8541 = new BitSet(new long[]{0x0000000000480000L});
+    public static final BitSet FOLLOW_19_in_ruleXBasicForLoopExpression8557 = new BitSet(new long[]{0x4C0860002028C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXBasicForLoopExpression8578 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleXBasicForLoopExpression8591 = new BitSet(new long[]{0x4C08600020A0C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXBasicForLoopExpression8613 = new BitSet(new long[]{0x0000000000C00000L});
+    public static final BitSet FOLLOW_22_in_ruleXBasicForLoopExpression8626 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXBasicForLoopExpression8647 = new BitSet(new long[]{0x0000000000C00000L});
+    public static final BitSet FOLLOW_23_in_ruleXBasicForLoopExpression8663 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXBasicForLoopExpression8684 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXWhileExpression_in_entryRuleXWhileExpression8720 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXWhileExpression8730 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_ruleXWhileExpression8776 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleXWhileExpression8788 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXWhileExpression8809 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_23_in_ruleXWhileExpression8821 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXWhileExpression8842 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXDoWhileExpression_in_entryRuleXDoWhileExpression8878 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXDoWhileExpression8888 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_ruleXDoWhileExpression8934 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXDoWhileExpression8955 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_69_in_ruleXDoWhileExpression8967 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleXDoWhileExpression8979 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXDoWhileExpression9000 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_23_in_ruleXDoWhileExpression9012 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXBlockExpression_in_entryRuleXBlockExpression9048 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXBlockExpression9058 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_ruleXBlockExpression9104 = new BitSet(new long[]{0x4C0860002021C1F0L,0x00000000005FFFF1L});
+    public static final BitSet FOLLOW_ruleXExpressionOrVarDeclaration_in_ruleXBlockExpression9126 = new BitSet(new long[]{0x4C0860002029C1F0L,0x00000000005FFFF1L});
+    public static final BitSet FOLLOW_19_in_ruleXBlockExpression9139 = new BitSet(new long[]{0x4C0860002021C1F0L,0x00000000005FFFF1L});
+    public static final BitSet FOLLOW_16_in_ruleXBlockExpression9155 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXExpressionOrVarDeclaration_in_entryRuleXExpressionOrVarDeclaration9191 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXExpressionOrVarDeclaration9201 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXVariableDeclaration_in_ruleXExpressionOrVarDeclaration9248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXExpressionOrVarDeclaration9275 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXVariableDeclaration_in_entryRuleXVariableDeclaration9310 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXVariableDeclaration9320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_ruleXVariableDeclaration9373 = new BitSet(new long[]{0x0000040000200010L});
+    public static final BitSet FOLLOW_72_in_ruleXVariableDeclaration9404 = new BitSet(new long[]{0x0000040000200010L});
+    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleXVariableDeclaration9452 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleValidID_in_ruleXVariableDeclaration9473 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_ruleValidID_in_ruleXVariableDeclaration9502 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_18_in_ruleXVariableDeclaration9516 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXVariableDeclaration9537 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJvmFormalParameter_in_entryRuleJvmFormalParameter9575 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleJvmFormalParameter9585 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleJvmFormalParameter9631 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleValidID_in_ruleJvmFormalParameter9653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFullJvmFormalParameter_in_entryRuleFullJvmFormalParameter9689 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFullJvmFormalParameter9699 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleFullJvmFormalParameter9745 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleValidID_in_ruleFullJvmFormalParameter9766 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXFeatureCall_in_entryRuleXFeatureCall9802 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXFeatureCall9812 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleXFeatureCall9859 = new BitSet(new long[]{0x0000040000200010L,0x0000000001000000L});
+    public static final BitSet FOLLOW_ruleJvmArgumentTypeReference_in_ruleXFeatureCall9880 = new BitSet(new long[]{0x0000000040400000L});
+    public static final BitSet FOLLOW_22_in_ruleXFeatureCall9893 = new BitSet(new long[]{0x0000040000200010L,0x0000000001000000L});
+    public static final BitSet FOLLOW_ruleJvmArgumentTypeReference_in_ruleXFeatureCall9914 = new BitSet(new long[]{0x0000000040400000L});
+    public static final BitSet FOLLOW_30_in_ruleXFeatureCall9928 = new BitSet(new long[]{0x0000000020004010L,0x0000000000001E00L});
+    public static final BitSet FOLLOW_ruleIdOrSuper_in_ruleXFeatureCall9953 = new BitSet(new long[]{0x0800000000200002L});
+    public static final BitSet FOLLOW_21_in_ruleXFeatureCall9987 = new BitSet(new long[]{0x6C08640020A0C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXShortClosure_in_ruleXFeatureCall10072 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXFeatureCall10100 = new BitSet(new long[]{0x0000000000C00000L});
+    public static final BitSet FOLLOW_22_in_ruleXFeatureCall10113 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXFeatureCall10134 = new BitSet(new long[]{0x0000000000C00000L});
+    public static final BitSet FOLLOW_23_in_ruleXFeatureCall10151 = new BitSet(new long[]{0x0800000000000002L});
+    public static final BitSet FOLLOW_ruleXClosure_in_ruleXFeatureCall10186 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFeatureCallID_in_entryRuleFeatureCallID10224 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFeatureCallID10235 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValidID_in_ruleFeatureCallID10282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_ruleFeatureCallID10306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_73_in_ruleFeatureCallID10325 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_74_in_ruleFeatureCallID10344 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_75_in_ruleFeatureCallID10363 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdOrSuper_in_entryRuleIdOrSuper10404 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIdOrSuper10415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFeatureCallID_in_ruleIdOrSuper10462 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_76_in_ruleIdOrSuper10486 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXConstructorCall_in_entryRuleXConstructorCall10526 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXConstructorCall10536 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_77_in_ruleXConstructorCall10582 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleXConstructorCall10605 = new BitSet(new long[]{0x0800000020200002L});
+    public static final BitSet FOLLOW_29_in_ruleXConstructorCall10626 = new BitSet(new long[]{0x0000040000200010L,0x0000000001000000L});
+    public static final BitSet FOLLOW_ruleJvmArgumentTypeReference_in_ruleXConstructorCall10648 = new BitSet(new long[]{0x0000000040400000L});
+    public static final BitSet FOLLOW_22_in_ruleXConstructorCall10661 = new BitSet(new long[]{0x0000040000200010L,0x0000000001000000L});
+    public static final BitSet FOLLOW_ruleJvmArgumentTypeReference_in_ruleXConstructorCall10682 = new BitSet(new long[]{0x0000000040400000L});
+    public static final BitSet FOLLOW_30_in_ruleXConstructorCall10696 = new BitSet(new long[]{0x0800000000200002L});
+    public static final BitSet FOLLOW_21_in_ruleXConstructorCall10732 = new BitSet(new long[]{0x6C08640020A0C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXShortClosure_in_ruleXConstructorCall10817 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXConstructorCall10845 = new BitSet(new long[]{0x0000000000C00000L});
+    public static final BitSet FOLLOW_22_in_ruleXConstructorCall10858 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXConstructorCall10879 = new BitSet(new long[]{0x0000000000C00000L});
+    public static final BitSet FOLLOW_23_in_ruleXConstructorCall10896 = new BitSet(new long[]{0x0800000000000002L});
+    public static final BitSet FOLLOW_ruleXClosure_in_ruleXConstructorCall10931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXBooleanLiteral_in_entryRuleXBooleanLiteral10968 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXBooleanLiteral10978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_78_in_ruleXBooleanLiteral11025 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_79_in_ruleXBooleanLiteral11049 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXNullLiteral_in_entryRuleXNullLiteral11099 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXNullLiteral11109 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_80_in_ruleXNullLiteral11155 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXNumberLiteral_in_entryRuleXNumberLiteral11191 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXNumberLiteral11201 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumber_in_ruleXNumberLiteral11256 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXStringLiteral_in_entryRuleXStringLiteral11292 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXStringLiteral11302 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleXStringLiteral11353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXTypeLiteral_in_entryRuleXTypeLiteral11394 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXTypeLiteral11404 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_81_in_ruleXTypeLiteral11450 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleXTypeLiteral11462 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleXTypeLiteral11485 = new BitSet(new long[]{0x0800000000800000L});
+    public static final BitSet FOLLOW_ruleArrayBrackets_in_ruleXTypeLiteral11506 = new BitSet(new long[]{0x0800000000800000L});
+    public static final BitSet FOLLOW_23_in_ruleXTypeLiteral11519 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXThrowExpression_in_entryRuleXThrowExpression11555 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXThrowExpression11565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_82_in_ruleXThrowExpression11611 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXThrowExpression11632 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXReturnExpression_in_entryRuleXReturnExpression11668 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXReturnExpression11678 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_ruleXReturnExpression11724 = new BitSet(new long[]{0x4C0860002020C1F2L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXReturnExpression11959 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXTryCatchFinallyExpression_in_entryRuleXTryCatchFinallyExpression11996 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXTryCatchFinallyExpression12006 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_84_in_ruleXTryCatchFinallyExpression12052 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXTryCatchFinallyExpression12073 = new BitSet(new long[]{0x0000000000000000L,0x0000000000A00000L});
+    public static final BitSet FOLLOW_ruleXCatchClause_in_ruleXTryCatchFinallyExpression12103 = new BitSet(new long[]{0x0000000000000002L,0x0000000000A00000L});
+    public static final BitSet FOLLOW_85_in_ruleXTryCatchFinallyExpression12125 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXTryCatchFinallyExpression12147 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_85_in_ruleXTryCatchFinallyExpression12169 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXTryCatchFinallyExpression12190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXSynchronizedExpression_in_entryRuleXSynchronizedExpression12228 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXSynchronizedExpression12238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_86_in_ruleXSynchronizedExpression12302 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleXSynchronizedExpression12314 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXSynchronizedExpression12337 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_23_in_ruleXSynchronizedExpression12349 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXSynchronizedExpression12370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXCatchClause_in_entryRuleXCatchClause12406 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXCatchClause12416 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_87_in_ruleXCatchClause12461 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleXCatchClause12474 = new BitSet(new long[]{0x0000040000200010L});
+    public static final BitSet FOLLOW_ruleFullJvmFormalParameter_in_ruleXCatchClause12495 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_23_in_ruleXCatchClause12507 = new BitSet(new long[]{0x4C0860002020C1F0L,0x00000000005FFE71L});
+    public static final BitSet FOLLOW_ruleXExpression_in_ruleXCatchClause12528 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName12565 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName12576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValidID_in_ruleQualifiedName12623 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_55_in_ruleQualifiedName12651 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleValidID_in_ruleQualifiedName12674 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_ruleNumber_in_entryRuleNumber12728 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNumber12739 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_HEX_in_ruleNumber12783 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleNumber12811 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_RULE_DECIMAL_in_ruleNumber12837 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_55_in_ruleNumber12857 = new BitSet(new long[]{0x0000000000000180L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleNumber12873 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DECIMAL_in_ruleNumber12899 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJvmTypeReference_in_entryRuleJvmTypeReference12954 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleJvmTypeReference12964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJvmParameterizedTypeReference_in_ruleJvmTypeReference13012 = new BitSet(new long[]{0x0800000000000002L});
+    public static final BitSet FOLLOW_ruleArrayBrackets_in_ruleJvmTypeReference13048 = new BitSet(new long[]{0x0800000000000002L});
+    public static final BitSet FOLLOW_ruleXFunctionTypeRef_in_ruleJvmTypeReference13079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArrayBrackets_in_entryRuleArrayBrackets13115 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleArrayBrackets13126 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_ruleArrayBrackets13164 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_60_in_ruleArrayBrackets13177 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXFunctionTypeRef_in_entryRuleXFunctionTypeRef13217 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXFunctionTypeRef13227 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_ruleXFunctionTypeRef13265 = new BitSet(new long[]{0x0000040000A00010L});
+    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleXFunctionTypeRef13287 = new BitSet(new long[]{0x0000000000C00000L});
+    public static final BitSet FOLLOW_22_in_ruleXFunctionTypeRef13300 = new BitSet(new long[]{0x0000040000200010L});
+    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleXFunctionTypeRef13321 = new BitSet(new long[]{0x0000000000C00000L});
+    public static final BitSet FOLLOW_23_in_ruleXFunctionTypeRef13337 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_42_in_ruleXFunctionTypeRef13351 = new BitSet(new long[]{0x0000040000200010L});
+    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleXFunctionTypeRef13372 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJvmParameterizedTypeReference_in_entryRuleJvmParameterizedTypeReference13408 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleJvmParameterizedTypeReference13418 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleJvmParameterizedTypeReference13466 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_29_in_ruleJvmParameterizedTypeReference13487 = new BitSet(new long[]{0x0000040000200010L,0x0000000001000000L});
+    public static final BitSet FOLLOW_ruleJvmArgumentTypeReference_in_ruleJvmParameterizedTypeReference13509 = new BitSet(new long[]{0x0000000040400000L});
+    public static final BitSet FOLLOW_22_in_ruleJvmParameterizedTypeReference13522 = new BitSet(new long[]{0x0000040000200010L,0x0000000001000000L});
+    public static final BitSet FOLLOW_ruleJvmArgumentTypeReference_in_ruleJvmParameterizedTypeReference13543 = new BitSet(new long[]{0x0000000040400000L});
+    public static final BitSet FOLLOW_30_in_ruleJvmParameterizedTypeReference13557 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_55_in_ruleJvmParameterizedTypeReference13593 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleValidID_in_ruleJvmParameterizedTypeReference13618 = new BitSet(new long[]{0x0080000020000002L});
+    public static final BitSet FOLLOW_29_in_ruleJvmParameterizedTypeReference13639 = new BitSet(new long[]{0x0000040000200010L,0x0000000001000000L});
+    public static final BitSet FOLLOW_ruleJvmArgumentTypeReference_in_ruleJvmParameterizedTypeReference13661 = new BitSet(new long[]{0x0000000040400000L});
+    public static final BitSet FOLLOW_22_in_ruleJvmParameterizedTypeReference13674 = new BitSet(new long[]{0x0000040000200010L,0x0000000001000000L});
+    public static final BitSet FOLLOW_ruleJvmArgumentTypeReference_in_ruleJvmParameterizedTypeReference13695 = new BitSet(new long[]{0x0000000040400000L});
+    public static final BitSet FOLLOW_30_in_ruleJvmParameterizedTypeReference13709 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_ruleJvmArgumentTypeReference_in_entryRuleJvmArgumentTypeReference13751 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleJvmArgumentTypeReference13761 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleJvmArgumentTypeReference13808 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJvmWildcardTypeReference_in_ruleJvmArgumentTypeReference13835 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJvmWildcardTypeReference_in_entryRuleJvmWildcardTypeReference13870 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleJvmWildcardTypeReference13880 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_88_in_ruleJvmWildcardTypeReference13926 = new BitSet(new long[]{0x0000000000004002L,0x0000000000001000L});
+    public static final BitSet FOLLOW_ruleJvmUpperBound_in_ruleJvmWildcardTypeReference13949 = new BitSet(new long[]{0x0000000000000002L,0x0000000002000000L});
+    public static final BitSet FOLLOW_ruleJvmUpperBoundAnded_in_ruleJvmWildcardTypeReference13970 = new BitSet(new long[]{0x0000000000000002L,0x0000000002000000L});
+    public static final BitSet FOLLOW_ruleJvmLowerBound_in_ruleJvmWildcardTypeReference14000 = new BitSet(new long[]{0x0000000000000002L,0x0000000002000000L});
+    public static final BitSet FOLLOW_ruleJvmLowerBoundAnded_in_ruleJvmWildcardTypeReference14021 = new BitSet(new long[]{0x0000000000000002L,0x0000000002000000L});
+    public static final BitSet FOLLOW_ruleJvmUpperBound_in_entryRuleJvmUpperBound14061 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleJvmUpperBound14071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_ruleJvmUpperBound14108 = new BitSet(new long[]{0x0000040000200010L});
+    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleJvmUpperBound14129 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJvmUpperBoundAnded_in_entryRuleJvmUpperBoundAnded14165 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleJvmUpperBoundAnded14175 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_89_in_ruleJvmUpperBoundAnded14212 = new BitSet(new long[]{0x0000040000200010L});
+    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleJvmUpperBoundAnded14233 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJvmLowerBound_in_entryRuleJvmLowerBound14269 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleJvmLowerBound14279 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_76_in_ruleJvmLowerBound14316 = new BitSet(new long[]{0x0000040000200010L});
+    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleJvmLowerBound14337 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJvmLowerBoundAnded_in_entryRuleJvmLowerBoundAnded14373 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleJvmLowerBoundAnded14383 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_89_in_ruleJvmLowerBoundAnded14420 = new BitSet(new long[]{0x0000040000200010L});
+    public static final BitSet FOLLOW_ruleJvmTypeReference_in_ruleJvmLowerBoundAnded14441 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedNameWithWildcard_in_entryRuleQualifiedNameWithWildcard14480 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedNameWithWildcard14491 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleQualifiedNameWithWildcard14538 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_55_in_ruleQualifiedNameWithWildcard14556 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_ruleQualifiedNameWithWildcard14569 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValidID_in_entryRuleValidID14610 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleValidID14621 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleValidID14660 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXImportSection_in_entryRuleXImportSection14704 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXImportSection14714 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXImportDeclaration_in_ruleXImportSection14759 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000400L});
+    public static final BitSet FOLLOW_ruleXImportDeclaration_in_entryRuleXImportDeclaration14795 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXImportDeclaration14805 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_74_in_ruleXImportDeclaration14842 = new BitSet(new long[]{0x0000000000000010L,0x0000000000000200L});
+    public static final BitSet FOLLOW_73_in_ruleXImportDeclaration14862 = new BitSet(new long[]{0x0000000000000010L,0x0000000000000800L});
+    public static final BitSet FOLLOW_75_in_ruleXImportDeclaration14893 = new BitSet(new long[]{0x0000000000000010L,0x0000000000000800L});
+    public static final BitSet FOLLOW_ruleQualifiedNameInStaticImport_in_ruleXImportDeclaration14930 = new BitSet(new long[]{0x0000800000000010L});
+    public static final BitSet FOLLOW_47_in_ruleXImportDeclaration14949 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_ruleValidID_in_ruleXImportDeclaration14989 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleXImportDeclaration15020 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_ruleQualifiedNameWithWildcard_in_ruleXImportDeclaration15047 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_19_in_ruleXImportDeclaration15061 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedNameInStaticImport_in_entryRuleQualifiedNameInStaticImport15100 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedNameInStaticImport15111 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValidID_in_ruleQualifiedNameInStaticImport15158 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_55_in_ruleQualifiedNameInStaticImport15176 = new BitSet(new long[]{0x0000000000000012L});
     public static final BitSet FOLLOW_ruleOpMultiAssign_in_synpred1_InternalEntities1051 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleOpOr_in_synpred2_InternalEntities1574 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleOpAnd_in_synpred3_InternalEntities1833 = new BitSet(new long[]{0x0000000000000002L});
@@ -24034,26 +24738,28 @@ public class InternalEntitiesParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_65_in_synpred26_InternalEntities7686 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleJvmFormalParameter_in_synpred27_InternalEntities7788 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
     public static final BitSet FOLLOW_65_in_synpred27_InternalEntities7794 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJvmTypeReference_in_synpred29_InternalEntities9403 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleValidID_in_synpred29_InternalEntities9412 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_synpred30_InternalEntities9950 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJvmFormalParameter_in_synpred31_InternalEntities10002 = new BitSet(new long[]{0x2000000000400000L});
-    public static final BitSet FOLLOW_22_in_synpred31_InternalEntities10009 = new BitSet(new long[]{0x0000040000200010L});
-    public static final BitSet FOLLOW_ruleJvmFormalParameter_in_synpred31_InternalEntities10016 = new BitSet(new long[]{0x2000000000400000L});
-    public static final BitSet FOLLOW_61_in_synpred31_InternalEntities10030 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_synpred32_InternalEntities10150 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_synpred33_InternalEntities10599 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_synpred34_InternalEntities10695 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJvmFormalParameter_in_synpred35_InternalEntities10747 = new BitSet(new long[]{0x2000000000400000L});
-    public static final BitSet FOLLOW_22_in_synpred35_InternalEntities10754 = new BitSet(new long[]{0x0000040000200010L});
-    public static final BitSet FOLLOW_ruleJvmFormalParameter_in_synpred35_InternalEntities10761 = new BitSet(new long[]{0x2000000000400000L});
-    public static final BitSet FOLLOW_61_in_synpred35_InternalEntities10775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_synpred36_InternalEntities10895 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_synpred37_InternalEntities11715 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_87_in_synpred38_InternalEntities12068 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_85_in_synpred39_InternalEntities12098 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_synpred42_InternalEntities12623 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArrayBrackets_in_synpred43_InternalEntities13008 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_synpred44_InternalEntities13460 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJvmTypeReference_in_synpred29_InternalEntities9422 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleValidID_in_synpred29_InternalEntities9431 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_synpred30_InternalEntities9969 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJvmFormalParameter_in_synpred31_InternalEntities10021 = new BitSet(new long[]{0x2000000000400000L});
+    public static final BitSet FOLLOW_22_in_synpred31_InternalEntities10028 = new BitSet(new long[]{0x0000040000200010L});
+    public static final BitSet FOLLOW_ruleJvmFormalParameter_in_synpred31_InternalEntities10035 = new BitSet(new long[]{0x2000000000400000L});
+    public static final BitSet FOLLOW_61_in_synpred31_InternalEntities10049 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_synpred32_InternalEntities10169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_synpred33_InternalEntities10618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_synpred34_InternalEntities10714 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJvmFormalParameter_in_synpred35_InternalEntities10766 = new BitSet(new long[]{0x2000000000400000L});
+    public static final BitSet FOLLOW_22_in_synpred35_InternalEntities10773 = new BitSet(new long[]{0x0000040000200010L});
+    public static final BitSet FOLLOW_ruleJvmFormalParameter_in_synpred35_InternalEntities10780 = new BitSet(new long[]{0x2000000000400000L});
+    public static final BitSet FOLLOW_61_in_synpred35_InternalEntities10794 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_synpred36_InternalEntities10914 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_synpred37_InternalEntities11734 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_87_in_synpred38_InternalEntities12087 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_85_in_synpred39_InternalEntities12117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_synpred42_InternalEntities12642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArrayBrackets_in_synpred43_InternalEntities13027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_synpred44_InternalEntities13479 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_synpred45_InternalEntities13574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_synpred46_InternalEntities13631 = new BitSet(new long[]{0x0000000000000002L});
 
 }
