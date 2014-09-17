@@ -7,12 +7,12 @@ import org.eclipse.xtext.junit4.XtextRunner;
 import org.eclipse.xtext.xbase.compiler.CompilationTestHelper;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Extension;
-import org.example.expressions.ExpressionsInjectorProvider;
+import org.example.expressions.tests.ExpressionsInjectorProviderCustom;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(XtextRunner.class)
-@InjectWith(ExpressionsInjectorProvider.class)
+@InjectWith(ExpressionsInjectorProviderCustom.class)
 @SuppressWarnings("all")
 public class ExpressionsGeneratorTest {
   @Inject

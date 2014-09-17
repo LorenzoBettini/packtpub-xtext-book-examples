@@ -4,12 +4,11 @@ import com.google.inject.Inject
 import org.eclipse.xtext.junit4.InjectWith
 import org.eclipse.xtext.junit4.XtextRunner
 import org.eclipse.xtext.xbase.compiler.CompilationTestHelper
-import org.example.expressions.ExpressionsInjectorProvider
 import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(typeof(XtextRunner))
-@InjectWith(typeof(ExpressionsInjectorProvider))
+@InjectWith(typeof(ExpressionsInjectorProviderCustom))
 class ExpressionsGeneratorTest {
 	
 	@Inject extension CompilationTestHelper

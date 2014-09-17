@@ -14,4 +14,14 @@ public class EntitiesRuntimeModule extends org.example.entities.AbstractEntities
     public Class<? extends IOutputConfigurationProvider> bindIOutputConfigurationProvider() {
         return EntitiesOutputConfigurationProvider.class;
     }
+
+    // this is required only by the CompilationTestHelper since Xtext 2.7
+    public Class<? extends org.eclipse.xtend.lib.macro.file.MutableFileSystemSupport> bindMutableFileSystemSupport() {
+		return org.eclipse.xtext.xbase.file.JavaIOFileSystemSupport.class;
+	}
+
+    // this is required only by the CompilationTestHelper since Xtext 2.7
+    public Class<? extends com.google.inject.Provider<org.eclipse.xtext.xbase.file.WorkspaceConfig>> provideWorkspaceConfig() {
+		return org.eclipse.xtext.xbase.file.RuntimeWorkspaceConfigProvider.class;
+	}
 }

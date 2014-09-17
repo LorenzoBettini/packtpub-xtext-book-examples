@@ -56,6 +56,103 @@ Thus, the Xbase Expressions example's grammar now reads:
 
 ## Xtext 2.7
 
+### Testing with CompilationTestHelper
+
+The class **org.eclipse.xtext.xbase.compiler.CompilationTestHelper** (contained in the bundle _org.eclipse.xtext.xbase.junit_) requires additional bindings which are created by default when your grammar uses Xbase.  However, this class could be used also for testing code generation also in languages that do not use Xbase (this is the case in the book, Chapter 7, for the examples Entities and Expressions); see also [this discussion in the Xtext forum](https://www.eclipse.org/forums/index.php/t/807828/).
+
+The symptom is this exception when running the Junit tests that use CompilationTestHelper
+
+	com.google.inject.ConfigurationException: Guice configuration errors:
+	
+	1) No implementation for org.eclipse.xtend.lib.macro.file.MutableFileSystemSupport was bound.
+	  while locating org.eclipse.xtend.lib.macro.file.MutableFileSystemSupport
+	    for field at org.eclipse.xtext.generator.FileSystemSupportBasedFileSystemAccess.fileSystemSupport(Unknown Source)
+	  while locating com.google.inject.Provider<org.eclipse.xtext.xbase.compiler.RegisteringFileSystemAccess>
+	    for field at org.eclipse.xtext.xbase.compiler.CompilationTestHelper$Result.fileSystemAccessProvider(Unknown Source)
+	  while locating com.google.inject.Provider<org.eclipse.xtext.xbase.compiler.CompilationTestHelper$Result>
+	    for field at org.eclipse.xtext.xbase.compiler.CompilationTestHelper.resultProvider(Unknown Source)
+	  while locating org.eclipse.xtext.xbase.compiler.CompilationTestHelper
+	    for field at org.example.expressions.tests.ExpressionsGeneratorTest._compilationTestHelper(Unknown Source)
+	  while locating org.example.expressions.tests.ExpressionsGeneratorTest
+
+To solve this problem the missing bindings in languages that do not use Xbase must be added explicitly; there are two ways of solving this:
+
+1. **Add the bindings in the runtime module of the language**
+
+For example, for the Entities example, you must add the following bindings in the _EntitiesRuntimeModule_ (first, make sure you have the following dependencies in the MANIFEST.MF: _org.eclipse.xtend.lib.macro_ and _org.eclipse.xtext.xbase_):
+
+```
+public class EntitiesRuntimeModule extends org.example.entities.AbstractEntitiesRuntimeModule {
+
+    //... existing bindings
+
+    // this is required only by the CompilationTestHelper since Xtext 2.7
+    public Class<? extends org.eclipse.xtend.lib.macro.file.MutableFileSystemSupport> bindMutableFileSystemSupport() {
+		return org.eclipse.xtext.xbase.file.JavaIOFileSystemSupport.class;
+	}
+
+    // this is required only by the CompilationTestHelper since Xtext 2.7
+    public Class<? extends com.google.inject.Provider<org.eclipse.xtext.xbase.file.WorkspaceConfig>> provideWorkspaceConfig() {
+		return org.eclipse.xtext.xbase.file.RuntimeWorkspaceConfigProvider.class;
+	}
+} 
+```
+
+2. **Add the bindings in a custom InjectorProvider in the tests project**
+
+If you do not want to add these bindings in the main DSL runtime module (after all, you need them only for testing), you can create a custom injector provider in the tests project (inheriting from the generated one in src-gen folder) to be used only for the test(s) that use CompilationTestHelper.  This custom injector provider must define a custom Guice module, inheriting from the DSL main module, and provide the additional bindings.
+
+For example, for the Expressions example, you must add the following class in the test project (first, make sure you have the following dependencies in the MANIFEST.MF: _org.eclipse.xtend.lib.macro_ and _org.eclipse.xtext.xbase_):
+
+```
+package org.example.expressions.tests;
+
+import org.example.expressions.ExpressionsInjectorProvider;
+import org.example.expressions.ExpressionsRuntimeModule;
+import org.example.expressions.ExpressionsStandaloneSetup;
+
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+
+public class ExpressionsInjectorProviderCustom extends ExpressionsInjectorProvider {
+
+	@Override
+	protected Injector internalCreateInjector() {
+		return new ExpressionsStandaloneSetup() {
+			@Override
+			public Injector createInjector() {
+				return Guice.createInjector(new ExpressionsRuntimeModule() {
+					// this is required only by the CompilationTestHelper since
+					// Xtext 2.7
+					@SuppressWarnings("unused")
+					public Class<? extends org.eclipse.xtend.lib.macro.file.MutableFileSystemSupport> bindMutableFileSystemSupport() {
+						return org.eclipse.xtext.xbase.file.JavaIOFileSystemSupport.class;
+					}
+
+					// this is required only by the CompilationTestHelper since
+					// Xtext 2.7
+					@SuppressWarnings("unused")
+					public Class<? extends com.google.inject.Provider<org.eclipse.xtext.xbase.file.WorkspaceConfig>> provideWorkspaceConfig() {
+						return org.eclipse.xtext.xbase.file.RuntimeWorkspaceConfigProvider.class;
+					}
+				});
+			}
+		}.createInjectorAndDoEMFRegistration();
+	}
+}
+```
+
+And then you must use this injector provider in the @InjectWith annotation of the test that uses CompilationTestHelper; in this example:
+
+```
+@RunWith(typeof(XtextRunner))
+@InjectWith(typeof(ExpressionsInjectorProviderCustom))
+class ExpressionsGeneratorTest {
+	
+	@Inject extension CompilationTestHelper
+	...
+```
+
 ### Model inferrer in Xbase
 
 Some methods in the JvmModelInferrer have been deprecated and should be updated in the examples as follows:
