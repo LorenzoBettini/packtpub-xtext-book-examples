@@ -49,8 +49,10 @@ public class SmallJavaProjectWizardTests {
 		bot.table().select("Plug-in Development");
 		bot.button("OK").click();
 
+		// in Luna the Error Log is not shown by default in the Plug-in Development perspective
+		// bot.viewByPartName("Error Log").close();
+
 		// in SwtBot 2.2.0 we must use viewByPartName instead of viewByTitle
-		bot.viewByPartName("Error Log").close();
 		bot.viewByPartName("Problems").show();
 	}
 
