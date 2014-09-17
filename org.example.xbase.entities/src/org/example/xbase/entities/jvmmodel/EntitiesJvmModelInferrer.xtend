@@ -67,7 +67,7 @@ class EntitiesJvmModelInferrer extends AbstractModelInferrer {
 					body = op.body
 				]
 			]
-			members += entity.toMethod("toString", typeRef(typeof(String))) [
+			members += entity.toMethod("toString", typeRef(String)) [
 				body = [
 					append(
 					'''

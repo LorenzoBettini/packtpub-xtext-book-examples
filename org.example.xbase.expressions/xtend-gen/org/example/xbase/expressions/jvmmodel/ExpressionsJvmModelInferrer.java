@@ -64,27 +64,26 @@ public class ExpressionsJvmModelInferrer extends AbstractModelInferrer {
     URI _trimFileExtension = _uRI.trimFileExtension();
     final String className = _trimFileExtension.lastSegment();
     JvmGenericType _class = this._jvmTypesBuilder.toClass(model, className);
-    IJvmDeclaredTypeAcceptor.IPostIndexingInitializing<JvmGenericType> _accept = acceptor.<JvmGenericType>accept(_class);
     final Procedure1<JvmGenericType> _function = new Procedure1<JvmGenericType>() {
       public void apply(final JvmGenericType it) {
         EList<JvmMember> _members = it.getMembers();
-        JvmTypeReference _newTypeRef = ExpressionsJvmModelInferrer.this._jvmTypesBuilder.newTypeRef(model, Void.TYPE);
+        JvmTypeReference _typeRef = ExpressionsJvmModelInferrer.this._typeReferenceBuilder.typeRef(Void.TYPE);
         final Procedure1<JvmOperation> _function = new Procedure1<JvmOperation>() {
           public void apply(final JvmOperation it) {
             EList<JvmFormalParameter> _parameters = it.getParameters();
-            JvmTypeReference _newTypeRef = ExpressionsJvmModelInferrer.this._jvmTypesBuilder.newTypeRef(model, String.class);
-            JvmTypeReference _addArrayTypeDimension = ExpressionsJvmModelInferrer.this._jvmTypesBuilder.addArrayTypeDimension(_newTypeRef);
+            JvmTypeReference _typeRef = ExpressionsJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
+            JvmTypeReference _addArrayTypeDimension = ExpressionsJvmModelInferrer.this._jvmTypesBuilder.addArrayTypeDimension(_typeRef);
             JvmFormalParameter _parameter = ExpressionsJvmModelInferrer.this._jvmTypesBuilder.toParameter(model, "args", _addArrayTypeDimension);
             ExpressionsJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
             it.setStatic(true);
             ExpressionsJvmModelInferrer.this._jvmTypesBuilder.setBody(it, model);
           }
         };
-        JvmOperation _method = ExpressionsJvmModelInferrer.this._jvmTypesBuilder.toMethod(model, "main", _newTypeRef, _function);
+        JvmOperation _method = ExpressionsJvmModelInferrer.this._jvmTypesBuilder.toMethod(model, "main", _typeRef, _function);
         ExpressionsJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members, _method);
       }
     };
-    _accept.initializeLater(_function);
+    acceptor.<JvmGenericType>accept(_class, _function);
   }
   
   public void infer(final EObject model, final IJvmDeclaredTypeAcceptor acceptor, final boolean isPreIndexingPhase) {

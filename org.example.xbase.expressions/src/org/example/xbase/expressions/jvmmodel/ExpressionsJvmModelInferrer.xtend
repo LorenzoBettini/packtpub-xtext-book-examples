@@ -46,12 +46,12 @@ class ExpressionsJvmModelInferrer extends AbstractModelInferrer {
 	 */
    	def dispatch void infer(ExpressionsModel model, IJvmDeclaredTypeAcceptor acceptor, boolean isPreIndexingPhase) {
    		val className = model.eResource.URI.trimFileExtension.lastSegment
-   		acceptor.accept(model.toClass(className)).initializeLater [
+   		acceptor.accept(model.toClass(className)) [
    			// the class will consist of one main method
-   			members += model.toMethod('main', model.newTypeRef(Void::TYPE)) [
+   			members += model.toMethod('main', typeRef(Void::TYPE)) [
    				parameters += 
    					model.toParameter
-   						("args", model.newTypeRef(typeof(String)).
+   						("args", typeRef(String).
    							addArrayTypeDimension)
    				static = true
    				// Associate the model as the body of the main method
