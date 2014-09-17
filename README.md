@@ -29,5 +29,57 @@ This is due to a new generation fragment in the mwe2 file: instead of
 
 and this fragment generates the .ecore and the .genmodel files in the folder "model/generated"
 
+## Xtext 2.5
 
+To specify a type literal you can simply write its name: there's no need to use the keyword **typeof** anymore.
 
+For example, instead of
+
+	typeof(String)
+
+you can simply write
+
+	String
+
+## Xtext 2.6
+
+The Xbase rule **XExpressionInsideBlock** has changed into **XExpressionOrVarDeclaration**.
+
+Thus, the Xbase Expressions example's grammar now reads:
+
+	ExpressionsModel returns XBlockExpression:
+		{ExpressionsModel}
+		(expressions+=XExpressionOrVarDeclaration)*;
+
+## Xtext 2.7
+
+Some methods in the JvmModelInferrer have been deprecated and should be updated in the examples as follows:
+
+Instead of the following acceptor invocation
+
+	acceptor.accept(entity.toClass("entities."+entity.name)).initializeLater [
+
+You should now pass directly as the last argument a lambda expression
+
+	acceptor.accept(entity.toClass("entities."+entity.name)) [
+
+This method in the JvmTypesBuilder has been deprecated
+
+	@Deprecated
+	public JvmTypeReference newTypeRef(EObject ctx, Class<?> clazz, JvmTypeReference... typeArgs) {
+		return references.getTypeForName(clazz, ctx, typeArgs);
+	}
+
+In the inferrer you should call directly 
+
+	public JvmTypeReference typeRef(Class<?> clazz, JvmTypeReference... typeArgs) {
+
+(So the EObject context is not required anymore).
+
+For example, instead of
+
+	entity.toMethod("toString", entity.newTypeRef(typeof(String)))
+
+You should write (recall that typeof is not required anymore to specify a type literal):
+
+	entity.toMethod("toString", typeRef(String))
