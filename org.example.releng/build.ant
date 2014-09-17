@@ -139,7 +139,7 @@
 				</fileset>
 			</classpath>
 			<arg line='-data "${director.dir}/workspace"' />
-			<arg line="-r ${eclipse.download}/tools/buckminster/headless-4.2,http://download.cloudsmith.com/buckminster/external-4.2,${eclipse.download}/releases/juno/" />
+			<arg line="-r ${eclipse.download}/tools/buckminster/headless-4.4,http://download.cloudsmith.com/buckminster/external-4.4" />
 			<arg line='-d "${buckminster.home}"' />
 			<arg line="-p Buckminster" />
 			<arg line="-i org.eclipse.buckminster.cmdline.product" />
@@ -195,6 +195,7 @@
 						          deleteonexit="true" />
 		<get src="${director.url}" dest="${director.zip}" />
 		<unzip src="${director.zip}" dest="${director.install.dest}" />
+		<chmod file="${director.install.dest}/director/director" perm="+x" />
 		<delete file="${director.zip}" />
 	</target>
 </project>
