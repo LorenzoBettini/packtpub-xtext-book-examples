@@ -4,7 +4,7 @@
     editorDirectory="/org.example.build.hello.editor/src" modelPluginID="org.example.build.hello"
     forceOverwrite="true" modelName="Hello" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="org.example.build.hello.edit"
-    editorPluginID="org.example.build.hello.editor" runtimeVersion="2.9">
+    editorPluginID="org.example.build.hello.editor" runtimeVersion="2.10">
   <genPackages prefix="Hello" basePackage="org.example.build.hello" disposableProviderFactory="true"
       fileExtensions="hello" ecorePackage="Hello.ecore#/">
     <genClasses ecoreClass="Hello.ecore#//Model">

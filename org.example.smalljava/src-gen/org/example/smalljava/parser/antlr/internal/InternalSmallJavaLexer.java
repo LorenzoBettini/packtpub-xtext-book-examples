@@ -709,10 +709,10 @@ public class InternalSmallJavaLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -730,10 +730,10 @@ public class InternalSmallJavaLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -749,23 +749,15 @@ public class InternalSmallJavaLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:21: '\\\\' .
                     	    {
                     	    match('\\'); 
-                    	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
-                    	        input.consume();
-
-                    	    }
-                    	    else {
-                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
-                    	        recover(mse);
-                    	        throw mse;}
-
+                    	    matchAny(); 
 
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -790,10 +782,10 @@ public class InternalSmallJavaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -809,23 +801,15 @@ public class InternalSmallJavaLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:54: '\\\\' .
                     	    {
                     	    match('\\'); 
-                    	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
-                    	        input.consume();
-
-                    	    }
-                    	    else {
-                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
-                    	        recover(mse);
-                    	        throw mse;}
-
+                    	    matchAny(); 
 
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.example.smalljava/src-gen/org/example/smalljava/parser/antlr/internal/InternalSmallJava.g:1519:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1327,51 +1311,19 @@ public class InternalSmallJavaLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\35\1\uffff\1\35\1\42\2\35\5\uffff\1\35\1\uffff\4\35\1"+
-        "\31\2\uffff\3\31\2\uffff\3\35\2\uffff\1\35\1\75\2\uffff\3\35\5\uffff"+
-        "\1\35\1\uffff\6\35\5\uffff\5\35\1\uffff\11\35\1\126\7\35\1\136\1"+
-        "\35\1\140\1\141\2\35\1\144\1\uffff\5\35\1\152\1\35\1\uffff\1\35"+
-        "\2\uffff\1\155\1\156\1\uffff\3\35\1\162\1\163\1\uffff\1\35\1\165"+
-        "\2\uffff\1\166\1\167\1\35\2\uffff\1\171\3\uffff\1\35\1\uffff\1\173"+
-        "\1\uffff";
+        "\1\uffff\1\35\1\uffff\1\35\1\42\2\35\5\uffff\1\35\1\uffff\4\35\1\31\2\uffff\3\31\2\uffff\3\35\2\uffff\1\35\1\75\2\uffff\3\35\5\uffff\1\35\1\uffff\6\35\5\uffff\5\35\1\uffff\11\35\1\126\7\35\1\136\1\35\1\140\1\141\2\35\1\144\1\uffff\5\35\1\152\1\35\1\uffff\1\35\2\uffff\1\155\1\156\1\uffff\3\35\1\162\1\163\1\uffff\1\35\1\165\2\uffff\1\166\1\167\1\35\2\uffff\1\171\3\uffff\1\35\1\uffff\1\173\1\uffff";
     static final String DFA12_eofS =
         "\174\uffff";
     static final String DFA12_minS =
-        "\1\0\1\141\1\uffff\1\146\1\52\2\154\5\uffff\1\145\1\uffff\1\150"+
-        "\1\141\1\165\1\145\1\101\2\uffff\2\0\1\52\2\uffff\1\143\1\151\1"+
-        "\142\2\uffff\1\160\1\60\2\uffff\1\141\1\164\1\163\5\uffff\1\164"+
-        "\1\uffff\1\165\1\151\1\154\1\160\1\154\1\167\5\uffff\1\153\1\166"+
-        "\1\164\1\154\1\157\1\uffff\1\163\2\145\1\165\1\145\2\163\1\145\1"+
-        "\154\1\60\2\141\1\145\1\151\1\162\1\163\1\156\1\60\1\162\2\60\1"+
-        "\145\1\162\1\60\1\uffff\1\147\1\164\2\143\1\164\1\60\1\144\1\uffff"+
-        "\1\156\2\uffff\2\60\1\uffff\2\145\1\164\2\60\1\uffff\1\163\1\60"+
-        "\2\uffff\2\60\1\145\2\uffff\1\60\3\uffff\1\144\1\uffff\1\60\1\uffff";
+        "\1\0\1\141\1\uffff\1\146\1\52\2\154\5\uffff\1\145\1\uffff\1\150\1\141\1\165\1\145\1\101\2\uffff\2\0\1\52\2\uffff\1\143\1\151\1\142\2\uffff\1\160\1\60\2\uffff\1\141\1\164\1\163\5\uffff\1\164\1\uffff\1\165\1\151\1\154\1\160\1\154\1\167\5\uffff\1\153\1\166\1\164\1\154\1\157\1\uffff\1\163\2\145\1\165\1\145\2\163\1\145\1\154\1\60\2\141\1\145\1\151\1\162\1\163\1\156\1\60\1\162\2\60\1\145\1\162\1\60\1\uffff\1\147\1\164\2\143\1\164\1\60\1\144\1\uffff\1\156\2\uffff\2\60\1\uffff\2\145\1\164\2\60\1\uffff\1\163\1\60\2\uffff\2\60\1\145\2\uffff\1\60\3\uffff\1\144\1\uffff\1\60\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\165\1\uffff\1\155\1\52\1\154\1\170\5\uffff\1\145\1\uffff"+
-        "\1\162\1\141\2\165\1\172\2\uffff\2\uffff\1\57\2\uffff\1\143\1\157"+
-        "\1\142\2\uffff\1\160\1\172\2\uffff\1\141\1\164\1\163\5\uffff\1\164"+
-        "\1\uffff\1\165\1\151\1\154\1\160\1\154\1\167\5\uffff\1\153\1\166"+
-        "\1\164\1\154\1\157\1\uffff\1\163\2\145\1\165\1\145\2\163\1\145\1"+
-        "\154\1\172\2\141\1\145\1\151\1\162\1\163\1\156\1\172\1\162\2\172"+
-        "\1\145\1\162\1\172\1\uffff\1\147\1\164\2\143\1\164\1\172\1\144\1"+
-        "\uffff\1\156\2\uffff\2\172\1\uffff\2\145\1\164\2\172\1\uffff\1\163"+
-        "\1\172\2\uffff\2\172\1\145\2\uffff\1\172\3\uffff\1\144\1\uffff\1"+
-        "\172\1\uffff";
+        "\1\uffff\1\165\1\uffff\1\155\1\52\1\154\1\170\5\uffff\1\145\1\uffff\1\162\1\141\2\165\1\172\2\uffff\2\uffff\1\57\2\uffff\1\143\1\157\1\142\2\uffff\1\160\1\172\2\uffff\1\141\1\164\1\163\5\uffff\1\164\1\uffff\1\165\1\151\1\154\1\160\1\154\1\167\5\uffff\1\153\1\166\1\164\1\154\1\157\1\uffff\1\163\2\145\1\165\1\145\2\163\1\145\1\154\1\172\2\141\1\145\1\151\1\162\1\163\1\156\1\172\1\162\2\172\1\145\1\162\1\172\1\uffff\1\147\1\164\2\143\1\164\1\172\1\144\1\uffff\1\156\2\uffff\2\172\1\uffff\2\145\1\164\2\172\1\uffff\1\163\1\172\2\uffff\2\172\1\145\2\uffff\1\172\3\uffff\1\144\1\uffff\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\2\uffff\1\2\4\uffff\1\10\1\11\1\12\1\13\1\14\1\uffff\1\16\5\uffff"+
-        "\1\32\1\33\3\uffff\1\37\1\40\3\uffff\1\32\1\2\2\uffff\1\4\1\5\3"+
-        "\uffff\1\10\1\11\1\12\1\13\1\14\1\uffff\1\16\6\uffff\1\33\1\34\1"+
-        "\35\1\36\1\37\5\uffff\1\17\30\uffff\1\26\7\uffff\1\20\1\uffff\1"+
-        "\21\1\23\2\uffff\1\25\5\uffff\1\6\2\uffff\1\22\1\24\3\uffff\1\30"+
-        "\1\3\1\uffff\1\15\1\1\1\27\1\uffff\1\7\1\uffff\1\31";
+        "\2\uffff\1\2\4\uffff\1\10\1\11\1\12\1\13\1\14\1\uffff\1\16\5\uffff\1\32\1\33\3\uffff\1\37\1\40\3\uffff\1\32\1\2\2\uffff\1\4\1\5\3\uffff\1\10\1\11\1\12\1\13\1\14\1\uffff\1\16\6\uffff\1\33\1\34\1\35\1\36\1\37\5\uffff\1\17\30\uffff\1\26\7\uffff\1\20\1\uffff\1\21\1\23\2\uffff\1\25\5\uffff\1\6\2\uffff\1\22\1\24\3\uffff\1\30\1\3\1\uffff\1\15\1\1\1\27\1\uffff\1\7\1\uffff\1\31";
     static final String DFA12_specialS =
         "\1\1\24\uffff\1\0\1\2\145\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\31\2\30\2\31\1\30\22\31\1\30\1\31\1\25\4\31\1\26\1\11\1"+
-            "\13\2\31\1\12\1\31\1\4\1\27\12\24\1\31\1\2\1\31\1\15\3\31\32"+
-            "\23\3\31\1\22\1\23\1\31\2\23\1\5\1\23\1\6\1\17\2\23\1\3\4\23"+
-            "\1\21\1\23\1\1\1\23\1\14\1\20\1\16\6\23\1\7\1\31\1\10\uff82"+
-            "\31",
+            "\11\31\2\30\2\31\1\30\22\31\1\30\1\31\1\25\4\31\1\26\1\11\1\13\2\31\1\12\1\31\1\4\1\27\12\24\1\31\1\2\1\31\1\15\3\31\32\23\3\31\1\22\1\23\1\31\2\23\1\5\1\23\1\6\1\17\2\23\1\3\4\23\1\21\1\23\1\1\1\23\1\14\1\20\1\16\6\23\1\7\1\31\1\10\uff82\31",
             "\1\32\20\uffff\1\33\2\uffff\1\34",
             "",
             "\1\40\6\uffff\1\37",

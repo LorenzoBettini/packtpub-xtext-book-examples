@@ -210,10 +210,10 @@ public class InternalHelloLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -231,10 +231,10 @@ public class InternalHelloLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -250,23 +250,15 @@ public class InternalHelloLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:21: '\\\\' .
                     	    {
                     	    match('\\'); 
-                    	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
-                    	        input.consume();
-
-                    	    }
-                    	    else {
-                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
-                    	        recover(mse);
-                    	        throw mse;}
-
+                    	    matchAny(); 
 
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -291,10 +283,10 @@ public class InternalHelloLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -310,23 +302,15 @@ public class InternalHelloLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:54: '\\\\' .
                     	    {
                     	    match('\\'); 
-                    	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
-                    	        input.consume();
-
-                    	    }
-                    	    else {
-                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
-                    	        recover(mse);
-                    	        throw mse;}
-
+                    	    matchAny(); 
 
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.example.build.hello/src-gen/org/example/build/hello/parser/antlr/internal/InternalHello.g:156:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -667,24 +651,19 @@ public class InternalHelloLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\14\1\uffff\1\12\2\uffff\3\12\2\uffff\1\14\7\uffff\2\14"+
-        "\1\26\1\uffff";
+        "\1\uffff\1\14\1\uffff\1\12\2\uffff\3\12\2\uffff\1\14\7\uffff\2\14\1\26\1\uffff";
     static final String DFA12_eofS =
         "\27\uffff";
     static final String DFA12_minS =
-        "\1\0\1\145\1\uffff\1\101\2\uffff\2\0\1\52\2\uffff\1\154\7\uffff"+
-        "\1\154\1\157\1\60\1\uffff";
+        "\1\0\1\145\1\uffff\1\101\2\uffff\2\0\1\52\2\uffff\1\154\7\uffff\1\154\1\157\1\60\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\145\1\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\154"+
-        "\7\uffff\1\154\1\157\1\172\1\uffff";
+        "\1\uffff\1\145\1\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\154\7\uffff\1\154\1\157\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\2\uffff\1\2\1\uffff\1\3\1\4\3\uffff\1\10\1\11\1\uffff\1\3\1\2\1"+
-        "\4\1\5\1\6\1\7\1\10\3\uffff\1\1";
+        "\2\uffff\1\2\1\uffff\1\3\1\4\3\uffff\1\10\1\11\1\uffff\1\3\1\2\1\4\1\5\1\6\1\7\1\10\3\uffff\1\1";
     static final String DFA12_specialS =
         "\1\0\5\uffff\1\2\1\1\17\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\12\2\11\2\12\1\11\22\12\1\11\1\2\1\6\4\12\1\7\7\12\1\10"+
-            "\12\5\7\12\7\4\1\1\22\4\3\12\1\3\1\4\1\12\32\4\uff85\12",
+            "\11\12\2\11\2\12\1\11\22\12\1\11\1\2\1\6\4\12\1\7\7\12\1\10\12\5\7\12\7\4\1\1\22\4\3\12\1\3\1\4\1\12\32\4\uff85\12",
             "\1\13",
             "",
             "\32\14\4\uffff\1\14\1\uffff\32\14",

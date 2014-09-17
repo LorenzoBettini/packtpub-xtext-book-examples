@@ -4,7 +4,7 @@
     editorDirectory="/org.example.expressions.editor/src" modelPluginID="org.example.expressions"
     forceOverwrite="true" modelName="Expressions" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="org.example.expressions.edit"
-    editorPluginID="org.example.expressions.editor" runtimeVersion="2.9">
+    editorPluginID="org.example.expressions.editor" runtimeVersion="2.10">
   <genPackages prefix="Expressions" basePackage="org.example.expressions" disposableProviderFactory="true"
       fileExtensions="expressions" ecorePackage="Expressions.ecore#/">
     <genClasses ecoreClass="Expressions.ecore#//ExpressionsModel">

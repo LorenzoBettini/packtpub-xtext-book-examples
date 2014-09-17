@@ -382,10 +382,10 @@ public class InternalEntitiesLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -403,10 +403,10 @@ public class InternalEntitiesLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -422,23 +422,15 @@ public class InternalEntitiesLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:21: '\\\\' .
                     	    {
                     	    match('\\'); 
-                    	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
-                    	        input.consume();
-
-                    	    }
-                    	    else {
-                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
-                    	        recover(mse);
-                    	        throw mse;}
-
+                    	    matchAny(); 
 
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -463,10 +455,10 @@ public class InternalEntitiesLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -482,23 +474,15 @@ public class InternalEntitiesLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:54: '\\\\' .
                     	    {
                     	    match('\\'); 
-                    	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
-                    	        input.consume();
-
-                    	    }
-                    	    else {
-                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
-                    	        recover(mse);
-                    	        throw mse;}
-
+                    	    matchAny(); 
 
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.example.entities/src-gen/org/example/entities/parser/antlr/internal/InternalEntities.g:469:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -895,32 +879,19 @@ public class InternalEntitiesLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\24\5\uffff\3\24\1\21\2\uffff\3\21\2\uffff\2\24\6\uffff"+
-        "\3\24\5\uffff\3\24\1\52\4\24\1\uffff\5\24\1\64\1\24\1\66\1\24\1"+
-        "\uffff\1\70\1\uffff\1\71\2\uffff";
+        "\1\uffff\1\24\5\uffff\3\24\1\21\2\uffff\3\21\2\uffff\2\24\6\uffff\3\24\5\uffff\3\24\1\52\4\24\1\uffff\5\24\1\64\1\24\1\66\1\24\1\uffff\1\70\1\uffff\1\71\2\uffff";
     static final String DFA12_eofS =
         "\72\uffff";
     static final String DFA12_minS =
-        "\1\0\1\156\5\uffff\1\164\1\156\1\157\1\101\2\uffff\2\0\1\52\2\uffff"+
-        "\2\164\6\uffff\1\162\1\164\1\157\5\uffff\1\151\1\145\1\151\1\60"+
-        "\1\154\1\164\2\156\1\uffff\1\145\1\171\1\144\1\147\1\141\1\60\1"+
-        "\163\1\60\1\156\1\uffff\1\60\1\uffff\1\60\2\uffff";
+        "\1\0\1\156\5\uffff\1\164\1\156\1\157\1\101\2\uffff\2\0\1\52\2\uffff\2\164\6\uffff\1\162\1\164\1\157\5\uffff\1\151\1\145\1\151\1\60\1\154\1\164\2\156\1\uffff\1\145\1\171\1\144\1\147\1\141\1\60\1\163\1\60\1\156\1\uffff\1\60\1\uffff\1\60\2\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\170\5\uffff\1\164\1\156\1\157\1\172\2\uffff\2\uffff\1"+
-        "\57\2\uffff\2\164\6\uffff\1\162\1\164\1\157\5\uffff\1\151\1\145"+
-        "\1\151\1\172\1\154\1\164\2\156\1\uffff\1\145\1\171\1\144\1\147\1"+
-        "\141\1\172\1\163\1\172\1\156\1\uffff\1\172\1\uffff\1\172\2\uffff";
+        "\1\uffff\1\170\5\uffff\1\164\1\156\1\157\1\172\2\uffff\2\uffff\1\57\2\uffff\2\164\6\uffff\1\162\1\164\1\157\5\uffff\1\151\1\145\1\151\1\172\1\154\1\164\2\156\1\uffff\1\145\1\171\1\144\1\147\1\141\1\172\1\163\1\172\1\156\1\uffff\1\172\1\uffff\1\172\2\uffff";
     static final String DFA12_acceptS =
-        "\2\uffff\1\3\1\4\1\5\1\6\1\7\4\uffff\1\13\1\14\3\uffff\1\20\1\21"+
-        "\2\uffff\1\13\1\3\1\4\1\5\1\6\1\7\3\uffff\1\14\1\15\1\16\1\17\1"+
-        "\20\10\uffff\1\11\11\uffff\1\1\1\uffff\1\10\1\uffff\1\2\1\12";
+        "\2\uffff\1\3\1\4\1\5\1\6\1\7\4\uffff\1\13\1\14\3\uffff\1\20\1\21\2\uffff\1\13\1\3\1\4\1\5\1\6\1\7\3\uffff\1\14\1\15\1\16\1\17\1\20\10\uffff\1\11\11\uffff\1\1\1\uffff\1\10\1\uffff\1\2\1\12";
     static final String DFA12_specialS =
         "\1\2\14\uffff\1\1\1\0\53\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\21\2\20\2\21\1\20\22\21\1\20\1\21\1\15\4\21\1\16\7\21\1"+
-            "\17\12\14\1\21\1\4\5\21\32\13\1\5\1\21\1\6\1\12\1\13\1\21\1"+
-            "\13\1\11\2\13\1\1\3\13\1\10\11\13\1\7\7\13\1\2\1\21\1\3\uff82"+
-            "\21",
+            "\11\21\2\20\2\21\1\20\22\21\1\20\1\21\1\15\4\21\1\16\7\21\1\17\12\14\1\21\1\4\5\21\32\13\1\5\1\21\1\6\1\12\1\13\1\21\1\13\1\11\2\13\1\1\3\13\1\10\11\13\1\7\7\13\1\2\1\21\1\3\uff82\21",
             "\1\22\11\uffff\1\23",
             "",
             "",

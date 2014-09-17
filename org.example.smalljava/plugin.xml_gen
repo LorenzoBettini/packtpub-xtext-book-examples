@@ -7,7 +7,7 @@
     <package 
        uri = "http://www.example.org/smalljava/SmallJava" 
        class = "org.example.smalljava.smallJava.SmallJavaPackage"
-       genModel = "org/example/smalljava/SmallJava.genmodel" /> 
+       genModel = "model/generated/SmallJava.genmodel" /> 
 	
   </extension>
 

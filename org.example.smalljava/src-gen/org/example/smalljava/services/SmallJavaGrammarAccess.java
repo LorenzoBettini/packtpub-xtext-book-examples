@@ -1012,38 +1012,60 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getPROTECTEDProtectedKeyword_2_0() { return cPROTECTEDProtectedKeyword_2_0; }
 	}
 	
-	private SJProgramElements pSJProgram;
-	private SJImportElements pSJImport;
-	private QualifiedNameWithWildcardElements pQualifiedNameWithWildcard;
-	private QualifiedNameElements pQualifiedName;
-	private SJClassElements pSJClass;
-	private SJMemberElements pSJMember;
-	private SJFieldElements pSJField;
-	private SJMethodElements pSJMethod;
-	private SJAccessLevelElements unknownRuleSJAccessLevel;
-	private SJParameterElements pSJParameter;
-	private SJMethodBodyElements pSJMethodBody;
-	private SJStatementElements pSJStatement;
-	private SJReturnElements pSJReturn;
-	private SJVariableDeclarationElements pSJVariableDeclaration;
-	private SJIfStatementElements pSJIfStatement;
-	private SJIfBlockElements pSJIfBlock;
-	private SJBlockElements pSJBlock;
-	private SJSymbolElements pSJSymbol;
-	private SJExpressionElements pSJExpression;
-	private SJAssignmentElements pSJAssignment;
-	private SJSelectionExpressionElements pSJSelectionExpression;
-	private SJTerminalExpressionElements pSJTerminalExpression;
+	private final SJProgramElements pSJProgram;
+	private final SJImportElements pSJImport;
+	private final QualifiedNameWithWildcardElements pQualifiedNameWithWildcard;
+	private final QualifiedNameElements pQualifiedName;
+	private final SJClassElements pSJClass;
+	private final SJMemberElements pSJMember;
+	private final SJFieldElements pSJField;
+	private final SJMethodElements pSJMethod;
+	private final SJAccessLevelElements unknownRuleSJAccessLevel;
+	private final SJParameterElements pSJParameter;
+	private final SJMethodBodyElements pSJMethodBody;
+	private final SJStatementElements pSJStatement;
+	private final SJReturnElements pSJReturn;
+	private final SJVariableDeclarationElements pSJVariableDeclaration;
+	private final SJIfStatementElements pSJIfStatement;
+	private final SJIfBlockElements pSJIfBlock;
+	private final SJBlockElements pSJBlock;
+	private final SJSymbolElements pSJSymbol;
+	private final SJExpressionElements pSJExpression;
+	private final SJAssignmentElements pSJAssignment;
+	private final SJSelectionExpressionElements pSJSelectionExpression;
+	private final SJTerminalExpressionElements pSJTerminalExpression;
 	
 	private final Grammar grammar;
 
-	private TerminalsGrammarAccess gaTerminals;
+	private final TerminalsGrammarAccess gaTerminals;
 
 	@Inject
 	public SmallJavaGrammarAccess(GrammarProvider grammarProvider,
 		TerminalsGrammarAccess gaTerminals) {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
+		this.pSJProgram = new SJProgramElements();
+		this.pSJImport = new SJImportElements();
+		this.pQualifiedNameWithWildcard = new QualifiedNameWithWildcardElements();
+		this.pQualifiedName = new QualifiedNameElements();
+		this.pSJClass = new SJClassElements();
+		this.pSJMember = new SJMemberElements();
+		this.pSJField = new SJFieldElements();
+		this.pSJMethod = new SJMethodElements();
+		this.unknownRuleSJAccessLevel = new SJAccessLevelElements();
+		this.pSJParameter = new SJParameterElements();
+		this.pSJMethodBody = new SJMethodBodyElements();
+		this.pSJStatement = new SJStatementElements();
+		this.pSJReturn = new SJReturnElements();
+		this.pSJVariableDeclaration = new SJVariableDeclarationElements();
+		this.pSJIfStatement = new SJIfStatementElements();
+		this.pSJIfBlock = new SJIfBlockElements();
+		this.pSJBlock = new SJBlockElements();
+		this.pSJSymbol = new SJSymbolElements();
+		this.pSJExpression = new SJExpressionElements();
+		this.pSJAssignment = new SJAssignmentElements();
+		this.pSJSelectionExpression = new SJSelectionExpressionElements();
+		this.pSJTerminalExpression = new SJTerminalExpressionElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -1076,7 +1098,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//SJProgram:
 	//	("package" name=QualifiedName ";")? imports+=SJImport* classes+=SJClass*;
 	public SJProgramElements getSJProgramAccess() {
-		return (pSJProgram != null) ? pSJProgram : (pSJProgram = new SJProgramElements());
+		return pSJProgram;
 	}
 	
 	public ParserRule getSJProgramRule() {
@@ -1086,7 +1108,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//SJImport:
 	//	"import" importedNamespace=QualifiedNameWithWildcard ";";
 	public SJImportElements getSJImportAccess() {
-		return (pSJImport != null) ? pSJImport : (pSJImport = new SJImportElements());
+		return pSJImport;
 	}
 	
 	public ParserRule getSJImportRule() {
@@ -1096,7 +1118,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//QualifiedNameWithWildcard:
 	//	QualifiedName ".*"?;
 	public QualifiedNameWithWildcardElements getQualifiedNameWithWildcardAccess() {
-		return (pQualifiedNameWithWildcard != null) ? pQualifiedNameWithWildcard : (pQualifiedNameWithWildcard = new QualifiedNameWithWildcardElements());
+		return pQualifiedNameWithWildcard;
 	}
 	
 	public ParserRule getQualifiedNameWithWildcardRule() {
@@ -1106,7 +1128,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//QualifiedName:
 	//	ID ("." ID)*;
 	public QualifiedNameElements getQualifiedNameAccess() {
-		return (pQualifiedName != null) ? pQualifiedName : (pQualifiedName = new QualifiedNameElements());
+		return pQualifiedName;
 	}
 	
 	public ParserRule getQualifiedNameRule() {
@@ -1116,7 +1138,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//SJClass:
 	//	"class" name=ID ("extends" superclass=[SJClass|QualifiedName])? "{" members+=SJMember* "}";
 	public SJClassElements getSJClassAccess() {
-		return (pSJClass != null) ? pSJClass : (pSJClass = new SJClassElements());
+		return pSJClass;
 	}
 	
 	public ParserRule getSJClassRule() {
@@ -1126,7 +1148,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//SJMember:
 	//	SJField | SJMethod;
 	public SJMemberElements getSJMemberAccess() {
-		return (pSJMember != null) ? pSJMember : (pSJMember = new SJMemberElements());
+		return pSJMember;
 	}
 	
 	public ParserRule getSJMemberRule() {
@@ -1136,7 +1158,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//SJField:
 	//	access=SJAccessLevel? type=[SJClass|QualifiedName] name=ID ";";
 	public SJFieldElements getSJFieldAccess() {
-		return (pSJField != null) ? pSJField : (pSJField = new SJFieldElements());
+		return pSJField;
 	}
 	
 	public ParserRule getSJFieldRule() {
@@ -1147,7 +1169,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//	access=SJAccessLevel? type=[SJClass|QualifiedName] name=ID "(" (params+=SJParameter ("," params+=SJParameter)*)? ")"
 	//	body=SJMethodBody;
 	public SJMethodElements getSJMethodAccess() {
-		return (pSJMethod != null) ? pSJMethod : (pSJMethod = new SJMethodElements());
+		return pSJMethod;
 	}
 	
 	public ParserRule getSJMethodRule() {
@@ -1157,7 +1179,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//enum SJAccessLevel:
 	//	PRIVATE="private" | PUBLIC="public" | PROTECTED="protected";
 	public SJAccessLevelElements getSJAccessLevelAccess() {
-		return (unknownRuleSJAccessLevel != null) ? unknownRuleSJAccessLevel : (unknownRuleSJAccessLevel = new SJAccessLevelElements());
+		return unknownRuleSJAccessLevel;
 	}
 	
 	public EnumRule getSJAccessLevelRule() {
@@ -1167,7 +1189,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//SJParameter:
 	//	type=[SJClass|QualifiedName] name=ID;
 	public SJParameterElements getSJParameterAccess() {
-		return (pSJParameter != null) ? pSJParameter : (pSJParameter = new SJParameterElements());
+		return pSJParameter;
 	}
 	
 	public ParserRule getSJParameterRule() {
@@ -1177,7 +1199,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//SJMethodBody:
 	//	{SJMethodBody} "{" statements+=SJStatement* "}";
 	public SJMethodBodyElements getSJMethodBodyAccess() {
-		return (pSJMethodBody != null) ? pSJMethodBody : (pSJMethodBody = new SJMethodBodyElements());
+		return pSJMethodBody;
 	}
 	
 	public ParserRule getSJMethodBodyRule() {
@@ -1187,7 +1209,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//SJStatement:
 	//	SJVariableDeclaration | SJReturn | SJExpression ";" | SJIfStatement;
 	public SJStatementElements getSJStatementAccess() {
-		return (pSJStatement != null) ? pSJStatement : (pSJStatement = new SJStatementElements());
+		return pSJStatement;
 	}
 	
 	public ParserRule getSJStatementRule() {
@@ -1197,7 +1219,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//SJReturn:
 	//	"return" expression=SJExpression ";";
 	public SJReturnElements getSJReturnAccess() {
-		return (pSJReturn != null) ? pSJReturn : (pSJReturn = new SJReturnElements());
+		return pSJReturn;
 	}
 	
 	public ParserRule getSJReturnRule() {
@@ -1207,7 +1229,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//SJVariableDeclaration:
 	//	type=[SJClass|QualifiedName] name=ID "=" expression=SJExpression ";";
 	public SJVariableDeclarationElements getSJVariableDeclarationAccess() {
-		return (pSJVariableDeclaration != null) ? pSJVariableDeclaration : (pSJVariableDeclaration = new SJVariableDeclarationElements());
+		return pSJVariableDeclaration;
 	}
 	
 	public ParserRule getSJVariableDeclarationRule() {
@@ -1217,7 +1239,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//SJIfStatement:
 	//	"if" "(" expression=SJExpression ")" thenBlock=SJIfBlock ("else" elseBlock=SJIfBlock)?;
 	public SJIfStatementElements getSJIfStatementAccess() {
-		return (pSJIfStatement != null) ? pSJIfStatement : (pSJIfStatement = new SJIfStatementElements());
+		return pSJIfStatement;
 	}
 	
 	public ParserRule getSJIfStatementRule() {
@@ -1227,7 +1249,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//SJIfBlock:
 	//	statements+=SJStatement | "{" statements+=SJStatement+ "}";
 	public SJIfBlockElements getSJIfBlockAccess() {
-		return (pSJIfBlock != null) ? pSJIfBlock : (pSJIfBlock = new SJIfBlockElements());
+		return pSJIfBlock;
 	}
 	
 	public ParserRule getSJIfBlockRule() {
@@ -1237,7 +1259,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//SJBlock:
 	//	SJMethodBody | SJIfBlock;
 	public SJBlockElements getSJBlockAccess() {
-		return (pSJBlock != null) ? pSJBlock : (pSJBlock = new SJBlockElements());
+		return pSJBlock;
 	}
 	
 	public ParserRule getSJBlockRule() {
@@ -1247,7 +1269,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//SJSymbol:
 	//	SJVariableDeclaration | SJParameter;
 	public SJSymbolElements getSJSymbolAccess() {
-		return (pSJSymbol != null) ? pSJSymbol : (pSJSymbol = new SJSymbolElements());
+		return pSJSymbol;
 	}
 	
 	public ParserRule getSJSymbolRule() {
@@ -1257,7 +1279,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//SJExpression:
 	//	SJAssignment;
 	public SJExpressionElements getSJExpressionAccess() {
-		return (pSJExpression != null) ? pSJExpression : (pSJExpression = new SJExpressionElements());
+		return pSJExpression;
 	}
 	
 	public ParserRule getSJExpressionRule() {
@@ -1267,7 +1289,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//SJAssignment returns SJExpression:
 	//	SJSelectionExpression ({SJAssignment.left=current} "=" right=SJExpression)?;
 	public SJAssignmentElements getSJAssignmentAccess() {
-		return (pSJAssignment != null) ? pSJAssignment : (pSJAssignment = new SJAssignmentElements());
+		return pSJAssignment;
 	}
 	
 	public ParserRule getSJAssignmentRule() {
@@ -1278,7 +1300,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//	SJTerminalExpression ({SJMemberSelection.receiver=current} "." member=[SJMember] (methodinvocation?="("
 	//	(args+=SJExpression ("," args+=SJExpression)*)? ")")?)*;
 	public SJSelectionExpressionElements getSJSelectionExpressionAccess() {
-		return (pSJSelectionExpression != null) ? pSJSelectionExpression : (pSJSelectionExpression = new SJSelectionExpressionElements());
+		return pSJSelectionExpression;
 	}
 	
 	public ParserRule getSJSelectionExpressionRule() {
@@ -1290,7 +1312,7 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	//	"this" | {SJSuper} "super" | {SJNull} "null" | {SJSymbolRef} symbol=[SJSymbol] | {SJNew} "new"
 	//	type=[SJClass|QualifiedName] "(" ")" | "(" SJExpression ")";
 	public SJTerminalExpressionElements getSJTerminalExpressionAccess() {
-		return (pSJTerminalExpression != null) ? pSJTerminalExpression : (pSJTerminalExpression = new SJTerminalExpressionElements());
+		return pSJTerminalExpression;
 	}
 	
 	public ParserRule getSJTerminalExpressionRule() {
@@ -1310,8 +1332,8 @@ public class SmallJavaGrammarAccess extends AbstractGrammarElementFinder {
 	} 
 
 	//terminal STRING:
-	//	"\"" ("\\" ("b" | "t" | "n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\""))* "\"" | "\'" ("\\" ("b" | "t" |
-	//	"n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'";
+	//	"\"" ("\\" . / * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\""))* "\"" | "\'" ("\\" .
+	//	/ * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\'"))* "\'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	} 

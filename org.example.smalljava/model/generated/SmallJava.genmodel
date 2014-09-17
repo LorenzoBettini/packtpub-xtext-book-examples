@@ -4,7 +4,7 @@
     editorDirectory="/org.example.smalljava.editor/src" modelPluginID="org.example.smalljava"
     forceOverwrite="true" modelName="SmallJava" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="org.example.smalljava.edit"
-    editorPluginID="org.example.smalljava.editor" runtimeVersion="2.9">
+    editorPluginID="org.example.smalljava.editor" runtimeVersion="2.10">
   <genPackages prefix="SmallJava" basePackage="org.example.smalljava" disposableProviderFactory="true"
       fileExtensions="smalljava" ecorePackage="SmallJava.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="SmallJava.ecore#//SJAccessLevel">

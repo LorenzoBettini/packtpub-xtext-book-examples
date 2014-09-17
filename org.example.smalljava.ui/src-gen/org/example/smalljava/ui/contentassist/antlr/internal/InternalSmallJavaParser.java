@@ -13426,8 +13426,7 @@ public class InternalSmallJavaParser extends AbstractInternalContentAssistParser
     static final String DFA2_specialS =
         "\10\uffff}>";
     static final String[] DFA2_transitionS = {
-            "\1\1\2\3\4\uffff\2\3\14\uffff\1\3\2\uffff\1\2\1\uffff\1\4\1"+
-            "\uffff\4\3",
+            "\1\1\2\3\4\uffff\2\3\14\uffff\1\3\2\uffff\1\2\1\uffff\1\4\1\uffff\4\3",
             "\1\6\14\uffff\1\3\2\uffff\1\5\10\uffff\1\3",
             "",
             "",

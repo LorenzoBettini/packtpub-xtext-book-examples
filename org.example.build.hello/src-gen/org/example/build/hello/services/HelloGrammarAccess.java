@@ -63,18 +63,20 @@ public class HelloGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	
-	private ModelElements pModel;
-	private GreetingElements pGreeting;
+	private final ModelElements pModel;
+	private final GreetingElements pGreeting;
 	
 	private final Grammar grammar;
 
-	private TerminalsGrammarAccess gaTerminals;
+	private final TerminalsGrammarAccess gaTerminals;
 
 	@Inject
 	public HelloGrammarAccess(GrammarProvider grammarProvider,
 		TerminalsGrammarAccess gaTerminals) {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
+		this.pModel = new ModelElements();
+		this.pGreeting = new GreetingElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -107,7 +109,7 @@ public class HelloGrammarAccess extends AbstractGrammarElementFinder {
 	//Model:
 	//	greetings+=Greeting*;
 	public ModelElements getModelAccess() {
-		return (pModel != null) ? pModel : (pModel = new ModelElements());
+		return pModel;
 	}
 	
 	public ParserRule getModelRule() {
@@ -117,7 +119,7 @@ public class HelloGrammarAccess extends AbstractGrammarElementFinder {
 	//Greeting:
 	//	"Hello" name=ID "!";
 	public GreetingElements getGreetingAccess() {
-		return (pGreeting != null) ? pGreeting : (pGreeting = new GreetingElements());
+		return pGreeting;
 	}
 	
 	public ParserRule getGreetingRule() {
@@ -137,8 +139,8 @@ public class HelloGrammarAccess extends AbstractGrammarElementFinder {
 	} 
 
 	//terminal STRING:
-	//	"\"" ("\\" ("b" | "t" | "n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\""))* "\"" | "\'" ("\\" ("b" | "t" |
-	//	"n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'";
+	//	"\"" ("\\" . / * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\""))* "\"" | "\'" ("\\" .
+	//	/ * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\'"))* "\'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	} 

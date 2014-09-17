@@ -239,23 +239,30 @@ public class EntitiesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	
-	private ModelElements pModel;
-	private EntityElements pEntity;
-	private AttributeElements pAttribute;
-	private AttributeTypeElements pAttributeType;
-	private ElementTypeElements pElementType;
-	private BasicTypeElements pBasicType;
-	private EntityTypeElements pEntityType;
+	private final ModelElements pModel;
+	private final EntityElements pEntity;
+	private final AttributeElements pAttribute;
+	private final AttributeTypeElements pAttributeType;
+	private final ElementTypeElements pElementType;
+	private final BasicTypeElements pBasicType;
+	private final EntityTypeElements pEntityType;
 	
 	private final Grammar grammar;
 
-	private TerminalsGrammarAccess gaTerminals;
+	private final TerminalsGrammarAccess gaTerminals;
 
 	@Inject
 	public EntitiesGrammarAccess(GrammarProvider grammarProvider,
 		TerminalsGrammarAccess gaTerminals) {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
+		this.pModel = new ModelElements();
+		this.pEntity = new EntityElements();
+		this.pAttribute = new AttributeElements();
+		this.pAttributeType = new AttributeTypeElements();
+		this.pElementType = new ElementTypeElements();
+		this.pBasicType = new BasicTypeElements();
+		this.pEntityType = new EntityTypeElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -288,7 +295,7 @@ public class EntitiesGrammarAccess extends AbstractGrammarElementFinder {
 	//Model:
 	//	entities+=Entity*;
 	public ModelElements getModelAccess() {
-		return (pModel != null) ? pModel : (pModel = new ModelElements());
+		return pModel;
 	}
 	
 	public ParserRule getModelRule() {
@@ -298,7 +305,7 @@ public class EntitiesGrammarAccess extends AbstractGrammarElementFinder {
 	//Entity:
 	//	"entity" name=ID ("extends" superType=[Entity])? "{" attributes+=Attribute* "}";
 	public EntityElements getEntityAccess() {
-		return (pEntity != null) ? pEntity : (pEntity = new EntityElements());
+		return pEntity;
 	}
 	
 	public ParserRule getEntityRule() {
@@ -308,7 +315,7 @@ public class EntitiesGrammarAccess extends AbstractGrammarElementFinder {
 	//Attribute:
 	//	type=AttributeType name=ID ";";
 	public AttributeElements getAttributeAccess() {
-		return (pAttribute != null) ? pAttribute : (pAttribute = new AttributeElements());
+		return pAttribute;
 	}
 	
 	public ParserRule getAttributeRule() {
@@ -318,7 +325,7 @@ public class EntitiesGrammarAccess extends AbstractGrammarElementFinder {
 	//AttributeType:
 	//	elementType=ElementType (array?="[" length=INT? "]")?;
 	public AttributeTypeElements getAttributeTypeAccess() {
-		return (pAttributeType != null) ? pAttributeType : (pAttributeType = new AttributeTypeElements());
+		return pAttributeType;
 	}
 	
 	public ParserRule getAttributeTypeRule() {
@@ -328,7 +335,7 @@ public class EntitiesGrammarAccess extends AbstractGrammarElementFinder {
 	//ElementType:
 	//	BasicType | EntityType;
 	public ElementTypeElements getElementTypeAccess() {
-		return (pElementType != null) ? pElementType : (pElementType = new ElementTypeElements());
+		return pElementType;
 	}
 	
 	public ParserRule getElementTypeRule() {
@@ -338,7 +345,7 @@ public class EntitiesGrammarAccess extends AbstractGrammarElementFinder {
 	//BasicType:
 	//	typeName=("string" | "int" | "boolean");
 	public BasicTypeElements getBasicTypeAccess() {
-		return (pBasicType != null) ? pBasicType : (pBasicType = new BasicTypeElements());
+		return pBasicType;
 	}
 	
 	public ParserRule getBasicTypeRule() {
@@ -348,7 +355,7 @@ public class EntitiesGrammarAccess extends AbstractGrammarElementFinder {
 	//EntityType:
 	//	entity=[Entity];
 	public EntityTypeElements getEntityTypeAccess() {
-		return (pEntityType != null) ? pEntityType : (pEntityType = new EntityTypeElements());
+		return pEntityType;
 	}
 	
 	public ParserRule getEntityTypeRule() {
@@ -368,8 +375,8 @@ public class EntitiesGrammarAccess extends AbstractGrammarElementFinder {
 	} 
 
 	//terminal STRING:
-	//	"\"" ("\\" ("b" | "t" | "n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\""))* "\"" | "\'" ("\\" ("b" | "t" |
-	//	"n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'";
+	//	"\"" ("\\" . / * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\""))* "\"" | "\'" ("\\" .
+	//	/ * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\'"))* "\'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	} 

@@ -7,7 +7,7 @@
     <package 
        uri = "http://www.example.org/entities/Entities" 
        class = "org.example.entities.entities.EntitiesPackage"
-       genModel = "org/example/entities/Entities.genmodel" /> 
+       genModel = "model/generated/Entities.genmodel" /> 
 	
   </extension>
 

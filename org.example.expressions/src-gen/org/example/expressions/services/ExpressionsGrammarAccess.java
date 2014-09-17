@@ -521,28 +521,40 @@ public class ExpressionsGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	
-	private ExpressionsModelElements pExpressionsModel;
-	private AbstractElementElements pAbstractElement;
-	private VariableElements pVariable;
-	private ExpressionElements pExpression;
-	private OrElements pOr;
-	private AndElements pAnd;
-	private EqualityElements pEquality;
-	private ComparisonElements pComparison;
-	private PlusOrMinusElements pPlusOrMinus;
-	private MulOrDivElements pMulOrDiv;
-	private PrimaryElements pPrimary;
-	private AtomicElements pAtomic;
+	private final ExpressionsModelElements pExpressionsModel;
+	private final AbstractElementElements pAbstractElement;
+	private final VariableElements pVariable;
+	private final ExpressionElements pExpression;
+	private final OrElements pOr;
+	private final AndElements pAnd;
+	private final EqualityElements pEquality;
+	private final ComparisonElements pComparison;
+	private final PlusOrMinusElements pPlusOrMinus;
+	private final MulOrDivElements pMulOrDiv;
+	private final PrimaryElements pPrimary;
+	private final AtomicElements pAtomic;
 	
 	private final Grammar grammar;
 
-	private TerminalsGrammarAccess gaTerminals;
+	private final TerminalsGrammarAccess gaTerminals;
 
 	@Inject
 	public ExpressionsGrammarAccess(GrammarProvider grammarProvider,
 		TerminalsGrammarAccess gaTerminals) {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
+		this.pExpressionsModel = new ExpressionsModelElements();
+		this.pAbstractElement = new AbstractElementElements();
+		this.pVariable = new VariableElements();
+		this.pExpression = new ExpressionElements();
+		this.pOr = new OrElements();
+		this.pAnd = new AndElements();
+		this.pEquality = new EqualityElements();
+		this.pComparison = new ComparisonElements();
+		this.pPlusOrMinus = new PlusOrMinusElements();
+		this.pMulOrDiv = new MulOrDivElements();
+		this.pPrimary = new PrimaryElements();
+		this.pAtomic = new AtomicElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -575,7 +587,7 @@ public class ExpressionsGrammarAccess extends AbstractGrammarElementFinder {
 	//ExpressionsModel:
 	//	elements+=AbstractElement*;
 	public ExpressionsModelElements getExpressionsModelAccess() {
-		return (pExpressionsModel != null) ? pExpressionsModel : (pExpressionsModel = new ExpressionsModelElements());
+		return pExpressionsModel;
 	}
 	
 	public ParserRule getExpressionsModelRule() {
@@ -585,7 +597,7 @@ public class ExpressionsGrammarAccess extends AbstractGrammarElementFinder {
 	//AbstractElement:
 	//	Variable | Expression;
 	public AbstractElementElements getAbstractElementAccess() {
-		return (pAbstractElement != null) ? pAbstractElement : (pAbstractElement = new AbstractElementElements());
+		return pAbstractElement;
 	}
 	
 	public ParserRule getAbstractElementRule() {
@@ -595,7 +607,7 @@ public class ExpressionsGrammarAccess extends AbstractGrammarElementFinder {
 	//Variable:
 	//	name=ID "=" expression=Expression;
 	public VariableElements getVariableAccess() {
-		return (pVariable != null) ? pVariable : (pVariable = new VariableElements());
+		return pVariable;
 	}
 	
 	public ParserRule getVariableRule() {
@@ -605,7 +617,7 @@ public class ExpressionsGrammarAccess extends AbstractGrammarElementFinder {
 	//Expression:
 	//	Or;
 	public ExpressionElements getExpressionAccess() {
-		return (pExpression != null) ? pExpression : (pExpression = new ExpressionElements());
+		return pExpression;
 	}
 	
 	public ParserRule getExpressionRule() {
@@ -615,7 +627,7 @@ public class ExpressionsGrammarAccess extends AbstractGrammarElementFinder {
 	//Or returns Expression:
 	//	And ({Or.left=current} "||" right=And)*;
 	public OrElements getOrAccess() {
-		return (pOr != null) ? pOr : (pOr = new OrElements());
+		return pOr;
 	}
 	
 	public ParserRule getOrRule() {
@@ -625,7 +637,7 @@ public class ExpressionsGrammarAccess extends AbstractGrammarElementFinder {
 	//And returns Expression:
 	//	Equality ({And.left=current} "&&" right=Equality)*;
 	public AndElements getAndAccess() {
-		return (pAnd != null) ? pAnd : (pAnd = new AndElements());
+		return pAnd;
 	}
 	
 	public ParserRule getAndRule() {
@@ -635,7 +647,7 @@ public class ExpressionsGrammarAccess extends AbstractGrammarElementFinder {
 	//Equality returns Expression:
 	//	Comparison ({Equality.left=current} op=("==" | "!=") right=Comparison)*;
 	public EqualityElements getEqualityAccess() {
-		return (pEquality != null) ? pEquality : (pEquality = new EqualityElements());
+		return pEquality;
 	}
 	
 	public ParserRule getEqualityRule() {
@@ -645,7 +657,7 @@ public class ExpressionsGrammarAccess extends AbstractGrammarElementFinder {
 	//Comparison returns Expression:
 	//	PlusOrMinus ({Comparison.left=current} op=(">=" | "<=" | ">" | "<") right=PlusOrMinus)*;
 	public ComparisonElements getComparisonAccess() {
-		return (pComparison != null) ? pComparison : (pComparison = new ComparisonElements());
+		return pComparison;
 	}
 	
 	public ParserRule getComparisonRule() {
@@ -655,7 +667,7 @@ public class ExpressionsGrammarAccess extends AbstractGrammarElementFinder {
 	//PlusOrMinus returns Expression:
 	//	MulOrDiv (({Plus.left=current} "+" | {Minus.left=current} "-") right=MulOrDiv)*;
 	public PlusOrMinusElements getPlusOrMinusAccess() {
-		return (pPlusOrMinus != null) ? pPlusOrMinus : (pPlusOrMinus = new PlusOrMinusElements());
+		return pPlusOrMinus;
 	}
 	
 	public ParserRule getPlusOrMinusRule() {
@@ -665,7 +677,7 @@ public class ExpressionsGrammarAccess extends AbstractGrammarElementFinder {
 	//MulOrDiv returns Expression:
 	//	Primary ({MulOrDiv.left=current} op=("*" | "/") right=Primary)*;
 	public MulOrDivElements getMulOrDivAccess() {
-		return (pMulOrDiv != null) ? pMulOrDiv : (pMulOrDiv = new MulOrDivElements());
+		return pMulOrDiv;
 	}
 	
 	public ParserRule getMulOrDivRule() {
@@ -675,7 +687,7 @@ public class ExpressionsGrammarAccess extends AbstractGrammarElementFinder {
 	//Primary returns Expression:
 	//	"(" Expression ")" | {Not} "!" expression=Primary | Atomic;
 	public PrimaryElements getPrimaryAccess() {
-		return (pPrimary != null) ? pPrimary : (pPrimary = new PrimaryElements());
+		return pPrimary;
 	}
 	
 	public ParserRule getPrimaryRule() {
@@ -686,7 +698,7 @@ public class ExpressionsGrammarAccess extends AbstractGrammarElementFinder {
 	//	{IntConstant} value=INT | {StringConstant} value=STRING | {BoolConstant} value=("true" | "false") | {VariableRef}
 	//	variable=[Variable];
 	public AtomicElements getAtomicAccess() {
-		return (pAtomic != null) ? pAtomic : (pAtomic = new AtomicElements());
+		return pAtomic;
 	}
 	
 	public ParserRule getAtomicRule() {
@@ -706,8 +718,8 @@ public class ExpressionsGrammarAccess extends AbstractGrammarElementFinder {
 	} 
 
 	//terminal STRING:
-	//	"\"" ("\\" ("b" | "t" | "n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\""))* "\"" | "\'" ("\\" ("b" | "t" |
-	//	"n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'";
+	//	"\"" ("\\" . / * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\""))* "\"" | "\'" ("\\" .
+	//	/ * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\'"))* "\'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	} 

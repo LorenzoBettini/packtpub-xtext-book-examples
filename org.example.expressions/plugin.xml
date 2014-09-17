@@ -7,10 +7,9 @@
     <package 
        uri = "http://www.example.org/expressions/Expressions" 
        class = "org.example.expressions.expressions.ExpressionsPackage"
-       genModel = "org/example/expressions/Expressions.genmodel" /> 
+       genModel = "model/generated/Expressions.genmodel" /> 
 	
   </extension>
-
 
 
 
