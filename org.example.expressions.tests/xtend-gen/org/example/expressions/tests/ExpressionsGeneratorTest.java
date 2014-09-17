@@ -3,11 +3,13 @@ package org.example.expressions.tests;
 import com.google.inject.Inject;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.junit4.InjectWith;
+import org.eclipse.xtext.junit4.TemporaryFolder;
 import org.eclipse.xtext.junit4.XtextRunner;
 import org.eclipse.xtext.xbase.compiler.CompilationTestHelper;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Extension;
 import org.example.expressions.tests.ExpressionsInjectorProviderCustom;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -15,6 +17,10 @@ import org.junit.runner.RunWith;
 @InjectWith(ExpressionsInjectorProviderCustom.class)
 @SuppressWarnings("all")
 public class ExpressionsGeneratorTest {
+  @Rule
+  @Inject
+  public TemporaryFolder temporaryFolder;
+  
   @Inject
   @Extension
   private CompilationTestHelper _compilationTestHelper;

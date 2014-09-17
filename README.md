@@ -12,7 +12,9 @@ ERRATA and changes in new versions of Xtext
 
 The book was written using Xtext 2.4.2 and some changes were introduced in new versions of Xtext that require some modifications in the sources (and make some parts written in the book not consistent).
 
-In the following we detail the changes required to adapt the examples to the new versions of Xtext
+In the following we detail the changes required to adapt the examples to the new versions of Xtext.
+
+(The other ERRATA, related to errors and typos in the text of the book can be found on the publisher web site: select "Support", search for the book, e.g., type "Xtext" and select the book title.  It should be possible to access it directly following [this link](https://www.packtpub.com/books/content/support/12928)). 
 
 ## Xtext 2.4.3
 
@@ -148,6 +150,27 @@ And then you must use this injector provider in the @InjectWith annotation of th
 @RunWith(typeof(XtextRunner))
 @InjectWith(typeof(ExpressionsInjectorProviderCustom))
 class ExpressionsGeneratorTest {
+	
+	@Inject extension CompilationTestHelper
+	...
+```
+
+
+### Inject Xtext TemporaryFolder when using CompilationTestHelper
+
+This is not a strict requirement, but Xtext 2.7 introduced an improved version of _TemporaryFolder_ (see org.junit.rules.TemporaryFolder), it "allows creation of files and folders that are guaranteed to be deleted when the test method finishes (whether it passes or fails)".
+
+If you want to use this improved version, you need to inject it with the @Rule annotation, e.g.,
+
+```
+import org.eclipse.xtext.junit4.TemporaryFolder
+
+@RunWith(typeof(XtextRunner))
+@InjectWith(typeof(EntitiesInjectorProvider))
+class EntitiesGeneratorTest {
+	
+	@Rule
+	@Inject public TemporaryFolder temporaryFolder
 	
 	@Inject extension CompilationTestHelper
 	...

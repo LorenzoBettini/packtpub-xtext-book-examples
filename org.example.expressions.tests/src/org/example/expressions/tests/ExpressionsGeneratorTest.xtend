@@ -2,14 +2,19 @@ package org.example.expressions.tests
 
 import com.google.inject.Inject
 import org.eclipse.xtext.junit4.InjectWith
+import org.eclipse.xtext.junit4.TemporaryFolder
 import org.eclipse.xtext.junit4.XtextRunner
 import org.eclipse.xtext.xbase.compiler.CompilationTestHelper
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(typeof(XtextRunner))
 @InjectWith(typeof(ExpressionsInjectorProviderCustom))
 class ExpressionsGeneratorTest {
+	
+	@Rule
+	@Inject public TemporaryFolder temporaryFolder
 	
 	@Inject extension CompilationTestHelper
 

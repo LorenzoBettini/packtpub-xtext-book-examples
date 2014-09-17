@@ -2,18 +2,23 @@ package org.example.entities.tests
 
 import com.google.inject.Inject
 import org.eclipse.xtext.junit4.InjectWith
+import org.eclipse.xtext.junit4.TemporaryFolder
 import org.eclipse.xtext.junit4.XtextRunner
 import org.eclipse.xtext.xbase.compiler.CompilationTestHelper
+import org.eclipse.xtext.xbase.lib.util.ReflectExtensions
 import org.example.entities.EntitiesInjectorProvider
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
 import static extension org.junit.Assert.*
-import org.eclipse.xtext.xbase.lib.util.ReflectExtensions
 
 @RunWith(typeof(XtextRunner))
 @InjectWith(typeof(EntitiesInjectorProvider))
 class EntitiesGeneratorTest {
+	
+	@Rule
+	@Inject public TemporaryFolder temporaryFolder
 	
 	@Inject extension CompilationTestHelper
 	@Inject extension ReflectExtensions
