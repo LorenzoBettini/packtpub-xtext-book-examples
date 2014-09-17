@@ -66,7 +66,6 @@ public class EntitiesJvmModelInferrer extends AbstractModelInferrer {
     String _name = entity.getName();
     String _plus = ("entities." + _name);
     JvmGenericType _class = this._jvmTypesBuilder.toClass(entity, _plus);
-    IJvmDeclaredTypeAcceptor.IPostIndexingInitializing<JvmGenericType> _accept = acceptor.<JvmGenericType>accept(_class);
     final Procedure1<JvmGenericType> _function = new Procedure1<JvmGenericType>() {
       public void apply(final JvmGenericType it) {
         String _documentation = EntitiesJvmModelInferrer.this._jvmTypesBuilder.getDocumentation(entity);
@@ -157,7 +156,7 @@ public class EntitiesJvmModelInferrer extends AbstractModelInferrer {
         };
         IterableExtensions.<Operation>forEach(_operations, _function_1);
         EList<JvmMember> _members = it.getMembers();
-        JvmTypeReference _newTypeRef = EntitiesJvmModelInferrer.this._jvmTypesBuilder.newTypeRef(entity, String.class);
+        JvmTypeReference _typeRef = EntitiesJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
         final Procedure1<JvmOperation> _function_2 = new Procedure1<JvmOperation>() {
           public void apply(final JvmOperation it) {
             final Procedure1<ITreeAppendable> _function = new Procedure1<ITreeAppendable>() {
@@ -191,11 +190,11 @@ public class EntitiesJvmModelInferrer extends AbstractModelInferrer {
             EntitiesJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _function);
           }
         };
-        JvmOperation _method = EntitiesJvmModelInferrer.this._jvmTypesBuilder.toMethod(entity, "toString", _newTypeRef, _function_2);
+        JvmOperation _method = EntitiesJvmModelInferrer.this._jvmTypesBuilder.toMethod(entity, "toString", _typeRef, _function_2);
         EntitiesJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members, _method);
       }
     };
-    _accept.initializeLater(_function);
+    acceptor.<JvmGenericType>accept(_class, _function);
   }
   
   public void infer(final EObject entity, final IJvmDeclaredTypeAcceptor acceptor, final boolean isPreIndexingPhase) {

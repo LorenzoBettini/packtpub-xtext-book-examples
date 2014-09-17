@@ -42,7 +42,7 @@ class EntitiesJvmModelInferrer extends AbstractModelInferrer {
 	 *            <code>true</code>.
 	 */
    	def dispatch void infer(Entity entity, IJvmDeclaredTypeAcceptor acceptor, boolean isPreIndexingPhase) {
-   		acceptor.accept(entity.toClass("entities."+entity.name)).initializeLater [
+   		acceptor.accept(entity.toClass("entities."+entity.name)) [
    			documentation = entity.documentation
    			if (entity.superType != null)
 				superTypes += entity.superType.cloneWithProxies
@@ -67,7 +67,7 @@ class EntitiesJvmModelInferrer extends AbstractModelInferrer {
 					body = op.body
 				]
 			]
-			members += entity.toMethod("toString", entity.newTypeRef(typeof(String))) [
+			members += entity.toMethod("toString", typeRef(typeof(String))) [
 				body = [
 					append(
 					'''
