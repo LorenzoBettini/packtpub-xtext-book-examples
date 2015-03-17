@@ -68,13 +68,8 @@ public class SmallJavaProjectWizardTests {
 	}
 
 	@Test
-	public void canCreateANewSmallJavaProject() throws Exception {
-		createProjectAndAssertNoErrorMarker("SmallJava Project");
-	}
-
-	@Test
 	public void testDuplicateClassError() throws CoreException {
-		createProjectAndAssertNoErrorMarker("SmallJava Project");
+		createProjectAndAssertNoErrorMarker("SmallJava Project", TEST_PROJECT);
 		SWTBotEditor editor = bot.editorByTitle("example.smalljava");
 		editor.toTextEditor().setText(
 				"package smalljava.lang;\nclass Object {}"
@@ -157,8 +152,15 @@ public class SmallJavaProjectWizardTests {
 		return buffer.toString();
 	}
 
-	protected void createProjectAndAssertNoErrorMarker(String projectType)
+	protected void createProjectAndAssertNoErrorMarker(String projectType, String projectName)
 			throws CoreException {
+		createProject(projectType, projectName);
+
+		waitForAutoBuild();
+		assertErrorsInProject(0);
+	}
+
+	private void createProject(String projectType, String projectName) {
 		bot.menu("File").menu("New").menu("Project...").click();
 
 		SWTBotShell shell = bot.shell("New Project");
@@ -166,16 +168,13 @@ public class SmallJavaProjectWizardTests {
 		bot.tree().expandNode("Xtext").select(projectType);
 		bot.button("Next >").click();
 
-		bot.textWithLabel("Project name:").setText(TEST_PROJECT);
+		bot.textWithLabel("Project name:").setText(projectName);
 
 		bot.button("Finish").click();
 
 		// creation of a project might require some time
 		bot.waitUntil(shellCloses(shell), 50000);
-		assertTrue("Project doesn't exist", isProjectCreated(TEST_PROJECT));
-
-		waitForAutoBuild();
-		assertErrorsInProject(0);
+		assertTrue("Project doesn't exist", isProjectCreated(projectName));
 	}
 
 }
