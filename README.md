@@ -14,7 +14,11 @@ The book was written using Xtext 2.4.2 and some changes were introduced in new v
 
 In the following we detail the changes required to adapt the examples to the new versions of Xtext.
 
-(The other ERRATA, related to errors and typos in the text of the book can be found on the publisher web site: select "Support", search for the book, e.g., type "Xtext" and select the book title.  It should be possible to access it directly following [this link](https://www.packtpub.com/books/content/support/12928)). 
+## General Book ERRATA
+
+Some initial ERRATA, related to errors and typos in the text of the book can be found on the publisher web site: select "Support", search for the book, e.g., type "Xtext" and select the book title.  It should be possible to access it directly following [this link](https://www.packtpub.com/books/content/support/12928).
+
+As reported in Issue https://github.com/LorenzoBettini/packtpub-xtext-book-examples/issues/1 in the ExpressionsTypeProvider and ExpressionsInterpreter xtend files, you get compilation errors "Cannot convert..." if you have only one dispatch method for an Expression class; as soon as you add another dispatch method, say, e.g., one for Variable, the error will go away, since a method accepting AbstractElement will be generated. 
 
 ## Xtext 2.4.3
 
