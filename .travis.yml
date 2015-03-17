@@ -6,8 +6,8 @@ jdk: oraclejdk7
 
 cache:
   directories:
-  - $HOME/director
-  - $HOME/buckminster
+  - director
+  - buckminster
   - buildroot
 
 env: DISPLAY=:99.0
