@@ -6,9 +6,9 @@ jdk: oraclejdk7
 
 cache:
   directories:
-  - director
-  - buckminster
-  - buildroot
+  - $HOME/build/LorenzoBettini/packtpub-xtext-book-examples/director
+  - $HOME/build/LorenzoBettini/packtpub-xtext-book-examples/buckminster
+  - $HOME/build/LorenzoBettini/packtpub-xtext-book-examples/buildroot
 
 env: DISPLAY=:99.0
 
