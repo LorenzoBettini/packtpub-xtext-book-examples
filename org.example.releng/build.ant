@@ -179,9 +179,11 @@
 	</target>
 
 	<target name="install.p2.director">
+		<echo message="checking ${director.dir}" />
 		<condition property="p2.director.installed">
 			<available file="${director.dir}" />
 		</condition>
+		<echo message="property p2.director.installed: ${p2.director.installed}" />
 		<antcall target="install.p2.director.internal" />
 	</target>
 
