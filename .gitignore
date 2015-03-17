@@ -8,5 +8,6 @@ logs.zip
 target/
 *.java._trace
 *.smap
+*.xtendbin
 
 buildroot
