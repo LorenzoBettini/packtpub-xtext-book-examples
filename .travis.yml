@@ -1,0 +1,22 @@
+sudo: false
+
+language: java
+
+jdk: oraclejdk7
+
+cache:
+  directories:
+  - $HOME/director
+  - $HOME/buckminster
+  - buildroot
+
+env: DISPLAY=:99.0
+
+install: true
+
+before_script:
+ - sh -e /etc/init.d/xvfb start
+ 
+script:
+ - export
+ - ant -f org.example.releng/build.ant -Dcommands.file=org.example.releng/commands-no-swtbot.txt
