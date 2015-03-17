@@ -60,6 +60,7 @@ public class ExpressionsValidatorTest {
       _builder.append("i = 1 j+i j = 10");
       ExpressionsModel _parse = this._parseHelper.parse(_builder);
       final Procedure1<ExpressionsModel> _function = new Procedure1<ExpressionsModel>() {
+        @Override
         public void apply(final ExpressionsModel it) {
           EClass _variableRef = ExpressionsPackage.eINSTANCE.getVariableRef();
           ExpressionsValidatorTest.this._validationTestHelper.assertError(it, _variableRef, 
@@ -141,6 +142,7 @@ public class ExpressionsValidatorTest {
       EList<AbstractElement> _elements = _parse.getElements();
       AbstractElement _last = IterableExtensions.<AbstractElement>last(_elements);
       final Procedure1<AbstractElement> _function = new Procedure1<AbstractElement>() {
+        @Override
         public void apply(final AbstractElement it) {
           EClass _expression = ExpressionsPackage.eINSTANCE.getExpression();
           ExpressionsValidatorTest.this._validationTestHelper.assertError(it, _expression, 
@@ -160,6 +162,7 @@ public class ExpressionsValidatorTest {
       EList<AbstractElement> _elements = _parse.getElements();
       AbstractElement _last = IterableExtensions.<AbstractElement>last(_elements);
       final Procedure1<AbstractElement> _function = new Procedure1<AbstractElement>() {
+        @Override
         public void apply(final AbstractElement it) {
           EClass _expression = ExpressionsPackage.eINSTANCE.getExpression();
           ExpressionsValidatorTest.this._validationTestHelper.assertError(it, _expression, 
@@ -179,6 +182,7 @@ public class ExpressionsValidatorTest {
       EList<AbstractElement> _elements = _parse.getElements();
       AbstractElement _last = IterableExtensions.<AbstractElement>last(_elements);
       final Procedure1<AbstractElement> _function = new Procedure1<AbstractElement>() {
+        @Override
         public void apply(final AbstractElement it) {
           EClass _expression = ExpressionsPackage.eINSTANCE.getExpression();
           ExpressionsValidatorTest.this._validationTestHelper.assertError(it, _expression, 

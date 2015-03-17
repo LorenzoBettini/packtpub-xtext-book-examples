@@ -29,11 +29,13 @@ import org.junit.Test;
 public class EntitiesEditorTest extends AbstractEditorTest {
   private final String TEST_PROJECT = "mytestproject";
   
+  @Override
   protected String getEditorId() {
     return "org.example.entities.Entities";
   }
   
   @Before
+  @Override
   public void setUp() {
     try {
       super.setUp();
@@ -47,6 +49,7 @@ public class EntitiesEditorTest extends AbstractEditorTest {
     try {
       IJavaProject _createJavaProject = JavaProjectSetupUtil.createJavaProject(this.TEST_PROJECT);
       final Procedure1<IJavaProject> _function = new Procedure1<IJavaProject>() {
+        @Override
         public void apply(final IJavaProject it) {
           try {
             IProject _project = it.getProject();
@@ -101,6 +104,7 @@ public class EntitiesEditorTest extends AbstractEditorTest {
       XtextEditor _openEditor = this.openEditor(_createTestFile);
       IXtextDocument _document = _openEditor.getDocument();
       final IUnitOfWork<Model, XtextResource> _function = new IUnitOfWork<Model, XtextResource>() {
+        @Override
         public Model exec(final XtextResource it) throws Exception {
           EList<EObject> _contents = it.getContents();
           EObject _get = _contents.get(0);
@@ -124,6 +128,7 @@ public class EntitiesEditorTest extends AbstractEditorTest {
       final XtextEditor editor = this.openEditor(_createTestFile);
       IXtextDocument _document = editor.getDocument();
       final IUnitOfWork<Boolean, XtextResource> _function = new IUnitOfWork<Boolean, XtextResource>() {
+        @Override
         public Boolean exec(final XtextResource it) throws Exception {
           boolean _xblockexpression = false;
           {
@@ -135,6 +140,7 @@ public class EntitiesEditorTest extends AbstractEditorTest {
             EList<Entity> _entities_1 = model.getEntities();
             Entity _createEntity = EntitiesFactory.eINSTANCE.createEntity();
             final Procedure1<Entity> _function = new Procedure1<Entity>() {
+              @Override
               public void apply(final Entity it) {
                 it.setName("Added");
                 it.setSuperType(currentEntity);
@@ -175,6 +181,7 @@ public class EntitiesEditorTest extends AbstractEditorTest {
       final XtextEditor editor = this.openEditor(_createTestFile);
       IXtextDocument _document = editor.getDocument();
       final IUnitOfWork<Entity, XtextResource> _function = new IUnitOfWork<Entity, XtextResource>() {
+        @Override
         public Entity exec(final XtextResource it) throws Exception {
           Entity _xblockexpression = null;
           {

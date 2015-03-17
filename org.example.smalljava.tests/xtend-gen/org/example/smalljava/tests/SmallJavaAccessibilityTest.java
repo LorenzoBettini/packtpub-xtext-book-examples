@@ -125,6 +125,7 @@ public class SmallJavaAccessibilityTest {
       SJProgram _parse = this._parseHelper.parse(_builder);
       EList<SJClass> _classes = _parse.getClasses();
       final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
+        @Override
         public void apply(final EList<SJClass> it) {
           SJClass _get = it.get(0);
           Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_get);
@@ -132,6 +133,7 @@ public class SmallJavaAccessibilityTest {
           SJMethodBody _body = _get_1.getBody();
           EList<SJStatement> _statements = _body.getStatements();
           final Procedure1<EList<SJStatement>> _function = new Procedure1<EList<SJStatement>>() {
+            @Override
             public void apply(final EList<SJStatement> it) {
               SJStatement _get = it.get(0);
               SmallJavaAccessibilityTest.this.assertMemberAccessible(_get, true);
@@ -148,6 +150,7 @@ public class SmallJavaAccessibilityTest {
           SJMethodBody _body_1 = _get_3.getBody();
           EList<SJStatement> _statements_1 = _body_1.getStatements();
           final Procedure1<EList<SJStatement>> _function_1 = new Procedure1<EList<SJStatement>>() {
+            @Override
             public void apply(final EList<SJStatement> it) {
               SJStatement _get = it.get(0);
               SmallJavaAccessibilityTest.this.assertMemberAccessible(_get, false);
@@ -164,6 +167,7 @@ public class SmallJavaAccessibilityTest {
           SJMethodBody _body_2 = _get_5.getBody();
           EList<SJStatement> _statements_2 = _body_2.getStatements();
           final Procedure1<EList<SJStatement>> _function_2 = new Procedure1<EList<SJStatement>>() {
+            @Override
             public void apply(final EList<SJStatement> it) {
               SJStatement _get = it.get(0);
               SmallJavaAccessibilityTest.this.assertMemberAccessible(_get, false);
@@ -269,6 +273,7 @@ public class SmallJavaAccessibilityTest {
       SJProgram _parse = this._parseHelper.parse(_builder);
       EList<SJClass> _classes = _parse.getClasses();
       final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
+        @Override
         public void apply(final EList<SJClass> it) {
           SJClass _get = it.get(0);
           Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_get);
@@ -276,6 +281,7 @@ public class SmallJavaAccessibilityTest {
           SJMethodBody _body = _last.getBody();
           EList<SJStatement> _statements = _body.getStatements();
           final Procedure1<EList<SJStatement>> _function = new Procedure1<EList<SJStatement>>() {
+            @Override
             public void apply(final EList<SJStatement> it) {
               SJStatement _get = it.get(0);
               SmallJavaAccessibilityTest.this.assertMemberAccessible(_get, true);
@@ -292,6 +298,7 @@ public class SmallJavaAccessibilityTest {
           SJMethodBody _body_1 = _last_1.getBody();
           EList<SJStatement> _statements_1 = _body_1.getStatements();
           final Procedure1<EList<SJStatement>> _function_1 = new Procedure1<EList<SJStatement>>() {
+            @Override
             public void apply(final EList<SJStatement> it) {
               SJStatement _get = it.get(0);
               SmallJavaAccessibilityTest.this.assertMemberAccessible(_get, false);
@@ -308,6 +315,7 @@ public class SmallJavaAccessibilityTest {
           SJMethodBody _body_2 = _last_2.getBody();
           EList<SJStatement> _statements_2 = _body_2.getStatements();
           final Procedure1<EList<SJStatement>> _function_2 = new Procedure1<EList<SJStatement>>() {
+            @Override
             public void apply(final EList<SJStatement> it) {
               SJStatement _get = it.get(0);
               SmallJavaAccessibilityTest.this.assertMemberAccessible(_get, false);

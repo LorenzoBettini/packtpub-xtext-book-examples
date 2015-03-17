@@ -99,6 +99,7 @@ public class SmallJavaModelUtil {
   public static String paramsTypesAsString(final SJMethod m) {
     EList<SJParameter> _params = m.getParams();
     final Function1<SJParameter, String> _function = new Function1<SJParameter, String>() {
+      @Override
       public String apply(final SJParameter it) {
         SJClass _type = it.getType();
         String _name = null;

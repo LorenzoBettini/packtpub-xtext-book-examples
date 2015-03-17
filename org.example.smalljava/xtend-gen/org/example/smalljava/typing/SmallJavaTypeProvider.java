@@ -48,6 +48,7 @@ public class SmallJavaTypeProvider {
   
   public final static SJClass stringType = ObjectExtensions.<SJClass>operator_doubleArrow(
     SmallJavaFactory.eINSTANCE.createSJClass(), new Procedure1<SJClass>() {
+    @Override
     public void apply(final SJClass it) {
       it.setName("stringType");
     }
@@ -55,6 +56,7 @@ public class SmallJavaTypeProvider {
   
   public final static SJClass intType = ObjectExtensions.<SJClass>operator_doubleArrow(
     SmallJavaFactory.eINSTANCE.createSJClass(), new Procedure1<SJClass>() {
+    @Override
     public void apply(final SJClass it) {
       it.setName("intType");
     }
@@ -62,6 +64,7 @@ public class SmallJavaTypeProvider {
   
   public final static SJClass booleanType = ObjectExtensions.<SJClass>operator_doubleArrow(
     SmallJavaFactory.eINSTANCE.createSJClass(), new Procedure1<SJClass>() {
+    @Override
     public void apply(final SJClass it) {
       it.setName("booleanType");
     }
@@ -69,6 +72,7 @@ public class SmallJavaTypeProvider {
   
   public final static SJClass nullType = ObjectExtensions.<SJClass>operator_doubleArrow(
     SmallJavaFactory.eINSTANCE.createSJClass(), new Procedure1<SJClass>() {
+    @Override
     public void apply(final SJClass it) {
       it.setName("nullType");
     }
@@ -226,6 +230,7 @@ public class SmallJavaTypeProvider {
   public String argsTypesAsStrings(final SJMemberSelection sel) {
     EList<SJExpression> _args = sel.getArgs();
     final Function1<SJExpression, String> _function = new Function1<SJExpression, String>() {
+      @Override
       public String apply(final SJExpression it) {
         SJClass _typeFor = SmallJavaTypeProvider.this.typeFor(it);
         String _name = null;

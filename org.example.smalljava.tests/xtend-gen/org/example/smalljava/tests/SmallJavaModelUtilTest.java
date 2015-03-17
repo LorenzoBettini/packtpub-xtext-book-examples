@@ -50,6 +50,7 @@ public class SmallJavaModelUtilTest {
       SJProgram _parse = this._parseHelper.parse(_builder);
       EList<SJClass> _classes = _parse.getClasses();
       final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
+        @Override
         public void apply(final EList<SJClass> it) {
           SJClass _get = it.get(0);
           SmallJavaModelUtilTest.this.assertHierarchy(_get, "");
@@ -79,6 +80,7 @@ public class SmallJavaModelUtilTest {
       SJProgram _parse = this._parseHelper.parse(_builder);
       EList<SJClass> _classes = _parse.getClasses();
       final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
+        @Override
         public void apply(final EList<SJClass> it) {
           SJClass _get = it.get(0);
           SmallJavaModelUtilTest.this.assertHierarchy(_get, "E, D, C");
@@ -123,6 +125,7 @@ public class SmallJavaModelUtilTest {
       Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_head);
       SJMethod _head_1 = IterableExtensions.<SJMethod>head(_methods);
       final Procedure1<SJMethod> _function = new Procedure1<SJMethod>() {
+        @Override
         public void apply(final SJMethod it) {
           SJMethodBody _body = it.getBody();
           EList<SJStatement> _statements = _body.getStatements();
@@ -163,6 +166,7 @@ public class SmallJavaModelUtilTest {
       SJClass _last = IterableExtensions.<SJClass>last(_classes);
       Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_last);
       final Procedure1<Iterable<SJMethod>> _function = new Procedure1<Iterable<SJMethod>>() {
+        @Override
         public void apply(final Iterable<SJMethod> it) {
           SJMethod _get = ((SJMethod[])Conversions.unwrapArray(it, SJMethod.class))[0];
           String _memberAsStringWithType = SmallJavaModelUtil.memberAsStringWithType(_get);
@@ -185,6 +189,7 @@ public class SmallJavaModelUtilTest {
     String _string = expected.toString();
     ArrayList<SJClass> _classHierarchy = SmallJavaModelUtil.classHierarchy(c);
     final Function1<SJClass, String> _function = new Function1<SJClass, String>() {
+      @Override
       public String apply(final SJClass it) {
         return it.getName();
       }

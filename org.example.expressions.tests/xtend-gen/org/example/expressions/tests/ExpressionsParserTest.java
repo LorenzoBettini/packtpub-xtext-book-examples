@@ -184,6 +184,7 @@ public class ExpressionsParserTest {
     try {
       ExpressionsModel _parse = this._parseHelper.parse(input);
       final Procedure1<ExpressionsModel> _function = new Procedure1<ExpressionsModel>() {
+        @Override
         public void apply(final ExpressionsModel it) {
           ExpressionsParserTest.this._validationTestHelper.assertNoErrors(it);
           EList<AbstractElement> _elements = it.getElements();
@@ -202,6 +203,7 @@ public class ExpressionsParserTest {
     try {
       ExpressionsModel _parse = this._parseHelper.parse(input);
       final Procedure1<ExpressionsModel> _function = new Procedure1<ExpressionsModel>() {
+        @Override
         public void apply(final ExpressionsModel it) {
           EList<AbstractElement> _elements = it.getElements();
           AbstractElement _last = IterableExtensions.<AbstractElement>last(_elements);

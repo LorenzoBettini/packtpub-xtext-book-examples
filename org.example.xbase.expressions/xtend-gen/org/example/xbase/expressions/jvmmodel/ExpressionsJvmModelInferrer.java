@@ -65,10 +65,12 @@ public class ExpressionsJvmModelInferrer extends AbstractModelInferrer {
     final String className = _trimFileExtension.lastSegment();
     JvmGenericType _class = this._jvmTypesBuilder.toClass(model, className);
     final Procedure1<JvmGenericType> _function = new Procedure1<JvmGenericType>() {
+      @Override
       public void apply(final JvmGenericType it) {
         EList<JvmMember> _members = it.getMembers();
         JvmTypeReference _typeRef = ExpressionsJvmModelInferrer.this._typeReferenceBuilder.typeRef(Void.TYPE);
         final Procedure1<JvmOperation> _function = new Procedure1<JvmOperation>() {
+          @Override
           public void apply(final JvmOperation it) {
             EList<JvmFormalParameter> _parameters = it.getParameters();
             JvmTypeReference _typeRef = ExpressionsJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);

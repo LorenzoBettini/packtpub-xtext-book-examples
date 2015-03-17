@@ -21,12 +21,14 @@ import org.example.expressions.ui.contentassist.AbstractExpressionsProposalProvi
  */
 @SuppressWarnings("all")
 public class ExpressionsProposalProvider extends AbstractExpressionsProposalProvider {
+  @Override
   public void completeAtomic_Variable(final EObject elem, final Assignment assignment, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
     if ((!(elem instanceof AbstractElement))) {
       return;
     }
     List<Variable> _variablesDefinedBefore = ExpressionsModelUtil.variablesDefinedBefore(((AbstractElement) elem));
     final Procedure1<Variable> _function = new Procedure1<Variable>() {
+      @Override
       public void apply(final Variable variable) {
         String _name = variable.getName();
         String _name_1 = variable.getName();

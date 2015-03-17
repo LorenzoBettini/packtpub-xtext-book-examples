@@ -26,11 +26,13 @@ import org.example.entities.entities.EntityType;
 
 @SuppressWarnings("all")
 public class EntitiesGenerator implements IGenerator {
+  @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
     TreeIterator<EObject> _allContents = resource.getAllContents();
     Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
     Iterable<Entity> _filter = Iterables.<Entity>filter(_iterable, Entity.class);
     final Procedure1<Entity> _function = new Procedure1<Entity>() {
+      @Override
       public void apply(final Entity it) {
         StringConcatenation _builder = new StringConcatenation();
         _builder.append("entities/");

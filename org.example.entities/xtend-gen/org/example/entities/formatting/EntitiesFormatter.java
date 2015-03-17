@@ -23,6 +23,7 @@ public class EntitiesFormatter extends AbstractDeclarativeFormatter {
   @Inject
   private EntitiesGrammarAccess g;
   
+  @Override
   protected void configureFormatting(final FormattingConfig c) {
     final EntitiesGrammarAccess.EntityElements e = this.g.getEntityAccess();
     Keyword _leftCurlyBracketKeyword_3 = e.getLeftCurlyBracketKeyword_3();

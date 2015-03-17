@@ -47,6 +47,7 @@ public class ExpressionsModelUtilTest {
       _builder.newLine();
       ExpressionsModel _parse = this._parseHelper.parse(_builder);
       final Procedure1<ExpressionsModel> _function = new Procedure1<ExpressionsModel>() {
+        @Override
         public void apply(final ExpressionsModel it) {
           ExpressionsModelUtilTest.this.assertVariablesDefinedBefore(it, 0, "");
           ExpressionsModelUtilTest.this.assertVariablesDefinedBefore(it, 1, "");
@@ -66,6 +67,7 @@ public class ExpressionsModelUtilTest {
     AbstractElement _get = _elements.get(elemIndex);
     List<Variable> _variablesDefinedBefore = ExpressionsModelUtil.variablesDefinedBefore(_get);
     final Function1<Variable, String> _function = new Function1<Variable, String>() {
+      @Override
       public String apply(final Variable it) {
         return it.getName();
       }

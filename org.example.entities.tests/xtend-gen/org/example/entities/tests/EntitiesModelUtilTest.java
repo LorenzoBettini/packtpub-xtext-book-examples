@@ -18,6 +18,7 @@ public class EntitiesModelUtilTest {
   public void testAddEntityAfter() {
     Entity _createEntity = this.factory.createEntity();
     final Procedure1<Entity> _function = new Procedure1<Entity>() {
+      @Override
       public void apply(final Entity it) {
         it.setName("First");
       }
@@ -25,6 +26,7 @@ public class EntitiesModelUtilTest {
     final Entity e1 = ObjectExtensions.<Entity>operator_doubleArrow(_createEntity, _function);
     Entity _createEntity_1 = this.factory.createEntity();
     final Procedure1<Entity> _function_1 = new Procedure1<Entity>() {
+      @Override
       public void apply(final Entity it) {
         it.setName("Second");
       }
@@ -32,6 +34,7 @@ public class EntitiesModelUtilTest {
     final Entity e2 = ObjectExtensions.<Entity>operator_doubleArrow(_createEntity_1, _function_1);
     Model _createModel = this.factory.createModel();
     final Procedure1<Model> _function_2 = new Procedure1<Model>() {
+      @Override
       public void apply(final Model it) {
         EList<Entity> _entities = it.getEntities();
         _entities.add(e1);

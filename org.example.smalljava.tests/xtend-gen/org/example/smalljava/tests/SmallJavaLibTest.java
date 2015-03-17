@@ -112,10 +112,12 @@ public class SmallJavaLibTest {
     _builder.newLine();
     SJProgram _loadLibAndParse = this.loadLibAndParse(_builder);
     final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
+      @Override
       public void apply(final SJProgram it) {
         SmallJavaLibTest.this._validationTestHelper.assertNoErrors(it);
         EList<SJClass> _classes = it.getClasses();
         final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
+          @Override
           public void apply(final EList<SJClass> it) {
             SJClass _get = it.get(0);
             SmallJavaLibTest.this.assertHierarchyWithObject(_get, "Object");
@@ -144,10 +146,12 @@ public class SmallJavaLibTest {
     _builder.newLine();
     SJProgram _loadLibAndParse = this.loadLibAndParse(_builder);
     final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
+      @Override
       public void apply(final SJProgram it) {
         SmallJavaLibTest.this._validationTestHelper.assertNoErrors(it);
         EList<SJClass> _classes = it.getClasses();
         final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
+          @Override
           public void apply(final EList<SJClass> it) {
             SJClass _head = IterableExtensions.<SJClass>head(it);
             final SJClass objClass = SmallJavaLibTest.this._smallJavaLib.getSmallJavaObjectClass(_head);
@@ -207,9 +211,11 @@ public class SmallJavaLibTest {
   private ResourceSet loadLibrary() {
     ResourceSet _loadLib = this._smallJavaLib.loadLib();
     final Procedure1<ResourceSet> _function = new Procedure1<ResourceSet>() {
+      @Override
       public void apply(final ResourceSet it) {
         EList<Resource> _resources = it.getResources();
         final Procedure1<Resource> _function = new Procedure1<Resource>() {
+          @Override
           public void apply(final Resource it) {
             EList<EObject> _contents = it.getContents();
             EObject _get = _contents.get(0);
@@ -226,6 +232,7 @@ public class SmallJavaLibTest {
     String _string = expected.toString();
     ArrayList<SJClass> _classHierarchyWithObject = this._smallJavaLib.getClassHierarchyWithObject(c);
     final Function1<SJClass, String> _function = new Function1<SJClass, String>() {
+      @Override
       public String apply(final SJClass it) {
         return it.getName();
       }

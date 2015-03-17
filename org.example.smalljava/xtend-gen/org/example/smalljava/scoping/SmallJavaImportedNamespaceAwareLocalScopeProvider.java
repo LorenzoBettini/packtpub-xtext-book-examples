@@ -8,6 +8,7 @@ import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 
 @SuppressWarnings("all")
 public class SmallJavaImportedNamespaceAwareLocalScopeProvider extends ImportedNamespaceAwareLocalScopeProvider {
+  @Override
   public List<ImportNormalizer> getImplicitImports(final boolean ignoreCase) {
     QualifiedName _create = QualifiedName.create("smalljava", "lang");
     ImportNormalizer _importNormalizer = new ImportNormalizer(_create, true, ignoreCase);

@@ -14,6 +14,7 @@ import org.example.xtend.examples.Person;
 public class PersonUtil {
   public static List<Person> mysort(final List<Person> persons) {
     final Function1<Person, String> _function = new Function1<Person, String>() {
+      @Override
       public String apply(final Person it) {
         String _surname = it.getSurname();
         String _plus = (_surname + " ");
@@ -29,6 +30,7 @@ public class PersonUtil {
   
   public static String asString(final List<Person> persons) {
     final Function1<Person, String> _function = new Function1<Person, String>() {
+      @Override
       public String apply(final Person it) {
         String _firstname = it.getFirstname();
         String _plus = (_firstname + " ");
@@ -46,6 +48,7 @@ public class PersonUtil {
   
   public static Person findByName(final List<Person> persons, final String name) {
     final Function1<Person, Boolean> _function = new Function1<Person, Boolean>() {
+      @Override
       public Boolean apply(final Person it) {
         String _firstname = it.getFirstname();
         return Boolean.valueOf(Objects.equal(_firstname, name));
@@ -65,6 +68,7 @@ public class PersonUtil {
     String _asString = PersonUtil.asString(_mysort);
     InputOutput.<String>println(_asString);
     final Function1<Person, Boolean> _function = new Function1<Person, Boolean>() {
+      @Override
       public Boolean apply(final Person it) {
         String _firstname = it.getFirstname();
         return Boolean.valueOf(_firstname.startsWith("J"));
@@ -72,6 +76,7 @@ public class PersonUtil {
     };
     Iterable<Person> _filter = IterableExtensions.<Person>filter(personList, _function);
     final Function1<Person, Integer> _function_1 = new Function1<Person, Integer>() {
+      @Override
       public Integer apply(final Person it) {
         return Integer.valueOf(it.getAge());
       }
@@ -79,6 +84,7 @@ public class PersonUtil {
     List<Person> _sortBy = IterableExtensions.<Person, Integer>sortBy(_filter, _function_1);
     Iterable<Person> _take = IterableExtensions.<Person>take(_sortBy, 3);
     final Function1<Person, String> _function_2 = new Function1<Person, String>() {
+      @Override
       public String apply(final Person it) {
         String _surname = it.getSurname();
         String _plus = (_surname + ", ");

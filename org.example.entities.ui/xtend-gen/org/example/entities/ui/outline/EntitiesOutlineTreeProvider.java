@@ -26,6 +26,7 @@ public class EntitiesOutlineTreeProvider extends DefaultOutlineTreeProvider {
   public void _createChildren(final DocumentRootNode outlineNode, final Model model) {
     EList<Entity> _entities = model.getEntities();
     final Procedure1<Entity> _function = new Procedure1<Entity>() {
+      @Override
       public void apply(final Entity entity) {
         EntitiesOutlineTreeProvider.this.createNode(outlineNode, entity);
       }

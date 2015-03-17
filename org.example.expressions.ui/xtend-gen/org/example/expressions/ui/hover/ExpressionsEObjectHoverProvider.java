@@ -24,6 +24,7 @@ public class ExpressionsEObjectHoverProvider extends DefaultEObjectHoverProvider
   @Extension
   private ExpressionsInterpreter _expressionsInterpreter;
   
+  @Override
   public String getHoverInfoAsHtml(final EObject o) {
     boolean _and = false;
     if (!(o instanceof AbstractElement)) {

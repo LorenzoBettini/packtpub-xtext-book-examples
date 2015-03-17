@@ -205,6 +205,7 @@ public class SmallJavaParserTest {
       _builder.append("}");
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
+        @Override
         public void apply(final SJProgram it) {
           SmallJavaParserTest.this._validationTestHelper.assertNoErrors(it);
           SmallJavaParserTest.this.assertAccessLevel(it, 0, SJAccessLevel.PRIVATE);
@@ -256,6 +257,7 @@ public class SmallJavaParserTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
+        @Override
         public void apply(final SJProgram it) {
           SmallJavaParserTest.this._validationTestHelper.assertNoErrors(it);
           EList<SJClass> _classes = it.getClasses();
@@ -313,6 +315,7 @@ public class SmallJavaParserTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
+        @Override
         public void apply(final SJProgram it) {
           SmallJavaParserTest.this._validationTestHelper.assertNoErrors(it);
           EList<SJClass> _classes = it.getClasses();

@@ -29,6 +29,7 @@ public class EntitiesQuickfixProvider extends DefaultQuickfixProvider {
     _builder.append(_get, "");
     _builder.append("\' ");
     final ISemanticModification _function = new ISemanticModification() {
+      @Override
       public void apply(final EObject element, final IModificationContext context) throws Exception {
         ((Entity) element).setSuperType(null);
       }
@@ -41,6 +42,7 @@ public class EntitiesQuickfixProvider extends DefaultQuickfixProvider {
   @Fix(Diagnostic.LINKING_DIAGNOSTIC)
   public void createMissingEntity(final Issue issue, final IssueResolutionAcceptor acceptor) {
     final ISemanticModification _function = new ISemanticModification() {
+      @Override
       public void apply(final EObject element, final IModificationContext context) throws Exception {
         Entity _containerOfType = EcoreUtil2.<Entity>getContainerOfType(element, Entity.class);
         IXtextDocument _xtextDocument = context.getXtextDocument();
@@ -63,6 +65,7 @@ public class EntitiesQuickfixProvider extends DefaultQuickfixProvider {
     String _plus = ("Capitalize first letter of \'" + _get);
     String _plus_1 = (_plus + "\'");
     final IModification _function = new IModification() {
+      @Override
       public void apply(final IModificationContext context) throws Exception {
         final IXtextDocument xtextDocument = context.getXtextDocument();
         Integer _offset = issue.getOffset();
@@ -84,6 +87,7 @@ public class EntitiesQuickfixProvider extends DefaultQuickfixProvider {
     String _plus = ("Uncapitalize first letter of \'" + _get);
     String _plus_1 = (_plus + "\'");
     final ISemanticModification _function = new ISemanticModification() {
+      @Override
       public void apply(final EObject element, final IModificationContext context) throws Exception {
         String[] _data = issue.getData();
         String _get = _data[0];

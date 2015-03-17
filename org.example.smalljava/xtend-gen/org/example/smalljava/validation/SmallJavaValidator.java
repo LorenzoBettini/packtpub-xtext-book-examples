@@ -123,6 +123,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
     final QualifiedName className = this._iQualifiedNameProvider.getFullyQualifiedName(c);
     Iterable<IEObjectDescription> _visibleClassesDescriptions = this._smallJavaIndex.getVisibleClassesDescriptions(c);
     final Procedure1<IEObjectDescription> _function = new Procedure1<IEObjectDescription>() {
+      @Override
       public void apply(final IEObjectDescription desc) {
         boolean _and = false;
         boolean _and_1 = false;
@@ -305,6 +306,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
     SJMethodBody _body = _containingMethod.getBody();
     List<SJVariableDeclaration> _allContentsOfType = EcoreUtil2.<SJVariableDeclaration>getAllContentsOfType(_body, SJVariableDeclaration.class);
     final Function1<SJVariableDeclaration, Boolean> _function = new Function1<SJVariableDeclaration, Boolean>() {
+      @Override
       public Boolean apply(final SJVariableDeclaration it) {
         boolean _and = false;
         boolean _notEquals = (!Objects.equal(it, vardecl));
@@ -336,6 +338,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
     SJClass _containingClass = SmallJavaModelUtil.containingClass(member);
     EList<SJMember> _members = _containingClass.getMembers();
     final Function1<SJMember, Boolean> _function = new Function1<SJMember, Boolean>() {
+      @Override
       public Boolean apply(final SJMember it) {
         boolean _and = false;
         boolean _and_1 = false;
@@ -376,6 +379,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
     SJProgram _containingProgram = SmallJavaModelUtil.containingProgram(c);
     EList<SJClass> _classes = _containingProgram.getClasses();
     final Function1<SJClass, Boolean> _function = new Function1<SJClass, Boolean>() {
+      @Override
       public Boolean apply(final SJClass it) {
         boolean _and = false;
         boolean _notEquals = (!Objects.equal(it, c));
@@ -433,6 +437,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
     SJClass _containingClass = SmallJavaModelUtil.containingClass(m);
     ArrayList<SJClass> _classHierarchy = SmallJavaModelUtil.classHierarchy(_containingClass);
     final Function1<SJClass, Iterable<SJMethod>> _function = new Function1<SJClass, Iterable<SJMethod>>() {
+      @Override
       public Iterable<SJMethod> apply(final SJClass it) {
         return SmallJavaModelUtil.methods(it);
       }
@@ -440,6 +445,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
     List<Iterable<SJMethod>> _map = ListExtensions.<SJClass, Iterable<SJMethod>>map(_classHierarchy, _function);
     Iterable<SJMethod> _flatten = Iterables.<SJMethod>concat(_map);
     final Function1<SJMethod, Boolean> _function_1 = new Function1<SJMethod, Boolean>() {
+      @Override
       public Boolean apply(final SJMethod it) {
         String _name = it.getName();
         String _name_1 = m.getName();
@@ -459,6 +465,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
       } else {
         EList<SJParameter> _params = m.getParams();
         final Function1<SJParameter, SJClass> _function_2 = new Function1<SJParameter, SJClass>() {
+          @Override
           public SJClass apply(final SJParameter it) {
             return it.getType();
           }
@@ -466,6 +473,7 @@ public class SmallJavaValidator extends AbstractSmallJavaValidator {
         List<SJClass> _map_1 = ListExtensions.<SJParameter, SJClass>map(_params, _function_2);
         EList<SJParameter> _params_1 = overridden.getParams();
         final Function1<SJParameter, SJClass> _function_3 = new Function1<SJParameter, SJClass>() {
+          @Override
           public SJClass apply(final SJParameter it) {
             return it.getType();
           }

@@ -16,21 +16,25 @@ public class EntitiesEMFExample {
     superEntity.setName("MySuperEntity");
     Entity _createEntity = EntitiesFactory.eINSTANCE.createEntity();
     final Procedure1<Entity> _function = new Procedure1<Entity>() {
+      @Override
       public void apply(final Entity it) {
         it.setName("MyEntity");
         it.setSuperType(superEntity);
         EList<Attribute> _attributes = it.getAttributes();
         Attribute _createAttribute = EntitiesFactory.eINSTANCE.createAttribute();
         final Procedure1<Attribute> _function = new Procedure1<Attribute>() {
+          @Override
           public void apply(final Attribute it) {
             it.setName("myattribute");
             AttributeType _createAttributeType = EntitiesFactory.eINSTANCE.createAttributeType();
             final Procedure1<AttributeType> _function = new Procedure1<AttributeType>() {
+              @Override
               public void apply(final AttributeType it) {
                 it.setArray(false);
                 it.setLength(10);
                 EntityType _createEntityType = EntitiesFactory.eINSTANCE.createEntityType();
                 final Procedure1<EntityType> _function = new Procedure1<EntityType>() {
+                  @Override
                   public void apply(final EntityType it) {
                     it.setEntity(superEntity);
                   }

@@ -87,6 +87,7 @@ public class SmallJavaTypeProviderTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
+        @Override
         public void apply(final SJProgram it) {
           SmallJavaTypeProviderTest.this._validationTestHelper.assertNoErrors(it);
           EList<SJClass> _classes = it.getClasses();
@@ -194,6 +195,7 @@ public class SmallJavaTypeProviderTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
+        @Override
         public void apply(final SJProgram it) {
           EList<SJClass> _classes = it.getClasses();
           SJClass _head = IterableExtensions.<SJClass>head(_classes);
@@ -202,6 +204,7 @@ public class SmallJavaTypeProviderTest {
           SJMethodBody _body = _head_1.getBody();
           EList<SJStatement> _statements = _body.getStatements();
           final Procedure1<EList<SJStatement>> _function = new Procedure1<EList<SJStatement>>() {
+            @Override
             public void apply(final EList<SJStatement> it) {
               SJStatement _get = it.get(0);
               SJClass _statementExpressionType = SmallJavaTypeProviderTest.this.statementExpressionType(_get);
@@ -308,6 +311,7 @@ public class SmallJavaTypeProviderTest {
     SJStatement _head = IterableExtensions.<SJStatement>head(_testStatements);
     EList<SJExpression> _args = ((SJMemberSelection) _head).getArgs();
     final Procedure1<EList<SJExpression>> _function = new Procedure1<EList<SJExpression>>() {
+      @Override
       public void apply(final EList<SJExpression> it) {
         SJExpression _get = it.get(0);
         SmallJavaTypeProviderTest.this.assertExpectedType(_get, "P1");
@@ -334,6 +338,7 @@ public class SmallJavaTypeProviderTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
+        @Override
         public void apply(final SJProgram it) {
           SmallJavaTypeProviderTest.this._validationTestHelper.assertNoErrors(it);
           EList<SJClass> _classes = it.getClasses();
@@ -343,6 +348,7 @@ public class SmallJavaTypeProviderTest {
           SJMethodBody _body = _head_1.getBody();
           EList<SJStatement> _statements = _body.getStatements();
           final Procedure1<EList<SJStatement>> _function = new Procedure1<EList<SJStatement>>() {
+            @Override
             public void apply(final EList<SJStatement> it) {
               SJStatement _get = it.get(0);
               SJClass _expectedType = SmallJavaTypeProviderTest.this._smallJavaTypeProvider.expectedType(((SJExpression) _get));
@@ -367,6 +373,7 @@ public class SmallJavaTypeProviderTest {
     SJStatement _head = IterableExtensions.<SJStatement>head(_testStatements);
     EList<SJExpression> _args = ((SJMemberSelection) _head).getArgs();
     final Procedure1<EList<SJExpression>> _function = new Procedure1<EList<SJExpression>>() {
+      @Override
       public void apply(final EList<SJExpression> it) {
         SJExpression _get = it.get(0);
         SJClass _expectedType = SmallJavaTypeProviderTest.this._smallJavaTypeProvider.expectedType(_get);
@@ -410,6 +417,7 @@ public class SmallJavaTypeProviderTest {
       SJClass _last = IterableExtensions.<SJClass>last(_classes);
       Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_last);
       final Procedure1<Iterable<SJMethod>> _function = new Procedure1<Iterable<SJMethod>>() {
+        @Override
         public void apply(final Iterable<SJMethod> it) {
           SJMethod _get = ((SJMethod[])Conversions.unwrapArray(it, SJMethod.class))[0];
           String _methodInvocationArgsTypesAsString = SmallJavaTypeProviderTest.this.methodInvocationArgsTypesAsString(_get);

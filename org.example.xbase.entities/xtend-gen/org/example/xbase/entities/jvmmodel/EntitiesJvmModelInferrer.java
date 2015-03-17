@@ -67,6 +67,7 @@ public class EntitiesJvmModelInferrer extends AbstractModelInferrer {
     String _plus = ("entities." + _name);
     JvmGenericType _class = this._jvmTypesBuilder.toClass(entity, _plus);
     final Procedure1<JvmGenericType> _function = new Procedure1<JvmGenericType>() {
+      @Override
       public void apply(final JvmGenericType it) {
         String _documentation = EntitiesJvmModelInferrer.this._jvmTypesBuilder.getDocumentation(entity);
         EntitiesJvmModelInferrer.this._jvmTypesBuilder.setDocumentation(it, _documentation);
@@ -80,6 +81,7 @@ public class EntitiesJvmModelInferrer extends AbstractModelInferrer {
         }
         EList<Attribute> _attributes = entity.getAttributes();
         final Procedure1<Attribute> _function = new Procedure1<Attribute>() {
+          @Override
           public void apply(final Attribute a) {
             JvmTypeReference _elvis = null;
             JvmTypeReference _type = a.getType();
@@ -97,6 +99,7 @@ public class EntitiesJvmModelInferrer extends AbstractModelInferrer {
             EList<JvmMember> _members = it.getMembers();
             String _name = a.getName();
             final Procedure1<JvmField> _function = new Procedure1<JvmField>() {
+              @Override
               public void apply(final JvmField it) {
                 String _documentation = EntitiesJvmModelInferrer.this._jvmTypesBuilder.getDocumentation(a);
                 EntitiesJvmModelInferrer.this._jvmTypesBuilder.setDocumentation(it, _documentation);
@@ -123,6 +126,7 @@ public class EntitiesJvmModelInferrer extends AbstractModelInferrer {
         IterableExtensions.<Attribute>forEach(_attributes, _function);
         EList<Operation> _operations = entity.getOperations();
         final Procedure1<Operation> _function_1 = new Procedure1<Operation>() {
+          @Override
           public void apply(final Operation op) {
             EList<JvmMember> _members = it.getMembers();
             String _name = op.getName();
@@ -135,6 +139,7 @@ public class EntitiesJvmModelInferrer extends AbstractModelInferrer {
               _elvis = _inferredType;
             }
             final Procedure1<JvmOperation> _function = new Procedure1<JvmOperation>() {
+              @Override
               public void apply(final JvmOperation it) {
                 String _documentation = EntitiesJvmModelInferrer.this._jvmTypesBuilder.getDocumentation(op);
                 EntitiesJvmModelInferrer.this._jvmTypesBuilder.setDocumentation(it, _documentation);
@@ -158,8 +163,10 @@ public class EntitiesJvmModelInferrer extends AbstractModelInferrer {
         EList<JvmMember> _members = it.getMembers();
         JvmTypeReference _typeRef = EntitiesJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
         final Procedure1<JvmOperation> _function_2 = new Procedure1<JvmOperation>() {
+          @Override
           public void apply(final JvmOperation it) {
             final Procedure1<ITreeAppendable> _function = new Procedure1<ITreeAppendable>() {
+              @Override
               public void apply(final ITreeAppendable it) {
                 StringConcatenation _builder = new StringConcatenation();
                 _builder.append("return");

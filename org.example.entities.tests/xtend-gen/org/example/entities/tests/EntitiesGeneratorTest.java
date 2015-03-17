@@ -97,6 +97,7 @@ public class EntitiesGeneratorTest {
       _builder.append("}");
       _builder.newLine();
       final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
+        @Override
         public void accept(final CompilationTestHelper.Result it) {
           StringConcatenation _builder = new StringConcatenation();
           _builder.append("package entities;");
@@ -155,6 +156,7 @@ public class EntitiesGeneratorTest {
       _builder.append("}");
       _builder.newLine();
       final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
+        @Override
         public void accept(final CompilationTestHelper.Result it) {
           it.getCompiledClass();
         }
@@ -184,6 +186,7 @@ public class EntitiesGeneratorTest {
       _builder.append("}");
       _builder.newLine();
       final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
+        @Override
         public void accept(final CompilationTestHelper.Result it) {
           Class<?> _compiledClass = it.getCompiledClass("entities.FirstEntity");
           Assert.assertNotNull(_compiledClass);
@@ -209,11 +212,13 @@ public class EntitiesGeneratorTest {
       _builder.append("}");
       _builder.newLine();
       final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
+        @Override
         public void accept(final CompilationTestHelper.Result it) {
           try {
             Class<?> _compiledClass = it.getCompiledClass();
             Object _newInstance = _compiledClass.newInstance();
             final Procedure1<Object> _function = new Procedure1<Object>() {
+              @Override
               public void apply(final Object it) {
                 try {
                   Object _invoke = EntitiesGeneratorTest.this._reflectExtensions.invoke(it, "getMyAttribute");
@@ -253,6 +258,7 @@ public class EntitiesGeneratorTest {
       _builder.append("entity SecondEntity { }");
       _builder.newLine();
       final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
+        @Override
         public void accept(final CompilationTestHelper.Result it) {
           StringConcatenation _builder = new StringConcatenation();
           _builder.append("package entities;");
@@ -331,6 +337,7 @@ public class EntitiesGeneratorTest {
       _builder.append("}");
       _builder.newLine();
       final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
+        @Override
         public void accept(final CompilationTestHelper.Result it) {
           try {
             Class<?> _compiledClass = it.getCompiledClass("entities.FirstEntity");
@@ -382,6 +389,7 @@ public class EntitiesGeneratorTest {
       _builder.append("}");
       _builder.newLine();
       final IAcceptor<CompilationTestHelper.Result> _function = new IAcceptor<CompilationTestHelper.Result>() {
+        @Override
         public void accept(final CompilationTestHelper.Result it) {
           StringConcatenation _builder = new StringConcatenation();
           _builder.append("package entities;");

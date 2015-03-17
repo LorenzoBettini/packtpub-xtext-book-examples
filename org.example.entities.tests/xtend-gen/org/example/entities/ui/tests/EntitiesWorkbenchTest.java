@@ -24,6 +24,7 @@ public class EntitiesWorkbenchTest extends AbstractWorkbenchTest {
   private final String TEST_PROJECT = "mytestproject";
   
   @Before
+  @Override
   public void setUp() {
     try {
       super.setUp();
@@ -37,6 +38,7 @@ public class EntitiesWorkbenchTest extends AbstractWorkbenchTest {
     try {
       IJavaProject _createJavaProject = JavaProjectSetupUtil.createJavaProject(this.TEST_PROJECT);
       final Procedure1<IJavaProject> _function = new Procedure1<IJavaProject>() {
+        @Override
         public void apply(final IJavaProject it) {
           try {
             IProject _project = it.getProject();

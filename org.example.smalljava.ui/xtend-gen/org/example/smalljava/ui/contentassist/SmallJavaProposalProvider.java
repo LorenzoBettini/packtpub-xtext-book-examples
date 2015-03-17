@@ -29,9 +29,11 @@ public class SmallJavaProposalProvider extends AbstractSmallJavaProposalProvider
   @Extension
   private SmallJavaAccessibility _smallJavaAccessibility;
   
+  @Override
   public void completeSJSelectionExpression_Member(final EObject model, final Assignment assignment, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
     AbstractElement _terminal = assignment.getTerminal();
     final Predicate<IEObjectDescription> _function = new Predicate<IEObjectDescription>() {
+      @Override
       public boolean apply(final IEObjectDescription description) {
         EObject _eObjectOrProxy = description.getEObjectOrProxy();
         return SmallJavaProposalProvider.this._smallJavaAccessibility.isAccessibleFrom(((SJMember) _eObjectOrProxy), model);
@@ -40,6 +42,7 @@ public class SmallJavaProposalProvider extends AbstractSmallJavaProposalProvider
     this.lookupCrossReference(((CrossReference) _terminal), context, acceptor, _function);
   }
   
+  @Override
   public StyledString getStyledDisplayString(final EObject element, final String qualifiedNameAsString, final String shortName) {
     StyledString _xifexpression = null;
     if ((element instanceof SJMember)) {

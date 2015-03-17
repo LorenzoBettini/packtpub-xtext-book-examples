@@ -10,6 +10,7 @@ public class WithOperator {
   public Entity m() {
     Entity _createEntity = EntitiesFactory.eINSTANCE.createEntity();
     final Procedure1<Entity> _function = new Procedure1<Entity>() {
+      @Override
       public void apply(final Entity it) {
         it.setName("MyEntity");
       }

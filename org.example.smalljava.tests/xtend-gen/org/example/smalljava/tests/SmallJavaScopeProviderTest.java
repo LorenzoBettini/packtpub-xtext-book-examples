@@ -100,6 +100,7 @@ public class SmallJavaScopeProviderTest {
       SJReturn _returnStatement = SmallJavaModelUtil.returnStatement(_last);
       SJExpression _expression = _returnStatement.getExpression();
       final Procedure1<SJExpression> _function = new Procedure1<SJExpression>() {
+        @Override
         public void apply(final SJExpression it) {
           EReference _sJMemberSelection_Member = SmallJavaPackage.eINSTANCE.getSJMemberSelection_Member();
           SmallJavaScopeProviderTest.this.assertScope(it, _sJMemberSelection_Member, 
@@ -146,6 +147,7 @@ public class SmallJavaScopeProviderTest {
       SJReturn _returnStatement = SmallJavaModelUtil.returnStatement(_last);
       SJExpression _expression = _returnStatement.getExpression();
       final Procedure1<SJExpression> _function = new Procedure1<SJExpression>() {
+        @Override
         public void apply(final SJExpression it) {
           EReference _sJMemberSelection_Member = SmallJavaPackage.eINSTANCE.getSJMemberSelection_Member();
           SmallJavaScopeProviderTest.this.assertScope(it, _sJMemberSelection_Member, 
@@ -204,8 +206,10 @@ public class SmallJavaScopeProviderTest {
       TreeIterator<EObject> _eAllContents = _body.eAllContents();
       Iterator<SJVariableDeclaration> _filter = Iterators.<SJVariableDeclaration>filter(_eAllContents, SJVariableDeclaration.class);
       final Procedure1<Iterator<SJVariableDeclaration>> _function = new Procedure1<Iterator<SJVariableDeclaration>>() {
+        @Override
         public void apply(final Iterator<SJVariableDeclaration> it) {
           final Function1<SJVariableDeclaration, Boolean> _function = new Function1<SJVariableDeclaration, Boolean>() {
+            @Override
             public Boolean apply(final SJVariableDeclaration it) {
               String _name = it.getName();
               return Boolean.valueOf(Objects.equal(_name, "v3"));
@@ -217,6 +221,7 @@ public class SmallJavaScopeProviderTest {
           SmallJavaScopeProviderTest.this.assertScope(_expression, _sJSymbolRef_Symbol, 
             "v2, v1, p");
           final Function1<SJVariableDeclaration, Boolean> _function_1 = new Function1<SJVariableDeclaration, Boolean>() {
+            @Override
             public Boolean apply(final SJVariableDeclaration it) {
               String _name = it.getName();
               return Boolean.valueOf(Objects.equal(_name, "v4"));
@@ -362,8 +367,10 @@ public class SmallJavaScopeProviderTest {
       TreeIterator<EObject> _eAllContents = _get.eAllContents();
       Iterator<SJVariableDeclaration> _filter = Iterators.<SJVariableDeclaration>filter(_eAllContents, SJVariableDeclaration.class);
       final Procedure1<Iterator<SJVariableDeclaration>> _function = new Procedure1<Iterator<SJVariableDeclaration>>() {
+        @Override
         public void apply(final Iterator<SJVariableDeclaration> it) {
           final Function1<SJVariableDeclaration, Boolean> _function = new Function1<SJVariableDeclaration, Boolean>() {
+            @Override
             public Boolean apply(final SJVariableDeclaration it) {
               String _name = it.getName();
               return Boolean.valueOf(Objects.equal(_name, "v3"));
@@ -429,6 +436,7 @@ public class SmallJavaScopeProviderTest {
       SJProgram _parse = this._parseHelper.parse(_builder);
       EList<SJClass> _classes = _parse.getClasses();
       final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
+        @Override
         public void apply(final EList<SJClass> it) {
           SJClass _get = it.get(2);
           Iterable<SJField> _fields = SmallJavaModelUtil.fields(_get);
@@ -509,6 +517,7 @@ public class SmallJavaScopeProviderTest {
       SJProgram _parse = this._parseHelper.parse(_builder);
       EList<SJClass> _classes = _parse.getClasses();
       final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
+        @Override
         public void apply(final EList<SJClass> it) {
           SJClass _get = it.get(2);
           Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_get);
@@ -573,6 +582,7 @@ public class SmallJavaScopeProviderTest {
       Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_head);
       SJMethod _head_1 = IterableExtensions.<SJMethod>head(_methods);
       final Procedure1<SJMethod> _function = new Procedure1<SJMethod>() {
+        @Override
         public void apply(final SJMethod it) {
           SJReturn _returnStatement = SmallJavaModelUtil.returnStatement(it);
           SJExpression _expression = _returnStatement.getExpression();
@@ -625,6 +635,7 @@ public class SmallJavaScopeProviderTest {
       EList<SJClass> _classes = _parse.getClasses();
       SJClass _head = IterableExtensions.<SJClass>head(_classes);
       final Procedure1<SJClass> _function = new Procedure1<SJClass>() {
+        @Override
         public void apply(final SJClass it) {
           Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(it);
           SJMethod _head = IterableExtensions.<SJMethod>head(_methods);
@@ -674,6 +685,7 @@ public class SmallJavaScopeProviderTest {
       Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_head);
       SJMethod _head_1 = IterableExtensions.<SJMethod>head(_methods);
       final Procedure1<SJMethod> _function = new Procedure1<SJMethod>() {
+        @Override
         public void apply(final SJMethod it) {
           SmallJavaScopeProviderTest.this._validationTestHelper.assertNoErrors(it);
           SJMethodBody _body = it.getBody();
@@ -730,6 +742,7 @@ public class SmallJavaScopeProviderTest {
       SJProgram _parse = this._parseHelper.parse(_builder);
       EList<SJClass> _classes = _parse.getClasses();
       final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
+        @Override
         public void apply(final EList<SJClass> it) {
           SJClass _get = it.get(1);
           Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_get);
@@ -1044,6 +1057,7 @@ public class SmallJavaScopeProviderTest {
     IScope _scope = this._iScopeProvider.getScope(context, reference);
     Iterable<IEObjectDescription> _allElements = _scope.getAllElements();
     final Function1<IEObjectDescription, QualifiedName> _function = new Function1<IEObjectDescription, QualifiedName>() {
+      @Override
       public QualifiedName apply(final IEObjectDescription it) {
         return it.getName();
       }

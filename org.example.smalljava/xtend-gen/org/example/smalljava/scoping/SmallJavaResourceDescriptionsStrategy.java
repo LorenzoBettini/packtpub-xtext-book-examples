@@ -28,6 +28,7 @@ public class SmallJavaResourceDescriptionsStrategy extends DefaultResourceDescri
   @Extension
   private IQualifiedNameProvider _iQualifiedNameProvider;
   
+  @Override
   public boolean createEObjectDescriptions(final EObject eObject, final IAcceptor<IEObjectDescription> acceptor) {
     boolean _xifexpression = false;
     if ((eObject instanceof SJProgram)) {
@@ -35,6 +36,7 @@ public class SmallJavaResourceDescriptionsStrategy extends DefaultResourceDescri
       {
         EList<SJClass> _classes = ((SJProgram) eObject).getClasses();
         final Procedure1<SJClass> _function = new Procedure1<SJClass>() {
+          @Override
           public void apply(final SJClass sjClass) {
             final QualifiedName fullyQualifiedName = SmallJavaResourceDescriptionsStrategy.this._iQualifiedNameProvider.getFullyQualifiedName(sjClass);
             boolean _notEquals = (!Objects.equal(fullyQualifiedName, null));

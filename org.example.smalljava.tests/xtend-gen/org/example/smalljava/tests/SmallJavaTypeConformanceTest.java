@@ -64,6 +64,7 @@ public class SmallJavaTypeConformanceTest {
       SJProgram _parse = this._parseHelper.parse(_builder);
       EList<SJClass> _classes = _parse.getClasses();
       final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
+        @Override
         public void apply(final EList<SJClass> it) {
           SJClass _get = it.get(0);
           SJClass _get_1 = it.get(0);
@@ -101,6 +102,7 @@ public class SmallJavaTypeConformanceTest {
       SJProgram _parse = this._parseHelper.parse(_builder);
       EList<SJClass> _classes = _parse.getClasses();
       final Procedure1<EList<SJClass>> _function = new Procedure1<EList<SJClass>>() {
+        @Override
         public void apply(final EList<SJClass> it) {
           SJClass _last = IterableExtensions.<SJClass>last(it);
           Iterable<SJMethod> _methods = SmallJavaModelUtil.methods(_last);

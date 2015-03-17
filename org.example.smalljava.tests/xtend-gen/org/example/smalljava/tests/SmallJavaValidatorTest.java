@@ -54,6 +54,7 @@ public class SmallJavaValidatorTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
+        @Override
         public void apply(final SJProgram it) {
           SmallJavaValidatorTest.this.assertHierarchyCycle(it, "A");
           SmallJavaValidatorTest.this.assertHierarchyCycle(it, "B");
@@ -362,6 +363,7 @@ public class SmallJavaValidatorTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
+        @Override
         public void apply(final SJProgram it) {
           EClass _sJSymbolRef = SmallJavaPackage.eINSTANCE.getSJSymbolRef();
           SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJSymbolRef, 
@@ -439,6 +441,7 @@ public class SmallJavaValidatorTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
+        @Override
         public void apply(final SJProgram it) {
           List<Issue> _validate = SmallJavaValidatorTest.this._validationTestHelper.validate(it);
           int _size = _validate.size();
@@ -515,6 +518,7 @@ public class SmallJavaValidatorTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
+        @Override
         public void apply(final SJProgram it) {
           List<Issue> _validate = SmallJavaValidatorTest.this._validationTestHelper.validate(it);
           int _size = _validate.size();
@@ -601,6 +605,7 @@ public class SmallJavaValidatorTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
+        @Override
         public void apply(final SJProgram it) {
           List<Issue> _validate = SmallJavaValidatorTest.this._validationTestHelper.validate(it);
           int _size = _validate.size();
@@ -683,6 +688,7 @@ public class SmallJavaValidatorTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
+        @Override
         public void apply(final SJProgram it) {
           List<Issue> _validate = SmallJavaValidatorTest.this._validationTestHelper.validate(it);
           int _size = _validate.size();
@@ -832,6 +838,7 @@ public class SmallJavaValidatorTest {
   @Test
   public void assertArgExpIncompatibleTypes() {
     final Procedure1<String> _function = new Procedure1<String>() {
+      @Override
       public void apply(final String it) {
         EClass _sJNew = SmallJavaPackage.eINSTANCE.getSJNew();
         SmallJavaValidatorTest.this.assertIncompatibleTypes(it, _sJNew, 
@@ -954,6 +961,7 @@ public class SmallJavaValidatorTest {
       _builder.newLine();
       SJProgram _parse = this._parseHelper.parse(_builder);
       final Procedure1<SJProgram> _function = new Procedure1<SJProgram>() {
+        @Override
         public void apply(final SJProgram it) {
           EClass _sJMethod = SmallJavaPackage.eINSTANCE.getSJMethod();
           SmallJavaValidatorTest.this._validationTestHelper.assertError(it, _sJMethod, 

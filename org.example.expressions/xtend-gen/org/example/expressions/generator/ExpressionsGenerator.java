@@ -32,11 +32,13 @@ public class ExpressionsGenerator implements IGenerator {
   @Extension
   private ExpressionsInterpreter _expressionsInterpreter;
   
+  @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
     TreeIterator<EObject> _allContents = resource.getAllContents();
     Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
     Iterable<ExpressionsModel> _filter = Iterables.<ExpressionsModel>filter(_iterable, ExpressionsModel.class);
     final Procedure1<ExpressionsModel> _function = new Procedure1<ExpressionsModel>() {
+      @Override
       public void apply(final ExpressionsModel it) {
         StringConcatenation _builder = new StringConcatenation();
         URI _uRI = resource.getURI();
@@ -53,6 +55,7 @@ public class ExpressionsGenerator implements IGenerator {
   public String interpretExpressions(final ExpressionsModel model) {
     EList<AbstractElement> _elements = model.getElements();
     final Function1<AbstractElement, String> _function = new Function1<AbstractElement, String>() {
+      @Override
       public String apply(final AbstractElement it) {
         StringConcatenation _builder = new StringConcatenation();
         ICompositeNode _node = NodeModelUtils.getNode(it);

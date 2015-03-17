@@ -76,6 +76,7 @@ public class SmallJavaIndexTest {
       SJClass _head = IterableExtensions.<SJClass>head(_classes);
       EList<SJMember> _members = _head.getMembers();
       final Procedure1<EList<SJMember>> _function = new Procedure1<EList<SJMember>>() {
+        @Override
         public void apply(final EList<SJMember> it) {
           SJMember _get = it.get(0);
           SmallJavaIndexTest.this.assertDescriptions(_get, "");
@@ -249,6 +250,7 @@ public class SmallJavaIndexTest {
       EClass _eClass = o.eClass();
       Iterable<IEObjectDescription> _visibleEObjectDescriptions = this._smallJavaIndex.getVisibleEObjectDescriptions(o, _eClass);
       final Function1<IEObjectDescription, QualifiedName> _function = new Function1<IEObjectDescription, QualifiedName>() {
+        @Override
         public QualifiedName apply(final IEObjectDescription it) {
           return it.getQualifiedName();
         }
@@ -269,6 +271,7 @@ public class SmallJavaIndexTest {
     String _string = expected.toString();
     Iterable<IEObjectDescription> _exportedEObjectDescriptions = this._smallJavaIndex.getExportedEObjectDescriptions(o);
     final Function1<IEObjectDescription, QualifiedName> _function = new Function1<IEObjectDescription, QualifiedName>() {
+      @Override
       public QualifiedName apply(final IEObjectDescription it) {
         return it.getQualifiedName();
       }
@@ -284,6 +287,7 @@ public class SmallJavaIndexTest {
       this._validationTestHelper.assertNoErrors(o);
       Iterable<IEObjectDescription> _visibleEObjectDescriptions = this._smallJavaIndex.getVisibleEObjectDescriptions(o);
       final Function1<IEObjectDescription, QualifiedName> _function = new Function1<IEObjectDescription, QualifiedName>() {
+        @Override
         public QualifiedName apply(final IEObjectDescription it) {
           return it.getQualifiedName();
         }
@@ -298,6 +302,7 @@ public class SmallJavaIndexTest {
     this._validationTestHelper.assertNoErrors(o);
     Iterable<IEObjectDescription> _visibleClassesDescriptions = this._smallJavaIndex.getVisibleClassesDescriptions(o);
     final Function1<IEObjectDescription, QualifiedName> _function = new Function1<IEObjectDescription, QualifiedName>() {
+      @Override
       public QualifiedName apply(final IEObjectDescription it) {
         return it.getQualifiedName();
       }

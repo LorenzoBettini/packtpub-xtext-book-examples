@@ -56,6 +56,7 @@ public class SmallJavaLib {
       final InputStream stream = _classLoader.getResourceAsStream(SmallJavaLib.MAIN_LIB);
       ResourceSet _get = this.resourceSetProvider.get();
       final Procedure1<ResourceSet> _function = new Procedure1<ResourceSet>() {
+        @Override
         public void apply(final ResourceSet resourceSet) {
           try {
             URI _createURI = URI.createURI(SmallJavaLib.MAIN_LIB);
@@ -115,6 +116,7 @@ public class SmallJavaLib {
     {
       Iterable<IEObjectDescription> _visibleClassesDescriptions = this._smallJavaIndex.getVisibleClassesDescriptions(context);
       final Function1<IEObjectDescription, Boolean> _function = new Function1<IEObjectDescription, Boolean>() {
+        @Override
         public Boolean apply(final IEObjectDescription it) {
           QualifiedName _qualifiedName = it.getQualifiedName();
           String _string = _qualifiedName.toString();

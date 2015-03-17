@@ -21,7 +21,7 @@ Require-Bundle: org.example.xbase.expressions;visibility:=reexport,
  org.eclipse.jdt.debug.ui
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.example.xbase.expressions.ui.quickfix,
  org.example.xbase.expressions.ui.contentassist,
  org.example.xbase.expressions.ui.contentassist.antlr,
