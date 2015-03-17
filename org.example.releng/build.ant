@@ -25,6 +25,7 @@
 	
 	<property name="b3.home" location="${user.home}/b3" />
 	<property name="buckminster.home" location="${user.home}/buckminster" />
+	<property name="buckminster.loglevel" value="INFO" />
 		
 	<property name="director.install.dest" location="${user.home}" />
 	<property name="director.dir" location="${director.install.dest}/director" />
@@ -51,7 +52,7 @@
 			<arg line='-configuration "${build.root}/configuration"' />
 			<arg line='--properties "${build.properties}"' />
 			<arg line='--script "${commands.file}"' />
-			<arg line='-L DEBUG' />
+			<arg line='-L ${buckminster.loglevel}' />
 			<sysproperty key="projects.location" value="${projects.location}" />
 			<sysproperty key="buckminster.output.root" value="${build.root}/buckminster.output" />
 			<sysproperty key="buckminster.temp.root" value="${build.root}/buckminster.temp" />
