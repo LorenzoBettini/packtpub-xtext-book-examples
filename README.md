@@ -220,3 +220,23 @@ You should write (recall that typeof is not required anymore to specify a type l
 ### Xtext Buckminster Wizard
 
 This wizard provided by Xtext was not updated and it generates the projects-platform.rmap incorrectly (see also [this forum post](https://www.eclipse.org/forums/index.php/t/811323/)); the quickiest way to fix it is to change the property _eclipse.target.platform_ from _juno_ (or _kepler_) to _luna_ so that the new version of EMF, required by Xtext 2.7, will be found in the Luna update site. (see the updated [projects-platform.rmap](https://github.com/LorenzoBettini/packtpub-xtext-book-examples/blob/master/org.example.build.hello.buckminster/projects-platform.rmap "projects-platform.rmap") file in the org.example.build.hello.buckminster example).
+
+## Xtext 2.8
+
+All Xtext plug-ins now require JavaSE-1.6 as execution environment.  If you start from scratch new Xtext projects, you don't have to worry about that.  However, if you had previously created Xtext projects, you need to adjust them all so that at least JavaSE-1.6 is specified as the execution environment.
+
+You can do that with a Search-Replace in the workspace:
+
+- in the files org.eclipse.jdt.core.prefs you need to replace 1.5 with 1.6
+- in MANIFEST.MF and .classpath files you need to replace J2SE-1.5 with JavaSE-1.6
+
+Running the mwe2 workflows requires in the classpath.  Again, if you start from scratch new Xtext projects, you don't have to worry about that.  Otherwise, you will experience such errors when running the mwe2 workflow
+
+```
+Could not load class: org.eclipse.core.runtime.OperationCanceledException
+Add org.eclipse.equinox.common to the class path.
+```
+
+To solve this, just add org.eclipse.equinox.common as dependency in your DSL main project.
+
+Just like with every new version of Xtext, please run mwe2 to re-generate all the artifacts, and make sure to merge the plugin.xml with the plugin.xml_gen.
