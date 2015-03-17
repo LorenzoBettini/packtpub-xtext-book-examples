@@ -6,8 +6,8 @@ jdk: oraclejdk7
 
 cache:
   directories:
-  - $HOME/build/LorenzoBettini/packtpub-xtext-book-examples/director
-  - $HOME/build/LorenzoBettini/packtpub-xtext-book-examples/buckminster
+  - $HOME/director
+  - $HOME/buckminster
   - $HOME/build/LorenzoBettini/packtpub-xtext-book-examples/buildroot
 
 env: DISPLAY=:99.0
@@ -19,4 +19,4 @@ before_script:
  
 script:
  - export
- - ant -f org.example.releng/build.ant -Dcommands.file=$HOME/build/LorenzoBettini/packtpub-xtext-book-examples/org.example.releng/commands-no-swtbot.txt -Ddirector.install.dest=$HOME/build/LorenzoBettini/packtpub-xtext-book-examples -Dbuckminster.home=$HOME/build/LorenzoBettini/packtpub-xtext-book-examples/buckminster
+ - ant -f org.example.releng/build.ant -Dcommands.file=$HOME/build/LorenzoBettini/packtpub-xtext-book-examples/org.example.releng/commands-no-swtbot.txt
