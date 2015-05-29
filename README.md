@@ -219,7 +219,19 @@ You should write (recall that typeof is not required anymore to specify a type l
 
 ### Xtext Buckminster Wizard
 
-This wizard provided by Xtext was not updated and it generates the projects-platform.rmap incorrectly (see also [this forum post](https://www.eclipse.org/forums/index.php/t/811323/)); the quickiest way to fix it is to change the property _eclipse.target.platform_ from _juno_ (or _kepler_) to _luna_ so that the new version of EMF, required by Xtext 2.7, will be found in the Luna update site. (see the updated [projects-platform.rmap](https://github.com/LorenzoBettini/packtpub-xtext-book-examples/blob/master/org.example.build.hello.buckminster/projects-platform.rmap "projects-platform.rmap") file in the org.example.build.hello.buckminster example).
+This wizard provided by Xtext was not updated and it generates the projects-platform.rmap incorrectly (see also [this forum post](https://www.eclipse.org/forums/index.php/t/811323/)); the quickiest way to fix it is to change the property _eclipse.target.platform_ from _juno_ (or _kepler_) to _luna_ so that the new version of EMF, required by Xtext 2.7, will be found in the Luna update site. 
+
+Moreover, recently, another architecture fragment has been introduced, "pcc64le", which is only available from the "Luna Updates" site, not from the main "Luna Releases"; you should then update the target plaform RMAP in order to use also the eclipse/updates/4.4 update site
+(see the updated [projects-platform.rmap](https://github.com/LorenzoBettini/packtpub-xtext-book-examples/blob/master/org.example.build.hello.buckminster/projects-platform.rmap "projects-platform.rmap") file in the org.example.build.hello.buckminster example).
+
+The sympthom of this problem is this error during target platform resolution:
+
+```
+ERROR   [0007] : No suitable provider for component 
+org.eclipse.core.filesystem.linux.ppc64le:osgi.bundle/[1.4.0.v20140808-1353,1.4.0.v20140808-1353]
+    (&(target.arch=ppc64le)(target.os=linux))
+    was found in resourceMap ... projects-platform.rmap
+```
 
 ## Xtext 2.8
 
