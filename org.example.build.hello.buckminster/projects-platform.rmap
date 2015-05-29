@@ -3,6 +3,7 @@
   <rm:property key="eclipse.download" value="http://download.eclipse.org"/>
   <rm:property key="xtext.p2.repository" value="${eclipse.download}/modeling/tmf/xtext/updates/composite/releases/"/>
   <rm:property key="eclipse.target.platform" value="${eclipse.download}/releases/luna"/>
+  <rm:property key="eclipse.updates.target.platform" value="${eclipse.download}/eclipse/updates/4.4"/>
   <rm:redirect pattern="org.example.build.hello.buckminster" href="project.rmap"/>
   <rm:locator pattern="^org\.eclipse\.(?:xtext|xpand|xtend|xtend2|emf\.mwe|emf\.mwe2)(?:\..+)?$" searchPathRef="xtext"/>
   <rm:locator pattern="^com\.google.*" searchPathRef="xtext"/>
@@ -22,6 +23,13 @@
     </rm:provider>
   </rm:searchPath>
   <rm:searchPath name="eclipse">
+    <rm:provider componentTypes="eclipse.feature,osgi.bundle" readerType="p2" source="false" mutable="false">
+      <rm:property key="buckminster.source" value="false"/>
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="{0}">
+        <bc:propertyRef key="eclipse.updates.target.platform"/>
+      </rm:uri>
+    </rm:provider>
     <rm:provider componentTypes="eclipse.feature,osgi.bundle" readerType="p2" source="false" mutable="false">
       <rm:property key="buckminster.source" value="false"/>
       <rm:property key="buckminster.mutable" value="false"/>
