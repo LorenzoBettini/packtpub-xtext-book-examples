@@ -252,3 +252,13 @@ Add org.eclipse.equinox.common to the class path.
 To solve this, just add org.eclipse.equinox.common as dependency in your DSL main project.
 
 Just like with every new version of Xtext, please run mwe2 to re-generate all the artifacts, and make sure to merge the plugin.xml with the plugin.xml_gen.
+
+### Xtext 2.8 new formatter API
+
+Xtext 2.8 introduced a new formatter API (currently provisional), more details can be found here: https://www.eclipse.org/Xtext/releasenotes.html#/releasenotes/2015/03/11/version-2-8-0.
+
+To enable the new formatter API, the mwe2 file should be changed:
+
+	fragment = formatting2.Formatter2Fragment {}
+
+Please note that the new formatter API is completely different from the previous one, described in the book.
